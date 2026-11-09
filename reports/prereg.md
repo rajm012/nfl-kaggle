@@ -83,3 +83,19 @@ WR F3 uses W1 context). **Plus** `ten_yd_split` (missing → position median + i
 
 ## Secondary (pre-specified, not in Holm family)
 Same models without `ten_yd_split` (to show what the stopwatch already captures); reliability of A0 (attempt 1 vs 2).
+
+---
+
+# Study 3 — Route-family specificity (frozen 2026-11-09)
+
+The complete appended protocol is [study3_protocol.md](study3_protocol.md). It specifies one
+primary TURN × SLANT/OUT-versus-GO interaction on rookie-season REG separation, development
+on 2023–24 classes, reserved 2025 evaluation, player-aware uncertainty, measurement/support
+screens and a November 20 stop date. No new trait–outcome associations were fitted during
+the planning block. Eligibility counts and prior study results informed this follow-up.
+
+The 2025 cohort already appeared in Studies 1–2, so this is **not a pristine untouched
+holdout**. Report prior outcome exposure. The primary exposure retains the original TURN
+definition but recomputes drill/player scaling from development classes only. Route-specific
+scores and other features are not additional confirmatory tests. Studies 1–2 above remain
+unchanged; any numerical corrections receive dated amendments and separate reports.

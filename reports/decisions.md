@@ -24,3 +24,14 @@
   only weakly predicts REG separation (WR turning z=1.7). Outcome reliability: DL get-off 0.80, OL peak pressure prob 0.80,
   WR target 0.74, WR separation 0.57, WR YACOE 0.14 (unusable).
 - **OPEN DECISION (needs a direction before more modelling):** see STATUS.md "Decision needed".
+
+- **2026-11-09 — Direction chosen; replaces the open decision above.** Build a scouting evidence
+  map and allow one bounded route-context follow-up to strengthen its central finding. Existing
+  TURN × SLANT/OUT-versus-GO contrast uses rookie-season REG and conventional-measurable/context
+  adjustment. This differs from a drill-specific route-talent score: slant has only 3 repeated
+  athletes and exact separate SLANT/OUT evaluation support is only 7 athletes. Pooled family
+  support is 42 development + 16 evaluation athletes before final checks.
+- **2026-11-09 — Execution constraints.** Incremental cash budget $0; audit and notebook begin
+  first; research/story freeze Nov 20. Retain all nulls and report prior 2025 exposure. No new
+  hypothesis families after the cutoff. Frozen details in `reports/study3_protocol.md`;
+  revised full strategy in `PLAN.md`, original archived in `reports/plan_2026-10-08.md`.

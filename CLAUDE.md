@@ -13,6 +13,7 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 | Path | What |
 |---|---|
 | `PLAN.md` | Strategy, thesis, stats design, figure plan, timeline. Source of truth for *what* we do. |
+| `reports/study3_protocol.md` | Frozen 2026-11-09 route-family follow-up protocol; feasibility counts in `reports/planning_feasibility.md`. |
 | `STATUS.md` | Dated progress log, newest first. Read the top before starting; append when you stop. |
 | `CLAUDE.md` | This file: durable facts + conventions. `AGENTS.md` points here. |
 | `data/raw/` | Original CSVs from Kaggle (git-ignored, never edit). |
@@ -31,10 +32,18 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 - Data licence CC BY-NC 4.0: do not commit or upload raw data anywhere except Kaggle.
 
 ## Current strategy (details: STATUS.md top entry, reports/decisions.md)
-- **2026-10-29: original thesis failed its pre-registered go/no-go.** Envelope traits (turning/burst) and start-of-40 acceleration do not predict NFL per-play outcomes beyond size/40/draft slot (9/9 tests null, positive control passes).
-- Real positive findings so far: Combine→game *transfer* (WR turning r=0.28 size-independent; DL burst r=0.45, half weight); tracking traits are not priced into the draft.
-- **Next direction (recommended, not yet pre-registered): route-matched WR study (Option A in STATUS.md).** Fallback: write the calibrated-null evidence map (Option B). Always pre-register in `reports/prereg.md` BEFORE touching outcomes.
-- **2026-11-09 review:** class holdout and 3-cone sensitivity are not implemented in current scripts/reports. Binary LMMs lack the preregistered robust SE; Study 2 SDs are play-weighted. See `reports/repo_review.md`. Writeup/figures are placeholders and the submission notebook has not been created.
+- **2026-11-09: PLAN.md rewritten; incremental cash budget $0.** Original plan archived in `reports/plan_2026-10-08.md`.
+- Studies 1–2: 9 tests without Holm-significant added performance associations; audit before final claims.
+  Reported transfer: WR turning r=0.28; DL burst r=0.45 (0.21 net of weight). Supporting checks need saved reproduction code.
+- **Chosen bounded follow-up:** existing TURN × SLANT/OUT-versus-GO separation contrast, rookie-season REG,
+  developed on 2023–24, evaluated on 2025. Frozen protocol appended to prereg; **not implemented yet**.
+  Support before final joins: 42 development + 16 evaluation WRs. Only 3 slant repeats; no slant-specific talent score.
+- **November 20: final narrative decision; no new hypothesis families afterward.** Primary product is a scouting
+  evidence map separating measurement, transfer and added prediction. Promote a signal only if validated.
+- Audit gaps: held-out prediction/3-cone sensitivity absent; binary LMM robust-SE deviation; Study 2 SDs play-weighted.
+  Preserve historical reports and save corrected outputs separately. Notebook/figures/writeup start during audit week;
+  public notebook ready Dec 14, owner submission by Dec 28. Current artifacts remain placeholders.
+- Kaggle CLI verified deadline, entry and $100k total pool on Nov 9. Individual track awards/rules require final UI check.
 
 ## Pipeline (run from project root, in order)
 1. `bash src/download_data.sh` → `data/raw/*.csv` (resumable, per file).
@@ -46,7 +55,8 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 ## Rules of the road (statistical hygiene)
 - Write hypotheses/features into `reports/prereg.md` **before** fitting outcome models; don't silently change them.
 - Control for draft capital and opportunity; prefer per-play/per-snap outcomes with player random effects.
-- Holdout: fit on 2023–24 draft classes, validate on 2025 class.
+- Develop on 2023–24 classes; reserve 2025 from further follow-up development. Prior studies already used 2025
+  outcomes, so disclose exposure and never claim a pristine untouched holdout. Scale/impute on training players.
 - Report effect sizes with intervals; label exploratory analyses as such.
 
 ## Data facts (verified — add as you learn)

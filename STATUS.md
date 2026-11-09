@@ -1,5 +1,22 @@
 # Status log (newest first)
 
+- **2026-11-09 — Submission strategy revised at owner's request**
+  - Replaced `PLAN.md` with an executable, $0-incremental-budget plan; original preserved in
+    `reports/plan_2026-10-08.md`. Final research/story decision Nov 20; notebook ready Dec 14;
+    internal owner submission Dec 28. No new hypothesis families after the research cutoff.
+  - Checked support before choosing the experiment: only 7 evaluation WRs have ≥10 SLANT and OUT
+    plays separately, and only 3 repeat the Combine slant. Revised to existing TURN × pooled
+    SLANT/OUT-versus-GO contrast, rookie-season REG: 42 development + 16 evaluation athletes.
+  - Added frozen `reports/study3_protocol.md` and appended it to `reports/prereg.md`; support and
+    competition verification in `reports/planning_feasibility.md`. No new outcome associations/refits.
+    Prior 2025 outcome exposure is explicitly disclosed; this is not a pristine holdout.
+  - Plan requires historical-output preservation, robust inference/scaling audit, reproduced supporting
+    results, cohort evaluation, six figures/one table and clean Kaggle reproduction. Evidence-map
+    submission remains viable if the bounded experiment fails; no prize or payout is guaranteed.
+  - Kaggle CLI confirms entry and Jan 6 23:59 UTC deadline; $100k is the total pool. Public overview/rules
+    GET returned 404, so precise track/rules verification remains a final UI task.
+  - Next: audit keys/season filters, reproduce TURN reliability and build notebook skeleton before new fits.
+
 - **2026-11-09 — Repository orientation and review**
   - Read all current project notes, source modules and reports; checked local Parquet counts/route labels. Saved assessment in `reports/repo_review.md`. No model refits or new outcome analyses.
   - Confirmed general envelope and first-step studies have no Holm-significant results (9 confirmatory tests). Route-matched WR direction is still proposed, with no preregistration or implementation yet.
