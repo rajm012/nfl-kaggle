@@ -4,7 +4,9 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 
 ## Who / what
 - Owner: Kaggle user `rajm012` (B.Tech Maths & Computing, undergrad → **University track**).
-- Owner is ill and rarely available. **Agents drive the work autonomously.** Only ask the owner for things only they can do: clicking Submit on the Kaggle Writeup, legal/terms acceptance, team changes.
+- Owner handles Python/notebook checks and design/writeup review (confirmed 2026-11-09).
+  Assistant drives football/statistical research and analysis; external expert reviewers are unavailable.
+  Ask owner for account authentication, legal/terms acceptance, team changes and final Kaggle Submit.
 - Competition: https://www.kaggle.com/competitions/nfl-big-data-bowl-2027 — judged analytics hackathon. Link 10 Hz **Combine tracking** → **regular-season NFL performance**.
 - Deliverable: Kaggle Writeup ≤ 2,000 words, < 10 figures+tables, with a **public Kaggle notebook** attached. Scoring: Football 30 · Data Science 30 · Writeup 20 · Data Viz 20. One submission per team.
 - **Hard deadline 2027-01-06 23:59 UTC. Internal deadline 2026-12-28.**
@@ -29,6 +31,12 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 - Python venv: `.venv/` → always use `.venv/bin/python`; call Kaggle as `.venv/bin/python -m kaggle` (the `.venv/bin/kaggle` launcher broke when the folder moved). Packages: polars, duckdb, pandas, statsmodels, pymc, bambi, arviz, lightgbm, scikit-learn, matplotlib, seaborn, plotnine, jupyter.
 - Kaggle auth: new-style token at `~/.kaggle/access_token` (Kaggle CLI 2.x). Never print or copy it.
 - Machine: 16 GB RAM (often only ~5 GB free), RTX 4050 6 GB. **Never load all game tracking into pandas.** Use parquet + DuckDB/Polars lazy scans, filter columns/rows early.
+- Remote resource reported by owner 2026-11-09: professor-provided **RTX 5080, 16 GiB VRAM**, strong CPU.
+  Owner confirms full SSH access; assistant can reach server but initial authentication failed.
+  Login uses password; dedicated local key `~/.ssh/nfl_bdb_2027_ed25519` prepared. Owner must install
+  its public key through their terminal before assistant jobs; private key stays outside the repo.
+  Host RAM/cores/OS/storage/access window remain unverified. Current pipeline is mainly CPU-bound;
+  use remote CPU for planned validation/refits first and preserve CPU/Kaggle reproduction. No extra cash budget.
 - Data licence CC BY-NC 4.0: do not commit or upload raw data anywhere except Kaggle.
 
 ## Current strategy (details: STATUS.md top entry, reports/decisions.md)
@@ -42,8 +50,15 @@ This file is the shared memory for any agent working in this folder. Keep it cur
   evidence map separating measurement, transfer and added prediction. Promote a signal only if validated.
 - Audit gaps: held-out prediction/3-cone sensitivity absent; binary LMM robust-SE deviation; Study 2 SDs play-weighted.
   Preserve historical reports and save corrected outputs separately. Notebook/figures/writeup start during audit week;
-  public notebook ready Dec 14, owner submission by Dec 28. Current artifacts remain placeholders.
+  public notebook ready Dec 14, owner submission by Dec 28. Starter notebook now runs on local CSV/Parquet
+  inputs and generates `reports/figures/study3_support.png`; full submission results still pending.
 - Kaggle CLI verified deadline, entry and $100k total pool on Nov 9. Individual track awards/rules require final UI check.
+- Resource priorities and professor/friend requests: `reports/resource_requests.md`; football/statistical review,
+  reliable remote access, independent notebook reproduction and visual/writing feedback precede more hardware.
+- Start/handoff: `START_HERE.md`; internal critique in `reports/review_notes.md` is not independent expert validation.
+- `python -m src.audit_data --tracking-keys` passes key/count checks; raw player-play CSV=Parquet=314,197.
+  Join attrition: 2,496 trait rows without player-play; 2,466 player-play without traits, causes pending.
+  Old numerical reports preserved in `reports/history/2026-11-09/`. `src/system_info.py` runs remotely via stdin.
 
 ## Pipeline (run from project root, in order)
 1. `bash src/download_data.sh` → `data/raw/*.csv` (resumable, per file).

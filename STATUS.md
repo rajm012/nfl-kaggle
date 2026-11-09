@@ -1,5 +1,32 @@
 # Status log (newest first)
 
+- **2026-11-09 — Joint work started; audit and starter notebook delivered**
+  - Owner takes Python/notebook and design/writeup checks; assistant handles football/statistical
+    research and internal review. External researchers unavailable; no independent-expert claim.
+    Updated allocation and created `START_HERE.md` and `reports/review_notes.md`.
+  - Built/ran `src/audit_data.py --tracking-keys`: zero input-integrity failures including full
+    22.65M game-frame keys. Raw/Parquet player-play counts both 314,197. Recorded 2,496/2,466
+    unmatched game-trait/player-play rows; explanations pending. Study 3 support remains 25/17/16.
+  - Created/executed `notebooks/submission.ipynb` on both CSV and Parquet inputs; saved outputs,
+    dependency versions and draft `reports/figures/study3_support.png`. No new outcome associations.
+    Preserved three historical numerical reports byte-for-byte in `reports/history/2026-11-09/`.
+  - Created/tested standard-library `src/system_info.py`. SSH server reached; non-interactive
+    authentication rejected, so remote inventory/specifications are not yet verified. Owner can
+    run the inventory through their terminal; authentication setup is next for assistant-run jobs.
+    Owner confirms password login; prepared a project-specific local SSH key outside Git and
+    documented public-key installation in `START_HERE.md`. No remote authorization change yet.
+  - Next: owner reviews/reruns notebook; assistant explains join attrition, reproduces movement
+    reliability and continues internal research critique before the frozen measurement screen.
+- **2026-11-09 — Professor-provided compute and resource priorities**
+  - Owner reports remote RTX 5080 (16 GiB VRAM) and strong CPU access. Updated `PLAN.md` with
+    local/remote/Kaggle allocation, remote inventory/benchmark steps and checkpointed CPU validation.
+    Connection, system RAM, core count, storage, OS and access duration remain unverified.
+  - Added `reports/resource_requests.md` with ranked volunteer help, concrete review outputs,
+    time estimates and a professor-ready resource request. Football/statistical reviewers are the
+    highest-value additions; notebook reproduction and figure/writeup feedback also prioritised.
+  - Retained $0 incremental budget, frozen hypotheses, November 20 research cutoff and public
+    CPU/Kaggle reproduction. No remote connection, data transfer, model changes or new analyses performed.
+
 - **2026-11-09 — Submission strategy revised at owner's request**
   - Replaced `PLAN.md` with an executable, $0-incremental-budget plan; original preserved in
     `reports/plan_2026-10-08.md`. Final research/story decision Nov 20; notebook ready Dec 14;

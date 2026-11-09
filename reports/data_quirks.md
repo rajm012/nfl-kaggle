@@ -14,5 +14,10 @@
 - **Game tracking is 22,654,290 frames** (2023: 3.67M, 2024: 7.83M, 2025: 11.16M), not the 8.8M on the data page.
   Verified: CSV line counts match, zero duplicate (game, play, nfl_id, time) keys → the docs are wrong, data is fine.
   Players tracked per season: 156 / 318 / 448 (cohort grows as classes enter). ~69 frames (6.9 s) per player-play.
-- `player_play.parquet` has 314,197 rows vs 316,338 on the data page — not yet reconciled (low priority).
+- **2026-11-09 audit:** downloaded `player_play.csv` and Parquet both contain 314,197 rows;
+  the data-page 316,338 count differs from the source file, not from conversion (counts checked;
+  not a cell-by-cell equality proof). Full game-frame key scan again found zero null/duplicate keys.
+- **2026-11-09 join attrition:** 2,496 `game_play_traits` rows lack a `player_play` row; 2,466
+  `player_play` rows lack a trait row. Main keys/references are valid; causes remain to be explained
+  before reporting transfer/outcome join coverage. See `reports/audit.md`.
 - Per-file Kaggle downloads of the big CSVs stall server-side; use `src/download_zip.sh` (download-all zip + curl resume).

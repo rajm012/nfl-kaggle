@@ -1,0 +1,359 @@
+{
+  "generated_utc": "2026-11-09T10:29:57.884783+00:00",
+  "checks": [
+    {
+      "check": "players: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "players: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_results: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_results: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "games: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "games: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "player_play: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "player_play: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_traits: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_traits: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_attempts: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_attempts: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "game_play_traits: null primary keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "game_play_traits: duplicate primary-key rows",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_results \u2192 players: missing nfl_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_traits \u2192 players: missing nfl_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_attempts \u2192 players: missing nfl_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "player_play \u2192 players: missing nfl_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "player_play \u2192 games: missing game_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "game_play_traits \u2192 players: missing nfl_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "game_play_traits \u2192 games: missing game_id",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Combine/player draft-year disagreements",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Player-play rows before draft year",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Game-trait/game season disagreements",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Game-trait rows without player-play outcome/context row",
+      "value": 2496,
+      "expected": 0,
+      "status": "NOTE"
+    },
+    {
+      "check": "Player-play rows without game-trait row",
+      "value": 2466,
+      "expected": 0,
+      "status": "NOTE"
+    },
+    {
+      "check": "players: CSV versus Parquet row difference",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "combine_results: CSV versus Parquet row difference",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "games: CSV versus Parquet row difference",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "player_play: CSV versus Parquet row difference",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Combine PLAYER frames: null keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Combine PLAYER frames: duplicate keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Game frames: null keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Game frames: duplicate keys",
+      "value": 0,
+      "expected": 0,
+      "status": "PASS"
+    }
+  ],
+  "table_keys": [
+    {
+      "table": "players",
+      "rows": 510,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "combine_results",
+      "rows": 510,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "games",
+      "rows": 1002,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "player_play",
+      "rows": 314197,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "combine_traits",
+      "rows": 510,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "combine_attempts",
+      "rows": 5517,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "game_play_traits",
+      "rows": 314227,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "combine_tracking PLAYER",
+      "rows": 431094,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "table": "game_tracking",
+      "rows": 22654290,
+      "null_keys": 0,
+      "duplicate_rows": 0
+    }
+  ],
+  "raw_counts": [
+    {
+      "table": "players",
+      "csv_rows": 510,
+      "parquet_rows": 510
+    },
+    {
+      "table": "combine_results",
+      "csv_rows": 510,
+      "parquet_rows": 510
+    },
+    {
+      "table": "games",
+      "csv_rows": 1002,
+      "parquet_rows": 1002
+    },
+    {
+      "table": "player_play",
+      "csv_rows": 314197,
+      "parquet_rows": 314197
+    }
+  ],
+  "game_frames": [
+    {
+      "season": 2023,
+      "frames": 3665443
+    },
+    {
+      "season": 2024,
+      "frames": 7827944
+    },
+    {
+      "season": 2025,
+      "frames": 11160903
+    }
+  ],
+  "season_types": [
+    {
+      "season_type": "POST",
+      "player_plays": 13169,
+      "players": 161
+    },
+    {
+      "season_type": "PRE",
+      "player_plays": 51759,
+      "players": 487
+    },
+    {
+      "season_type": "REG",
+      "player_plays": 249269,
+      "players": 401
+    }
+  ],
+  "study3_eligibility": [
+    {
+      "draft_year": 2023,
+      "eligible_players": 25
+    },
+    {
+      "draft_year": 2024,
+      "eligible_players": 17
+    },
+    {
+      "draft_year": 2025,
+      "eligible_players": 16
+    }
+  ],
+  "study3_missingness": [
+    {
+      "draft_year": 2023,
+      "candidate_plays": 2446,
+      "missing_cushion": 77,
+      "missing_required_context": 0,
+      "missing_coverage": 3,
+      "missing_alignment": 0
+    },
+    {
+      "draft_year": 2024,
+      "candidate_plays": 1708,
+      "missing_cushion": 53,
+      "missing_required_context": 0,
+      "missing_coverage": 0,
+      "missing_alignment": 0
+    },
+    {
+      "draft_year": 2025,
+      "candidate_plays": 1235,
+      "missing_cushion": 53,
+      "missing_required_context": 0,
+      "missing_coverage": 0,
+      "missing_alignment": 0
+    }
+  ],
+  "full_game_tracking_keys_checked": true
+}
