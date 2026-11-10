@@ -1,5 +1,17 @@
 # Status log (newest first)
 
+- **2026-11-10 — Redesigned notebook verified and republished**
+  - Removed the 220,831-character serialized source cell from the reading view. Required source now lives in verified notebook metadata; longest visible code cell is 1,502 characters. Six narrative sections, figure-specific explanations, a formatted table, quiet setup/logging and a collapsible appendix improve the report.
+  - Local raw pipeline: 505.28 s, largest sampled stage RSS 1,115 MiB; 402 checks, 25 scores and 12 tests pass. Private clean Kaggle version 3: 979.82 s, peak 1107.0 MiB; all checks pass. W1 historical cone retry-path repair preserves its original BFGS/L-BFGS result with canonical row order; W2 retains Powell. No frozen model/source/protocol/sample or verification tolerance changed.
+  - Republished same URL under `oppenheimer6th`, new notebook ID 144208320/public version 4. API verifies public metadata, unchanged tested source, ten report outputs and six inline figures. Full-resolution cloud figures retained; saved report outputs use verified cloud results. Owner deleted the previous ID; old evidence is archived.
+  - Refreshed both standalone previews, ZIP, asset hashes and handoff. Owner actual browser rendering, Writeup attachment, track/terms and final competition Submit remain separate. No Git push or final competition submission.
+
+- **2026-11-10 — Notebook presentation redesign; private raw execution started**
+  - Owner deleted the first public notebook and requested a cleaner reading experience plus republication. Removed the 220,831-character serialized source cell; source/reference files now live in notebook metadata with verified hashes. Longest visible code cell is 1,502 characters.
+  - Added six numbered narrative sections, figure-specific explanations, a formatted evaluation table, quiet setup/logging and collapsible complete reports. Scientific source/specifications and stopping decisions remain frozen.
+  - Private Kaggle bootstrap probe confirms source metadata is available at execution startup. Same notebook URL was recreated privately as ID 144208320; version 3 is rebuilding before republication. Version 2 exposed an unordered-row historical W1 cone retry-path discrepancy; source-only canonical-order BFGS/L-BFGS replay matches the recorded beta to 3.2e-14. Frozen models/specifications and verification tolerances are unchanged. Prior publication evidence archived in `kaggle_execution_before_redesign.json`.
+  - Local visual preview and final updated cloud/publication evidence remain in progress. Owner final competition Writeup Submit remains separate.
+
 - **2026-11-10 — Kaggle reproduction and notebook publication completed**
   - Private full Kaggle rebuild COMPLETE: 1,421.62 s, largest sampled stage RSS 1,021.4 MiB; all 402 numeric checks, 25 scores and 12 tests pass. Downloaded execution/verification records saved in `kaggle_*` reports. All 146 output files checked: no raw CSVs or intermediate Parquets redistributed.
   - Published under owner-confirmed `oppenheimer6th`: code notebook ID 144187820, public version 3. Publication is a QUICK_SAVE of unchanged tested source and saved outputs; full execution was version 1. API retrieval confirms public flag, matching code, 59 output blocks and six figures. Inline previews reduced to 950px/128 colours for Kaggle's 1 MB source limit; full 200dpi assets retained.

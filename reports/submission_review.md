@@ -54,3 +54,7 @@ verification passes. Direct anonymous HTTP returned 404, so browser access/rende
 requires owner confirmation. Owner fresh-kernel/design review, actual public-access
 verification, writeup attachment/rendering and final Submit are separate completion conditions.
 Do not mark the competition submission complete until its confirmation exists.
+
+## November 10 presentation revision
+
+The owner deleted the first public notebook because its serialized source cell overwhelmed the reading view. Format 2 stores ordinary source files and their hashes in notebook metadata; visible code is at most 1,502 characters. Six numbered figure sections, a formatted table, quiet setup/logs and collapsible complete reports replace the earlier layout. Kaggle raw version 3 passes 402 checks, 25 scores and 12 tests; redesigned public version 4 is verified via API. The source-only W1 historical BFGS/L-BFGS replay uses canonical row ordering to preserve its recorded result, alongside the existing W2 Powell replay. No model formula, sample, frozen prediction source or verification tolerance changed. Updated notebook reading preview is included in the ZIP.

@@ -1,0 +1,20 @@
+{
+  "issue": "Unordered join rows changed historical W1 + cone optimizer retry path during redesigned private Kaggle version 2.",
+  "recorded_beta": 0.011392906958938957,
+  "failed_rebuild_beta": 0.013000452182679331,
+  "recorded_path": "BFGS then L-BFGS",
+  "incorrect_rebuild_path": "default invalid, then Powell",
+  "fix": "Replay the recorded W1 BFGS/L-BFGS sequence using canonical row order; retain the existing W2 Powell replay.",
+  "canonical_original_input_beta": 0.01139290695897114,
+  "frozen_prediction_source_or_protocol_changed": false,
+  "model_formula_or_sample_changed": false,
+  "cached_coefficients_used": false,
+  "verification_tolerance_changed": false,
+  "local_full_raw_rebuild_verified": true,
+  "local_headline_checks": 402,
+  "local_comparisons_verified": 25,
+  "local_tests_passed": 12,
+  "clean_kaggle_version": 3,
+  "clean_kaggle_raw_rebuild_verified": true,
+  "public_version": 4
+}

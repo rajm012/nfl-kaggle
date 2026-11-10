@@ -1,0 +1,27 @@
+{
+  "cwd": "/kaggle/working",
+  "source_directory": [
+    "/kaggle/src/script.ipynb"
+  ],
+  "notebooks": {
+    "/kaggle/working/__notebook__.ipynb": {
+      "metadata_keys": [
+        "bdb_source_files",
+        "kernelspec",
+        "papermill"
+      ],
+      "probe": {
+        "probe": "metadata preserved"
+      }
+    },
+    "/kaggle/src/script.ipynb": {
+      "metadata_keys": [
+        "bdb_source_files",
+        "kernelspec"
+      ],
+      "probe": {
+        "probe": "metadata preserved"
+      }
+    }
+  }
+}

@@ -2,13 +2,14 @@
 
 ## Reviewable packet
 
-- `writeup/preview.html`: standalone reading/visual preview, all six images embedded.
+- `writeup/preview.html`: standalone manuscript preview, all six images embedded.
+- `writeup/notebook_preview.html`: redesigned notebook reading preview, code hidden and reports collapsible.
 - `writeup/writeup.md`: complete manuscript and nine-row table; 1,900 conservative words.
 - `writeup/submission_packet.zip`: manuscript, preview, notebook/metadata, six PNGs,
   evaluation CSV and verification/source notes. No raw or intermediate data.
-- `notebooks/submission.ipynb`: standalone nine-CSV rebuild, with saved local outputs.
+- `notebooks/submission.ipynb`: standalone nine-CSV rebuild, with saved report outputs from verified cloud results.
 - Notebook target: https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map .
-  Public version 3 is verified by API with 59 output blocks and six figures; full clean Kaggle execution was version 1 (1,421.62 s). Exact proof: `kaggle_execution.json`. Direct anonymous HTTP from this workspace returned 404; check actual browser access/rendering.
+  Redesigned public version 4 (notebook ID 144208320) is verified by API with ten clean report outputs and six figures. Full clean Kaggle execution was version 3 (979.82 s; sampled peak 1107.0 MiB). Exact proof: `kaggle_execution.json`. Check actual browser access/rendering.
 
 Full clean local run: 523.08 seconds; largest sampled stage RSS 1,183 MiB. All 402 numeric comparisons, 25 cohort scores and 12 tests pass. No frozen prediction source/model/sample changed. Reported results and figure captions retain uncertainty, prior 2025 exposure and selected-subset limitations. Official field/track/rules checks: `official_sources.md`.
 

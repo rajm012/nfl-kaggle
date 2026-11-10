@@ -6,6 +6,7 @@ do not establish a supported prediction gain; secondary cone findings remain sep
 
 - [Writeup](writeup/writeup.md) and [standalone visual preview](writeup/preview.html)
 - [Self-contained raw-input notebook](notebooks/submission.ipynb)
+- [Notebook reading preview](writeup/notebook_preview.html)
 - [Current state](STATUS.md), [project memory](CLAUDE.md) and [submission checklist](reports/submission_checklist.md)
 - [Validation interpretation](reports/validation_findings.md) and [production review](reports/submission_review.md)
 
@@ -18,7 +19,9 @@ Launch with `BDB_INPUT_ROOT="$PWD/data/raw" .venv/bin/python -m jupyter lab note
 On Kaggle, attach `nfl-big-data-bowl-2027` as a competition source and enable Internet
 for installation of the recorded dependencies. CPU is sufficient; no GPU is used.
 
-The notebook embeds all required project source. It rebuilds features, measurement and
+The notebook stores all required project source in its metadata, with verified hashes.
+Its reading view has six figure sections, a formatted table and a collapsible report appendix.
+It rebuilds features, measurement and
 transfer checks, the historical model audit, all 25 frozen cohort comparisons, cone
 sensitivities, six figures and the evaluation table. Reference results are assertions
 after fitting, not a substitute for computation. No source module needs downloading.

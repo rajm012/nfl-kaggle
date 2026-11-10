@@ -10,13 +10,13 @@ Open `notebooks/submission.ipynb` in your notebook editor with the project `.ven
 kernel. Alternatively, from the project root:
 
 ```bash
-.venv/bin/python -m jupyter lab notebooks/submission.ipynb
+BDB_INPUT_ROOT="$PWD/data/raw" .venv/bin/python -m jupyter lab notebooks/submission.ipynb
 ```
 
-Restart the kernel and run all cells. The starter has already executed locally on both raw
-CSV and cached Parquet paths. It contains counts, key checks, season coverage, eligibility
-and the frozen conventional separation-contrast measurement screen. No TURN interaction
-or new 2025 performance evaluation was fitted.
+Restart the kernel and run all cells to rebuild from all nine raw CSVs. The complete pipeline
+checks features, measurement, transfer and all 25 cohort comparisons, then creates six figures
+and one table. The route-family measurement gate failed; its primary TURN interaction remains
+stopped. For a quick reading review, open `writeup/notebook_preview.html`.
 
 Check these numbers:
 
@@ -66,4 +66,4 @@ page's 316,338 count differs from the downloaded file, not from conversion.
 
 The join, reliability, model, transfer, cohort prediction and cone checks are complete. The frozen route measurement screen failed, so its primary performance claim stops; none of the nine primary cohort prediction additions has a supported RMSE gain. Small selected cone findings remain secondary. Read `reports/validation_findings.md` and review `reports/figures/cohort_prediction.png` / `reports/evaluation_table.csv`.
 
-The notebook now includes an explicitly labelled saved cohort-result review snapshot; those evaluation models are not yet rebuilt from raw inputs in the notebook. Next is complete notebook/figure/writeup integration. Keep the November 20 final-claim checkpoint. Current work and rerun commands: `reports/latest_runs.md`.
+The notebook now rebuilds every result from all nine raw CSVs. Its redesigned reading view has six figure sections, a formatted evaluation table and a collapsible report appendix; source lives in verified notebook metadata. Open `writeup/notebook_preview.html` for the standalone reading preview. Redesigned public version 4 and full Kaggle raw execution version 3 are verified; see `reports/kaggle_execution.json`. Final Writeup attachment/terms/Submit remain owner actions. Keep the November 20 final-claim checkpoint.

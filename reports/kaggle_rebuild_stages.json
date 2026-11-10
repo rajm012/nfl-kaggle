@@ -4,71 +4,71 @@
     "arguments": [
       "--convert"
     ],
-    "seconds": 55.38,
-    "sampled_peak_RSS_MiB": 533.6,
+    "seconds": 34.31,
+    "sampled_peak_RSS_MiB": 578.8,
     "exit_code": 0
   },
   {
     "module": "src.combine_features",
     "arguments": [],
-    "seconds": 25.8,
-    "sampled_peak_RSS_MiB": 678.1,
+    "seconds": 18.03,
+    "sampled_peak_RSS_MiB": 654.8,
     "exit_code": 0
   },
   {
     "module": "src.sprint",
     "arguments": [],
-    "seconds": 4.26,
-    "sampled_peak_RSS_MiB": 194.5,
+    "seconds": 3.01,
+    "sampled_peak_RSS_MiB": 193.5,
     "exit_code": 0
   },
   {
     "module": "src.game_features",
     "arguments": [],
-    "seconds": 1079.39,
-    "sampled_peak_RSS_MiB": 353.3,
+    "seconds": 740.12,
+    "sampled_peak_RSS_MiB": 307.2,
     "exit_code": 0
   },
   {
     "module": "src.audit_data",
     "arguments": [],
-    "seconds": 2.01,
-    "sampled_peak_RSS_MiB": 239.9,
+    "seconds": 1.25,
+    "sampled_peak_RSS_MiB": 239.2,
     "exit_code": 0
   },
   {
     "module": "src.join_audit",
     "arguments": [],
-    "seconds": 2.01,
-    "sampled_peak_RSS_MiB": 122.0,
+    "seconds": 1.25,
+    "sampled_peak_RSS_MiB": 127.9,
     "exit_code": 0
   },
   {
     "module": "src.reliability",
     "arguments": [],
-    "seconds": 3.51,
-    "sampled_peak_RSS_MiB": 224.6,
+    "seconds": 2.5,
+    "sampled_peak_RSS_MiB": 221.9,
     "exit_code": 0
   },
   {
     "module": "src.route_context",
     "arguments": [],
-    "seconds": 9.52,
-    "sampled_peak_RSS_MiB": 645.4,
+    "seconds": 6.76,
+    "sampled_peak_RSS_MiB": 647.3,
     "exit_code": 0
   },
   {
     "module": "src.transfer_audit",
     "arguments": [],
-    "seconds": 80.18,
-    "sampled_peak_RSS_MiB": 399.5,
+    "seconds": 53.6,
+    "sampled_peak_RSS_MiB": 404.8,
     "exit_code": 0
   },
   {
     "module": "src.validation",
     "arguments": [],
-    "seconds": 25.31,
-    "sampled_peak_RSS_MiB": 1021.4,
+    "seconds": 16.29,
+    "sampled_peak_RSS_MiB": 1107.0,
     "exit_code": 0
   },
   {
@@ -77,8 +77,8 @@
       "--stage",
       "develop"
     ],
-    "seconds": 37.59,
-    "sampled_peak_RSS_MiB": 357.3,
+    "seconds": 24.8,
+    "sampled_peak_RSS_MiB": 353.9,
     "exit_code": 0
   },
   {
@@ -87,43 +87,43 @@
       "--stage",
       "evaluate"
     ],
-    "seconds": 5.51,
-    "sampled_peak_RSS_MiB": 337.6,
+    "seconds": 3.76,
+    "sampled_peak_RSS_MiB": 338.7,
     "exit_code": 0
   },
   {
     "module": "src.submission_replay",
     "arguments": [],
-    "seconds": 19.29,
-    "sampled_peak_RSS_MiB": 978.1,
+    "seconds": 12.52,
+    "sampled_peak_RSS_MiB": 1082.6,
     "exit_code": 0
   },
   {
     "module": "src.submission_verify",
     "arguments": [],
-    "seconds": 3.26,
-    "sampled_peak_RSS_MiB": 308.7,
+    "seconds": 2.25,
+    "sampled_peak_RSS_MiB": 308.3,
     "exit_code": 0
   },
   {
     "module": "src.audit_figures",
     "arguments": [],
-    "seconds": 3.01,
-    "sampled_peak_RSS_MiB": 282.6,
+    "seconds": 2.0,
+    "sampled_peak_RSS_MiB": 281.7,
     "exit_code": 0
   },
   {
     "module": "src.evaluation_figures",
     "arguments": [],
-    "seconds": 4.26,
-    "sampled_peak_RSS_MiB": 327.1,
+    "seconds": 2.76,
+    "sampled_peak_RSS_MiB": 327.6,
     "exit_code": 0
   },
   {
     "module": "src.submission_figures",
     "arguments": [],
-    "seconds": 2.26,
-    "sampled_peak_RSS_MiB": 205.2,
+    "seconds": 1.5,
+    "sampled_peak_RSS_MiB": 208.2,
     "exit_code": 0
   }
 ]

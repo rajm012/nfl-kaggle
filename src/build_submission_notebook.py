@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MODULES = ['__init__','kinematics','combine_features','game_features','sprint','audit_data',
            'join_audit','reliability','route_context','outcomes','study2','validation','evaluate',
            'cone_sensitivity','transfer_audit','audit_figures','evaluation_figures',
-           'submission_pipeline','submission_figures','submission_verify','submission_replay']
+           'submission_pipeline','notebook_runtime','submission_figures','submission_verify','submission_replay']
 
 
 def main():
@@ -25,9 +25,13 @@ def main():
     files['reports/reference_headlines.json'] = json.dumps(reference,indent=2)+'\n'
     cone = json.loads((ROOT/'reports/cone_sensitivity.json').read_text())
     solver_plan = [{'id':r['id'],'model':name,'columns':list(model['coefficients']),
-                    'recorded_optimizer':model['optimizer']}
+                    'recorded_optimizer':model['optimizer'],
+                    'method':'powell' if 'Powell' in model['optimizer'] else ['bfgs','lbfgs'],
+                    'canonical_row_order':'Powell' not in model['optimizer']}
                    for r in cone['comparisons'] for name,model in r['models'].items()
-                   if 'Powell' in model['optimizer']]
+                   if ('Powell' in model['optimizer'] or
+                       ('Retrying MixedLM optimization with lbfgs' in model.get('initial_diagnostics', [])
+                        and 'Retrying MixedLM optimization with cg' not in model.get('initial_diagnostics', [])))]
     files['reports/historical_solver_plan.json'] = json.dumps(solver_plan,indent=2)+'\n'
     frozen_source = json.loads((ROOT/'reports/evaluation_development.json').read_text())['provenance']
     for name in ['src/evaluate.py','src/route_context.py','requirements.txt','reports/evaluation_protocol.md']:
@@ -35,165 +39,169 @@ def main():
             raise ValueError('Frozen specification changed: '+name)
     manifest = {name:hashlib.sha256(value.encode()).hexdigest() for name,value in files.items()}
     nb = nbformat.v4.new_notebook()
-    nb.metadata = {'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},
-                   'language_info':{'name':'python'},'bdb_source_sha256':manifest}
-    md,code = nbformat.v4.new_markdown_cell,nbformat.v4.new_code_cell
-    nb.cells = [md('''# From Combine movement to NFL decisions: an evidence map
+    nb.metadata = {'kernelspec': {'display_name': 'Python 3', 'language': 'python', 'name': 'python3'},
+                   'language_info': {'name': 'python'}, 'bdb_source_sha256': manifest,
+                   'bdb_source_files': files, 'bdb_format_version': 2}
+    md = nbformat.v4.new_markdown_cell
 
-**Some movement transfers; added performance prediction remains uncertain.** This notebook
-rebuilds every submission figure and the nine-primary-comparison table from the nine competition
-CSVs. It includes the original source so no unpublished repository, cache, remote machine or
-credential is needed. Every development model is refitted and frozen before evaluation scoring.
+    def code(source, quiet=False):
+        tags = ['hide-input', 'remove_input'] + (['remove_output'] if quiet else [])
+        return nbformat.v4.new_code_cell(source, metadata={
+            'jupyter': {'source_hidden': True, 'outputs_hidden': quiet},
+            'hide_input': True, 'collapsed': True, 'tags': tags})
 
-2025 outcomes were used in earlier studies. The cohort split below is retrospective conditional
-validation, not a pristine holdout or a draft-time forecast. The route-family measurement gate
-failed; no TURN interaction is fitted. Selected favourable and adverse cone findings remain secondary.
+    nb.cells = [
+        md('''# Beyond the stopwatch
+### Combine movement to NFL decisions: an evidence map
 
-Code: MIT license (embedded in the source bundle). Data attribution: NFL / NFL Big Data Bowl 2027,
-competition data (CC BY-NC 4.0). The code license does not relicense competition data.
-Official source: https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/data .
-Local use: set `BDB_INPUT_ROOT` to the raw CSV folder. Each Run All creates a fresh output directory.'''),
-    code('''import os, sys, json, hashlib, tempfile, time, subprocess
+**NFL Big Data Bowl 2027 · University Track**
+
+Two prospects can post nearly identical 40-yard times and move differently through a route.
+Does that difference carry into NFL games—and does it improve performance prediction?
+
+We follow the evidence through three questions: **can we measure it, does it transfer,
+and does it add predictive value?** The answer supports a scouting conversation, with clear limits
+on what tracking can justify.'''),
+        code('''# Load the source stored with this notebook, then prepare a fresh run.
+import hashlib, json, os, sys, tempfile
 from pathlib import Path
-from importlib.metadata import version, PackageNotFoundError
-os.environ.update(OPENBLAS_NUM_THREADS='2', OMP_NUM_THREADS='2', POLARS_MAX_THREADS='2', MPLBACKEND='Agg')
-STARTED = time.monotonic()
-INPUT_NAMES = ['players.csv','combine_results.csv','combine_tracking.csv','games.csv',
-               'player_play.csv','player_career_successes.csv',
-               'game_tracking_2023.csv','game_tracking_2024.csv','game_tracking_2025.csv']
-input_base = Path(os.environ.get('BDB_INPUT_ROOT', '/kaggle/input'))
-inputs = {}
-for name in INPUT_NAMES:
-    matches = sorted(input_base.rglob(name))
-    if len(matches)!=1:
-        raise ValueError(f'Expected one {name} under {input_base}; found {len(matches)}')
-    inputs[name] = matches[0].resolve()
+
+os.environ.update(OPENBLAS_NUM_THREADS='2', OMP_NUM_THREADS='2',
+                  POLARS_MAX_THREADS='2', MPLBACKEND='Agg')
+candidates = [Path(os.environ.get('BDB_NOTEBOOK_PATH', 'submission.ipynb')),
+              Path('/kaggle/working/__notebook__.ipynb'),
+              Path('notebooks/submission.ipynb'), *Path.cwd().glob('*.ipynb')]
+for path in candidates:
+    if path.is_file():
+        metadata = json.loads(path.read_text()).get('metadata', {})
+        if 'bdb_source_files' in metadata:
+            break
+else:
+    raise FileNotFoundError('Open the complete notebook; its source metadata is required.')
+
 output_base = Path('/kaggle/working') if Path('/kaggle/working').exists() else Path(tempfile.gettempdir())
 run_root = Path(tempfile.mkdtemp(prefix='bdb_raw_rebuild_', dir=output_base))
-for directory in ['src','tests','reports/figures','data/raw','data/interim']:
+for directory in ['src', 'tests', 'reports/figures', 'data/raw', 'data/interim']:
     (run_root/directory).mkdir(parents=True, exist_ok=True)
-for name,path in inputs.items():
-    (run_root/'data/raw'/name).symlink_to(path)
-print('Fresh raw-input rebuild:', run_root)
-print('Input CSVs:', sorted(inputs))'''),
-    md('''## Source and environment
-
-The expandable source cell writes the frozen statistical modules and the bounded data pipeline
-into the fresh working directory. The reference JSON is used only for assertions **after** all
-fits and scores; it never supplies results or coefficients. CSV and source hashes are recorded.
-Kaggle installs the recorded package versions when needed (Internet must be enabled).'''),
-    code('SOURCE_FILES = json.loads('+repr(json.dumps(files))+')\n'
-         'SOURCE_HASHES = json.loads('+repr(json.dumps(manifest))+')\n'
-         '''for name,source in SOURCE_FILES.items():
-    if hashlib.sha256(source.encode()).hexdigest()!=SOURCE_HASHES[name]:
-        raise AssertionError('Embedded source integrity: '+name)
+for name, source in metadata['bdb_source_files'].items():
+    if hashlib.sha256(source.encode()).hexdigest() != metadata['bdb_source_sha256'][name]:
+        raise ValueError('Source integrity check failed: '+name)
     (run_root/name).write_text(source)
-runtime_packages = ['duckdb','polars','numpy','pandas','scipy','statsmodels','matplotlib']
-required = dict(line.split('==') for line in SOURCE_FILES['requirements.txt'].splitlines()
-                if line and not line.startswith('#'))
-mismatches = []
-for package in runtime_packages:
-    try:
-        installed = version(package)
-    except PackageNotFoundError:
-        installed = None
-    if installed!=required[package]:
-        mismatches.append(f'{package}=={required[package]}')
-if mismatches:
-    subprocess.run([sys.executable,'-m','pip','install','--quiet',*mismatches],check=True)
-print({p:version(p) for p in runtime_packages})
-sys.path.insert(0,str(run_root))
-from src.submission_pipeline import run_stage
-def run(module,*arguments):
-    run_stage(run_root,'src.'+module,arguments)
-'''),
-    md('''## Raw data → movement measurements
+sys.path.insert(0, str(run_root))
+from src.notebook_runtime import prepare, rebuild, overview, figure, evaluation_table, evidence_notes, appendix, finish
+prepare(run_root)''', quiet=True),
+        code('''# Rebuild from the nine competition CSVs; detailed logs are saved in reports/.
+rebuild()''', quiet=True),
+        code('overview()'),
+        md('''## 01 · What the stopwatch misses
 
-Positions are smoothed at 10 Hz; signed acceleration is decomposed into longitudinal and lateral
-components. TURN uses attempt 90th-percentile absolute lateral acceleration; BURST uses peak
-longitudinal acceleration. Non-40 attempt means are standardised within drill, then averaged
-within athlete. Prediction drill references use 2023–24 athletes only. A0 comes from the existing
-40-yard speed-curve fit. Game traits use complete tracks for smoothing and a snap-to-three-second
-window. Whole-game batches reduce memory without cutting any player track.'''),
-    code("run('submission_pipeline','--convert')\nrun('combine_features')\nrun('sprint')"),
-    code("run('game_features')\nrun('audit_data')\nrun('join_audit')"),
-    md('''## Measurement and transfer
+The 40-yard dash captures straight-line speed. Route tracking adds the shape of movement:
+how a player turns, accelerates and builds speed. Here, two development receivers have observed
+40 times within **0.03 seconds**, but different turning profiles.'''),
+        code("figure('combine_route_trace')"),
+        md('''*Figure 1. Actual Combine route traces. The pair was chosen using Combine exposure only:
+largest training-reference TURN difference among development WRs with comparable observed 40 times,
+with deterministic athlete-ID ties. NFL outcomes played no part in selection.*
 
-Cross-drill consistency is distinct from same-route test–retest. Movement transfer is descriptive
-across available seasons, using PRE + REG and excluding POST; it is not performance prediction.
-The frozen SLANT/OUT-minus-GO contrast screen uses 2023–24 rookie REG outcomes only. If it fails,
-the primary TURN interaction remains stopped.'''),
-    code("run('reliability')\nrun('route_context')\nrun('transfer_audit')\nrun('validation')"),
-    md('''## Development freeze → cohort evaluation → cone sensitivity
+**TURN** summarises lateral acceleration through a drill. **BURST** summarises peak forward
+acceleration. **A0** describes the early acceleration of the fitted 40-yard speed curve.
+Positions are smoothed at 10 Hz; acceleration is decomposed into signed longitudinal and lateral
+components. Standardisation for prediction uses 2023–24 athletes only.
 
-All 25 prescribed baseline/augmented pairs are refitted before any evaluation score is calculated:
-nine primary, seven original secondary, nine cone-subset comparisons. Primary outcomes are rookie
-REG on 2025 athletes, with 2023–24 training-only preprocessing. Predictions use fixed components,
-never evaluation-player intercepts, and each athlete receives equal weight in RMSE. Baseline and
-tracking models score identical rows. Paired athlete-bootstrap intervals condition on trained
-models and omit training-fit uncertainty. The latest trained calendar intercept is assumed to persist.
+These are descriptions of movement. A more distinctive trace alone does not establish a better player.'''),
+        md('''## 02 · The sample behind the claim
 
-Binary outcomes use the disclosed player-clustered linear-probability fallback without clipping.
-Historical associations use all available REG seasons and are reported separately from cohort
-prediction. Cone checks compare identical rows and never invent missing cone times. The original
-historical WR BURST + cone fit used a Powell retry; raw rebuilding replays that recorded solver
-choice because unordered joins can alter the default retry path. No model, sample or prediction
-solver is changed, and no cached coefficients are used.'''),
-    code("run('evaluate','--stage','develop')"),
-    code("run('evaluate','--stage','evaluate')\nrun('submission_replay')"),
-    md('''## Verify every headline and athlete score
+The supplied tracking covers **510 rookie-cohort players**. Availability narrows as we require
+a usable drill, an NFL outcome and enough repeated observations. Each comparison therefore
+reports its own athlete count.'''),
+        code("figure('evidence_support')"),
+        md('''*Figure 2. Athlete support across the evidence chain. Primary cohort evaluation uses
+20–37 athletes per comparison; cone subsets are smaller.*
 
-Recompute the 25 equal-athlete scores, verify disjoint training/evaluation players, frozen hashes,
-context-adjustment identities and agreement with the reviewed results. Tolerances account for
-floating-point/optimizer reproduction; they do not define football utility or change model choices.'''),
-    code("run('submission_verify')\nsubprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-v'],cwd=run_root,check=True)"),
-    code("run('audit_figures')\nrun('evaluation_figures')\nrun('submission_figures')"),
-    md('''## Six figures and one evaluation table
+The game coordinates contain the tracked rookies, without teammates, opponents or the ball.
+We use provider-supplied performance outcomes rather than reconstructing opponent geometry.
+Movement transfer uses PRE + REG and excludes POST; performance prediction uses rookie REG only.'''),
+        md('''## 03 · Movement carries into games
 
-The hero pair is selected using Combine exposure only: development WRs within 0.03 seconds
-in their observed 40, largest training-reference TURN difference, deterministic athlete-ID ties.
-It illustrates measurement and carries no NFL-success ranking claim.'''),
-    code('''from IPython.display import Image, display, Markdown
-import pandas as pd
-FIGURES = ['combine_route_trace','evidence_support','transfer_audited',
-           'study3_measurement','cohort_prediction','scout_evidence_card']
-for index,name in enumerate(FIGURES,1):
-    display(Markdown(f'**Figure {index}**'))
-    display(Image(filename=str(run_root/'reports/figures'/(name+'.png'))))
-table = pd.read_csv(run_root/'reports/evaluation_table.csv')
-display(table[['comparison','units','evaluation_players','baseline_RMSE','tracking_RMSE',
-               'improvement_95_lo','improvement_95_hi']].round(5))'''),
-    md('''## Complete record and decision
+Some Combine movement differences reappear in NFL tracking. Receiver TURN correlates with game
+turning at **0.279 [0.107, 0.445]** across 98 athletes. Defensive-line BURST correlates with
+game burst at **0.443 [0.289, 0.584]** across 115 athletes; after weight adjustment, the estimate
+is **0.203 [0.044, 0.376]**.'''),
+        code("figure('transfer_audited')"),
+        md('''*Figure 3. Descriptive movement transfer, with athlete-bootstrap intervals and refitted
+adjustment. These pooled PRE + REG estimates are separate from held-out performance prediction.*
 
-The evidence map supports describing repeatable movement and modest transfer while withholding
-automatic draft upgrades. Nine primary marginal intervals do not support a prediction gain;
-all original-family simultaneous intervals include zero. Uncertainty is not equivalence.
-The route-family contrast failed the original measurement threshold before the interaction fit.
+Development WR cross-drill TURN consistency is **0.593 [0.373, 0.737]**, based on 70 receivers.
+Cross-drill consistency supports measuring a trait, but does not by itself establish repeatability
+of a particular route-performance outcome.'''),
+        md('''## 04 · A measurement gate worth respecting
 
-The full cone record retains the positive nine-athlete DL A0 cohort finding and the positive
-historical DL TURN/pressure coefficient, as well as uncertain/adverse findings. These selected
-subsets do not establish universal performance rankings. Rebuilt reports below include all tests,
-sample attrition, context mappings, fit warnings and preprocessing metadata.
+Before testing whether TURN predicts a route-specific performance advantage, we required a
+stable SLANT/OUT-minus-GO contrast. The adjusted reliability was **0.296 [−0.257, 0.606]**
+among 41 diagnostic receivers, below the predeclared **0.40** threshold.'''),
+        code("figure('study3_measurement')"),
+        md('''*Figure 4. The frozen measurement screen failed. The primary TURN interaction and its
+2025 performance evaluation remain stopped.*
 
-Limitations: prior 2025 exposure; small evaluation samples; training uncertainty omitted; selection
-into NFL playing time and cone testing; observational context; incomplete opponent/ball tracking.
-Player-only coordinates cannot reconstruct opponent geometry. Separation is the supplied
-pass-forward-event field, not a break-specific causal effect. Practice/film review is a proposed use.'''),
-    code('''for name in ['reliability','transfer_audit','model_audit','study3_measurement','validation','cone_sensitivity']:
-    display(Markdown((run_root/'reports'/(name+'.md')).read_text()))
-stages = json.loads((run_root/'reports/rebuild_stages.json').read_text())
-summary = {'source':'nine raw competition CSVs','cohort_pipeline_rebuilt_in_notebook':True,
-           'all_headlines_verified':True,'figures':6,'tables':1,
-           'elapsed_seconds':round(time.monotonic()-STARTED,2),
-           'largest_stage_sampled_RSS_MiB':max(s['sampled_peak_RSS_MiB'] for s in stages),
-           'versions':{p:version(p) for p in runtime_packages},'output_root':str(run_root)}
-(run_root/'reports/full_notebook_execution.json').write_text(json.dumps(summary,indent=2)+'\\n')
-print(json.dumps(summary,indent=2))
-# Public outputs contain summaries and figures, not redistributed source/row-level data.
-if Path('/kaggle/working').exists():
-    import shutil
-    shutil.rmtree(run_root/'data')
-    print('Removed input links and intermediate row-level data from Kaggle outputs.')''')]
+The data do not support turning this contrast into a talent score. Eligibility and route groups
+were kept fixed after the result.'''),
+        md('''## 05 · Does tracking improve performance prediction?
+
+We trained conventional baselines on 2023–24 athletes and compared them with the same models
+plus tracking on 2025 athletes. Both models score identical rows; each athlete contributes equal
+weight to RMSE. Evaluation-player intercepts are never fitted.
+
+**None of the nine primary marginal intervals supports an RMSE gain.** Every original-family
+simultaneous interval includes zero. This is uncertainty about added value, not evidence of equivalence.'''),
+        code("figure('cohort_prediction')"),
+        md('''*Figure 5. All nine primary tracking additions, with athlete-bootstrap uncertainty.
+Positive RMSE gain means better prediction. Intervals condition on the training fits.*'''),
+        code('evaluation_table()'),
+        md('''*Table 1. Equal-athlete RMSE in the original outcome units. Gain is baseline minus
+tracking RMSE; the 95% intervals omit training-fit uncertainty.*
+
+For WR TURN, the baseline RMSE is **0.23572 yd** and tracking RMSE is **0.23577 yd**
+on 23 evaluation athletes. A secondary DL A0 comparison with observed cone times improves by
+**0.00755 s [0.00443, 0.01080]**, but includes only **nine athletes**. The full appendix retains
+this result, the positive historical DL TURN/pressure association, and uncertain/adverse subset findings.
+Missing cone times are never imputed.
+
+**Validation context:** earlier studies already used 2025 outcomes. This is a retrospective cohort
+split, not a pristine holdout or a draft-time forecast. All 25 prescribed model pairs are refitted
+before evaluation scoring, using training-only preprocessing. Binary outcomes use the disclosed
+player-clustered linear-probability fallback without clipping.'''),
+        md('''## 06 · A scout’s evidence card
+
+Use tracking to make a specific film question: where does a player turn efficiently, build speed,
+or lose momentum? Carry that question into game review. The evidence is stronger for describing
+movement than for assigning an automatic draft upgrade.'''),
+        code("figure('scout_evidence_card')"),
+        md('''*Figure 6. A practical evidence map separating measurement, movement transfer and added
+performance prediction. Film/practice review is a proposed use, not a validated intervention.*
+
+The limits matter: small evaluation samples, prior 2025 exposure, omitted training uncertainty,
+selection into NFL playing time and cone testing, observational context, and incomplete opponent
+tracking. Supplied separation is measured at the pass-forward event, not a break-specific causal effect.'''),
+        md('''---
+## Reproduction and complete record
+
+**Run All** rebuilds the six figures and table from all nine competition CSVs in a fresh directory.
+On Kaggle, attach the competition data and enable Internet for the recorded dependencies.
+Locally, set `BDB_INPUT_ROOT` to the raw CSV folder and `BDB_NOTEBOOK_PATH` to this notebook.
+No private repository or fitted-coefficient cache is required.
+
+The ordinary source files and their SHA-256 manifest are stored in notebook metadata, keeping
+the setup cell readable. Detailed logs, fit warnings, sample attrition and full reports are saved
+under the run’s `reports/` directory. The assertion references are checked only after refitting.
+Recorded historical W1/W2 + cone retries are reproduced; W1 uses a stable row order to keep
+numerical joins from changing its recorded BFGS → L-BFGS path.'''),
+        code('evidence_notes()'),
+        code('appendix()'),
+        md('''**Attribution:** NFL / NFL Big Data Bowl 2027, competition data under CC BY-NC 4.0.
+Prepared code: MIT, with the license included in the source metadata.
+[Official competition data](https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/data).'''),
+        code('finish()', quiet=True),
+    ]
     nbformat.write(nb,ROOT/'notebooks/submission.ipynb')
     metadata = {'id':'oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map',
                 'title':'Combine Movement to NFL Decisions: An Evidence Map',

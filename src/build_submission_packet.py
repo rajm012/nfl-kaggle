@@ -13,6 +13,32 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def notebook_preview(source, target):
+    """Export the saved notebook as a standalone reading preview with code hidden."""
+    import nbformat
+    from nbconvert import HTMLExporter
+    notebook = nbformat.read(source, as_version=4)
+    exporter = HTMLExporter(template_name='basic')
+    exporter.exclude_input = True
+    exporter.exclude_input_prompt = True
+    exporter.exclude_output_prompt = True
+    content, _ = exporter.from_notebook_node(notebook)
+    style = '''body{max-width:1040px;margin:48px auto;padding:0 26px;color:#253747;background:white;
+        font:17px/1.7 system-ui,sans-serif}h1{font-size:42px;line-height:1.15;margin-bottom:12px}
+        h2{font-size:27px;line-height:1.3;margin-top:42px}h3{font-size:20px;color:#527184}
+        p{margin:14px 0}a{color:#0072b2}img{max-width:100%;height:auto}
+        .prompt{display:none}.output_subarea{padding:0;margin:18px 0}.anchor-link{display:none}
+        pre{padding:16px;background:#f4f7fa;overflow-x:auto;font-size:12px;line-height:1.5}
+        table{border-collapse:collapse;font-size:13px}td,th{padding:8px;border-bottom:1px solid #dce4eb}
+        details{margin:10px 0}summary{cursor:pointer}hr{border:0;border-top:1px solid #dce4eb;margin-top:40px}
+        @media(max-width:640px){body{margin:24px auto;padding:0 16px;font-size:15px}h1{font-size:32px}}'''
+    target = Path(target)
+    target.write_text('<!doctype html><html lang="en"><meta charset="utf-8">'
+                      '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                      '<title>Beyond the stopwatch — notebook preview</title><style>'+style+
+                      '</style><body>'+content+'</body></html>')
+
+
 def word_count(text):
     # Count captions, headings and table cells. Include image alt text conservatively.
     text = re.sub(r'\[([^\]]+)\]\([^)]*\)',r'\1',text)
@@ -59,7 +85,9 @@ def main():
     preview = '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">'
     preview += '<title>Combine movement evidence map</title><style>'+style+'</style><body>'+html+'</body></html>'
     (target.parent/'preview.html').write_text(preview)
+    notebook_preview(ROOT/'notebooks/submission.ipynb', target.parent/'notebook_preview.html')
     paths = [target,ROOT/'notebooks/submission.ipynb',ROOT/'notebooks/kernel-metadata.json']
+    paths += [target.parent/'notebook_preview.html']
     paths += [(target.parent/p).resolve() for p in figures]
     platform_path = ROOT/'reports/kaggle_execution.json'
     platform = json.loads(platform_path.read_text()) if platform_path.exists() else {}
@@ -68,6 +96,7 @@ def main():
               'figures':len(figures),'tables':1,'combined_visuals':7,
               'assets':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
               'local_preview':'writeup/preview.html',
+              'notebook_reading_preview':'writeup/notebook_preview.html',
               'public_notebook_verified':platform.get('public_access_verified',False),
               'notebook_url':platform.get('notebook_url'),
               'final_submission_complete':False}

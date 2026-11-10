@@ -34,7 +34,7 @@ All unchecked items are pending. This file records evidence of completion, not a
 ## Publication and submission
 - [x] Official rules, University eligibility requirements, award allocation and citations rechecked (`official_sources.md`, `official_tracks.json`; owner personal/track confirmation separate).
 - [x] Publication authorized by request to complete remaining steps; owner confirmed `oppenheimer6th`. Concrete local and Kaggle artifact tested before publication.
-- [x] Notebook published; Kaggle API confirms public status and saved outputs by Dec 14 (`kaggle_execution.json`; public version 3, full execution version 1).
+- [x] Redesigned notebook republished and public source/saved outputs verified (`kaggle_execution.json`; notebook 144208320, public version 4, full raw execution version 3). Ten clean report outputs and six figures; longest code cell 1,502 characters. Owner deleted the earlier oversized-source version; historical proof is archived.
 - [ ] Owner confirms public notebook browser access/rendering (direct anonymous HTTP returned 404 from this workspace despite API public flag).
 - [ ] Writeup embeds render correctly and notebook attachment works.
 - [ ] Owner completes required terms/UI actions and submits by Dec 28.
