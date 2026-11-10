@@ -1,0 +1,903 @@
+{
+  "generated_utc": "2026-11-09T14:42:04.246277+00:00",
+  "models": [
+    {
+      "id": "W1",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "WR",
+      "outcome": "separation_at_pass_forward",
+      "coefficient": "lat_z",
+      "candidate_plays": 31035,
+      "fitted_plays": 31035,
+      "dropped_missing_plays": 0,
+      "players": 83,
+      "design_rank": 39,
+      "dropped_redundant_columns": [],
+      "beta": -0.014988211868383757,
+      "lo": -0.0500125245083488,
+      "hi": 0.020036100771581293,
+      "se": 0.01786987562844642,
+      "p_two": 0.4016142095788272,
+      "p_dir_historical": 0.7991928952105865,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.07720380037351432,
+          "lo": -0.13484508844232695,
+          "hi": -0.019562512304701678
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.03431512974572536,
+          "lo": -0.0920430930129614,
+          "hi": 0.023412833521510683
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.010037677045383912,
+          "lo": -0.037869769579504796,
+          "hi": 0.05794512367027262
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.01844028522654798,
+          "lo": -0.06131923506345022,
+          "hi": 0.024438664610354256
+        }
+      ],
+      "seconds": 1.16,
+      "formula": "separation_at_pass_forward ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion",
+      "p_two_holm": 1.0
+    },
+    {
+      "id": "W2",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "WR",
+      "outcome": "separation_at_pass_forward",
+      "coefficient": "burst_z",
+      "candidate_plays": 31035,
+      "fitted_plays": 31035,
+      "dropped_missing_plays": 0,
+      "players": 83,
+      "design_rank": 39,
+      "dropped_redundant_columns": [],
+      "beta": 0.0008084376086858525,
+      "lo": -0.035806457134363354,
+      "hi": 0.03742333235173506,
+      "se": 0.018681412021783476,
+      "p_two": 0.9654823408462408,
+      "p_dir_historical": 0.4827411704231204,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.07947953204267577,
+          "lo": -0.1372179620357381,
+          "hi": -0.02174110204961343
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.03193576823578819,
+          "lo": -0.0896691182653563,
+          "hi": 0.025797581793779917
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.00972784634315091,
+          "lo": -0.03879279798845667,
+          "hi": 0.058248490674758485
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.019047253120947027,
+          "lo": -0.06234497774044681,
+          "hi": 0.02425047149855276
+        }
+      ],
+      "seconds": 1.05,
+      "formula": "separation_at_pass_forward ~ burst_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion",
+      "p_two_holm": 1.0
+    },
+    {
+      "id": "O1",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "OL",
+      "outcome": "pressure_allowed_i",
+      "coefficient": "lat_z",
+      "candidate_plays": 48697,
+      "fitted_plays": 48697,
+      "dropped_missing_plays": 0,
+      "players": 89,
+      "design_rank": 16,
+      "dropped_redundant_columns": [],
+      "beta": 0.0013710045103463282,
+      "lo": -0.0047446958156204125,
+      "hi": 0.0074867048363130686,
+      "se": 0.003120312604826724,
+      "p_two": 0.6603858540605677,
+      "p_dir_historical": 0.6698070729697161,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.001883067276425324,
+          "lo": -0.004258452192276584,
+          "hi": 0.008024586745127231
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.005147772008065696,
+          "lo": -0.0015492033616508263,
+          "hi": 0.011844747377782218
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.01381906135179272,
+          "lo": 0.004880970083653055,
+          "hi": 0.022757152619932386
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.0040920871035493465,
+          "lo": -0.01064691359169864,
+          "hi": 0.0024627393845999476
+        }
+      ],
+      "seconds": 0.59,
+      "formula": "pressure_allowed_i ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered",
+      "p_two_holm": 1.0
+    },
+    {
+      "id": "O1",
+      "study": 1,
+      "model": "original specification",
+      "method": "player-clustered LPM sensitivity",
+      "position": "OL",
+      "outcome": "pressure_allowed_i",
+      "coefficient": "lat_z",
+      "candidate_plays": 48697,
+      "fitted_plays": 48697,
+      "dropped_missing_plays": 0,
+      "players": 89,
+      "design_rank": 16,
+      "dropped_redundant_columns": [],
+      "beta": 0.0028687128699196544,
+      "lo": -0.003648872057260307,
+      "hi": 0.009386297797099616,
+      "se": 0.0032796347641684694,
+      "p_two": 0.38411549611829143,
+      "p_dir_historical": 0.8079422519408543,
+      "cluster_t_df": 88,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.001451669339654249,
+          "lo": -0.002970024430935295,
+          "hi": 0.005873363110243794
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.004589488123323768,
+          "lo": -0.001952832036025147,
+          "hi": 0.011131808282672684
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.006949756047616255,
+          "lo": -0.001924465905182803,
+          "hi": 0.015823978000415313
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.0033616597778783493,
+          "lo": -0.008404319262946972,
+          "hi": 0.0016809997071902728
+        }
+      ],
+      "seconds": 0.24,
+      "formula": "pressure_allowed_i ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered",
+      "p_two_holm": 0.7682309922365829
+    },
+    {
+      "id": "O2",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "OL",
+      "outcome": "pressure_allowed_i",
+      "coefficient": "burst_z",
+      "candidate_plays": 48697,
+      "fitted_plays": 48697,
+      "dropped_missing_plays": 0,
+      "players": 89,
+      "design_rank": 16,
+      "dropped_redundant_columns": [],
+      "beta": -0.003119927319612807,
+      "lo": -0.009571283253502864,
+      "hi": 0.003331428614277251,
+      "se": 0.0032915686128814257,
+      "p_two": 0.34320365503142825,
+      "p_dir_historical": 0.17160182751571412,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.0015327540330083392,
+          "lo": -0.004555669878644622,
+          "hi": 0.0076211779446613
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.004800746082660069,
+          "lo": -0.0018816955046613293,
+          "hi": 0.011483187669981467
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.01458131878678613,
+          "lo": 0.005642777598384996,
+          "hi": 0.023519859975187265
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.005096362390533699,
+          "lo": -0.011288344885215539,
+          "hi": 0.0010956201041481392
+        }
+      ],
+      "seconds": 0.62,
+      "formula": "pressure_allowed_i ~ burst_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered",
+      "p_two_holm": 1.0
+    },
+    {
+      "id": "O2",
+      "study": 1,
+      "model": "original specification",
+      "method": "player-clustered LPM sensitivity",
+      "position": "OL",
+      "outcome": "pressure_allowed_i",
+      "coefficient": "burst_z",
+      "candidate_plays": 48697,
+      "fitted_plays": 48697,
+      "dropped_missing_plays": 0,
+      "players": 89,
+      "design_rank": 16,
+      "dropped_redundant_columns": [],
+      "beta": -0.0025863759082278503,
+      "lo": -0.00858190143023217,
+      "hi": 0.0034091496137764695,
+      "se": 0.003016935590578112,
+      "p_two": 0.39361568068147645,
+      "p_dir_historical": 0.19680784034073823,
+      "cluster_t_df": 88,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.000744989430310098,
+          "lo": -0.003684918192829888,
+          "hi": 0.005174897053450084
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.004634240103307278,
+          "lo": -0.002231697026148197,
+          "hi": 0.011500177232762754
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.007878378518130263,
+          "lo": -0.001081003257511549,
+          "hi": 0.016837760293772076
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.005139058459243795,
+          "lo": -0.009765596715351238,
+          "hi": -0.000512520203136353
+        }
+      ],
+      "seconds": 0.25,
+      "formula": "pressure_allowed_i ~ burst_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered",
+      "p_two_holm": 0.7682309922365829
+    },
+    {
+      "id": "D1",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "DL",
+      "outcome": "player_get_off",
+      "coefficient": "burst_z",
+      "candidate_plays": 33417,
+      "fitted_plays": 33417,
+      "dropped_missing_plays": 0,
+      "players": 98,
+      "design_rank": 18,
+      "dropped_redundant_columns": [],
+      "beta": 0.0023664678537135405,
+      "lo": -0.013809531624685015,
+      "hi": 0.018542467332112098,
+      "se": 0.008253212613085127,
+      "p_two": 0.7743168195278357,
+      "p_dir_historical": 0.6128415902360822,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.0497698306259769,
+          "lo": 0.02719526924139658,
+          "hi": 0.07234439201055723
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.0019198238596653803,
+          "lo": -0.010919506662839045,
+          "hi": 0.014759154382169805
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.01416975166871707,
+          "lo": -0.004270378616413396,
+          "hi": 0.032609881953847536
+        },
+        {
+          "feature": "forty_z",
+          "beta": 0.007122252121408231,
+          "lo": -0.013536481501883347,
+          "hi": 0.027780985744699806
+        }
+      ],
+      "seconds": 0.85,
+      "formula": "player_get_off ~ burst_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)",
+      "p_two_holm": 1.0
+    },
+    {
+      "id": "D2",
+      "study": 1,
+      "model": "original specification",
+      "method": "LMM",
+      "position": "DL",
+      "outcome": "pressure_i",
+      "coefficient": "lat_z",
+      "candidate_plays": 28970,
+      "fitted_plays": 28970,
+      "dropped_missing_plays": 0,
+      "players": 98,
+      "design_rank": 20,
+      "dropped_redundant_columns": [],
+      "beta": 0.005491044522092629,
+      "lo": -0.0006146518018678169,
+      "hi": 0.011596740846053076,
+      "se": 0.003115208428380011,
+      "p_two": 0.07795832583868777,
+      "p_dir_historical": 0.038979162919343883,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.005001535401701849,
+          "lo": -0.014384046998979931,
+          "hi": 0.004380976195576231
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.0038441709440738435,
+          "lo": -0.009368821993689835,
+          "hi": 0.0016804801055421486
+        },
+        {
+          "feature": "pick_z",
+          "beta": -0.015597241910037642,
+          "lo": -0.023075078768304412,
+          "hi": -0.008119405051770872
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.007077161344331479,
+          "lo": -0.015325898202431524,
+          "hi": 0.0011715755137685644
+        }
+      ],
+      "seconds": 0.64,
+      "formula": "pressure_i ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)",
+      "p_two_holm": 0.4677499550321266
+    },
+    {
+      "id": "D2",
+      "study": 1,
+      "model": "original specification",
+      "method": "player-clustered LPM sensitivity",
+      "position": "DL",
+      "outcome": "pressure_i",
+      "coefficient": "lat_z",
+      "candidate_plays": 28970,
+      "fitted_plays": 28970,
+      "dropped_missing_plays": 0,
+      "players": 98,
+      "design_rank": 20,
+      "dropped_redundant_columns": [],
+      "beta": 0.004202139665583942,
+      "lo": -0.0006729339587339981,
+      "hi": 0.009077213289901881,
+      "se": 0.0024562990237992767,
+      "p_two": 0.09032171063563878,
+      "p_dir_historical": 0.04516085531781939,
+      "cluster_t_df": 97,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.00421220767960701,
+          "lo": -0.013554482082845737,
+          "hi": 0.005130066723631716
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.004263615437279566,
+          "lo": -0.009684217546571363,
+          "hi": 0.001156986672012232
+        },
+        {
+          "feature": "pick_z",
+          "beta": -0.018006325312639952,
+          "lo": -0.025957284509020143,
+          "hi": -0.01005536611625976
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.008360575212861486,
+          "lo": -0.014610638550820877,
+          "hi": -0.002110511874902095
+        }
+      ],
+      "seconds": 0.25,
+      "formula": "pressure_i ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)",
+      "p_two_holm": 0.27096513190691635
+    },
+    {
+      "id": "F1",
+      "study": 2,
+      "model": "confirmatory, player SDs",
+      "method": "LMM",
+      "position": "DL",
+      "outcome": "player_get_off",
+      "coefficient": "A0_z",
+      "candidate_plays": 25799,
+      "fitted_plays": 25799,
+      "dropped_missing_plays": 0,
+      "players": 77,
+      "design_rank": 18,
+      "dropped_redundant_columns": [
+        "forty_missing",
+        "ten_missing"
+      ],
+      "beta": -0.0011869500343774002,
+      "lo": -0.018997729048856216,
+      "hi": 0.016623828980101417,
+      "se": 0.009087299131498318,
+      "p_two": 0.8960787915280763,
+      "p_dir_historical": 0.4480393957640382,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.0436429808024109,
+          "lo": 0.00889292097101619,
+          "hi": 0.07839304063380562
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.0030373203135344385,
+          "lo": -0.012914989794360014,
+          "hi": 0.01898963042142889
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.019068993439250892,
+          "lo": -0.004728938336564802,
+          "hi": 0.04286692521506659
+        },
+        {
+          "feature": "forty_z",
+          "beta": 0.0004323270608178265,
+          "lo": -0.04419604086068406,
+          "hi": 0.04506069498231971
+        }
+      ],
+      "seconds": 0.67,
+      "formula": "player_get_off ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position) + ten_f_z + ten_missing",
+      "p_two_holm": 0.8960787915280763
+    },
+    {
+      "id": "F1",
+      "study": 2,
+      "model": "secondary, player SDs",
+      "method": "LMM",
+      "position": "DL",
+      "outcome": "player_get_off",
+      "coefficient": "A0_z",
+      "candidate_plays": 25799,
+      "fitted_plays": 25799,
+      "dropped_missing_plays": 0,
+      "players": 77,
+      "design_rank": 17,
+      "dropped_redundant_columns": [
+        "forty_missing"
+      ],
+      "beta": -0.0015356335105611908,
+      "lo": -0.01918630757097044,
+      "hi": 0.016115040549848057,
+      "se": 0.009005611429411722,
+      "p_two": 0.8646014995228793,
+      "p_dir_historical": 0.4323007497614397,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.04561672962672946,
+          "lo": 0.012130387865796545,
+          "hi": 0.07910307138766237
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.003694482581523484,
+          "lo": -0.011909499967823053,
+          "hi": 0.01929846513087002
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.01912259880334627,
+          "lo": -0.004540859991383754,
+          "hi": 0.04278605759807629
+        },
+        {
+          "feature": "forty_z",
+          "beta": 0.008175932269732218,
+          "lo": -0.022195964327800556,
+          "hi": 0.03854782886726499
+        }
+      ],
+      "seconds": 0.46,
+      "formula": "player_get_off ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)"
+    },
+    {
+      "id": "F2",
+      "study": 2,
+      "model": "confirmatory, player SDs",
+      "method": "LMM",
+      "position": "OL",
+      "outcome": "peak_pressure_probability_allowed",
+      "coefficient": "A0_z",
+      "candidate_plays": 37216,
+      "fitted_plays": 37216,
+      "dropped_missing_plays": 0,
+      "players": 73,
+      "design_rank": 16,
+      "dropped_redundant_columns": [
+        "forty_missing",
+        "ten_missing"
+      ],
+      "beta": -0.004197421621344385,
+      "lo": -0.011487122062165164,
+      "hi": 0.003092278819476396,
+      "se": 0.003719303261856344,
+      "p_two": 0.25908749472478154,
+      "p_dir_historical": 0.12954374736239077,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.0040898347273836235,
+          "lo": -0.005074338219679648,
+          "hi": 0.013254007674446896
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.012078441439889369,
+          "lo": 0.002637862140408391,
+          "hi": 0.021519020739370346
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.007310575094632924,
+          "lo": -0.004957302007605723,
+          "hi": 0.01957845219687157
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.005522068098286024,
+          "lo": -0.018806946852123477,
+          "hi": 0.00776281065555143
+        }
+      ],
+      "seconds": 0.9,
+      "formula": "peak_pressure_probability_allowed ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered + ten_f_z + ten_missing",
+      "p_two_holm": 0.7772624841743446
+    },
+    {
+      "id": "F2",
+      "study": 2,
+      "model": "secondary, player SDs",
+      "method": "LMM",
+      "position": "OL",
+      "outcome": "peak_pressure_probability_allowed",
+      "coefficient": "A0_z",
+      "candidate_plays": 37216,
+      "fitted_plays": 37216,
+      "dropped_missing_plays": 0,
+      "players": 73,
+      "design_rank": 15,
+      "dropped_redundant_columns": [
+        "forty_missing"
+      ],
+      "beta": -0.003993464460231708,
+      "lo": -0.01071798034504631,
+      "hi": 0.0027310514245828922,
+      "se": 0.0034309384957360053,
+      "p_two": 0.24444148759206152,
+      "p_dir_historical": 0.12222074379603076,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [
+        "The MLE may be on the boundary of the parameter space."
+      ],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": 0.003836753322097126,
+          "lo": -0.0046129333255195215,
+          "hi": 0.012286439969713774
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": 0.012223482221090123,
+          "lo": 0.0030874930301446665,
+          "hi": 0.021359471412035577
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.00745741651240237,
+          "lo": -0.0044871867044559595,
+          "hi": 0.0194020197292607
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.006319595192568095,
+          "lo": -0.014277235614836802,
+          "hi": 0.001638045229700613
+        }
+      ],
+      "seconds": 0.64,
+      "formula": "peak_pressure_probability_allowed ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + dropback_duration + pass_rushers_encountered"
+    },
+    {
+      "id": "F3",
+      "study": 2,
+      "model": "confirmatory, player SDs",
+      "method": "LMM",
+      "position": "WR",
+      "outcome": "separation_at_pass_forward",
+      "coefficient": "A0_z",
+      "candidate_plays": 26624,
+      "fitted_plays": 26624,
+      "dropped_missing_plays": 0,
+      "players": 73,
+      "design_rank": 39,
+      "dropped_redundant_columns": [
+        "forty_missing",
+        "ten_missing"
+      ],
+      "beta": -0.020292516006302087,
+      "lo": -0.058899431865253656,
+      "hi": 0.01831439985264948,
+      "se": 0.019697768001594926,
+      "p_two": 0.30291909828175,
+      "p_dir_historical": 0.848540450859125,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.0834445847575243,
+          "lo": -0.14022496382816593,
+          "hi": -0.02666420568688265
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.021345264006754214,
+          "lo": -0.08033055297397022,
+          "hi": 0.03764002496046179
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.02150889066935757,
+          "lo": -0.028474011919162556,
+          "hi": 0.07149179325787769
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.01412114682156123,
+          "lo": -0.05792043844241421,
+          "hi": 0.029678144799291747
+        }
+      ],
+      "seconds": 0.9,
+      "formula": "separation_at_pass_forward ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion + ten_f_z + ten_missing",
+      "p_two_holm": 0.7772624841743446
+    },
+    {
+      "id": "F3",
+      "study": 2,
+      "model": "secondary, player SDs",
+      "method": "LMM",
+      "position": "WR",
+      "outcome": "separation_at_pass_forward",
+      "coefficient": "A0_z",
+      "candidate_plays": 26624,
+      "fitted_plays": 26624,
+      "dropped_missing_plays": 0,
+      "players": 73,
+      "design_rank": 38,
+      "dropped_redundant_columns": [
+        "forty_missing"
+      ],
+      "beta": -0.021228854010470196,
+      "lo": -0.060595490808054264,
+      "hi": 0.018137782787113876,
+      "se": 0.02008538784799266,
+      "p_two": 0.29054342129649213,
+      "p_dir_historical": 0.8547282893517539,
+      "cluster_t_df": null,
+      "converged": true,
+      "warnings": [],
+      "controls": [
+        {
+          "feature": "combine_weight_z",
+          "beta": -0.07715975703387583,
+          "lo": -0.13451438362434176,
+          "hi": -0.019805130443409896
+        },
+        {
+          "feature": "combine_height_z",
+          "beta": -0.02982692414606696,
+          "lo": -0.08896286828110798,
+          "hi": 0.029309019988974064
+        },
+        {
+          "feature": "pick_z",
+          "beta": 0.01738737575037031,
+          "lo": -0.03333982883249845,
+          "hi": 0.06811458033323907
+        },
+        {
+          "feature": "forty_z",
+          "beta": -0.023738686309448562,
+          "lo": -0.06668847815307206,
+          "hi": 0.019211105534174943
+        }
+      ],
+      "seconds": 0.8,
+      "formula": "separation_at_pass_forward ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion"
+    }
+  ],
+  "study2_player_scalers": [
+    {
+      "position": "DB",
+      "feature": "A0",
+      "mean": 8.876678718078324,
+      "std": 1.0258024693619203,
+      "count": 102.0
+    },
+    {
+      "position": "DL",
+      "feature": "A0",
+      "mean": 8.280165188264013,
+      "std": 0.863850336646717,
+      "count": 93.0
+    },
+    {
+      "position": "OL",
+      "feature": "A0",
+      "mean": 7.746632381877193,
+      "std": 1.5566674425596212,
+      "count": 95.0
+    },
+    {
+      "position": "TE",
+      "feature": "A0",
+      "mean": 8.420716307587853,
+      "std": 0.6219512837934275,
+      "count": 34.0
+    },
+    {
+      "position": "WR",
+      "feature": "A0",
+      "mean": 8.999777861930706,
+      "std": 1.1798138776506804,
+      "count": 94.0
+    },
+    {
+      "position": "DB",
+      "feature": "ten_f",
+      "mean": 1.5362745098039217,
+      "std": 0.033327702883041634,
+      "count": 102.0
+    },
+    {
+      "position": "DL",
+      "feature": "ten_f",
+      "mean": 1.6996774193548387,
+      "std": 0.08087096018944959,
+      "count": 93.0
+    },
+    {
+      "position": "OL",
+      "feature": "ten_f",
+      "mean": 1.7827368421052634,
+      "std": 0.05570519104240246,
+      "count": 95.0
+    },
+    {
+      "position": "TE",
+      "feature": "ten_f",
+      "mean": 1.595294117647059,
+      "std": 0.036864641359047476,
+      "count": 34.0
+    },
+    {
+      "position": "WR",
+      "feature": "ten_f",
+      "mean": 1.5345744680851063,
+      "std": 0.026054735338993423,
+      "count": 94.0
+    }
+  ],
+  "all_converged": true,
+  "primary_two_sided_holm_significant": 0,
+  "binary_cluster_sensitivity_holm_significant": 0
+}

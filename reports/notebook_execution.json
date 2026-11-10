@@ -1,0 +1,12 @@
+[
+  {
+    "input": "interim",
+    "seconds": 4.45,
+    "measurement_matches_pipeline": true
+  },
+  {
+    "input": "raw",
+    "seconds": 6.1,
+    "measurement_matches_pipeline": true
+  }
+]

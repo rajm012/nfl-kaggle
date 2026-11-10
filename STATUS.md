@@ -1,5 +1,41 @@
 # Status log (newest first)
 
+- **2026-11-10 — Plan-position review (no new analysis runs)**
+  - Current phase: late audit / early final validation, covering the Nov 10–16 milestones.
+    Data/model audits, reliability, the frozen measurement screen and draft notebook/figures
+    were completed early. Studies 1–2 cohort prediction and 3-cone sensitivity remain the
+    next required work before the Nov 20 final-claim decision. Full writeup, final visuals,
+    complete Kaggle reproduction and publication/submission are still pending.
+
+- **2026-11-09 — Local validation runs completed; route-performance measurement gate failed**
+  - Owner supplied `gpu2@192.168.0.104`; SSH times out from current network. Their key-copy output
+    contains a Windows `exec` error, so key installation is unverified. Owner requested local work;
+    no remote data staging/jobs, resource inventory or authentication changes performed.
+  - Implemented/ran `src/join_audit.py`: all 2,466 absent movement rows explained (1,750 tracking
+    keys missing, 715 snap events missing, 1 track too short). All 2,496 movement-only keys exist
+    in supplied tracking; provider context omission remains unknown.
+  - `src/reliability.py` reproduces historical WR TURN SB=0.546. Training-only reference gives
+    development SB=0.593, 95% bootstrap interval [0.373,0.737], 70 athletes. Metadata and repeat/QC
+    tables saved; no outcome-based trace/feature selection.
+  - **Frozen Study 3 gate fails:** 42 development + 16 evaluation eligible WRs; 41 diagnostic WRs.
+    Raw contrast SB=0.463; baseline-adjusted SB=0.296 [−0.257,0.606], below 0.40. Conventional
+    baseline fits 3,971 development plays, rank 65. No TURN interaction or new 2025 performance
+    evaluation. Stop primary route-performance claim and follow planned evidence-map path.
+  - `src/validation.py`: all 15 LMM/cluster-sensitivity fits converge; no two-sided Holm-significant
+    result among 9 original-family tests or 3 player-clustered binary LPM sensitivities. Corrected
+    Study 2 scaling on unique players; recorded exact samples, rank, boundary warnings, control
+    estimates and model checkpoints. One-sided-test ambiguity documented conservatively.
+  - `src/transfer_audit.py`: historical findings reproduced; corrected PRE+REG WR TURN r=0.279
+    (n=98), DL BURST r=0.443, weight-adjusted r=0.203 (n=115). Saved athlete-bootstrap intervals
+    and pooled/player-season traits with explicit POST exclusion; REG-only sensitivity separate.
+  - Notebook now independently reproduces measurement screen from four competition tables;
+    clean-kernel Parquet/CSV runs take 4.45/6.10 s and match all screen statistics. Added measurement,
+    audited-transfer and actual route-trace draft figures; trace pair chosen only from exposures.
+    Five statistical-invariant tests pass. Historical reports verified byte-for-byte unchanged.
+  - Current run summary: `reports/latest_runs.md`. Next: held-out Studies 1–2 prediction, same-sample
+    3-cone sensitivity, complete notebook rebuilding/integration and evidence-map writing. No new
+    route-family primary fit or hypothesis family after the failed screen.
+
 - **2026-11-09 — Joint work started; audit and starter notebook delivered**
   - Owner takes Python/notebook and design/writeup checks; assistant handles football/statistical
     research and internal review. External researchers unavailable; no independent-expert claim.

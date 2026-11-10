@@ -1,0 +1,52 @@
+{
+  "id": "W2",
+  "study": 1,
+  "model": "original specification",
+  "method": "LMM",
+  "position": "WR",
+  "outcome": "separation_at_pass_forward",
+  "coefficient": "burst_z",
+  "candidate_plays": 31035,
+  "fitted_plays": 31035,
+  "dropped_missing_plays": 0,
+  "players": 83,
+  "design_rank": 39,
+  "dropped_redundant_columns": [],
+  "beta": 0.0008084376086858525,
+  "lo": -0.035806457134363354,
+  "hi": 0.03742333235173506,
+  "se": 0.018681412021783476,
+  "p_two": 0.9654823408462408,
+  "p_dir_historical": 0.4827411704231204,
+  "cluster_t_df": null,
+  "converged": true,
+  "warnings": [],
+  "controls": [
+    {
+      "feature": "combine_weight_z",
+      "beta": -0.07947953204267577,
+      "lo": -0.1372179620357381,
+      "hi": -0.02174110204961343
+    },
+    {
+      "feature": "combine_height_z",
+      "beta": -0.03193576823578819,
+      "lo": -0.0896691182653563,
+      "hi": 0.025797581793779917
+    },
+    {
+      "feature": "pick_z",
+      "beta": 0.00972784634315091,
+      "lo": -0.03879279798845667,
+      "hi": 0.058248490674758485
+    },
+    {
+      "feature": "forty_z",
+      "beta": -0.019047253120947027,
+      "lo": -0.06234497774044681,
+      "hi": 0.02425047149855276
+    }
+  ],
+  "seconds": 1.05,
+  "formula": "separation_at_pass_forward ~ burst_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion"
+}

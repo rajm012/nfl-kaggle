@@ -1,0 +1,192 @@
+{
+  "generated_utc": "2026-11-09T14:37:26.305812+00:00",
+  "stage": "measurement only",
+  "support": [
+    {
+      "draft_year": 2023,
+      "players_initial": 25,
+      "plays_initial": 2385,
+      "players_fitted": 25,
+      "plays_fitted": 2385
+    },
+    {
+      "draft_year": 2024,
+      "players_initial": 17,
+      "plays_initial": 1586,
+      "players_fitted": 17,
+      "plays_fitted": 1586
+    },
+    {
+      "draft_year": 2025,
+      "players_initial": 16,
+      "plays_initial": 1179,
+      "players_fitted": 16,
+      "plays_fitted": 1179
+    }
+  ],
+  "preprocessing": {
+    "reference_players": 70,
+    "reference_classes": [
+      2023,
+      2024
+    ],
+    "median_forty": 4.465,
+    "cushion_median": 6.15999984741211,
+    "player_scalers": {
+      "weight": {
+        "mean": 198.3,
+        "sd": 15.613400041937222
+      },
+      "height": {
+        "mean": 72.79464285714286,
+        "sd": 2.2992827050097464
+      },
+      "forty": {
+        "mean": 4.4767142857142845,
+        "sd": 0.08113276699285674
+      },
+      "pick": {
+        "mean": 157.78571428571428,
+        "sd": 87.6592369459498
+      },
+      "TURN": {
+        "mean": -0.0238095751729676,
+        "sd": 0.4131503558651131
+      }
+    },
+    "categories": {
+      "route_ran": [
+        "GO",
+        "OUT",
+        "SLANT"
+      ],
+      "down": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "team_coverage_man_zone": [
+        "MAN_COVERAGE",
+        "UNK",
+        "ZONE_COVERAGE"
+      ],
+      "receiver_alignment": [
+        "1x1",
+        "2x1",
+        "2x2",
+        "3x1",
+        "3x2",
+        "4x0",
+        "4x1"
+      ]
+    },
+    "development_missing": {
+      "cushion": 123,
+      "motion": 0,
+      "coverage": 3,
+      "alignment": 0
+    },
+    "evaluation_unknown_rule": "Unseen levels map to UNK if present, otherwise first training level"
+  },
+  "dropped_redundant_columns": [],
+  "design_columns": [
+    "Intercept",
+    "player_55885",
+    "player_55887",
+    "player_55904",
+    "player_55915",
+    "player_55920",
+    "player_55928",
+    "player_55934",
+    "player_55938",
+    "player_55939",
+    "player_55959",
+    "player_55965",
+    "player_55998",
+    "player_56042",
+    "player_56052",
+    "player_56056",
+    "player_56060",
+    "player_56062",
+    "player_56070",
+    "player_56071",
+    "player_56075",
+    "player_56118",
+    "player_56220",
+    "player_56248",
+    "player_56471",
+    "player_57130",
+    "player_57144",
+    "player_57152",
+    "player_57153",
+    "player_57154",
+    "player_57155",
+    "player_57158",
+    "player_57173",
+    "player_57213",
+    "player_57221",
+    "player_57223",
+    "player_57277",
+    "player_57291",
+    "player_57304",
+    "player_57305",
+    "player_57355",
+    "player_57606",
+    "route_ran=OUT",
+    "route_ran=SLANT",
+    "down=2",
+    "down=3",
+    "down=4",
+    "team_coverage_man_zone=UNK",
+    "team_coverage_man_zone=ZONE_COVERAGE",
+    "receiver_alignment=2x1",
+    "receiver_alignment=2x2",
+    "receiver_alignment=3x1",
+    "receiver_alignment=3x2",
+    "receiver_alignment=4x0",
+    "receiver_alignment=4x1",
+    "yards_to_go",
+    "motion",
+    "cushion_f",
+    "cushion_missing",
+    "weight_z:BREAK",
+    "height_z:BREAK",
+    "forty_z:BREAK",
+    "pick_z:BREAK",
+    "udfa:BREAK",
+    "forty_missing:BREAK"
+  ],
+  "model_rank": 65,
+  "development_players": 42,
+  "development_plays": 3971,
+  "development_games": 384,
+  "diagnostic": [
+    {
+      "contrast": "raw",
+      "n": 41,
+      "r": 0.30136429475637627,
+      "r_lo": 0.031950460491374746,
+      "r_hi": 0.5595791881830743,
+      "SB": 0.4631513189207233,
+      "SB_lo": 0.0619224695653727,
+      "SB_hi": 0.7176027898076657,
+      "valid_bootstraps": 10000
+    },
+    {
+      "contrast": "adjusted",
+      "n": 41,
+      "r": 0.17379620853134298,
+      "r_lo": -0.11371633477213824,
+      "r_hi": 0.4349283160891164,
+      "SB": 0.2961267164916085,
+      "SB_lo": -0.2566138567902005,
+      "SB_hi": 0.6062021513025952,
+      "valid_bootstraps": 10000
+    }
+  ],
+  "screen_passes": false,
+  "primary_TURN_association_fitted": false,
+  "evaluation_outcomes_opened": false,
+  "decision": "Stop primary route-performance claim: frozen reliability screen fails"
+}

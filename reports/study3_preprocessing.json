@@ -1,0 +1,65 @@
+{
+  "reference_players": 70,
+  "reference_classes": [
+    2023,
+    2024
+  ],
+  "median_forty": 4.465,
+  "cushion_median": 6.15999984741211,
+  "player_scalers": {
+    "weight": {
+      "mean": 198.3,
+      "sd": 15.613400041937222
+    },
+    "height": {
+      "mean": 72.79464285714286,
+      "sd": 2.2992827050097464
+    },
+    "forty": {
+      "mean": 4.4767142857142845,
+      "sd": 0.08113276699285674
+    },
+    "pick": {
+      "mean": 157.78571428571428,
+      "sd": 87.6592369459498
+    },
+    "TURN": {
+      "mean": -0.0238095751729676,
+      "sd": 0.4131503558651131
+    }
+  },
+  "categories": {
+    "route_ran": [
+      "GO",
+      "OUT",
+      "SLANT"
+    ],
+    "down": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "team_coverage_man_zone": [
+      "MAN_COVERAGE",
+      "UNK",
+      "ZONE_COVERAGE"
+    ],
+    "receiver_alignment": [
+      "1x1",
+      "2x1",
+      "2x2",
+      "3x1",
+      "3x2",
+      "4x0",
+      "4x1"
+    ]
+  },
+  "development_missing": {
+    "cushion": 123,
+    "motion": 0,
+    "coverage": 3,
+    "alignment": 0
+  },
+  "evaluation_unknown_rule": "Unseen levels map to UNK if present, otherwise first training level"
+}

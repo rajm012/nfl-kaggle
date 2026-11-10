@@ -24,6 +24,7 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 | `notebooks/` | Exploration notebooks; final Kaggle notebook is `notebooks/submission.ipynb` (later). |
 | `reports/` | Markdown findings: `eda.md`, `data_quirks.md`, `prereg.md`, `decisions.md`; figures in `reports/figures/`. |
 | `reports/repo_review.md` | 2026-11-09 code/data review: implemented scope, validation gaps, route-mapping constraints. |
+| `reports/latest_runs.md` | Current local-run results, artifacts and exact next work; updated 2026-11-09. |
 | `writeup/` | Writeup drafts (`writeup.md`). |
 
 ## Environment
@@ -32,33 +33,50 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 - Kaggle auth: new-style token at `~/.kaggle/access_token` (Kaggle CLI 2.x). Never print or copy it.
 - Machine: 16 GB RAM (often only ~5 GB free), RTX 4050 6 GB. **Never load all game tracking into pandas.** Use parquet + DuckDB/Polars lazy scans, filter columns/rows early.
 - Remote resource reported by owner 2026-11-09: professor-provided **RTX 5080, 16 GiB VRAM**, strong CPU.
-  Owner confirms full SSH access; assistant can reach server but initial authentication failed.
-  Login uses password; dedicated local key `~/.ssh/nfl_bdb_2027_ed25519` prepared. Owner must install
-  its public key through their terminal before assistant jobs; private key stays outside the repo.
+  Owner confirms full SSH access. Target supplied Nov 9: `gpu2@192.168.0.104`; SSH times out from
+  this workspace's `172.16.1.x` network. `ssh-copy-id` printed a Windows `exec` error before claiming
+  a key was added, so installation is **unverified**. Dedicated key `~/.ssh/nfl_bdb_2027_ed25519`
+  remains outside the repo. Owner explicitly requested **local execution** after connection trouble.
   Host RAM/cores/OS/storage/access window remain unverified. Current pipeline is mainly CPU-bound;
   use remote CPU for planned validation/refits first and preserve CPU/Kaggle reproduction. No extra cash budget.
 - Data licence CC BY-NC 4.0: do not commit or upload raw data anywhere except Kaggle.
 
 ## Current strategy (details: STATUS.md top entry, reports/decisions.md)
+- **Stage as of Nov 10:** late audit / early final validation (Nov 10–16 plan milestones).
+  Several audit/measurement outputs completed early; cohort evaluation/sensitivities still
+  precede the Nov 20 final-claim decision. Final submission production remains ahead.
 - **2026-11-09: PLAN.md rewritten; incremental cash budget $0.** Original plan archived in `reports/plan_2026-10-08.md`.
-- Studies 1–2: 9 tests without Holm-significant added performance associations; audit before final claims.
-  Reported transfer: WR turning r=0.28; DL burst r=0.45 (0.21 net of weight). Supporting checks need saved reproduction code.
-- **Chosen bounded follow-up:** existing TURN × SLANT/OUT-versus-GO separation contrast, rookie-season REG,
-  developed on 2023–24, evaluated on 2025. Frozen protocol appended to prereg; **not implemented yet**.
-  Support before final joins: 42 development + 16 evaluation WRs. Only 3 slant repeats; no slant-specific talent score.
+- Studies 1–2 audited Nov 9: all 15 fits converge; **0/9 two-sided Holm-significant** original-family
+  associations and **0/3** player-clustered binary LPM sensitivities. `src/validation.py` saves separate
+  reports/checkpoints, actual fitted samples and player-table Study 2 SDs. Expected signs were preregistered
+  but one-sided tests were not explicit; conservative two-sided audit is a disclosed correction.
+- **Study 3 measurement gate FAILED Nov 9.** Support after checks: 42 development + 16 evaluation WRs;
+  41 support alternating-game halves. Adjusted contrast SB=0.296 (interval −0.257 to 0.606), below
+  frozen 0.40 gate; raw SB=0.463. `src/route_context.py` fits only the conventional baseline.
+  **No TURN interaction or 2025 performance evaluation fitted. Stop the primary route-performance claim**;
+  proceed with the evidence-map narrative without changing eligibility/route groups to seek a result.
+  Full protocol remains frozen; only 3 slant repeats, no slant-specific talent score.
 - **November 20: final narrative decision; no new hypothesis families afterward.** Primary product is a scouting
   evidence map separating measurement, transfer and added prediction. Promote a signal only if validated.
-- Audit gaps: held-out prediction/3-cone sensitivity absent; binary LMM robust-SE deviation; Study 2 SDs play-weighted.
-  Preserve historical reports and save corrected outputs separately. Notebook/figures/writeup start during audit week;
-  public notebook ready Dec 14, owner submission by Dec 28. Starter notebook now runs on local CSV/Parquet
-  inputs and generates `reports/figures/study3_support.png`; full submission results still pending.
+- Remaining audit work: Studies 1–2 held-out prediction and 3-cone sensitivity, plus final claim/notebook integration.
+  Binary robust sensitivity, player-level Study 2 SDs, reliability and adjusted transfer now have saved code.
+  Historical reports are preserved byte-for-byte. Public notebook ready Dec 14, owner submission by Dec 28.
+  Notebook reproduces the frozen conventional measurement screen from four raw CSVs or Parquets with
+  embedded helper source and identical results; complete submission feature rebuilding remains pending.
+  Draft figures: support, measurement, `transfer_audited.png`, exposure-only `combine_route_trace.png`.
 - Kaggle CLI verified deadline, entry and $100k total pool on Nov 9. Individual track awards/rules require final UI check.
 - Resource priorities and professor/friend requests: `reports/resource_requests.md`; football/statistical review,
   reliable remote access, independent notebook reproduction and visual/writing feedback precede more hardware.
 - Start/handoff: `START_HERE.md`; internal critique in `reports/review_notes.md` is not independent expert validation.
 - `python -m src.audit_data --tracking-keys` passes key/count checks; raw player-play CSV=Parquet=314,197.
-  Join attrition: 2,496 trait rows without player-play; 2,466 player-play without traits, causes pending.
+  `src/join_audit.py` explains all 2,466 missing trait rows: 1,750 absent tracking keys, 715 no snap, 1 short track.
+  All 2,496 trait rows without player-play exist in supplied tracking; provider omission reasons unknown.
+  Study 3 needs no game-trait join; only 3/5,389 candidate rows lack it.
   Old numerical reports preserved in `reports/history/2026-11-09/`. `src/system_info.py` runs remotely via stdin.
+- `src/reliability.py` reproduces WR cross-drill TURN SB=0.546; training-reference development SB=0.593
+  (70 WRs; interval 0.373–0.737). `src/transfer_audit.py` reproduces historical correlations and excludes POST
+  for corrected PRE+REG scope: WR TURN r=0.279 (n=98); DL BURST r=0.443, weight-adjusted 0.203 (n=115).
+  These are descriptive movement transfer, not held-out performance prediction. Athlete bootstraps refit adjustment.
 
 ## Pipeline (run from project root, in order)
 1. `bash src/download_data.sh` → `data/raw/*.csv` (resumable, per file).
@@ -66,6 +84,12 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 3. `.venv/bin/python -m src.combine_features` → `combine_frames`, `combine_attempts`, `combine_traits` parquet.
 4. `-m src.game_features` (~6 min) → `game_play_traits`; `-m src.transfer` → reports/transfer.md.
 5. `-m src.outcomes` (Study 1) → reports/confirmatory.md; `-m src.sprint` then `-m src.study2` → reports/study2.md. MixedLM: use default `.fit()` (lbfgs alone silently fails); drop constant indicator columns (singular matrix). Kinematics (signed a_lon / a_lat from x,y) live in `src/kinematics.py` — reuse for game tracking.
+
+Audited path (existing inputs): `-m src.join_audit`, `-m src.reliability`, `-m src.route_context`,
+`-m src.validation`, `-m src.transfer_audit`, `-m src.audit_figures`. Use bounded threads locally:
+`OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 POLARS_MAX_THREADS=2`. Rebuild notebook screen source with
+`-m src.build_measurement_notebook` after editing shared helpers; execute notebook afterward.
+Meaningful invariants: `.venv/bin/python -m unittest discover -s tests -v` (5 passed Nov 9).
 
 ## Rules of the road (statistical hygiene)
 - Write hypotheses/features into `reports/prereg.md` **before** fitting outcome models; don't silently change them.

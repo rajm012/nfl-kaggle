@@ -52,3 +52,27 @@ do not prove interpretation.
   `reports/history/2026-11-09/` before future corrected reruns.
 
 Append dated review findings, sources and resolutions as analysis proceeds.
+
+## 2026-11-09 — Local-run resolutions
+
+- Join attrition is now explained in `join_attrition.md`: all missing movement rows have
+  source/extraction reasons; all movement-only keys exist in supplied tracking. The
+  provider's player-play context omission remains unknown. No game-trait join is needed
+  for Study 3; adding one would remove three otherwise usable candidate rows.
+- Cross-drill TURN reliability and explicit size-adjusted transfer reproduce the earlier
+  patterns with athlete-bootstrap uncertainty. Corrected movement scope excludes POST;
+  REG-only sensitivity is separate. These findings establish neither added prediction
+  nor an intrinsic trainable agility capacity.
+- The frozen route-family measurement screen failed (adjusted SB=0.296 <0.40). No new
+  TURN association/evaluation was opened. Follow the prespecified stopping rule; retain
+  wide intervals and the shared-adjustment limitation instead of calling this proof of zero.
+- Model audit saves all 15 converged fits and boundary warnings. Unique-player Study 2
+  SDs and player-clustered binary LPM sensitivities are now reproducible. Expected signs
+  did not explicitly preregister a one-sided test, so the separate audit conservatively
+  reports two-sided Holm results (0/9 original-family tests, 0/3 binary sensitivities).
+- Exposure-only hero pair: development WRs within 0.03 s in observed forty, greatest
+  TURN difference, deterministic ties; first recorded speed-out attempt. Draft traces
+  use start-relative translation only and exact cached attempt quantiles. They illustrate
+  measurement, not NFL success or a ranking recommendation.
+- Remaining material gaps: earlier-study held-out prediction, same-sample 3-cone analysis,
+  complete raw-input submission rebuilding, and official field semantics/citations.

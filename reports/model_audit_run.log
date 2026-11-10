@@ -1,0 +1,16 @@
+W1_primary_lmm: n=31,035/83 players; beta=-0.01499 [-0.05001,0.02004]; p(two)=0.4016; 1.16s
+W2_primary_lmm: n=31,035/83 players; beta=0.00081 [-0.03581,0.03742]; p(two)=0.9655; 1.05s
+O1_primary_lmm: n=48,697/89 players; beta=0.00137 [-0.00474,0.00749]; p(two)=0.6604; 0.59s
+O1_primary_cluster: n=48,697/89 players; beta=0.00287 [-0.00365,0.00939]; p(two)=0.3841; 0.24s
+O2_primary_lmm: n=48,697/89 players; beta=-0.00312 [-0.00957,0.00333]; p(two)=0.3432; 0.62s
+O2_primary_cluster: n=48,697/89 players; beta=-0.00259 [-0.00858,0.00341]; p(two)=0.3936; 0.25s
+D1_primary_lmm: n=33,417/98 players; beta=0.00237 [-0.01381,0.01854]; p(two)=0.7743; 0.85s
+D2_primary_lmm: n=28,970/98 players; beta=0.00549 [-0.00061,0.01160]; p(two)=0.0780; 0.64s
+D2_primary_cluster: n=28,970/98 players; beta=0.00420 [-0.00067,0.00908]; p(two)=0.0903; 0.25s
+F1_primary_lmm: n=25,799/77 players; beta=-0.00119 [-0.01900,0.01662]; p(two)=0.8961; 0.67s
+F1_secondary_lmm: n=25,799/77 players; beta=-0.00154 [-0.01919,0.01612]; p(two)=0.8646; 0.46s
+F2_primary_lmm: n=37,216/73 players; beta=-0.00420 [-0.01149,0.00309]; p(two)=0.2591; 0.9s
+F2_secondary_lmm: n=37,216/73 players; beta=-0.00399 [-0.01072,0.00273]; p(two)=0.2444; 0.64s
+F3_primary_lmm: n=26,624/73 players; beta=-0.02029 [-0.05890,0.01831]; p(two)=0.3029; 0.9s
+F3_secondary_lmm: n=26,624/73 players; beta=-0.02123 [-0.06060,0.01814]; p(two)=0.2905; 0.8s
+Audit complete: 0/9 two-sided Holm-significant original-family tests

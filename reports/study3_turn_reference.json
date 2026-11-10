@@ -1,0 +1,299 @@
+{
+  "reference_classes": [
+    2023,
+    2024
+  ],
+  "ddof": 1,
+  "reference_population": "All development-class Combine athletes, across positions",
+  "excluded_constant_or_sparse_drills": [],
+  "unseen_drills": [
+    "CIRCUS_ROUTE_LEFT",
+    "SHORT_ZONE_BREAK_FLAT_WHEEL",
+    "SHORT_ZONE_BREAK_FORWARD",
+    "SHORT_ZONE_BREAK_INSIDE"
+  ],
+  "drill_reference": [
+    {
+      "drill": "BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL",
+      "mean": 5.364126405110214,
+      "std": 0.5986473913170711,
+      "count": 85
+    },
+    {
+      "drill": "BACK_PEDAL_AND_REACT",
+      "mean": 4.795139933055272,
+      "std": 0.3958563830002693,
+      "count": 41
+    },
+    {
+      "drill": "BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION",
+      "mean": 3.3457144221144297,
+      "std": 0.7231505659167475,
+      "count": 85
+    },
+    {
+      "drill": "BLOCK_EXPLOSION",
+      "mean": 1.4014936260665936,
+      "std": 0.6118823717541817,
+      "count": 22
+    },
+    {
+      "drill": "BODY_CONTROL_DRILL",
+      "mean": 5.1152089957427105,
+      "std": 0.6909732263489967,
+      "count": 69
+    },
+    {
+      "drill": "BOX_DRILL",
+      "mean": 5.718432509972892,
+      "std": 0.4615079457109501,
+      "count": 85
+    },
+    {
+      "drill": "COMEBACK_ROUTE_RIGHT",
+      "mean": 5.919574220475581,
+      "std": 0.6367704234697137,
+      "count": 64
+    },
+    {
+      "drill": "CORNER_ROUTE",
+      "mean": 3.712227657791234,
+      "std": 0.5022407376174344,
+      "count": 14
+    },
+    {
+      "drill": "CURL_ROUTE_RIGHT",
+      "mean": 5.9082858712374815,
+      "std": 0.860655507432937,
+      "count": 67
+    },
+    {
+      "drill": "DAGGER_ROUTE_LEFT",
+      "mean": 5.930034121643539,
+      "std": 0.7002019526269933,
+      "count": 70
+    },
+    {
+      "drill": "END_ZONE_FADE_RIGHT",
+      "mean": 2.0354806294269796,
+      "std": 0.3136339224869265,
+      "count": 13
+    },
+    {
+      "drill": "FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE",
+      "mean": 3.6177735129394226,
+      "std": 0.48548502726586873,
+      "count": 82
+    },
+    {
+      "drill": "FLAT_ROUTE_LEFT",
+      "mean": 5.347124679656327,
+      "std": 0.424274819613905,
+      "count": 25
+    },
+    {
+      "drill": "FOUR_BAG_AGILITY_DRILL",
+      "mean": 3.4063239488829686,
+      "std": 0.457624697182304,
+      "count": 68
+    },
+    {
+      "drill": "FOUR_BAG_SHUFFLE_DRILL",
+      "mean": 3.2368837807748876,
+      "std": 0.2944250313310621,
+      "count": 3
+    },
+    {
+      "drill": "FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION",
+      "mean": 4.2397135271552076,
+      "std": 0.614202280205314,
+      "count": 68
+    },
+    {
+      "drill": "GAUNTLET_DRILL",
+      "mean": 5.029534049315923,
+      "std": 0.6568215978750583,
+      "count": 177
+    },
+    {
+      "drill": "GO_ROUTE_RIGHT",
+      "mean": 1.7250853457138422,
+      "std": 0.7400761442260789,
+      "count": 64
+    },
+    {
+      "drill": "HOOK_ROUTE_RIGHT",
+      "mean": 5.436878271427054,
+      "std": 0.5151212240047232,
+      "count": 24
+    },
+    {
+      "drill": "IN_ROUTE_LEFT",
+      "mean": 5.60898940184617,
+      "std": 0.6504894749006186,
+      "count": 23
+    },
+    {
+      "drill": "LINE_DRILL",
+      "mean": 0.9544507961737215,
+      "std": 0.2751929460304148,
+      "count": 81
+    },
+    {
+      "drill": "OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT",
+      "mean": 4.46068484646946,
+      "std": 0.3351747055203296,
+      "count": 60
+    },
+    {
+      "drill": "OL_PULL_DRILL_FOLD_BLOCK_RIGHT",
+      "mean": 3.1087486997643916,
+      "std": 1.1240380612074024,
+      "count": 81
+    },
+    {
+      "drill": "OL_PULL_DRILL_LONG_PULL_RIGHT",
+      "mean": 4.913943394798937,
+      "std": 0.6887290846576459,
+      "count": 55
+    },
+    {
+      "drill": "OVER_SHOULDER_ADJUST",
+      "mean": 1.5319572875884313,
+      "std": 0.7406951041476894,
+      "count": 91
+    },
+    {
+      "drill": "PASS_PRO_MIRROR_DRILL",
+      "mean": 3.1598736492000667,
+      "std": 0.5649101493163505,
+      "count": 83
+    },
+    {
+      "drill": "PASS_RUSH_DRILL",
+      "mean": 4.961764618973507,
+      "std": 0.5207667856968764,
+      "count": 74
+    },
+    {
+      "drill": "PASS_RUSH_DROP",
+      "mean": 2.4268191512116326,
+      "std": 0.405884142752784,
+      "count": 82
+    },
+    {
+      "drill": "POST_CORNER_ROUTE_LEFT",
+      "mean": 6.266211986872134,
+      "std": 0.5516319134905477,
+      "count": 70
+    },
+    {
+      "drill": "POST_CORNER_ROUTE_RIGHT",
+      "mean": 4.5073684355435315,
+      "std": 0.5583850038949636,
+      "count": 65
+    },
+    {
+      "drill": "RED_ZONE_FADE_RIGHT",
+      "mean": 1.7717966427411826,
+      "std": 0.4666877206322091,
+      "count": 65
+    },
+    {
+      "drill": "RUN_AND_CLUB_DRILL",
+      "mean": 3.892446535084122,
+      "std": 0.6425559145462643,
+      "count": 69
+    },
+    {
+      "drill": "RUN_THE_HOOP_DRILL",
+      "mean": 6.2442048614412355,
+      "std": 0.4172722307246735,
+      "count": 67
+    },
+    {
+      "drill": "SCREEN_DRILL",
+      "mean": 4.692963015108372,
+      "std": 0.5601016652993868,
+      "count": 81
+    },
+    {
+      "drill": "SHORT_SHUTTLE",
+      "mean": 2.30873526358451,
+      "std": 0.750631160943863,
+      "count": 107
+    },
+    {
+      "drill": "SHORT_ZONE_BREAKS",
+      "mean": 4.610111337994988,
+      "std": 0.6568278382000204,
+      "count": 40
+    },
+    {
+      "drill": "SHUFFLE_SPRINT_AND_COD_DRILL",
+      "mean": 1.7080965707728204,
+      "std": 0.8729328714296428,
+      "count": 4
+    },
+    {
+      "drill": "SLANT_ROUTE_LEFT",
+      "mean": 4.115701829423292,
+      "std": 0.7098151587406941,
+      "count": 70
+    },
+    {
+      "drill": "SLOT_SAIL_ROUTE_RIGHT",
+      "mean": 6.465357146259995,
+      "std": 0.6106779842749298,
+      "count": 63
+    },
+    {
+      "drill": "SLOT_STRIKE_ROUTE_LEFT",
+      "mean": 5.441473909154583,
+      "std": 0.598044411508236,
+      "count": 65
+    },
+    {
+      "drill": "SPEED_OUT_ROUTE_LEFT",
+      "mean": 6.664657575633579,
+      "std": 0.43533815593923747,
+      "count": 70
+    },
+    {
+      "drill": "TERYL_AUSTIN_DRILL_1",
+      "mean": 3.944084385934716,
+      "std": 0.7139916400213334,
+      "count": 64
+    },
+    {
+      "drill": "TERYL_AUSTIN_DRILL_2",
+      "mean": 4.862032430572507,
+      "std": 0.5600622286004656,
+      "count": 79
+    },
+    {
+      "drill": "THREE_CONE_DRILL",
+      "mean": 5.466661226616017,
+      "std": 0.7416890640380783,
+      "count": 105
+    },
+    {
+      "drill": "WAVE_DRILL",
+      "mean": 4.198767831954019,
+      "std": 0.555171652661713,
+      "count": 4
+    },
+    {
+      "drill": "WHEEL_ROUTE_LEFT",
+      "mean": 2.429126873158497,
+      "std": 0.5971455163727823,
+      "count": 24
+    },
+    {
+      "drill": "W_DRILL",
+      "mean": 4.513233464273788,
+      "std": 0.49003902533737015,
+      "count": 84
+    }
+  ]
+}

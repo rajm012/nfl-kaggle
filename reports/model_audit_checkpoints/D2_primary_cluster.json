@@ -1,0 +1,52 @@
+{
+  "id": "D2",
+  "study": 1,
+  "model": "original specification",
+  "method": "player-clustered LPM sensitivity",
+  "position": "DL",
+  "outcome": "pressure_i",
+  "coefficient": "lat_z",
+  "candidate_plays": 28970,
+  "fitted_plays": 28970,
+  "dropped_missing_plays": 0,
+  "players": 98,
+  "design_rank": 20,
+  "dropped_redundant_columns": [],
+  "beta": 0.004202139665583942,
+  "lo": -0.0006729339587339981,
+  "hi": 0.009077213289901881,
+  "se": 0.0024562990237992767,
+  "p_two": 0.09032171063563878,
+  "p_dir_historical": 0.04516085531781939,
+  "cluster_t_df": 97,
+  "converged": true,
+  "warnings": [],
+  "controls": [
+    {
+      "feature": "combine_weight_z",
+      "beta": -0.00421220767960701,
+      "lo": -0.013554482082845737,
+      "hi": 0.005130066723631716
+    },
+    {
+      "feature": "combine_height_z",
+      "beta": -0.004263615437279566,
+      "lo": -0.009684217546571363,
+      "hi": 0.001156986672012232
+    },
+    {
+      "feature": "pick_z",
+      "beta": -0.018006325312639952,
+      "lo": -0.025957284509020143,
+      "hi": -0.01005536611625976
+    },
+    {
+      "feature": "forty_z",
+      "beta": -0.008360575212861486,
+      "lo": -0.014610638550820877,
+      "hi": -0.002110511874902095
+    }
+  ],
+  "seconds": 0.25,
+  "formula": "pressure_i ~ lat_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)"
+}

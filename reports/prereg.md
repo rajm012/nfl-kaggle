@@ -99,3 +99,20 @@ holdout**. Report prior outcome exposure. The primary exposure retains the origi
 definition but recomputes drill/player scaling from development classes only. Route-specific
 scores and other features are not additional confirmatory tests. Studies 1–2 above remain
 unchanged; any numerical corrections receive dated amendments and separate reports.
+
+## 2026-11-09 — Historical audit execution disclosure
+
+Studies 1–2 retain their hypotheses/features. The audit implements the already documented
+unique-player Study 2 scaling correction, records actual fitted samples and adds a separate
+player-clustered OLS linear-probability sensitivity for binary outcomes. This is not silently
+described as the historical MixedLM or a new confirmatory success.
+
+Expected signs in the original record did not explicitly define one-sided tests, while
+the original implementation used directional p-values. The separate numerical audit uses
+conservative two-sided p-values, Holm within the original six/three families, and a separately
+labelled three-test binary-sensitivity family. Results: 0/9 original-family and 0/3 binary
+sensitivity associations are Holm-significant. Historical reports remain unchanged.
+
+The frozen Study 3 measurement screen failed (adjusted SB=0.296 <0.40; 41 diagnostic WRs).
+No TURN interaction or new 2025 performance evaluation was fitted, and no protocol choice
+was changed to bypass this screen. Full record: `study3.md`, `model_audit.md`, `latest_runs.md`.

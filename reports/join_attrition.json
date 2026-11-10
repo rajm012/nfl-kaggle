@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-11-09T14:35:18.359900+00:00",
+  "reasons": [
+    {
+      "reason": "no ball_snap event",
+      "player_plays": 715
+    },
+    {
+      "reason": "no game tracking key",
+      "player_plays": 1750
+    },
+    {
+      "reason": "track shorter than 15 frames",
+      "player_plays": 1
+    }
+  ],
+  "source_confirmation": [
+    {
+      "traits_without_player_play": 2496,
+      "confirmed_in_tracking": 2496,
+      "play_has_other_player_context": 2287
+    }
+  ],
+  "by_season": [
+    {
+      "direction": "missing_traits",
+      "season_type": "POST",
+      "rows": 244,
+      "players": 77
+    },
+    {
+      "direction": "missing_traits",
+      "season_type": "PRE",
+      "rows": 1182,
+      "players": 325
+    },
+    {
+      "direction": "missing_traits",
+      "season_type": "REG",
+      "rows": 1040,
+      "players": 248
+    },
+    {
+      "direction": "missing_pp",
+      "season_type": "POST",
+      "rows": 79,
+      "players": 30
+    },
+    {
+      "direction": "missing_pp",
+      "season_type": "PRE",
+      "rows": 185,
+      "players": 75
+    },
+    {
+      "direction": "missing_pp",
+      "season_type": "REG",
+      "rows": 2232,
+      "players": 110
+    }
+  ],
+  "nullified": [
+    {
+      "play_nullified_by_penalty": "N",
+      "rows": 1028
+    },
+    {
+      "play_nullified_by_penalty": "Y",
+      "rows": 1438
+    }
+  ],
+  "study3": [
+    {
+      "candidate_rows": 5389,
+      "without_game_trait": 3
+    }
+  ]
+}

@@ -155,3 +155,12 @@ eligibility table, evaluation table and a notebook figure. These do not exist ye
 Measurement/development done by November 16; evaluate and select final story by **November 20**.
 If the screen fails, publish the failure in the research record and build the audited evidence
 map. Preserve old outputs and all amendments. Future edits append a dated amendment here.
+
+## Execution record — 2026-11-09 (no protocol change)
+
+The frozen screen failed: 41 diagnostic development WRs, adjusted contrast SB=0.296,
+below 0.40 (95% athlete-bootstrap interval −0.257 to 0.606). Support remains 42 development
+and 16 evaluation WRs after feature/context checks. **Stop the primary route-performance
+claim.** No TURN interaction or new 2025 performance evaluation was fitted; no thresholds,
+route groups or hypotheses were changed. Conventional baseline and training-only metadata
+are saved. Results: `study3.md`, `study3_measurement.md`, `study3_measurement.json`.

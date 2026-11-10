@@ -1,0 +1,33 @@
+{
+  "development_players": 42,
+  "development_plays": 3971,
+  "design_rank": 65,
+  "dropped_columns": [],
+  "diagnostic": [
+    {
+      "contrast": "raw",
+      "n": 41,
+      "r": 0.30136429475637627,
+      "r_lo": 0.03195046049137491,
+      "r_hi": 0.5595791881830743,
+      "SB": 0.4631513189207233,
+      "SB_lo": 0.061922469565373006,
+      "SB_hi": 0.7176027898076657,
+      "valid_bootstraps": 10000
+    },
+    {
+      "contrast": "adjusted",
+      "n": 41,
+      "r": 0.17379620853134198,
+      "r_lo": -0.1137163347721385,
+      "r_hi": 0.4349283160891165,
+      "SB": 0.29612671649160704,
+      "SB_lo": -0.2566138567902011,
+      "SB_hi": 0.6062021513025954,
+      "valid_bootstraps": 10000
+    }
+  ],
+  "screen_passes": false,
+  "primary_TURN_association_fitted": false,
+  "evaluation_outcomes_opened": false
+}

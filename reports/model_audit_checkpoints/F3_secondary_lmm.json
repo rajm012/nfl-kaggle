@@ -1,0 +1,54 @@
+{
+  "id": "F3",
+  "study": 2,
+  "model": "secondary, player SDs",
+  "method": "LMM",
+  "position": "WR",
+  "outcome": "separation_at_pass_forward",
+  "coefficient": "A0_z",
+  "candidate_plays": 26624,
+  "fitted_plays": 26624,
+  "dropped_missing_plays": 0,
+  "players": 73,
+  "design_rank": 38,
+  "dropped_redundant_columns": [
+    "forty_missing"
+  ],
+  "beta": -0.021228854010470196,
+  "lo": -0.060595490808054264,
+  "hi": 0.018137782787113876,
+  "se": 0.02008538784799266,
+  "p_two": 0.29054342129649213,
+  "p_dir_historical": 0.8547282893517539,
+  "cluster_t_df": null,
+  "converged": true,
+  "warnings": [],
+  "controls": [
+    {
+      "feature": "combine_weight_z",
+      "beta": -0.07715975703387583,
+      "lo": -0.13451438362434176,
+      "hi": -0.019805130443409896
+    },
+    {
+      "feature": "combine_height_z",
+      "beta": -0.02982692414606696,
+      "lo": -0.08896286828110798,
+      "hi": 0.029309019988974064
+    },
+    {
+      "feature": "pick_z",
+      "beta": 0.01738737575037031,
+      "lo": -0.03333982883249845,
+      "hi": 0.06811458033323907
+    },
+    {
+      "feature": "forty_z",
+      "beta": -0.023738686309448562,
+      "lo": -0.06668847815307206,
+      "hi": 0.019211105534174943
+    }
+  ],
+  "seconds": 0.8,
+  "formula": "separation_at_pass_forward ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + C(route_ran) + cushion_f + cushion_missing + C(team_coverage_man_zone) + C(receiver_alignment) + in_motion"
+}

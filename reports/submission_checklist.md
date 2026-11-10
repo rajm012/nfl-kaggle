@@ -9,13 +9,15 @@ All unchecked items are pending. This file records evidence of completion, not a
 - [x] Work allocated: assistant football/statistical review; owner Python/design; external review optional.
 - [x] Preserve historical numerical reports before corrected reruns (`reports/history/2026-11-09/`).
 - [x] Initial key/reference/count/season audit including full game-frame keys; report saved.
-- [ ] Explain unmatched game-trait/player-play rows and final model-specific attrition.
-- [ ] Reproduce TURN/other published reliability, adjusted transfer and positive controls.
-- [ ] Correct/document binary uncertainty, player-level Study 2 scaling and test direction.
-- [ ] Record Study 3 measurement screens before exposure–outcome associations.
+- [x] Explain unmatched game-trait/player-play rows and final model-specific attrition (`join_attrition.*`, `model_audit.json`).
+- [x] Reproduce selected TURN/other published reliability, adjusted transfer and descriptive conventional-control checks (`reliability.*`, `transfer_audit.*`, `model_audit.json`).
+- [x] Correct/document binary uncertainty, player-level Study 2 scaling and test direction (`model_audit.*`).
+- [x] Record Study 3 measurement screens before exposure–outcome associations (`study3_measurement.*`; gate FAILED, primary claim stopped).
 - [ ] Save training-only preprocessing and development coefficients before 2025 evaluation.
 - [ ] Finish baseline/augmented evaluation, intervals and prespecified sensitivities.
 - [ ] Choose final narrative by Nov 20; retain null/uncertain findings and prior-outcome disclosure.
+  - Nov 9: follow the evidence-map path after the frozen measurement gate failed; final claims
+    still depend on completing required Studies 1–2 evaluation/sensitivity work.
 - [x] Create starter notebook and record dependencies; local CSV/Parquet execution verified.
 - [ ] Run full notebook from clean inputs; record duration/memory; reproduce every headline number.
 
@@ -23,7 +25,7 @@ All unchecked items are pending. This file records evidence of completion, not a
 - [ ] Explicit Combine-tracking→REG performance link with conventional baseline.
 - [ ] Six self-contained figures and one table; unique-player n, units and intervals agree.
 - [ ] Evidence card separates measurement, transfer and incremental prediction confidence.
-- [ ] Hero examples selected without reference to desired NFL outcomes.
+- [x] Draft hero examples selected without reference to desired NFL outcomes (`route_trace_selection.json`).
 - [ ] Actual findings and limitations replace provisional titles/claims.
 - [ ] Football and statistical review issues recorded and resolved.
 - [ ] ≤2,000 words and fewer than ten combined figures/tables.

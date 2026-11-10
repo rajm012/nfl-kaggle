@@ -1,0 +1,56 @@
+{
+  "id": "F1",
+  "study": 2,
+  "model": "secondary, player SDs",
+  "method": "LMM",
+  "position": "DL",
+  "outcome": "player_get_off",
+  "coefficient": "A0_z",
+  "candidate_plays": 25799,
+  "fitted_plays": 25799,
+  "dropped_missing_plays": 0,
+  "players": 77,
+  "design_rank": 17,
+  "dropped_redundant_columns": [
+    "forty_missing"
+  ],
+  "beta": -0.0015356335105611908,
+  "lo": -0.01918630757097044,
+  "hi": 0.016115040549848057,
+  "se": 0.009005611429411722,
+  "p_two": 0.8646014995228793,
+  "p_dir_historical": 0.4323007497614397,
+  "cluster_t_df": null,
+  "converged": true,
+  "warnings": [
+    "The MLE may be on the boundary of the parameter space."
+  ],
+  "controls": [
+    {
+      "feature": "combine_weight_z",
+      "beta": 0.04561672962672946,
+      "lo": 0.012130387865796545,
+      "hi": 0.07910307138766237
+    },
+    {
+      "feature": "combine_height_z",
+      "beta": 0.003694482581523484,
+      "lo": -0.011909499967823053,
+      "hi": 0.01929846513087002
+    },
+    {
+      "feature": "pick_z",
+      "beta": 0.01912259880334627,
+      "lo": -0.004540859991383754,
+      "hi": 0.04278605759807629
+    },
+    {
+      "feature": "forty_z",
+      "beta": 0.008175932269732218,
+      "lo": -0.022195964327800556,
+      "hi": 0.03854782886726499
+    }
+  ],
+  "seconds": 0.46,
+  "formula": "player_get_off ~ A0_z + pick_z + udfa + forty_z + forty_missing + combine_weight_z + combine_height_z + C(season) + C(down) + yards_to_go + blitz + C(lined_up_position)"
+}

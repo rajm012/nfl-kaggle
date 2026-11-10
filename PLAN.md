@@ -76,11 +76,19 @@ resource ideas remain in [resource_requests.md](reports/resource_requests.md).
 
 ## 2. Existing evidence and limits
 
+**Execution update, November 9:** local audit/reliability/transfer refits completed. The frozen
+Study 3 measurement screen failed (adjusted contrast SB=0.296 <0.40; 41 diagnostic WRs), so the
+primary route-performance claim stops before fitting TURN or evaluating 2025. Follow the planned
+evidence-map path. Two-sided audited Studies 1–2 remain 0/9 Holm-significant; separate robust
+binary sensitivities remain 0/3. Held-out prediction and same-sample 3-cone checks remain pending.
+Current outputs and exact next work: [latest_runs.md](reports/latest_runs.md).
+
 - All nine CSVs downloaded: 510 athletes, **22,654,290 game frames**, 314,197 player-play rows.
 - Reusable pipeline: signed acceleration → drill-normalised Combine traits → game movement.
 - Reported WR turning transfer r=0.28; DL burst r=0.45, attenuating to 0.21 after weight adjustment in prior notes. These are movement findings, not established performance gains.
 - Six envelope tests and three first-step tests produced no Holm-significant added performance association. The original general-metric and first-step bets have ended.
-- Held-out prediction, robust binary uncertainty and supporting reproduction checks remain unfinished. Audit the old nulls before presenting them as final evidence.
+- Held-out prediction and same-sample 3-cone checks remain unfinished. Robust binary sensitivity,
+  player-level Study 2 SDs, reliability and adjusted transfer now have saved reproduction code.
 - Only the rookie cohort appears in game tracking. We cannot reconstruct opponent geometry, separation time series or ball-relative outcomes from these frames.
 - Many plays improve performance measurement but do not create more independent athletes.
 
@@ -278,6 +286,8 @@ artifacts instead of repeating orientation or adding more study families.
 
 **Started November 9:** historical reports preserved; executable audit passes key/count checks
 and records join attrition; starter notebook executes on CSV and Parquet inputs with a sample
-support figure. **Next:** explain unmatched game-trait/player-play rows, reproduce TURN
-reliability, and configure remote authentication/inventory. No new trait–outcome fit before
-the frozen follow-up protocol and measurement checks.
+support figure. **Completed later November 9:** join explanations, reliability, model/transfer
+audits and the frozen measurement screen. The screen failed, stopping the primary route claim.
+Notebook reproduces it from CSV and Parquet; three additional draft figures saved. Owner chose
+local execution while remote access is unresolved. **Next:** Studies 1–2 held-out prediction and
+same-sample 3-cone sensitivity, followed by complete notebook/figure/writeup integration.

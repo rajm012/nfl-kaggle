@@ -1,0 +1,25 @@
+{
+  "rule": "2023/24 WRs with observed forty, within 0.03 s; greatest training-reference TURN difference; ties by ascending athlete IDs; first recorded speed-out attempt",
+  "outcome_information_used": false,
+  "coordinate_transform": "Translation to attempt start only",
+  "players": [
+    {
+      "label": "WR A",
+      "nfl_id": 56239,
+      "event_id": "6414e684e3d8e72dcdcb4e2e-2023",
+      "forty": 4.54,
+      "TURN_z": -1.7821512138598212,
+      "frames": 43,
+      "attempt_turn": 6.620081806537165
+    },
+    {
+      "label": "WR B",
+      "nfl_id": 57158,
+      "event_id": "20240302100800_1709422886501_000",
+      "forty": 4.52,
+      "TURN_z": 2.5331385769522226,
+      "frames": 50,
+      "attempt_turn": 7.217826497940989
+    }
+  ]
+}

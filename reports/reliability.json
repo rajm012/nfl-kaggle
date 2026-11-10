@@ -1,0 +1,1220 @@
+{
+  "generated_utc": "2026-11-09T14:35:44.259548+00:00",
+  "seed": 20261109,
+  "bootstrap_resamples": 10000,
+  "cross_drill": [
+    {
+      "sample": "historical full cohort",
+      "position": "WR",
+      "feature": "lat",
+      "n": 107,
+      "r": 0.37506825900959795,
+      "r_lo": 0.2176169837532048,
+      "r_hi": 0.514708717202733,
+      "SB": 0.5455267497480356,
+      "SB_lo": 0.3574473527503177,
+      "SB_hi": 0.679614121655369,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "WR",
+      "feature": "burst",
+      "n": 107,
+      "r": 0.4781068863032905,
+      "r_lo": 0.3154304638817003,
+      "r_hi": 0.6148253253891173,
+      "SB": 0.6469178795303826,
+      "SB_lo": 0.47958515868774604,
+      "SB_hi": 0.7614759512654603,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "WR",
+      "feature": "brake",
+      "n": 107,
+      "r": 0.07003000753719081,
+      "r_lo": -0.1263803493096096,
+      "r_hi": 0.26778415586958493,
+      "SB": 0.13089353951553884,
+      "SB_lo": -0.28932579346111487,
+      "SB_hi": 0.42244439580633386,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "WR",
+      "feature": "vmax",
+      "n": 107,
+      "r": 0.37037619582270986,
+      "r_lo": 0.18934672525974397,
+      "r_hi": 0.5332700420781489,
+      "SB": 0.5405467446847372,
+      "SB_lo": 0.3184045850353556,
+      "SB_hi": 0.6955983322485978,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "development, training reference",
+      "position": "WR",
+      "feature": "TURN",
+      "n": 70,
+      "r": 0.42104010570498407,
+      "r_lo": 0.2290615931080971,
+      "r_hi": 0.5834529401547928,
+      "SB": 0.5925801868851609,
+      "SB_lo": 0.37274225212560347,
+      "SB_hi": 0.7369375184560351,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DB",
+      "feature": "lat",
+      "n": 122,
+      "r": 0.14103064809339352,
+      "r_lo": -0.05276470259890314,
+      "r_hi": 0.3172327579946405,
+      "SB": 0.2471987029078471,
+      "SB_lo": -0.11140780489002507,
+      "SB_hi": 0.4816654552041307,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DB",
+      "feature": "burst",
+      "n": 122,
+      "r": 0.06045951093824562,
+      "r_lo": -0.13629314216104832,
+      "r_hi": 0.24840066961899593,
+      "SB": 0.11402511895009333,
+      "SB_lo": -0.315600463106342,
+      "SB_hi": 0.3979502345105378,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DB",
+      "feature": "brake",
+      "n": 122,
+      "r": 0.18467093503764748,
+      "r_lo": 0.009624033007527545,
+      "r_hi": 0.35137931206090606,
+      "SB": 0.31176747833655405,
+      "SB_lo": 0.019064587792861683,
+      "SB_hi": 0.5200306219355081,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DB",
+      "feature": "vmax",
+      "n": 122,
+      "r": 0.5580401234712374,
+      "r_lo": 0.4198893080468602,
+      "r_hi": 0.6745307226101184,
+      "SB": 0.7163360109468186,
+      "SB_lo": 0.591439495553977,
+      "SB_hi": 0.8056355294081632,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "development, training reference",
+      "position": "DB",
+      "feature": "TURN",
+      "n": 85,
+      "r": 0.16438725810971214,
+      "r_lo": -0.06110263965235292,
+      "r_hi": 0.37110361112062074,
+      "SB": 0.28235839402190205,
+      "SB_lo": -0.13015829468245252,
+      "SB_hi": 0.5413210323577413,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "OL",
+      "feature": "lat",
+      "n": 121,
+      "r": 0.43021281764842123,
+      "r_lo": 0.26737116969011154,
+      "r_hi": 0.5699944360277213,
+      "SB": 0.6016067152240797,
+      "SB_lo": 0.421930332777709,
+      "SB_hi": 0.7261101351032518,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "OL",
+      "feature": "burst",
+      "n": 121,
+      "r": 0.27677075277507773,
+      "r_lo": 0.08669016971910455,
+      "r_hi": 0.44260525295618497,
+      "SB": 0.43354807771639964,
+      "SB_lo": 0.15954900878787345,
+      "SB_hi": 0.6136193557443366,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "OL",
+      "feature": "brake",
+      "n": 121,
+      "r": -0.034310714192371236,
+      "r_lo": -0.23865933038271275,
+      "r_hi": 0.17866702600957834,
+      "SB": -0.0710595316663918,
+      "SB_lo": -0.6269449141674847,
+      "SB_hi": 0.3031679381317085,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "OL",
+      "feature": "vmax",
+      "n": 121,
+      "r": 0.6499954058042974,
+      "r_lo": 0.5340232382970043,
+      "r_hi": 0.7498238153156972,
+      "SB": 0.7878754128863217,
+      "SB_lo": 0.6962387856521002,
+      "SB_hi": 0.8570277861721941,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "development, training reference",
+      "position": "OL",
+      "feature": "TURN",
+      "n": 83,
+      "r": 0.33473664887955745,
+      "r_lo": 0.11779902404325517,
+      "r_hi": 0.5216008354937889,
+      "SB": 0.5015770701442139,
+      "SB_lo": 0.21076959544508733,
+      "SB_hi": 0.6855948331870091,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DL",
+      "feature": "lat",
+      "n": 118,
+      "r": 0.40381356161914606,
+      "r_lo": 0.2577148250573535,
+      "r_hi": 0.5401475239346655,
+      "SB": 0.575309389593574,
+      "SB_lo": 0.40981440295195903,
+      "SB_hi": 0.7014230981649509,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DL",
+      "feature": "burst",
+      "n": 118,
+      "r": 0.41770009964550825,
+      "r_lo": 0.24627252407095504,
+      "r_hi": 0.558956643029875,
+      "SB": 0.5892644004891485,
+      "SB_lo": 0.3952145607230506,
+      "SB_hi": 0.7170906843740407,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DL",
+      "feature": "brake",
+      "n": 118,
+      "r": 0.23404755753029266,
+      "r_lo": 0.07195577804264032,
+      "r_hi": 0.3871672884255878,
+      "SB": 0.3793169170865563,
+      "SB_lo": 0.13425139267224148,
+      "SB_hi": 0.5582128293480974,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "DL",
+      "feature": "vmax",
+      "n": 118,
+      "r": 0.7445931295437087,
+      "r_lo": 0.6588587013692404,
+      "r_hi": 0.8143201785540283,
+      "SB": 0.8536008963172451,
+      "SB_lo": 0.7943518044368831,
+      "SB_hi": 0.8976587354091192,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "development, training reference",
+      "position": "DL",
+      "feature": "TURN",
+      "n": 74,
+      "r": 0.33868344860459315,
+      "r_lo": 0.1485412263396666,
+      "r_hi": 0.5058123800394587,
+      "SB": 0.505994824926875,
+      "SB_lo": 0.25866067831636963,
+      "SB_hi": 0.6718132839712797,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "TE",
+      "feature": "lat",
+      "n": 42,
+      "r": 0.05742245088122603,
+      "r_lo": -0.2928294463199694,
+      "r_hi": 0.39655197605078385,
+      "SB": 0.10860834443863336,
+      "SB_lo": -0.8281720577762186,
+      "SB_hi": 0.5679014928927554,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "TE",
+      "feature": "burst",
+      "n": 42,
+      "r": 0.45415304504291826,
+      "r_lo": 0.19985773534969042,
+      "r_hi": 0.7046850612453152,
+      "SB": 0.624628950289774,
+      "SB_lo": 0.3331357201134237,
+      "SB_hi": 0.8267627578439916,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "TE",
+      "feature": "brake",
+      "n": 42,
+      "r": 0.16336188107131064,
+      "r_lo": -0.07767111678959877,
+      "r_hi": 0.4534464196180139,
+      "SB": 0.28084447965730974,
+      "SB_lo": -0.16842390649037167,
+      "SB_hi": 0.6239602829489731,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "historical full cohort",
+      "position": "TE",
+      "feature": "vmax",
+      "n": 42,
+      "r": 0.3069969524821236,
+      "r_lo": 0.0443049092183083,
+      "r_hi": 0.5552719146000166,
+      "SB": 0.46977454981682143,
+      "SB_lo": 0.0848505236875153,
+      "SB_hi": 0.7140512335977223,
+      "valid_bootstraps": 10000
+    },
+    {
+      "sample": "development, training reference",
+      "position": "TE",
+      "feature": "TURN",
+      "n": 25,
+      "r": 0.1788014193854068,
+      "r_lo": -0.21727340736252693,
+      "r_hi": 0.5497956453378521,
+      "SB": 0.30336139140149443,
+      "SB_lo": -0.5551706289431233,
+      "SB_hi": 0.7095072785780061,
+      "valid_bootstraps": 10000
+    }
+  ],
+  "same_drill_turn": [
+    {
+      "position": "DB",
+      "drill": "BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL",
+      "n": 2,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DB",
+      "drill": "BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION",
+      "n": 119,
+      "r": 0.5826474941953927,
+      "r_lo": 0.43657250061467906,
+      "r_hi": 0.710171152697507,
+      "SB": 0.7362947167102512,
+      "SB_lo": 0.6077973794262092,
+      "SB_hi": 0.8305264085145297,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DB",
+      "drill": "BOX_DRILL",
+      "n": 3,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DB",
+      "drill": "GAUNTLET_DRILL",
+      "n": 4,
+      "r": 0.6626316355256685,
+      "r_lo": -1.0,
+      "r_hi": 1.0000000000000002,
+      "SB": 0.797087726910918,
+      "SB_lo": null,
+      "SB_hi": 1.0000000000000002,
+      "valid_bootstraps": 9857
+    },
+    {
+      "position": "DB",
+      "drill": "LINE_DRILL",
+      "n": 99,
+      "r": 0.2145884854962758,
+      "r_lo": 0.03909613050630485,
+      "r_hi": 0.4020349735304431,
+      "SB": 0.35335175338599695,
+      "SB_lo": 0.0752502667626239,
+      "SB_hi": 0.5735020611049165,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DB",
+      "drill": "SHORT_SHUTTLE",
+      "n": 8,
+      "r": 0.1587431460901847,
+      "r_lo": -0.562596790729485,
+      "r_hi": 0.8680993189111648,
+      "SB": 0.27399194830332096,
+      "SB_lo": -2.5724401595853092,
+      "SB_hi": 0.9293931110869873,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DB",
+      "drill": "TERYL_AUSTIN_DRILL_1",
+      "n": 2,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DB",
+      "drill": "TERYL_AUSTIN_DRILL_2",
+      "n": 2,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DB",
+      "drill": "THREE_CONE_DRILL",
+      "n": 7,
+      "r": 0.48431074592645923,
+      "r_lo": -0.7545098934311824,
+      "r_hi": 0.9637236293812451,
+      "SB": 0.6525732529466638,
+      "SB_lo": -6.146967826743539,
+      "SB_hi": 0.9815267433380198,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DB",
+      "drill": "W_DRILL",
+      "n": 3,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DL",
+      "drill": "BACK_PEDAL_AND_REACT",
+      "n": 3,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DL",
+      "drill": "BODY_CONTROL_DRILL",
+      "n": 2,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DL",
+      "drill": "PASS_RUSH_DRILL",
+      "n": 106,
+      "r": 0.4374858415528678,
+      "r_lo": 0.26763536872624333,
+      "r_hi": 0.5949449262123337,
+      "SB": 0.6086819485891652,
+      "SB_lo": 0.4222592321562802,
+      "SB_hi": 0.7460382066297494,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DL",
+      "drill": "RUN_AND_CLUB_DRILL",
+      "n": 1,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "DL",
+      "drill": "RUN_THE_HOOP_DRILL",
+      "n": 10,
+      "r": 0.48326300116716886,
+      "r_lo": -0.14693535495978458,
+      "r_hi": 0.8280958524614026,
+      "SB": 0.6516214599661594,
+      "SB_lo": -0.3444882068764149,
+      "SB_hi": 0.9059654627479513,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DL",
+      "drill": "SHORT_SHUTTLE",
+      "n": 4,
+      "r": -0.152054856886788,
+      "r_lo": -1.0000000000000002,
+      "r_hi": 1.0,
+      "SB": -0.3586431460141912,
+      "SB_lo": null,
+      "SB_hi": 1.0,
+      "valid_bootstraps": 9857
+    },
+    {
+      "position": "DL",
+      "drill": "SHORT_ZONE_BREAKS",
+      "n": 39,
+      "r": 0.20208514516356718,
+      "r_lo": -0.0790728584461996,
+      "r_hi": 0.5046805921285326,
+      "SB": 0.3362243448005832,
+      "SB_lo": -0.17172446087925441,
+      "SB_hi": 0.6708142509030539,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "DL",
+      "drill": "THREE_CONE_DRILL",
+      "n": 12,
+      "r": 0.0870760777879224,
+      "r_lo": -0.5415352108772336,
+      "r_hi": 0.666348485671361,
+      "SB": 0.16020236222125764,
+      "SB_lo": -2.362385176464327,
+      "SB_hi": 0.7997708659397178,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "OL",
+      "drill": "PASS_RUSH_DROP",
+      "n": 118,
+      "r": 0.2348927925337656,
+      "r_lo": 0.0836465953140617,
+      "r_hi": 0.3701964480766885,
+      "SB": 0.38042621020049877,
+      "SB_lo": 0.15437984242421635,
+      "SB_hi": 0.5403552878805433,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "OL",
+      "drill": "SCREEN_DRILL",
+      "n": 1,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "OL",
+      "drill": "SHORT_SHUTTLE",
+      "n": 13,
+      "r": 0.5831813415768972,
+      "r_lo": 0.26757511839434805,
+      "r_hi": 0.8861563721601673,
+      "SB": 0.736720837040728,
+      "SB_lo": 0.42218423904263525,
+      "SB_hi": 0.9396425293680977,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "OL",
+      "drill": "THREE_CONE_DRILL",
+      "n": 7,
+      "r": 0.3124116138411769,
+      "r_lo": -0.4682351410869578,
+      "r_hi": 0.8142086185969236,
+      "SB": 0.4760878531496807,
+      "SB_lo": -1.7610608645485046,
+      "SB_hi": 0.8975909498507596,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "BLOCK_EXPLOSION",
+      "n": 1,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "TE",
+      "drill": "CORNER_ROUTE",
+      "n": 29,
+      "r": 0.4232073724075424,
+      "r_lo": 0.05898873292333443,
+      "r_hi": 0.7110741570961643,
+      "SB": 0.5947234122201481,
+      "SB_lo": 0.11140578004167476,
+      "SB_hi": 0.8311435879587084,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "END_ZONE_FADE_RIGHT",
+      "n": 7,
+      "r": 0.7034202915552186,
+      "r_lo": -0.40559873499426496,
+      "r_hi": 0.9951085853272459,
+      "SB": 0.8258916428816256,
+      "SB_lo": -1.3647303896311578,
+      "SB_hi": 0.9975482965144217,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "GAUNTLET_DRILL",
+      "n": 40,
+      "r": 0.5394818008150642,
+      "r_lo": 0.20591528940093015,
+      "r_hi": 0.7547114086010838,
+      "SB": 0.7008615503339378,
+      "SB_lo": 0.34150871327491655,
+      "SB_hi": 0.8602114340873473,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "HOOK_ROUTE_RIGHT",
+      "n": 4,
+      "r": -0.5379904998889423,
+      "r_lo": -1.0000000000000002,
+      "r_hi": 1.0000000000000002,
+      "SB": -2.328915313471348,
+      "SB_lo": null,
+      "SB_hi": 1.0000000000000002,
+      "valid_bootstraps": 9857
+    },
+    {
+      "position": "TE",
+      "drill": "IN_ROUTE_LEFT",
+      "n": 3,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "TE",
+      "drill": "OVER_SHOULDER_ADJUST",
+      "n": 4,
+      "r": 0.1322047456936221,
+      "r_lo": -1.0000000000000002,
+      "r_hi": 1.0,
+      "SB": 0.23353504955082932,
+      "SB_lo": null,
+      "SB_hi": 1.0,
+      "valid_bootstraps": 9857
+    },
+    {
+      "position": "TE",
+      "drill": "SHORT_SHUTTLE",
+      "n": 11,
+      "r": 0.3994379934044883,
+      "r_lo": -0.34147515119793215,
+      "r_hi": 0.8139488887143761,
+      "SB": 0.5708548650058499,
+      "SB_lo": -1.037091164651158,
+      "SB_hi": 0.8974331016473752,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "THREE_CONE_DRILL",
+      "n": 7,
+      "r": 0.5870773213551331,
+      "r_lo": -0.3144867388353036,
+      "r_hi": 0.9972879901475806,
+      "SB": 0.7398219525358154,
+      "SB_lo": -0.9175219697456657,
+      "SB_hi": 0.9986421538276916,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "TE",
+      "drill": "WHEEL_ROUTE_LEFT",
+      "n": 5,
+      "r": 0.995886746006561,
+      "r_lo": 0.9522269464457311,
+      "r_hi": 1.0,
+      "SB": 0.9979391345718043,
+      "SB_lo": 0.975528944705304,
+      "SB_hi": 1.0,
+      "valid_bootstraps": 9982
+    },
+    {
+      "position": "WR",
+      "drill": "CIRCUS_ROUTE_LEFT",
+      "n": 6,
+      "r": 0.7561723226948822,
+      "r_lo": -0.8909458262219065,
+      "r_hi": 0.9983958013702658,
+      "SB": 0.8611595945601971,
+      "SB_lo": -16.33950898632873,
+      "SB_hi": 0.9991972568053665,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "COMEBACK_ROUTE_RIGHT",
+      "n": 12,
+      "r": 0.5344869325041333,
+      "r_lo": 0.04277351712097087,
+      "r_hi": 0.9627669909031396,
+      "SB": 0.696632758718776,
+      "SB_lo": 0.08203798124652367,
+      "SB_hi": 0.9810303468168027,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "CURL_ROUTE_RIGHT",
+      "n": 7,
+      "r": -0.39115075542407934,
+      "r_lo": -0.9270834456556086,
+      "r_hi": 0.6810207017142108,
+      "SB": -1.2848854093480104,
+      "SB_lo": -25.428613680150356,
+      "SB_hi": 0.810246656712489,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "DAGGER_ROUTE_LEFT",
+      "n": 8,
+      "r": 0.29822181097030837,
+      "r_lo": -0.33711679565460617,
+      "r_hi": 0.884055362735614,
+      "SB": 0.4594312134494388,
+      "SB_lo": -1.0171227553955409,
+      "SB_hi": 0.9384600688718422,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "GAUNTLET_DRILL",
+      "n": 93,
+      "r": 0.33149825086203955,
+      "r_lo": 0.10456886829870153,
+      "r_hi": 0.5062648790998899,
+      "SB": 0.4979326869523422,
+      "SB_lo": 0.18933879326105293,
+      "SB_hi": 0.6722122863309704,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "GO_ROUTE_RIGHT",
+      "n": 7,
+      "r": 0.07420216592858656,
+      "r_lo": -0.7747829185207622,
+      "r_hi": 0.9105540843392199,
+      "SB": 0.13815307449960876,
+      "SB_lo": -6.880321096712085,
+      "SB_hi": 0.9531832590378012,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "OVER_SHOULDER_ADJUST",
+      "n": 1,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "WR",
+      "drill": "POST_CORNER_ROUTE_LEFT",
+      "n": 10,
+      "r": 0.49493500388554557,
+      "r_lo": -0.2758170731510488,
+      "r_hi": 0.908528343122296,
+      "SB": 0.6621491939102906,
+      "SB_lo": -0.7617331558786616,
+      "SB_hi": 0.95207215171452,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "POST_CORNER_ROUTE_RIGHT",
+      "n": 15,
+      "r": 0.37527180369099505,
+      "r_lo": -0.1788583610784975,
+      "r_hi": 0.8744636149659067,
+      "SB": 0.545742016500054,
+      "SB_lo": -0.4356333977008212,
+      "SB_hi": 0.9330281025292794,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "RED_ZONE_FADE_RIGHT",
+      "n": 13,
+      "r": 0.5105776502286765,
+      "r_lo": -0.06459944124620069,
+      "r_hi": 0.858650597137238,
+      "SB": 0.6760031834859777,
+      "SB_lo": -0.13812145105464596,
+      "SB_hi": 0.9239505246007649,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "SHORT_SHUTTLE",
+      "n": 6,
+      "r": -0.6507829521787312,
+      "r_lo": -0.9999982450081703,
+      "r_hi": 0.49158746513522683,
+      "SB": -3.727097266521796,
+      "SB_lo": -1139604.444939971,
+      "SB_hi": 0.6591466831489626,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "SLANT_ROUTE_LEFT",
+      "n": 3,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "WR",
+      "drill": "SLOT_SAIL_ROUTE_RIGHT",
+      "n": 8,
+      "r": -0.011113440725674292,
+      "r_lo": -0.9514081922266989,
+      "r_hi": 0.9294567580703179,
+      "SB": -0.022476674642700502,
+      "SB_lo": -39.15920134790512,
+      "SB_hi": 0.9634388064751275,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "SLOT_STRIKE_ROUTE_LEFT",
+      "n": 1,
+      "r": null,
+      "r_lo": null,
+      "r_hi": null,
+      "SB": null,
+      "SB_lo": null,
+      "SB_hi": null,
+      "valid_bootstraps": 0
+    },
+    {
+      "position": "WR",
+      "drill": "SPEED_OUT_ROUTE_LEFT",
+      "n": 17,
+      "r": 0.01202943831804756,
+      "r_lo": -0.4424571403598192,
+      "r_hi": 0.4916218974997336,
+      "SB": 0.023772901978108475,
+      "SB_lo": -1.5871681708752077,
+      "SB_hi": 0.6591776351953448,
+      "valid_bootstraps": 10000
+    },
+    {
+      "position": "WR",
+      "drill": "THREE_CONE_DRILL",
+      "n": 5,
+      "r": 0.7230437913304633,
+      "r_lo": 0.1474242576848002,
+      "r_hi": 1.0,
+      "SB": 0.8392633953570718,
+      "SB_lo": 0.25696555863698317,
+      "SB_hi": 1.0,
+      "valid_bootstraps": 9982
+    }
+  ],
+  "qc": {
+    "attempts": 5517,
+    "nonfinite_turn_attempts": 0,
+    "nonpositive_duration": 0,
+    "nonfinite_coordinates": 0,
+    "dropped_attempts": 0,
+    "turn_range": [
+      0.30545849645434453,
+      7.743827875910975
+    ]
+  },
+  "preprocessing": {
+    "reference_classes": [
+      2023,
+      2024
+    ],
+    "ddof": 1,
+    "reference_population": "All development-class Combine athletes, across positions",
+    "excluded_constant_or_sparse_drills": [],
+    "unseen_drills": [
+      "CIRCUS_ROUTE_LEFT",
+      "SHORT_ZONE_BREAK_FLAT_WHEEL",
+      "SHORT_ZONE_BREAK_FORWARD",
+      "SHORT_ZONE_BREAK_INSIDE"
+    ],
+    "drill_reference": [
+      {
+        "drill": "BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL",
+        "mean": 5.364126405110214,
+        "std": 0.5986473913170711,
+        "count": 85
+      },
+      {
+        "drill": "BACK_PEDAL_AND_REACT",
+        "mean": 4.795139933055272,
+        "std": 0.3958563830002693,
+        "count": 41
+      },
+      {
+        "drill": "BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION",
+        "mean": 3.3457144221144297,
+        "std": 0.7231505659167475,
+        "count": 85
+      },
+      {
+        "drill": "BLOCK_EXPLOSION",
+        "mean": 1.4014936260665936,
+        "std": 0.6118823717541817,
+        "count": 22
+      },
+      {
+        "drill": "BODY_CONTROL_DRILL",
+        "mean": 5.1152089957427105,
+        "std": 0.6909732263489967,
+        "count": 69
+      },
+      {
+        "drill": "BOX_DRILL",
+        "mean": 5.718432509972892,
+        "std": 0.4615079457109501,
+        "count": 85
+      },
+      {
+        "drill": "COMEBACK_ROUTE_RIGHT",
+        "mean": 5.919574220475581,
+        "std": 0.6367704234697137,
+        "count": 64
+      },
+      {
+        "drill": "CORNER_ROUTE",
+        "mean": 3.712227657791234,
+        "std": 0.5022407376174344,
+        "count": 14
+      },
+      {
+        "drill": "CURL_ROUTE_RIGHT",
+        "mean": 5.9082858712374815,
+        "std": 0.860655507432937,
+        "count": 67
+      },
+      {
+        "drill": "DAGGER_ROUTE_LEFT",
+        "mean": 5.930034121643539,
+        "std": 0.7002019526269933,
+        "count": 70
+      },
+      {
+        "drill": "END_ZONE_FADE_RIGHT",
+        "mean": 2.0354806294269796,
+        "std": 0.3136339224869265,
+        "count": 13
+      },
+      {
+        "drill": "FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE",
+        "mean": 3.6177735129394226,
+        "std": 0.48548502726586873,
+        "count": 82
+      },
+      {
+        "drill": "FLAT_ROUTE_LEFT",
+        "mean": 5.347124679656327,
+        "std": 0.424274819613905,
+        "count": 25
+      },
+      {
+        "drill": "FOUR_BAG_AGILITY_DRILL",
+        "mean": 3.4063239488829686,
+        "std": 0.457624697182304,
+        "count": 68
+      },
+      {
+        "drill": "FOUR_BAG_SHUFFLE_DRILL",
+        "mean": 3.2368837807748876,
+        "std": 0.2944250313310621,
+        "count": 3
+      },
+      {
+        "drill": "FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION",
+        "mean": 4.2397135271552076,
+        "std": 0.614202280205314,
+        "count": 68
+      },
+      {
+        "drill": "GAUNTLET_DRILL",
+        "mean": 5.029534049315923,
+        "std": 0.6568215978750583,
+        "count": 177
+      },
+      {
+        "drill": "GO_ROUTE_RIGHT",
+        "mean": 1.7250853457138422,
+        "std": 0.7400761442260789,
+        "count": 64
+      },
+      {
+        "drill": "HOOK_ROUTE_RIGHT",
+        "mean": 5.436878271427054,
+        "std": 0.5151212240047232,
+        "count": 24
+      },
+      {
+        "drill": "IN_ROUTE_LEFT",
+        "mean": 5.60898940184617,
+        "std": 0.6504894749006186,
+        "count": 23
+      },
+      {
+        "drill": "LINE_DRILL",
+        "mean": 0.9544507961737215,
+        "std": 0.2751929460304148,
+        "count": 81
+      },
+      {
+        "drill": "OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT",
+        "mean": 4.46068484646946,
+        "std": 0.3351747055203296,
+        "count": 60
+      },
+      {
+        "drill": "OL_PULL_DRILL_FOLD_BLOCK_RIGHT",
+        "mean": 3.1087486997643916,
+        "std": 1.1240380612074024,
+        "count": 81
+      },
+      {
+        "drill": "OL_PULL_DRILL_LONG_PULL_RIGHT",
+        "mean": 4.913943394798937,
+        "std": 0.6887290846576459,
+        "count": 55
+      },
+      {
+        "drill": "OVER_SHOULDER_ADJUST",
+        "mean": 1.5319572875884313,
+        "std": 0.7406951041476894,
+        "count": 91
+      },
+      {
+        "drill": "PASS_PRO_MIRROR_DRILL",
+        "mean": 3.1598736492000667,
+        "std": 0.5649101493163505,
+        "count": 83
+      },
+      {
+        "drill": "PASS_RUSH_DRILL",
+        "mean": 4.961764618973507,
+        "std": 0.5207667856968764,
+        "count": 74
+      },
+      {
+        "drill": "PASS_RUSH_DROP",
+        "mean": 2.4268191512116326,
+        "std": 0.405884142752784,
+        "count": 82
+      },
+      {
+        "drill": "POST_CORNER_ROUTE_LEFT",
+        "mean": 6.266211986872134,
+        "std": 0.5516319134905477,
+        "count": 70
+      },
+      {
+        "drill": "POST_CORNER_ROUTE_RIGHT",
+        "mean": 4.5073684355435315,
+        "std": 0.5583850038949636,
+        "count": 65
+      },
+      {
+        "drill": "RED_ZONE_FADE_RIGHT",
+        "mean": 1.7717966427411826,
+        "std": 0.4666877206322091,
+        "count": 65
+      },
+      {
+        "drill": "RUN_AND_CLUB_DRILL",
+        "mean": 3.892446535084122,
+        "std": 0.6425559145462643,
+        "count": 69
+      },
+      {
+        "drill": "RUN_THE_HOOP_DRILL",
+        "mean": 6.2442048614412355,
+        "std": 0.4172722307246735,
+        "count": 67
+      },
+      {
+        "drill": "SCREEN_DRILL",
+        "mean": 4.692963015108372,
+        "std": 0.5601016652993868,
+        "count": 81
+      },
+      {
+        "drill": "SHORT_SHUTTLE",
+        "mean": 2.30873526358451,
+        "std": 0.750631160943863,
+        "count": 107
+      },
+      {
+        "drill": "SHORT_ZONE_BREAKS",
+        "mean": 4.610111337994988,
+        "std": 0.6568278382000204,
+        "count": 40
+      },
+      {
+        "drill": "SHUFFLE_SPRINT_AND_COD_DRILL",
+        "mean": 1.7080965707728204,
+        "std": 0.8729328714296428,
+        "count": 4
+      },
+      {
+        "drill": "SLANT_ROUTE_LEFT",
+        "mean": 4.115701829423292,
+        "std": 0.7098151587406941,
+        "count": 70
+      },
+      {
+        "drill": "SLOT_SAIL_ROUTE_RIGHT",
+        "mean": 6.465357146259995,
+        "std": 0.6106779842749298,
+        "count": 63
+      },
+      {
+        "drill": "SLOT_STRIKE_ROUTE_LEFT",
+        "mean": 5.441473909154583,
+        "std": 0.598044411508236,
+        "count": 65
+      },
+      {
+        "drill": "SPEED_OUT_ROUTE_LEFT",
+        "mean": 6.664657575633579,
+        "std": 0.43533815593923747,
+        "count": 70
+      },
+      {
+        "drill": "TERYL_AUSTIN_DRILL_1",
+        "mean": 3.944084385934716,
+        "std": 0.7139916400213334,
+        "count": 64
+      },
+      {
+        "drill": "TERYL_AUSTIN_DRILL_2",
+        "mean": 4.862032430572507,
+        "std": 0.5600622286004656,
+        "count": 79
+      },
+      {
+        "drill": "THREE_CONE_DRILL",
+        "mean": 5.466661226616017,
+        "std": 0.7416890640380783,
+        "count": 105
+      },
+      {
+        "drill": "WAVE_DRILL",
+        "mean": 4.198767831954019,
+        "std": 0.555171652661713,
+        "count": 4
+      },
+      {
+        "drill": "WHEEL_ROUTE_LEFT",
+        "mean": 2.429126873158497,
+        "std": 0.5971455163727823,
+        "count": 24
+      },
+      {
+        "drill": "W_DRILL",
+        "mean": 4.513233464273788,
+        "std": 0.49003902533737015,
+        "count": 84
+      }
+    ]
+  }
+}
