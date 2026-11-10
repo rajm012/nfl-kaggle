@@ -1,0 +1,822 @@
+{
+  "spec": {
+    "id": "F3",
+    "position": "WR",
+    "outcome": "separation_at_pass_forward",
+    "traits": [
+      "A0"
+    ],
+    "study": 2,
+    "family": "primary",
+    "ten_split": true,
+    "cone": false
+  },
+  "preprocessing": {
+    "player_reference_n": 61,
+    "development_classes": [
+      2023,
+      2024
+    ],
+    "player_medians": {
+      "forty": 4.47,
+      "ten_yd_split": 1.54
+    },
+    "player_scalers": {
+      "pick": {
+        "mean": 156.24590163934425,
+        "sd": 86.87781760182993
+      },
+      "forty": {
+        "mean": 4.479344262295082,
+        "sd": 0.08592378119509982
+      },
+      "combine_weight": {
+        "mean": 199.01639344262296,
+        "sd": 15.727356000801796
+      },
+      "combine_height": {
+        "mean": 72.84836065573771,
+        "sd": 2.2783074348646544
+      },
+      "A0": {
+        "mean": 9.321902921159287,
+        "sd": 1.2726169028128178
+      },
+      "ten_f": {
+        "mean": 1.5375409836065572,
+        "sd": 0.02890534770043532
+      }
+    },
+    "cushion_median": 6.42000007629395,
+    "categories": {
+      "season": [
+        "2023",
+        "2024"
+      ],
+      "down": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "route_ran": [
+        "ANGLE",
+        "CORNER",
+        "CROSS",
+        "FLAT",
+        "GO",
+        "HITCH",
+        "IN",
+        "OUT",
+        "POST",
+        "SCREEN",
+        "SLANT",
+        "WHEEL"
+      ],
+      "team_coverage_man_zone": [
+        "MAN_COVERAGE",
+        "UNK",
+        "ZONE_COVERAGE"
+      ],
+      "receiver_alignment": [
+        "1x1",
+        "2x1",
+        "2x2",
+        "3x1",
+        "3x2",
+        "3x3",
+        "4x0",
+        "4x1"
+      ]
+    },
+    "most_frequent": {
+      "season": "2023",
+      "down": "1",
+      "route_ran": "GO",
+      "team_coverage_man_zone": "ZONE_COVERAGE",
+      "receiver_alignment": "2x2"
+    },
+    "latest_season": "2024"
+  },
+  "training_missingness": {
+    "missing": {
+      "forty": 0,
+      "ten_yd_split": 0,
+      "cushion": 484,
+      "in_motion_at_ball_snap": 0,
+      "blitzing": 5
+    },
+    "unknown_categories": {
+      "season": {},
+      "down": {},
+      "route_ran": {},
+      "team_coverage_man_zone": {},
+      "receiver_alignment": {}
+    }
+  },
+  "columns0": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "route_ran=CORNER",
+    "route_ran=CROSS",
+    "route_ran=FLAT",
+    "route_ran=GO",
+    "route_ran=HITCH",
+    "route_ran=IN",
+    "route_ran=OUT",
+    "route_ran=POST",
+    "route_ran=SCREEN",
+    "route_ran=SLANT",
+    "route_ran=WHEEL",
+    "team_coverage_man_zone=UNK",
+    "team_coverage_man_zone=ZONE_COVERAGE",
+    "receiver_alignment=2x1",
+    "receiver_alignment=2x2",
+    "receiver_alignment=3x1",
+    "receiver_alignment=3x2",
+    "receiver_alignment=3x3",
+    "receiver_alignment=4x0",
+    "receiver_alignment=4x1",
+    "yards_to_go",
+    "cushion_f",
+    "cushion_missing",
+    "in_motion"
+  ],
+  "columns1": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "route_ran=CORNER",
+    "route_ran=CROSS",
+    "route_ran=FLAT",
+    "route_ran=GO",
+    "route_ran=HITCH",
+    "route_ran=IN",
+    "route_ran=OUT",
+    "route_ran=POST",
+    "route_ran=SCREEN",
+    "route_ran=SLANT",
+    "route_ran=WHEEL",
+    "team_coverage_man_zone=UNK",
+    "team_coverage_man_zone=ZONE_COVERAGE",
+    "receiver_alignment=2x1",
+    "receiver_alignment=2x2",
+    "receiver_alignment=3x1",
+    "receiver_alignment=3x2",
+    "receiver_alignment=3x3",
+    "receiver_alignment=4x0",
+    "receiver_alignment=4x1",
+    "yards_to_go",
+    "cushion_f",
+    "cushion_missing",
+    "in_motion",
+    "A0_z"
+  ],
+  "dropped0": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "dropped1": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "context_columns": [
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "route_ran=CORNER",
+    "route_ran=CROSS",
+    "route_ran=FLAT",
+    "route_ran=GO",
+    "route_ran=HITCH",
+    "route_ran=IN",
+    "route_ran=OUT",
+    "route_ran=POST",
+    "route_ran=SCREEN",
+    "route_ran=SLANT",
+    "route_ran=WHEEL",
+    "team_coverage_man_zone=UNK",
+    "team_coverage_man_zone=ZONE_COVERAGE",
+    "receiver_alignment=2x1",
+    "receiver_alignment=2x2",
+    "receiver_alignment=3x1",
+    "receiver_alignment=3x2",
+    "receiver_alignment=3x3",
+    "receiver_alignment=4x0",
+    "receiver_alignment=4x1",
+    "yards_to_go",
+    "cushion_f",
+    "cushion_missing",
+    "in_motion"
+  ],
+  "training_players": 51,
+  "training_plays": 9463,
+  "training_player_ids": [
+    55887,
+    55904,
+    55915,
+    55920,
+    55928,
+    55934,
+    55938,
+    55939,
+    55959,
+    55965,
+    55990,
+    56052,
+    56056,
+    56060,
+    56062,
+    56070,
+    56071,
+    56075,
+    56084,
+    56109,
+    56118,
+    56220,
+    56248,
+    56541,
+    56559,
+    57130,
+    57144,
+    57152,
+    57153,
+    57154,
+    57155,
+    57158,
+    57173,
+    57201,
+    57205,
+    57213,
+    57221,
+    57223,
+    57231,
+    57234,
+    57256,
+    57277,
+    57291,
+    57302,
+    57304,
+    57305,
+    57336,
+    57345,
+    57355,
+    57565,
+    57606
+  ],
+  "training_outcome_sd": 2.1304224177507054,
+  "baseline": {
+    "coefficients": {
+      "Intercept": 1.607059252643481,
+      "pick_z": 0.0833957388139267,
+      "forty_z": -0.03318222310403103,
+      "combine_weight_z": -0.14921415527458234,
+      "combine_height_z": 0.08509766510015525,
+      "udfa": -0.05046258034092288,
+      "ten_f_z": -0.040758437600308485,
+      "season=2024": -0.01937998996841597,
+      "down=2": -0.09069705400798334,
+      "down=3": -0.12481994575101744,
+      "down=4": -0.26197679665510376,
+      "route_ran=CORNER": 0.13900386964485498,
+      "route_ran=CROSS": 0.47251357386612314,
+      "route_ran=FLAT": 1.4131191639312985,
+      "route_ran=GO": -0.26772547366888266,
+      "route_ran=HITCH": 0.15378322467457664,
+      "route_ran=IN": 0.12014117578553378,
+      "route_ran=OUT": 0.08269487701022114,
+      "route_ran=POST": 0.022056037401146072,
+      "route_ran=SCREEN": 3.2275883869274757,
+      "route_ran=SLANT": 0.34713945948077546,
+      "route_ran=WHEEL": -0.7731428071069799,
+      "team_coverage_man_zone=UNK": 0.06833220630057196,
+      "team_coverage_man_zone=ZONE_COVERAGE": 0.9944921953922092,
+      "receiver_alignment=2x1": -0.5595402861630616,
+      "receiver_alignment=2x2": -0.468712866299284,
+      "receiver_alignment=3x1": -0.4418088903747412,
+      "receiver_alignment=3x2": -0.4866723324462844,
+      "receiver_alignment=3x3": -1.7904726629311225,
+      "receiver_alignment=4x0": 0.9920347480969186,
+      "receiver_alignment=4x1": -0.06013665165240835,
+      "yards_to_go": 0.022795521042162026,
+      "cushion_f": 0.1375851829918029,
+      "cushion_missing": 0.7640556043943443,
+      "in_motion": 0.68433972524944
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": 1.607059252643481,
+        "se": 1.0324714681569482,
+        "lo": -0.41654764000933064,
+        "hi": 3.630666145296293
+      },
+      "pick_z": {
+        "beta": 0.0833957388139267,
+        "se": 0.03665003330405692,
+        "lo": 0.011562993505781619,
+        "hi": 0.1552284841220718
+      },
+      "forty_z": {
+        "beta": -0.03318222310403103,
+        "se": 0.03813529978767637,
+        "lo": -0.10792603722751469,
+        "hi": 0.04156159101945263
+      },
+      "combine_weight_z": {
+        "beta": -0.14921415527458234,
+        "se": 0.04451728635372222,
+        "lo": -0.23646643321733432,
+        "hi": -0.06196187733183037
+      },
+      "combine_height_z": {
+        "beta": 0.08509766510015525,
+        "se": 0.045482823799115564,
+        "lo": -0.004047031461292497,
+        "hi": 0.174242361661603
+      },
+      "udfa": {
+        "beta": -0.05046258034092288,
+        "se": 0.13645129923700308,
+        "lo": -0.3179022124891467,
+        "hi": 0.21697705180730092
+      },
+      "ten_f_z": {
+        "beta": -0.040758437600308485,
+        "se": 0.03052665785131839,
+        "lo": -0.1005895875572694,
+        "hi": 0.01907271235665243
+      },
+      "season=2024": {
+        "beta": -0.01937998996841597,
+        "se": 0.062197222518919563,
+        "lo": -0.14128430604392192,
+        "hi": 0.10252432610708999
+      },
+      "down=2": {
+        "beta": -0.09069705400798334,
+        "se": 0.04663830249538857,
+        "lo": -0.18210644719902946,
+        "hi": 0.0007123391830627934
+      },
+      "down=3": {
+        "beta": -0.12481994575101744,
+        "se": 0.050450930287729116,
+        "lo": -0.2237019521015075,
+        "hi": -0.025937939400527396
+      },
+      "down=4": {
+        "beta": -0.26197679665510376,
+        "se": 0.11946217625105328,
+        "lo": -0.4961183596219444,
+        "hi": -0.027835233688263156
+      },
+      "route_ran=CORNER": {
+        "beta": 0.13900386964485498,
+        "se": 0.8301856525508208,
+        "lo": -1.4881301098366366,
+        "hi": 1.7661378491263466
+      },
+      "route_ran=CROSS": {
+        "beta": 0.47251357386612314,
+        "se": 0.8289249164767046,
+        "lo": -1.1521494083160904,
+        "hi": 2.097176556048337
+      },
+      "route_ran=FLAT": {
+        "beta": 1.4131191639312985,
+        "se": 0.8337248186567224,
+        "lo": -0.22095145365306523,
+        "hi": 3.0471897815156623
+      },
+      "route_ran=GO": {
+        "beta": -0.26772547366888266,
+        "se": 0.8287495481876213,
+        "lo": -1.8920447403204625,
+        "hi": 1.356593792982697
+      },
+      "route_ran=HITCH": {
+        "beta": 0.15378322467457664,
+        "se": 0.828722078422599,
+        "lo": -1.4704822022268957,
+        "hi": 1.7780486515760492
+      },
+      "route_ran=IN": {
+        "beta": 0.12014117578553378,
+        "se": 0.8295867015202761,
+        "lo": -1.5058188812475872,
+        "hi": 1.7461012328186547
+      },
+      "route_ran=OUT": {
+        "beta": 0.08269487701022114,
+        "se": 0.8294468563351954,
+        "lo": -1.5429910884967302,
+        "hi": 1.7083808425171725
+      },
+      "route_ran=POST": {
+        "beta": 0.022056037401146072,
+        "se": 0.8296829480667391,
+        "lo": -1.6040926593966787,
+        "hi": 1.6482047341989707
+      },
+      "route_ran=SCREEN": {
+        "beta": 3.2275883869274757,
+        "se": 0.8344983760846488,
+        "lo": 1.5920016246444029,
+        "hi": 4.863175149210549
+      },
+      "route_ran=SLANT": {
+        "beta": 0.34713945948077546,
+        "se": 0.8310320444666753,
+        "lo": -1.2816534176725969,
+        "hi": 1.975932336634148
+      },
+      "route_ran=WHEEL": {
+        "beta": -0.7731428071069799,
+        "se": 1.0059549958607084,
+        "lo": -2.7447783690621073,
+        "hi": 1.1984927548481477
+      },
+      "team_coverage_man_zone=UNK": {
+        "beta": 0.06833220630057196,
+        "se": 1.0611200091689983,
+        "lo": -2.0114247949454764,
+        "hi": 2.1480892075466205
+      },
+      "team_coverage_man_zone=ZONE_COVERAGE": {
+        "beta": 0.9944921953922092,
+        "se": 0.04575695429939538,
+        "lo": 0.9048102129231491,
+        "hi": 1.0841741778612692
+      },
+      "receiver_alignment=2x1": {
+        "beta": -0.5595402861630616,
+        "se": 0.6200636695188162,
+        "lo": -1.7748427465416878,
+        "hi": 0.6557621742155646
+      },
+      "receiver_alignment=2x2": {
+        "beta": -0.468712866299284,
+        "se": 0.6134227677754114,
+        "lo": -1.6709993984359675,
+        "hi": 0.7335736658373996
+      },
+      "receiver_alignment=3x1": {
+        "beta": -0.4418088903747412,
+        "se": 0.6134869366804205,
+        "lo": -1.6442211912541702,
+        "hi": 0.7606034105046877
+      },
+      "receiver_alignment=3x2": {
+        "beta": -0.4866723324462844,
+        "se": 0.6152548700198515,
+        "lo": -1.6925497189980656,
+        "hi": 0.7192050541054967
+      },
+      "receiver_alignment=3x3": {
+        "beta": -1.7904726629311225,
+        "se": 1.437449336851892,
+        "lo": -4.607821592761815,
+        "hi": 1.02687626689957
+      },
+      "receiver_alignment=4x0": {
+        "beta": 0.9920347480969186,
+        "se": 1.4367837252862758,
+        "lo": -1.824009607037473,
+        "hi": 3.80807910323131
+      },
+      "receiver_alignment=4x1": {
+        "beta": -0.06013665165240835,
+        "se": 0.6385244310909031,
+        "lo": -1.311621539839506,
+        "hi": 1.191348236534689
+      },
+      "yards_to_go": {
+        "beta": 0.022795521042162026,
+        "se": 0.004965878457602811,
+        "lo": 0.013062578113657203,
+        "hi": 0.032528463970666846
+      },
+      "cushion_f": {
+        "beta": 0.1375851829918029,
+        "se": 0.006990752506925347,
+        "lo": 0.12388355985339612,
+        "hi": 0.15128680613020967
+      },
+      "cushion_missing": {
+        "beta": 0.7640556043943443,
+        "se": 0.092492522310631,
+        "lo": 0.5827735918262401,
+        "hi": 0.9453376169624484
+      },
+      "in_motion": {
+        "beta": 0.68433972524944,
+        "se": 0.08649805342733188,
+        "lo": 0.514806655799048,
+        "hi": 0.8538727946998319
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.015159070319459334,
+    "converged": true,
+    "warnings": [
+      "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+      "Retrying MixedLM optimization with lbfgs"
+    ],
+    "optimizer": "default",
+    "initial_diagnostics": [
+      "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+      "Retrying MixedLM optimization with lbfgs"
+    ],
+    "seconds": 1.308
+  },
+  "augmented": {
+    "coefficients": {
+      "Intercept": 1.6079254320843717,
+      "pick_z": 0.07928750477078166,
+      "forty_z": -0.03915431163609647,
+      "combine_weight_z": -0.14978564871375272,
+      "combine_height_z": 0.08895223292506402,
+      "udfa": -0.042502030445678206,
+      "ten_f_z": -0.0413306843102525,
+      "season=2024": -0.019173407675004993,
+      "down=2": -0.09059315779937718,
+      "down=3": -0.12482422775043538,
+      "down=4": -0.2617972766552141,
+      "route_ran=CORNER": 0.13673887884268401,
+      "route_ran=CROSS": 0.469256449599107,
+      "route_ran=FLAT": 1.4097675297776093,
+      "route_ran=GO": -0.27056538790843115,
+      "route_ran=HITCH": 0.15176719417181908,
+      "route_ran=IN": 0.11816786775966415,
+      "route_ran=OUT": 0.08047657051091921,
+      "route_ran=POST": 0.019278013192673315,
+      "route_ran=SCREEN": 3.2238851992386235,
+      "route_ran=SLANT": 0.343918260536335,
+      "route_ran=WHEEL": -0.775160650058256,
+      "team_coverage_man_zone=UNK": 0.06632353042086486,
+      "team_coverage_man_zone=ZONE_COVERAGE": 0.9943789756612673,
+      "receiver_alignment=2x1": -0.5600706416961106,
+      "receiver_alignment=2x2": -0.46822785812534157,
+      "receiver_alignment=3x1": -0.4419234572016616,
+      "receiver_alignment=3x2": -0.48750836861484664,
+      "receiver_alignment=3x3": -1.7910681303510076,
+      "receiver_alignment=4x0": 0.9797665639468113,
+      "receiver_alignment=4x1": -0.0625616537081814,
+      "yards_to_go": 0.02277973685415128,
+      "cushion_f": 0.1375599303803537,
+      "cushion_missing": 0.7641379285073763,
+      "in_motion": 0.6839644050473075,
+      "A0_z": -0.014105967520358594
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": 1.6079254320843717,
+        "se": 1.032502456949457,
+        "lo": -0.4157421974856814,
+        "hi": 3.6315930616544247
+      },
+      "pick_z": {
+        "beta": 0.07928750477078166,
+        "se": 0.03834806144663464,
+        "lo": 0.004126685458448798,
+        "hi": 0.1544483240831145
+      },
+      "forty_z": {
+        "beta": -0.03915431163609647,
+        "se": 0.041074959887348154,
+        "lo": -0.11965975368172624,
+        "hi": 0.0413511304095333
+      },
+      "combine_weight_z": {
+        "beta": -0.14978564871375272,
+        "se": 0.04564843938045968,
+        "lo": -0.23925494584991358,
+        "hi": -0.060316351577591854
+      },
+      "combine_height_z": {
+        "beta": 0.08895223292506402,
+        "se": 0.047330514494354825,
+        "lo": -0.0038138708536224475,
+        "hi": 0.18171833670375048
+      },
+      "udfa": {
+        "beta": -0.042502030445678206,
+        "se": 0.1396503219294792,
+        "lo": -0.31621163185688156,
+        "hi": 0.23120757096552516
+      },
+      "ten_f_z": {
+        "beta": -0.0413306843102525,
+        "se": 0.03129593249600297,
+        "lo": -0.10266958486501504,
+        "hi": 0.020008216244510053
+      },
+      "season=2024": {
+        "beta": -0.019173407675004993,
+        "se": 0.06358174229881541,
+        "lo": -0.14379133265499014,
+        "hi": 0.10544451730498017
+      },
+      "down=2": {
+        "beta": -0.09059315779937718,
+        "se": 0.04663886562226277,
+        "lo": -0.18200365469881546,
+        "hi": 0.0008173391000610986
+      },
+      "down=3": {
+        "beta": -0.12482422775043538,
+        "se": 0.050451262840752215,
+        "lo": -0.22370688589287366,
+        "hi": -0.025941569607997095
+      },
+      "down=4": {
+        "beta": -0.2617972766552141,
+        "se": 0.11946884946138023,
+        "lo": -0.49595191887395673,
+        "hi": -0.027642634436471386
+      },
+      "route_ran=CORNER": {
+        "beta": 0.13673887884268401,
+        "se": 0.830194021758869,
+        "lo": -1.4904115039851613,
+        "hi": 1.7638892616705293
+      },
+      "route_ran=CROSS": {
+        "beta": 0.469256449599107,
+        "se": 0.8289409164320926,
+        "lo": -1.155437891919421,
+        "hi": 2.093950791117635
+      },
+      "route_ran=FLAT": {
+        "beta": 1.4097675297776093,
+        "se": 0.8337483116262846,
+        "lo": -0.22434913318098615,
+        "hi": 3.043884192736205
+      },
+      "route_ran=GO": {
+        "beta": -0.27056538790843115,
+        "se": 0.8287696742641288,
+        "lo": -1.8949241009451157,
+        "hi": 1.3537933251282535
+      },
+      "route_ran=HITCH": {
+        "beta": 0.15176719417181908,
+        "se": 0.8287237422659579,
+        "lo": -1.4725014938027126,
+        "hi": 1.7760358821463507
+      },
+      "route_ran=IN": {
+        "beta": 0.11816786775966415,
+        "se": 0.8295855701871645,
+        "lo": -1.5077899719013033,
+        "hi": 1.7441257074206318
+      },
+      "route_ran=OUT": {
+        "beta": 0.08047657051091921,
+        "se": 0.8294499016600734,
+        "lo": -1.5452153637231143,
+        "hi": 1.7061685047449526
+      },
+      "route_ran=POST": {
+        "beta": 0.019278013192673315,
+        "se": 0.8296956903707685,
+        "lo": -1.6068956580621292,
+        "hi": 1.6454516844474758
+      },
+      "route_ran=SCREEN": {
+        "beta": 3.2238851992386235,
+        "se": 0.8345141743012591,
+        "lo": 1.5882674730199746,
+        "hi": 4.859502925457273
+      },
+      "route_ran=SLANT": {
+        "beta": 0.343918260536335,
+        "se": 0.8310494859326006,
+        "lo": -1.2849088012620884,
+        "hi": 1.9727453223347586
+      },
+      "route_ran=WHEEL": {
+        "beta": -0.775160650058256,
+        "se": 1.0059675373235546,
+        "lo": -2.7468207928288755,
+        "hi": 1.1964994927123636
+      },
+      "team_coverage_man_zone=UNK": {
+        "beta": 0.06632353042086486,
+        "se": 1.0611224202017213,
+        "lo": -2.0134381963624866,
+        "hi": 2.146085257204216
+      },
+      "team_coverage_man_zone=ZONE_COVERAGE": {
+        "beta": 0.9943789756612673,
+        "se": 0.04576199401589463,
+        "lo": 0.9046871155293763,
+        "hi": 1.0840708357931583
+      },
+      "receiver_alignment=2x1": {
+        "beta": -0.5600706416961106,
+        "se": 0.6200622669021514,
+        "lo": -1.7753703529965899,
+        "hi": 0.6552290696043684
+      },
+      "receiver_alignment=2x2": {
+        "beta": -0.46822785812534157,
+        "se": 0.6134217397048493,
+        "lo": -1.6705123752807498,
+        "hi": 0.7340566590300666
+      },
+      "receiver_alignment=3x1": {
+        "beta": -0.4419234572016616,
+        "se": 0.6134861853638027,
+        "lo": -1.6443342855275787,
+        "hi": 0.7604873711242554
+      },
+      "receiver_alignment=3x2": {
+        "beta": -0.48750836861484664,
+        "se": 0.6152577124392992,
+        "lo": -1.6933913262063742,
+        "hi": 0.7183745889766808
+      },
+      "receiver_alignment=3x3": {
+        "beta": -1.7910681303510076,
+        "se": 1.437497947987923,
+        "lo": -4.608512336257569,
+        "hi": 1.0263760755555535
+      },
+      "receiver_alignment=4x0": {
+        "beta": 0.9797665639468113,
+        "se": 1.437096313359709,
+        "lo": -1.8368904525535061,
+        "hi": 3.7964235804471285
+      },
+      "receiver_alignment=4x1": {
+        "beta": -0.0625616537081814,
+        "se": 0.638536394736957,
+        "lo": -1.3140699902106685,
+        "hi": 1.1889466827943056
+      },
+      "yards_to_go": {
+        "beta": 0.02277973685415128,
+        "se": 0.004966024286429699,
+        "lo": 0.013046508106397849,
+        "hi": 0.03251296560190471
+      },
+      "cushion_f": {
+        "beta": 0.1375599303803537,
+        "se": 0.006991990855836958,
+        "lo": 0.12385588012267987,
+        "hi": 0.1512639806380275
+      },
+      "cushion_missing": {
+        "beta": 0.7641379285073763,
+        "se": 0.09249844997923287,
+        "lo": 0.5828442979223001,
+        "hi": 0.9454315590924525
+      },
+      "in_motion": {
+        "beta": 0.6839644050473075,
+        "se": 0.08651437294270739,
+        "lo": 0.5143993499345345,
+        "hi": 0.8535294601600805
+      },
+      "A0_z": {
+        "beta": -0.014105967520358594,
+        "se": 0.031142012406867498,
+        "lo": -0.07514319024391841,
+        "hi": 0.046931255203201225
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.016631762867748624,
+    "converged": true,
+    "warnings": [],
+    "optimizer": "default",
+    "initial_diagnostics": [],
+    "seconds": 0.571
+  },
+  "attrition": {
+    "position_rookie_rows": 12704,
+    "outcome_recorded_rows": 11109,
+    "fitted_rows": 9463,
+    "dropped_required_or_exposure": 1646,
+    "players": 51
+  }
+}

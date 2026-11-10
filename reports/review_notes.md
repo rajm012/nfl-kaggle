@@ -76,3 +76,11 @@ Append dated review findings, sources and resolutions as analysis proceeds.
   measurement, not NFL success or a ranking recommendation.
 - Remaining material gaps: earlier-study held-out prediction, same-sample 3-cone analysis,
   complete raw-input submission rebuilding, and official field semantics/citations.
+
+## 2026-11-10 — Cohort/cone review
+
+- The earlier prediction/cone gaps are now addressed by separate, versioned analyses. Rookie-only cohort prediction and historical all-REG cone associations are not pooled into one claim. No evaluation-player intercepts are fitted, and training preprocessing uses unique players/development-only drill references. Artifacts verify all 25 scores.
+- No primary marginal interval supports an RMSE gain; all original-family intervals cross zero. This does not establish equivalence. Nominal deterioration in DL burst/get-off depends on family/support sensitivity; retain uncertainty rather than asserting harm.
+- Cone subset DL TURN/pressure association is positive, but its cohort prediction is not supported. DL A0 improves in a nine-player cone cohort subset. These selected secondary exceptions are disclosed without granting a general scouting ranking recommendation.
+- Training-fit uncertainty is not included in paired evaluation bootstraps. Numerical default-optimizer failures were resolved before opening evaluation, using the same-model Powell retry rule with finite fixed-coefficient/SE checks; warnings are retained.
+- Remaining gaps for submission: full raw-input notebook rebuilding of validated results, official field semantics/citations, final figure/wording review and clean Kaggle execution. The notebook's embedded evaluation table is explicitly a review snapshot.

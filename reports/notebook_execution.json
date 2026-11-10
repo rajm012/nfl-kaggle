@@ -1,12 +1,16 @@
 [
   {
     "input": "interim",
-    "seconds": 4.45,
-    "measurement_matches_pipeline": true
+    "seconds": 3.2,
+    "measurement_matches_pipeline": true,
+    "cohort_review_snapshot_rendered": true,
+    "cohort_pipeline_rebuilt_in_notebook": false
   },
   {
     "input": "raw",
-    "seconds": 6.1,
-    "measurement_matches_pipeline": true
+    "seconds": 4.95,
+    "measurement_matches_pipeline": true,
+    "cohort_review_snapshot_rendered": true,
+    "cohort_pipeline_rebuilt_in_notebook": false
   }
 ]

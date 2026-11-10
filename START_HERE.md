@@ -64,8 +64,6 @@ page's 316,338 count differs from the downloaded file, not from conversion.
 
 ## What the assistant does next
 
-The join, reliability, model and transfer audits are complete for this block. The frozen
-measurement screen failed, so the primary route-performance claim stops. Next is the
-already preregistered Studies 1–2 cohort prediction and same-sample 3-cone sensitivity,
-followed by complete notebook/figure/writeup integration. Keep the November 20 final-claim
-decision. Current work and rerun commands: `reports/latest_runs.md`.
+The join, reliability, model, transfer, cohort prediction and cone checks are complete. The frozen route measurement screen failed, so its primary performance claim stops; none of the nine primary cohort prediction additions has a supported RMSE gain. Small selected cone findings remain secondary. Read `reports/validation_findings.md` and review `reports/figures/cohort_prediction.png` / `reports/evaluation_table.csv`.
+
+The notebook now includes an explicitly labelled saved cohort-result review snapshot; those evaluation models are not yet rebuilt from raw inputs in the notebook. Next is complete notebook/figure/writeup integration. Keep the November 20 final-claim checkpoint. Current work and rerun commands: `reports/latest_runs.md`.

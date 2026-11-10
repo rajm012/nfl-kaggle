@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-11-09T14:49:42.328737+00:00",
+  "execution": "local, bounded threads (2)",
+  "dependencies": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "polars": "2.0.0",
+    "duckdb": "1.5.6",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  },
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/audit_data.py": "bebe181b11bcbf0dfc32dfa8be4689934fd066d8b041bd305181a4a53ba8e011",
+    "src/audit_figures.py": "222adbbaf607f891e086971a2088a40f6b59aa347dba3edaf546f54da0114657",
+    "src/build_measurement_notebook.py": "b4fd4d107f776045c2fba5d5c699c2963a8a63df55e1451ff9464eebb38605e0",
+    "src/combine_features.py": "763dae09be38974e125a208fe0c5172a2301373e00f7dc12775e7a2ac51d082e",
+    "src/cuts.py": "7e183bc56fffc71098365a516122b22ff08c3b305aa6513abed37efc7cf5bfc9",
+    "src/game_features.py": "a7afbf595fcb450ede27f1c60d75d75a8e687bc1899a9650328a00c23c95078f",
+    "src/join_audit.py": "c0887bc2fab659b5d59286d4b944d5bc145fda03b2fb62766bf2701e75fac2aa",
+    "src/kinematics.py": "2d1c078da74b74394ae0215b89fc1d6463ed6e1e6046e1fc7d1abb6f9dffed2b",
+    "src/outcomes.py": "658e7baab3e06c3dc70077d923ec9df7bb3bbbc91c52b52d4fe0bb4c8893c0eb",
+    "src/reliability.py": "13715b750a84d2529df98fa83b3f67afd5ccaac65e50558756b17c920fe88d6e",
+    "src/route_context.py": "218ffb0c3dd0ffc3ab48f951f027ad80500dd84d6d6a26b1d315455e3445bc99",
+    "src/sprint.py": "ab397695ce1b0945cb8e2d3f6b20856c9558f691618fa7e773d4c791c1cb9480",
+    "src/study2.py": "226b9c64854f63d8420152871573c7dc2e29c40191912b47d6675b22a11acfd1",
+    "src/system_info.py": "decb499f6577d641972116ef5abc2a812f52dc0b8159b4a33a60f759eca2486f",
+    "src/to_parquet.py": "db5b2cada4cd6722bdefbb706003aa993dae668591df9463cff60bdbf8d66db9",
+    "src/transfer.py": "856cb00558f9f31c7189ff9a38958c9bf4fa479678dc00f4a7ac21301b6cfd4a",
+    "src/transfer_audit.py": "579b0bfbdb98c5baddd0cc2cde73fdb1c2e62684029d36071392be87031d9da9",
+    "src/validation.py": "43b325dcaabfdfc7d68bac857f9146e816c7dbed780bc0958e3feb2a733b26a6",
+    "tests/test_audit.py": "97b06a9191533d9302482f0f2b2902388c9b5baff3d03afe550eb98c43ee0747",
+    "requirements.txt": "874fcf8eea57713dbae5db6dbd9b3ac2e10e7e4f85dedc1fa91eafaf2cd28b55"
+  },
+  "artifact_sha256": {
+    "reports/reliability.json": "bae95e98f26f000a2e3bafa810d0e5547efc093657e6660828e0128adc88c1c6",
+    "reports/join_attrition.json": "55d65afb56839f56f4b8463413c60dbf8a999526a073a825df559d40f32f3ec3",
+    "reports/model_audit.json": "e8311197bc5a2bfe37ae8fc3600715166968340e5655591761fe54692877861c",
+    "reports/transfer_audit.json": "bde5b6ba15c7575adb4f36d1901ca66fffc26e42d1294554c866d71445473a26",
+    "reports/study3_measurement.json": "f145ac9caf1984419afb2b1650ad9eaecac1ebf6a3788f599e698bbb7d422070",
+    "notebooks/submission.ipynb": "5091d6053c29b53bf9a0ed19e781bfbcfd97448b832d898c4ee7bb32bd4a3a2b"
+  },
+  "historical_reports_unchanged": {
+    "confirmatory.md": true,
+    "study2.md": true,
+    "transfer.md": true
+  },
+  "statistical_invariant_tests_passed": 5,
+  "notebook_clean_kernel_runs": [
+    {
+      "input": "interim",
+      "seconds": 4.45,
+      "measurement_matches_pipeline": true
+    },
+    {
+      "input": "raw",
+      "seconds": 6.1,
+      "measurement_matches_pipeline": true
+    }
+  ]
+}

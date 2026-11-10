@@ -13,11 +13,12 @@ All unchecked items are pending. This file records evidence of completion, not a
 - [x] Reproduce selected TURN/other published reliability, adjusted transfer and descriptive conventional-control checks (`reliability.*`, `transfer_audit.*`, `model_audit.json`).
 - [x] Correct/document binary uncertainty, player-level Study 2 scaling and test direction (`model_audit.*`).
 - [x] Record Study 3 measurement screens before exposure–outcome associations (`study3_measurement.*`; gate FAILED, primary claim stopped).
-- [ ] Save training-only preprocessing and development coefficients before 2025 evaluation.
-- [ ] Finish baseline/augmented evaluation, intervals and prespecified sensitivities.
-- [ ] Choose final narrative by Nov 20; retain null/uncertain findings and prior-outcome disclosure.
+- [x] Save training-only preprocessing and development coefficients before 2025 evaluation (`evaluation_development.json`, `evaluation_models/`; Nov 10).
+- [x] Finish baseline/augmented cohort evaluation, intervals and original prediction/cone sensitivities (`validation.*`, `cone_sensitivity.*`; Nov 10).
+- [x] Choose narrative by Nov 20; retain null/uncertain findings and prior-outcome disclosure (`validation_findings.md`; evidence-map decision retained Nov 10, final wording review still pending).
   - Nov 9: follow the evidence-map path after the frozen measurement gate failed; final claims
     still depend on completing required Studies 1–2 evaluation/sensitivity work.
+  - Nov 10: required cohort/cone work complete; none of nine primary intervals supports a prediction gain. Secondary subset findings retained; keep Nov 20 final-claim review.
 - [x] Create starter notebook and record dependencies; local CSV/Parquet execution verified.
 - [ ] Run full notebook from clean inputs; record duration/memory; reproduce every headline number.
 

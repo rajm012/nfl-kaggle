@@ -1,0 +1,463 @@
+{
+  "spec": {
+    "id": "F1_cone",
+    "position": "DL",
+    "outcome": "player_get_off",
+    "traits": [
+      "A0"
+    ],
+    "study": 2,
+    "family": "cone sensitivity",
+    "ten_split": true,
+    "cone": true
+  },
+  "preprocessing": {
+    "player_reference_n": 64,
+    "development_classes": [
+      2023,
+      2024
+    ],
+    "player_medians": {
+      "forty": 4.8,
+      "ten_yd_split": 1.67
+    },
+    "player_scalers": {
+      "pick": {
+        "mean": 151.484375,
+        "sd": 90.49616183871935
+      },
+      "forty": {
+        "mean": 4.84484375,
+        "sd": 0.25842620258507004
+      },
+      "combine_weight": {
+        "mean": 278.859375,
+        "sd": 28.877336193543208
+      },
+      "combine_height": {
+        "mean": 75.421875,
+        "sd": 1.4401933016202186
+      },
+      "A0": {
+        "mean": 8.574526025409554,
+        "sd": 0.8030563631471497
+      },
+      "ten_f": {
+        "mean": 1.69453125,
+        "sd": 0.08269142654356329
+      },
+      "three_cone": {
+        "mean": 7.430740740740742,
+        "sd": 0.28214734183954754
+      }
+    },
+    "cushion_median": 0.0,
+    "categories": {
+      "season": [
+        "2023",
+        "2024"
+      ],
+      "down": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "lined_up_position": [
+        "CB",
+        "EDGE",
+        "INTERIOR_LINE",
+        "SLOT_CB"
+      ]
+    },
+    "most_frequent": {
+      "season": "2023",
+      "down": "1",
+      "lined_up_position": "EDGE"
+    },
+    "latest_season": "2024"
+  },
+  "training_missingness": {
+    "missing": {
+      "forty": 0,
+      "ten_yd_split": 0,
+      "cushion": 3445,
+      "in_motion_at_ball_snap": 3761,
+      "blitzing": 941
+    },
+    "unknown_categories": {
+      "season": {},
+      "down": {},
+      "lined_up_position": {}
+    }
+  },
+  "columns0": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "three_cone_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "lined_up_position=EDGE",
+    "lined_up_position=INTERIOR_LINE",
+    "lined_up_position=SLOT_CB",
+    "yards_to_go",
+    "blitz"
+  ],
+  "columns1": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "three_cone_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "lined_up_position=EDGE",
+    "lined_up_position=INTERIOR_LINE",
+    "lined_up_position=SLOT_CB",
+    "yards_to_go",
+    "blitz",
+    "A0_z"
+  ],
+  "dropped0": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "dropped1": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "context_columns": [
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "lined_up_position=EDGE",
+    "lined_up_position=INTERIOR_LINE",
+    "lined_up_position=SLOT_CB",
+    "yards_to_go",
+    "blitz"
+  ],
+  "training_players": 20,
+  "training_plays": 3761,
+  "training_player_ids": [
+    55877,
+    55905,
+    55914,
+    55918,
+    55929,
+    55942,
+    55963,
+    55991,
+    55995,
+    56078,
+    56456,
+    56514,
+    56571,
+    57140,
+    57169,
+    57177,
+    57216,
+    57230,
+    57434,
+    57436
+  ],
+  "training_outcome_sd": 0.2859085372221409,
+  "baseline": {
+    "coefficients": {
+      "Intercept": 1.3958793678351167,
+      "pick_z": 0.06225903190769248,
+      "forty_z": 0.017956676033657942,
+      "combine_weight_z": 0.1390131765934165,
+      "combine_height_z": -0.013465541035911051,
+      "udfa": -0.09481098389113528,
+      "ten_f_z": -0.09213971698419393,
+      "three_cone_z": -0.022280022486053246,
+      "season=2024": -0.0017484735114203973,
+      "down=2": -0.04262172283020778,
+      "down=3": -0.11938421469196842,
+      "down=4": -0.12431714941415602,
+      "lined_up_position=EDGE": -0.1349509035036354,
+      "lined_up_position=INTERIOR_LINE": -0.09296013402561071,
+      "lined_up_position=SLOT_CB": -0.0518857481235218,
+      "yards_to_go": -0.005023253599995469,
+      "blitz": -0.18198063916679824
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": 1.3958793678351167,
+        "se": 0.26020812474445143,
+        "lo": 0.8858808148512862,
+        "hi": 1.9058779208189471
+      },
+      "pick_z": {
+        "beta": 0.06225903190769248,
+        "se": 0.02989867394401568,
+        "lo": 0.0036587077919156205,
+        "hi": 0.12085935602346934
+      },
+      "forty_z": {
+        "beta": 0.017956676033657942,
+        "se": 0.03856862427183823,
+        "lo": -0.05763643847240235,
+        "hi": 0.09354979053971824
+      },
+      "combine_weight_z": {
+        "beta": 0.1390131765934165,
+        "se": 0.056320180204594915,
+        "lo": 0.028627651789604774,
+        "hi": 0.24939870139722822
+      },
+      "combine_height_z": {
+        "beta": -0.013465541035911051,
+        "se": 0.02052802437170986,
+        "lo": -0.053699729478222845,
+        "hi": 0.026768647406400746
+      },
+      "udfa": {
+        "beta": -0.09481098389113528,
+        "se": 0.07059639846179822,
+        "lo": -0.23317738231449864,
+        "hi": 0.043555414532228096
+      },
+      "ten_f_z": {
+        "beta": -0.09213971698419393,
+        "se": 0.060981692472200734,
+        "lo": -0.2116616379460047,
+        "hi": 0.027382203977616842
+      },
+      "three_cone_z": {
+        "beta": -0.022280022486053246,
+        "se": 0.02493301550511728,
+        "lo": -0.07114783490206186,
+        "hi": 0.026587789929955367
+      },
+      "season=2024": {
+        "beta": -0.0017484735114203973,
+        "se": 0.04388264060930291,
+        "lo": -0.0877568686521689,
+        "hi": 0.08425992162932812
+      },
+      "down=2": {
+        "beta": -0.04262172283020778,
+        "se": 0.009927340803160442,
+        "lo": -0.062078953266657175,
+        "hi": -0.02316449239375838
+      },
+      "down=3": {
+        "beta": -0.11938421469196842,
+        "se": 0.012421997489461748,
+        "lo": -0.14373088238736043,
+        "hi": -0.09503754699657642
+      },
+      "down=4": {
+        "beta": -0.12431714941415602,
+        "se": 0.028736465263862167,
+        "lo": -0.18063958637431216,
+        "hi": -0.06799471245399986
+      },
+      "lined_up_position=EDGE": {
+        "beta": -0.1349509035036354,
+        "se": 0.25803851542144823,
+        "lo": -0.6406971003538572,
+        "hi": 0.37079529334658645
+      },
+      "lined_up_position=INTERIOR_LINE": {
+        "beta": -0.09296013402561071,
+        "se": 0.2591283929052635,
+        "lo": -0.6008424514916717,
+        "hi": 0.41492218344045023
+      },
+      "lined_up_position=SLOT_CB": {
+        "beta": -0.0518857481235218,
+        "se": 0.26638685652869204,
+        "lo": -0.5739943928745967,
+        "hi": 0.4702228966275532
+      },
+      "yards_to_go": {
+        "beta": -0.005023253599995469,
+        "se": 0.001102072452330934,
+        "lo": -0.007183275914917835,
+        "hi": -0.002863231285073103
+      },
+      "blitz": {
+        "beta": -0.18198063916679824,
+        "se": 0.010181196438224707,
+        "lo": -0.20193541750524613,
+        "hi": -0.16202586082835035
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.0024127882125057807,
+    "converged": true,
+    "warnings": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "optimizer": "default",
+    "initial_diagnostics": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "seconds": 0.05
+  },
+  "augmented": {
+    "coefficients": {
+      "Intercept": 1.3946409929894186,
+      "pick_z": 0.0644875560539533,
+      "forty_z": 0.0194092365915341,
+      "combine_weight_z": 0.13594244920232648,
+      "combine_height_z": -0.01011806642257402,
+      "udfa": -0.09834940446796077,
+      "ten_f_z": -0.09165510610941283,
+      "three_cone_z": -0.023001629363364112,
+      "season=2024": 0.0027743659881618353,
+      "down=2": -0.04267501272595322,
+      "down=3": -0.11957642202284426,
+      "down=4": -0.12432895228183667,
+      "lined_up_position=EDGE": -0.1346475664512604,
+      "lined_up_position=INTERIOR_LINE": -0.09490610853775609,
+      "lined_up_position=SLOT_CB": -0.05168389248005544,
+      "yards_to_go": -0.005023272997631546,
+      "blitz": -0.18203785695400454,
+      "A0_z": -0.005979417453190015
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": 1.3946409929894186,
+        "se": 0.26053391814155225,
+        "lo": 0.8840038966808695,
+        "hi": 1.9052780892979677
+      },
+      "pick_z": {
+        "beta": 0.0644875560539533,
+        "se": 0.03242580788627122,
+        "lo": 0.0009341404272468629,
+        "hi": 0.12804097168065975
+      },
+      "forty_z": {
+        "beta": 0.0194092365915341,
+        "se": 0.04101647070748995,
+        "lo": -0.060981568768088315,
+        "hi": 0.0998000419511565
+      },
+      "combine_weight_z": {
+        "beta": 0.13594244920232648,
+        "se": 0.06080026933600506,
+        "lo": 0.01677611105342154,
+        "hi": 0.25510878735123144
+      },
+      "combine_height_z": {
+        "beta": -0.01011806642257402,
+        "se": 0.024180178268737924,
+        "lo": -0.05751034496905843,
+        "hi": 0.03727421212391039
+      },
+      "udfa": {
+        "beta": -0.09834940446796077,
+        "se": 0.07532885840400197,
+        "lo": -0.24599125393632199,
+        "hi": 0.04929244500040046
+      },
+      "ten_f_z": {
+        "beta": -0.09165510610941283,
+        "se": 0.06493518331500067,
+        "lo": -0.21892572673632038,
+        "hi": 0.03561551451749473
+      },
+      "three_cone_z": {
+        "beta": -0.023001629363364112,
+        "se": 0.026666270628342613,
+        "lo": -0.0752665593969139,
+        "hi": 0.029263300670185684
+      },
+      "season=2024": {
+        "beta": 0.0027743659881618353,
+        "se": 0.04884079894998408,
+        "lo": -0.09295184092996867,
+        "hi": 0.09850057290629233
+      },
+      "down=2": {
+        "beta": -0.04267501272595322,
+        "se": 0.0099272303164358,
+        "lo": -0.06213202661240155,
+        "hi": -0.023217998839504886
+      },
+      "down=3": {
+        "beta": -0.11957642202284426,
+        "se": 0.012429044103307927,
+        "lo": -0.14393690082758773,
+        "hi": -0.09521594321810078
+      },
+      "down=4": {
+        "beta": -0.12432895228183667,
+        "se": 0.02873640731723338,
+        "lo": -0.18065127566868738,
+        "hi": -0.06800662889498596
+      },
+      "lined_up_position=EDGE": {
+        "beta": -0.1346475664512604,
+        "se": 0.2580331668608831,
+        "lo": -0.6403832803154055,
+        "hi": 0.37108814741288465
+      },
+      "lined_up_position=INTERIOR_LINE": {
+        "beta": -0.09490610853775609,
+        "se": 0.2591268390029357,
+        "lo": -0.602785380411219,
+        "hi": 0.4129731633357068
+      },
+      "lined_up_position=SLOT_CB": {
+        "beta": -0.05168389248005544,
+        "se": 0.2663812423074964,
+        "lo": -0.5737815335597857,
+        "hi": 0.4704137485996748
+      },
+      "yards_to_go": {
+        "beta": -0.005023272997631546,
+        "se": 0.0011020868456939731,
+        "lo": -0.007183323523027085,
+        "hi": -0.0028632224722360063
+      },
+      "blitz": {
+        "beta": -0.18203785695400454,
+        "se": 0.010181746412667452,
+        "lo": -0.20199371322255263,
+        "hi": -0.16208200068545645
+      },
+      "A0_z": {
+        "beta": -0.005979417453190015,
+        "se": 0.019084886183344148,
+        "lo": -0.04338510702159063,
+        "hi": 0.0314262721152106
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.0028047815389396985,
+    "converged": true,
+    "warnings": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "optimizer": "default",
+    "initial_diagnostics": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "seconds": 0.059
+  },
+  "attrition": {
+    "position_rookie_rows": 14300,
+    "outcome_recorded_rows": 9745,
+    "fitted_rows": 3761,
+    "dropped_required_or_exposure": 5984,
+    "players": 20
+  }
+}

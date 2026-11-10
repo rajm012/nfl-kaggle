@@ -1,0 +1,433 @@
+{
+  "spec": {
+    "id": "F2_cone",
+    "position": "OL",
+    "outcome": "peak_pressure_probability_allowed",
+    "traits": [
+      "A0"
+    ],
+    "study": 2,
+    "family": "cone sensitivity",
+    "ten_split": true,
+    "cone": true
+  },
+  "preprocessing": {
+    "player_reference_n": 67,
+    "development_classes": [
+      2023,
+      2024
+    ],
+    "player_medians": {
+      "forty": 5.16,
+      "ten_yd_split": 1.77
+    },
+    "player_scalers": {
+      "pick": {
+        "mean": 152.71641791044777,
+        "sd": 90.81646592960946
+      },
+      "forty": {
+        "mean": 5.160597014925374,
+        "sd": 0.14089412097134377
+      },
+      "combine_weight": {
+        "mean": 312.64179104477614,
+        "sd": 12.910767754718625
+      },
+      "combine_height": {
+        "mean": 76.72574626865672,
+        "sd": 1.539295700256054
+      },
+      "A0": {
+        "mean": 7.90227544307913,
+        "sd": 1.7916127365608265
+      },
+      "ten_f": {
+        "mean": 1.7819402985074622,
+        "sd": 0.056117809142373416
+      },
+      "three_cone": {
+        "mean": 7.647954545454544,
+        "sd": 0.2496563176761256
+      }
+    },
+    "cushion_median": 0.0,
+    "categories": {
+      "season": [
+        "2023",
+        "2024"
+      ],
+      "down": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "most_frequent": {
+      "season": "2024",
+      "down": "1"
+    },
+    "latest_season": "2024"
+  },
+  "training_missingness": {
+    "missing": {
+      "forty": 0,
+      "ten_yd_split": 0,
+      "cushion": 7237,
+      "in_motion_at_ball_snap": 0,
+      "blitzing": 0
+    },
+    "unknown_categories": {
+      "season": {},
+      "down": {}
+    }
+  },
+  "columns0": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "three_cone_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "yards_to_go",
+    "dropback_duration",
+    "pass_rushers_encountered"
+  ],
+  "columns1": [
+    "Intercept",
+    "pick_z",
+    "forty_z",
+    "combine_weight_z",
+    "combine_height_z",
+    "udfa",
+    "ten_f_z",
+    "three_cone_z",
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "yards_to_go",
+    "dropback_duration",
+    "pass_rushers_encountered",
+    "A0_z"
+  ],
+  "dropped0": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "dropped1": [
+    "forty_missing",
+    "ten_missing"
+  ],
+  "context_columns": [
+    "season=2024",
+    "down=2",
+    "down=3",
+    "down=4",
+    "yards_to_go",
+    "dropback_duration",
+    "pass_rushers_encountered"
+  ],
+  "training_players": 26,
+  "training_plays": 7237,
+  "training_player_ids": [
+    55875,
+    55901,
+    55913,
+    55927,
+    55971,
+    55973,
+    55982,
+    56021,
+    56055,
+    56066,
+    56572,
+    57126,
+    57150,
+    57176,
+    57180,
+    57194,
+    57207,
+    57238,
+    57240,
+    57262,
+    57283,
+    57310,
+    57330,
+    57335,
+    57337,
+    57687
+  ],
+  "training_outcome_sd": 0.24345579004018922,
+  "baseline": {
+    "coefficients": {
+      "Intercept": -0.13644837795205228,
+      "pick_z": -0.026799798281531204,
+      "forty_z": -0.01865621782197279,
+      "combine_weight_z": -0.015855856154157976,
+      "combine_height_z": 0.01708909782104926,
+      "udfa": 0.17881636825900504,
+      "ten_f_z": 0.002859851127300425,
+      "three_cone_z": 0.01793950034966085,
+      "season=2024": -0.009582074642966622,
+      "down=2": 0.022850336444124167,
+      "down=3": 0.07522991326599379,
+      "down=4": 0.06821529205785526,
+      "yards_to_go": 0.0021834571210018,
+      "dropback_duration": 0.07227893136295858,
+      "pass_rushers_encountered": 0.13519842653464892
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": -0.13644837795205228,
+        "se": 0.02379066780005109,
+        "lo": -0.18307723000830917,
+        "hi": -0.0898195258957954
+      },
+      "pick_z": {
+        "beta": -0.026799798281531204,
+        "se": 0.012454621990799141,
+        "lo": -0.051210408824558074,
+        "hi": -0.0023891877385043385
+      },
+      "forty_z": {
+        "beta": -0.01865621782197279,
+        "se": 0.015350117993149361,
+        "lo": -0.04874189624698579,
+        "hi": 0.01142946060304021
+      },
+      "combine_weight_z": {
+        "beta": -0.015855856154157976,
+        "se": 0.010206705069835632,
+        "lo": -0.03586063049185819,
+        "hi": 0.004148918183542238
+      },
+      "combine_height_z": {
+        "beta": 0.01708909782104926,
+        "se": 0.00726947411328659,
+        "lo": 0.0028411903724613,
+        "hi": 0.03133700526963722
+      },
+      "udfa": {
+        "beta": 0.17881636825900504,
+        "se": 0.06793207532259943,
+        "lo": 0.045671947231648,
+        "hi": 0.31196078928636206
+      },
+      "ten_f_z": {
+        "beta": 0.002859851127300425,
+        "se": 0.01331546123548817,
+        "lo": -0.0232379733317956,
+        "hi": 0.028957675586396447
+      },
+      "three_cone_z": {
+        "beta": 0.01793950034966085,
+        "se": 0.010565896273997084,
+        "lo": -0.002769275811759387,
+        "hi": 0.03864827651108109
+      },
+      "season=2024": {
+        "beta": -0.009582074642966622,
+        "se": 0.016400312531561764,
+        "lo": -0.041726096540028595,
+        "hi": 0.022561947254095355
+      },
+      "down=2": {
+        "beta": 0.022850336444124167,
+        "se": 0.006372120408619655,
+        "lo": 0.01036120993807699,
+        "hi": 0.035339462950171346
+      },
+      "down=3": {
+        "beta": 0.07522991326599379,
+        "se": 0.006886355188090077,
+        "lo": 0.061732905112586695,
+        "hi": 0.08872692141940089
+      },
+      "down=4": {
+        "beta": 0.06821529205785526,
+        "se": 0.01793604664425222,
+        "lo": 0.03306128661009041,
+        "hi": 0.1033692975056201
+      },
+      "yards_to_go": {
+        "beta": 0.0021834571210018,
+        "se": 0.0007136903740068039,
+        "lo": 0.000784649691835543,
+        "hi": 0.003582264550168057
+      },
+      "dropback_duration": {
+        "beta": 0.07227893136295858,
+        "se": 0.0022832198712579234,
+        "lo": 0.06780390264650688,
+        "hi": 0.0767539600794103
+      },
+      "pass_rushers_encountered": {
+        "beta": 0.13519842653464892,
+        "se": 0.01603765507550965,
+        "lo": 0.103765200190174,
+        "hi": 0.16663165287912385
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.0007315294728871854,
+    "converged": true,
+    "warnings": [
+      "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+      "Random effects covariance is singular",
+      "Retrying MixedLM optimization with lbfgs",
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "optimizer": "Powell after invalid default covariance/convergence",
+    "initial_diagnostics": [
+      "Default optimizer raised LinAlgError: Singular matrix",
+      "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+      "Random effects covariance is singular",
+      "Retrying MixedLM optimization with lbfgs"
+    ],
+    "seconds": 0.314
+  },
+  "augmented": {
+    "coefficients": {
+      "Intercept": -0.13748151290813296,
+      "pick_z": -0.027626175320191827,
+      "forty_z": -0.017520161973131335,
+      "combine_weight_z": -0.015802830885128773,
+      "combine_height_z": 0.016107266270705786,
+      "udfa": 0.18146292988750967,
+      "ten_f_z": 8.790052044578488e-05,
+      "three_cone_z": 0.01799807260991431,
+      "season=2024": -0.0075765622924067735,
+      "down=2": 0.02288836218804532,
+      "down=3": 0.07526250926957395,
+      "down=4": 0.06810870653341683,
+      "yards_to_go": 0.002183648362953265,
+      "dropback_duration": 0.07230614758934557,
+      "pass_rushers_encountered": 0.1352451377295513,
+      "A0_z": -0.0024464239386500506
+    },
+    "coefficient_intervals": {
+      "Intercept": {
+        "beta": -0.13748151290813296,
+        "se": 0.024091665436981564,
+        "lo": -0.18470030949220526,
+        "hi": -0.09026271632406066
+      },
+      "pick_z": {
+        "beta": -0.027626175320191827,
+        "se": 0.012902204522062456,
+        "lo": -0.05291403150460407,
+        "hi": -0.002338319135779591
+      },
+      "forty_z": {
+        "beta": -0.017520161973131335,
+        "se": 0.015877698931981033,
+        "lo": -0.04863988003718424,
+        "hi": 0.013599556090921571
+      },
+      "combine_weight_z": {
+        "beta": -0.015802830885128773,
+        "se": 0.010489550143039412,
+        "lo": -0.036361971379513,
+        "hi": 0.004756309609255448
+      },
+      "combine_height_z": {
+        "beta": 0.016107266270705786,
+        "se": 0.0077300008332391364,
+        "lo": 0.0009567430370924709,
+        "hi": 0.0312577895043191
+      },
+      "udfa": {
+        "beta": 0.18146292988750967,
+        "se": 0.06889458310574358,
+        "lo": 0.04643202827035059,
+        "hi": 0.31649383150466875
+      },
+      "ten_f_z": {
+        "beta": 8.790052044578488e-05,
+        "se": 0.01479669193137527,
+        "lo": -0.028913082755384154,
+        "hi": 0.029088883796275725
+      },
+      "three_cone_z": {
+        "beta": 0.01799807260991431,
+        "se": 0.01082231017299291,
+        "lo": -0.003213265558673236,
+        "hi": 0.03920941077850186
+      },
+      "season=2024": {
+        "beta": -0.0075765622924067735,
+        "se": 0.01736259403834492,
+        "lo": -0.04160662128575267,
+        "hi": 0.02645349670093912
+      },
+      "down=2": {
+        "beta": 0.02288836218804532,
+        "se": 0.006372560751298527,
+        "lo": 0.0103983726262067,
+        "hi": 0.03537835174988394
+      },
+      "down=3": {
+        "beta": 0.07526250926957395,
+        "se": 0.006886793098380607,
+        "lo": 0.06176464282776895,
+        "hi": 0.08876037571137896
+      },
+      "down=4": {
+        "beta": 0.06810870653341683,
+        "se": 0.017936965875417123,
+        "lo": 0.03295289942567531,
+        "hi": 0.10326451364115835
+      },
+      "yards_to_go": {
+        "beta": 0.002183648362953265,
+        "se": 0.0007137034427030657,
+        "lo": 0.00078481531961301,
+        "hi": 0.00358248140629352
+      },
+      "dropback_duration": {
+        "beta": 0.07230614758934557,
+        "se": 0.0022835165869765995,
+        "lo": 0.06783053732077161,
+        "hi": 0.07678175785791953
+      },
+      "pass_rushers_encountered": {
+        "beta": 0.1352451377295513,
+        "se": 0.01603783179637268,
+        "lo": 0.10381156501854953,
+        "hi": 0.16667871044055305
+      },
+      "A0_z": {
+        "beta": -0.0024464239386500506,
+        "se": 0.005046034436618291,
+        "lo": -0.012336469699170762,
+        "hi": 0.007443621821870662
+      }
+    },
+    "method": "player random-intercept LMM",
+    "player_random_variance": 0.0007867298661780942,
+    "converged": true,
+    "warnings": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "optimizer": "default",
+    "initial_diagnostics": [
+      "The MLE may be on the boundary of the parameter space."
+    ],
+    "seconds": 0.098
+  },
+  "attrition": {
+    "position_rookie_rows": 28214,
+    "outcome_recorded_rows": 15797,
+    "fitted_rows": 7237,
+    "dropped_required_or_exposure": 8560,
+    "players": 26
+  }
+}

@@ -116,3 +116,11 @@ sensitivity associations are Holm-significant. Historical reports remain unchang
 The frozen Study 3 measurement screen failed (adjusted SB=0.296 <0.40; 41 diagnostic WRs).
 No TURN interaction or new 2025 performance evaluation was fitted, and no protocol choice
 was changed to bypass this screen. Full record: `study3.md`, `model_audit.md`, `latest_runs.md`.
+
+## 2026-11-10 — Cohort prediction implementation frozen before new fits
+
+The remaining original Studies 1–2 incremental-value/3-cone requirement is implemented in `evaluation_protocol.md`. It fixes rookie-season REG prediction windows, training-only drill/player preprocessing, nine original baseline/exposure comparisons, original joint/ no-10-yard secondaries, unknown-context/year encoding, fixed-only evaluation predictions, equal-athlete scores and paired athlete-bootstrap intervals. Rookie-only prediction differs from the historical all-REG association window; this implementation choice is disclosed. Prior 2025 exposure prevents a pristine-holdout claim. Separate same-sample cone analyses use only recorded times. No Study 3 primary association or new hypothesis is introduced.
+
+## 2026-11-10 — Cohort/cone execution record (no hypothesis change)
+
+All 25 planned prediction comparisons were scored after freezing development coefficients/preprocessing: nine primary, seven original secondary joint/no-10-yard comparisons, nine cone subsets. None of the primary marginal improvement intervals supports a gain; all original-family simultaneous intervals include zero. Nine same-row historical cone checks are complete. Secondary subset findings, including favourable ones, are retained in full. Development numerical failures were handled under the recorded pre-evaluation retry rule, without outcome/exposure/sample changes. Prior 2025 exposure and conditional-on-training bootstrap uncertainty are disclosed. `validation_findings.md` records the retained evidence map decision. The frozen `evaluation_protocol.md` and Study 3 stop are unchanged.

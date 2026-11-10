@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-09T14:49:42.328737+00:00",
+  "generated_utc": "2026-11-10T04:29:36.003758+00:00",
   "execution": "local, bounded threads (2)",
   "dependencies": {
     "numpy": "2.5.3",
@@ -16,9 +16,12 @@
     "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/audit_data.py": "bebe181b11bcbf0dfc32dfa8be4689934fd066d8b041bd305181a4a53ba8e011",
     "src/audit_figures.py": "222adbbaf607f891e086971a2088a40f6b59aa347dba3edaf546f54da0114657",
-    "src/build_measurement_notebook.py": "b4fd4d107f776045c2fba5d5c699c2963a8a63df55e1451ff9464eebb38605e0",
+    "src/build_measurement_notebook.py": "490aa9b1a321d15e4669518eaacd29522b89c5f5a02c33af8f10c377a1b04df5",
     "src/combine_features.py": "763dae09be38974e125a208fe0c5172a2301373e00f7dc12775e7a2ac51d082e",
+    "src/cone_sensitivity.py": "fd5080ee5317a3212f7d00cb7ea2905d23823402932fbdda08ab48640da3f1cf",
     "src/cuts.py": "7e183bc56fffc71098365a516122b22ff08c3b305aa6513abed37efc7cf5bfc9",
+    "src/evaluate.py": "e79257914cff252c7dfff0330d52ebae11d82c9cf0526d2dc3df14e9cba820fe",
+    "src/evaluation_figures.py": "44e91e8601518aeaf489975ab94e025a9a5bf6faac781f8e25edfcf1a13b001a",
     "src/game_features.py": "a7afbf595fcb450ede27f1c60d75d75a8e687bc1899a9650328a00c23c95078f",
     "src/join_audit.py": "c0887bc2fab659b5d59286d4b944d5bc145fda03b2fb62766bf2701e75fac2aa",
     "src/kinematics.py": "2d1c078da74b74394ae0215b89fc1d6463ed6e1e6046e1fc7d1abb6f9dffed2b",
@@ -33,32 +36,74 @@
     "src/transfer_audit.py": "579b0bfbdb98c5baddd0cc2cde73fdb1c2e62684029d36071392be87031d9da9",
     "src/validation.py": "43b325dcaabfdfc7d68bac857f9146e816c7dbed780bc0958e3feb2a733b26a6",
     "tests/test_audit.py": "97b06a9191533d9302482f0f2b2902388c9b5baff3d03afe550eb98c43ee0747",
+    "tests/test_evaluate.py": "89d977443a6b1d1c41b991f5eb3f1030e68bacaf14ed78a2c8e144a0a1b7b5eb",
     "requirements.txt": "874fcf8eea57713dbae5db6dbd9b3ac2e10e7e4f85dedc1fa91eafaf2cd28b55"
   },
   "artifact_sha256": {
-    "reports/reliability.json": "bae95e98f26f000a2e3bafa810d0e5547efc093657e6660828e0128adc88c1c6",
-    "reports/join_attrition.json": "55d65afb56839f56f4b8463413c60dbf8a999526a073a825df559d40f32f3ec3",
-    "reports/model_audit.json": "e8311197bc5a2bfe37ae8fc3600715166968340e5655591761fe54692877861c",
-    "reports/transfer_audit.json": "bde5b6ba15c7575adb4f36d1901ca66fffc26e42d1294554c866d71445473a26",
-    "reports/study3_measurement.json": "f145ac9caf1984419afb2b1650ad9eaecac1ebf6a3788f599e698bbb7d422070",
-    "notebooks/submission.ipynb": "5091d6053c29b53bf9a0ed19e781bfbcfd97448b832d898c4ee7bb32bd4a3a2b"
+    "reports/validation.json": "9053c495b86795d842aded834895bad0f96a47b24f24945a17c1d07816cde6a1",
+    "reports/cone_sensitivity.json": "fe5088c1c0150d8da001a15ffcca9c723fc4b2881d1956adcdc0f3a2b7664b9f",
+    "reports/evaluation_development.json": "4a1f03a71fe5d13c777e50bdf1151e48849f0fca324e90496319df1cf4b9885f",
+    "reports/evaluation_verification.json": "76e12e06790f9466620a5e74bddcb500bd164c657a1dacdb29345c646373a14a",
+    "reports/evaluation_table.csv": "9c337e23553d73da043817e56b816d33c1401738e97929a2e3b7616c3b9a6c97",
+    "reports/validation_findings.md": "05915fdad0c63f788799d6439ba1311d3c684d54939f5cf6772a0a85a10de53d",
+    "notebooks/submission.ipynb": "75ac58b971ddf6d20aef8b51eadc264fba711793678a420bafa69a169e9728ba"
   },
-  "historical_reports_unchanged": {
-    "confirmatory.md": true,
-    "study2.md": true,
-    "transfer.md": true
-  },
-  "statistical_invariant_tests_passed": 5,
+  "frozen_evaluation_provenance_matches": true,
+  "statistical_invariant_tests_passed": 11,
   "notebook_clean_kernel_runs": [
     {
       "input": "interim",
-      "seconds": 4.45,
-      "measurement_matches_pipeline": true
+      "seconds": 3.2,
+      "measurement_matches_pipeline": true,
+      "cohort_review_snapshot_rendered": true,
+      "cohort_pipeline_rebuilt_in_notebook": false
     },
     {
       "input": "raw",
-      "seconds": 6.1,
-      "measurement_matches_pipeline": true
+      "seconds": 4.95,
+      "measurement_matches_pipeline": true,
+      "cohort_review_snapshot_rendered": true,
+      "cohort_pipeline_rebuilt_in_notebook": false
     }
-  ]
+  ],
+  "verification": {
+    "generated_utc": "2026-11-10T04:23:00.030900+00:00",
+    "comparisons_verified": [
+      "W1",
+      "W2",
+      "O1",
+      "O2",
+      "D1",
+      "D2",
+      "F1",
+      "F2",
+      "F3",
+      "W1_joint",
+      "O1_joint",
+      "D1_joint",
+      "D2_joint",
+      "F1_no10",
+      "F2_no10",
+      "F3_no10",
+      "W1_cone",
+      "W2_cone",
+      "O1_cone",
+      "O2_cone",
+      "D1_cone",
+      "D2_cone",
+      "F1_cone",
+      "F2_cone",
+      "F3_cone"
+    ],
+    "frozen_source_inputs_match": true,
+    "training_before_evaluation": true,
+    "no_player_overlap": true,
+    "all_fixed_coefficients_and_uncertainty_finite": true,
+    "equal_player_metrics_recomputed": true,
+    "common_context_error_identity_verified": true,
+    "historical_reports_unchanged": true,
+    "marginal_primary_supported_gains": 0,
+    "primary_point_gains": 3,
+    "statistical_tests_passed": 11
+  }
 }

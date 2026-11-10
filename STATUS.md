@@ -1,5 +1,34 @@
 # Status log (newest first)
 
+- **2026-11-10 — Cohort prediction and 3-cone validation completed locally**
+  - Froze implementation details before fitting in `reports/evaluation_protocol.md`, appended
+    disclosure to prereg. Rookie-season REG prediction, 2023–24 training and 2025 evaluation;
+    historical association sensitivity keeps its all-REG window. Prior 2025 exposure disclosed.
+  - Built `src/evaluate.py` with separate develop/evaluate stages, training-only drill/player
+    preprocessing, frozen context/year encoding, fixed-only predictions and hash enforcement.
+    All 25 model pairs freeze before scoring: 9 primary, 7 prespecified joint/no-10-yard
+    secondaries, 9 cone subsets. Three development fits required Powell retries under a
+    recorded numerical rule; coefficients and uncertainty pass finite/positive checks.
+  - **No primary prediction addition has a supported gain:** all 9 marginal gain intervals
+    fail to support improvement; all 6/3-family simultaneous intervals include zero. Primary
+    evaluation n=20–37 athletes. Three point gains positive, six negative; no equivalence claim.
+    DL BURST get-off deteriorates nominally; the family/≥30-play sensitivities remain uncertain.
+  - `src/cone_sensitivity.py` completes nine four-model same-row historical comparisons,
+    with 23–43 athletes and no fabricated cone times. Secondary DL TURN/pressure association
+    remains positive but cone cohort prediction is uncertain; DL A0 cone cohort improves on
+    just nine evaluation athletes. Retained all favourable/adverse subset results separately.
+  - Saved `validation.*`, `cone_sensitivity.*`, frozen model metadata, player-score Parquet,
+    primary `evaluation_table.csv`, `figures/cohort_prediction.png`, run logs and interpretation
+    in `validation_findings.md`. Evidence-map narrative retained; Study 3 remains stopped.
+  - 11 statistical tests pass. Independent artifact checks recompute all 25 player-weighted
+    scores, verify disjoint cohorts, frozen hashes, common-context identities, finite model
+    uncertainty and unchanged historical reports. Notebook CSV/Parquet reruns pass (4.95/3.20 s):
+    conventional screen rebuild plus an explicitly labelled cohort-result review snapshot.
+    Full evaluation/feature rebuilding in the public notebook remains pending.
+  - **Next stage: submission production** — complete raw-input notebook integration, final
+    evidence-card/figure selection and writeup draft; Nov 20 claim checkpoint and Dec deadlines
+    retained. No new hypotheses, remote work or publication actions in this block.
+
 - **2026-11-10 — Plan-position review (no new analysis runs)**
   - Current phase: late audit / early final validation, covering the Nov 10–16 milestones.
     Data/model audits, reliability, the frozen measurement screen and draft notebook/figures

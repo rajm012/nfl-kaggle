@@ -1,0 +1,10 @@
+Cone W1: 25 players, 9,438 identical rows; tracking beta=+0.01139
+Cone W2: 25 players, 9,438 identical rows; tracking beta=-0.02772
+Cone O1: 43 players, 20,730 identical rows; tracking beta=-0.00235
+Cone O2: 43 players, 20,730 identical rows; tracking beta=+0.00042
+Cone D1: 37 players, 12,470 identical rows; tracking beta=-0.01068
+Cone D2: 37 players, 10,874 identical rows; tracking beta=+0.01521
+Cone F1: 33 players, 11,717 identical rows; tracking beta=-0.02260
+Cone F2: 42 players, 19,773 identical rows; tracking beta=-0.00199
+Cone F3: 23 players, 7,918 identical rows; tracking beta=-0.08328
+Saved reports/cone_sensitivity.md

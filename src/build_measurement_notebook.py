@@ -4,6 +4,7 @@ Run once after modifying the shared screen helpers. The generated notebook
 contains their source and needs no unpublished src modules at runtime.
 """
 import inspect
+import json
 from pathlib import Path
 
 import nbformat
@@ -29,8 +30,9 @@ association or 2025 performance evaluation is run here.
 
 The adjusted measurement reliability failed the prespecified screen on November 9,
 so the primary route-performance claim stops. Earlier Studies 1–2 included 2025 outcomes;
-we do not describe that cohort as a pristine holdout. Their audited models and movement
-reliability/transfer still need integration before this becomes the complete submission.
+we do not describe that cohort as a pristine holdout. Cohort prediction and cone checks
+are complete in separate saved reports; full rebuilding of those results and movement
+features still needs integration before this becomes the complete submission.
 
 Local runs accept CSV or Parquet; Kaggle discovers the four competition CSVs. Only
 development receiver rows enter pandas for the measurement model. No helper modules,
@@ -96,6 +98,33 @@ plot_screen(contrasts,rows,out/'study3_measurement.png')
 from IPython.display import Image, display
 display(Image(filename=str(out/'study3_measurement.png')))
 con.close()'''))
+    validation = ROOT/'reports/validation.json'
+    if validation.exists():
+        result = json.loads(validation.read_text())
+        review = []
+        for row in result['results']:
+            if row['family']=='primary':
+                m = row['metrics']
+                review.append(dict(test=row['id'],evaluation_players=m['players'],
+                    baseline_RMSE=m['rmse0'],tracking_RMSE=m['rmse1'],improvement=m['improvement'],
+                    improvement_lo=m['improvement_lo'],improvement_hi=m['improvement_hi']))
+        nb.cells.append(nbformat.v4.new_markdown_cell('''## Frozen cohort-evaluation review snapshot
+
+The table below records the completed Studies 1–2 evaluation for review. **This section
+embeds saved results; it does not rebuild their training/feature pipeline from the four
+inputs used above.** Full raw-input evaluation rebuilding remains required before
+publication. The standalone project pipeline saves the development models before scoring.
+
+These are equal-player RMSE comparisons on 2025 rookie REG outcomes, with 2023–24
+training-only preprocessing and fixed-component predictions. Intervals use 10,000
+paired player resamples conditional on training fits. Prior 2025 exposure is disclosed.
+Units: WR separation in yards; DL get-off in seconds; pressure outcomes in proportions.
+All nine original primary comparisons are shown; positive improvement means better.'''))
+        nb.cells.append(nbformat.v4.new_code_cell(
+            'import json\ncohort_review = json.loads('+repr(json.dumps(review,allow_nan=False))+')\n'
+            'display(pd.DataFrame(cohort_review))\n'
+            "print('Primary comparisons with marginal intervals supporting improvement:', "
+            "sum(row['improvement_lo'] > 0 for row in cohort_review), '/ 9')"))
     nb.cells.append(nbformat.v4.new_markdown_cell('''## Interpretation and remaining work
 
 The local run gives 41 diagnostic development receivers. Adjusted correlation is
@@ -105,10 +134,14 @@ performance claim; it does not establish that Combine movement has no value.
 
 The project now follows the planned evidence-map narrative: distinguish reproducible
 movement, transfer into games and evidence of additional performance prediction.
-Historical model audits still show no Holm-significant added associations, but held-out
-prediction and the small 3-cone sensitivity must be completed before final claims.
-Full feature rebuilding, audit integration, final figures and clean Kaggle execution remain
-pending. This notebook is not ready for publication or submission.'''))
+Historical model audits still show no Holm-significant added primary associations.
+The completed cohort validation gives no supported primary RMSE improvement. Small cone
+sensitivities contain secondary exceptions, including a nine-athlete DL first-step
+improvement; they do not establish general scouting value. Complete tables and limitations
+are in the saved project validation/cone reports.
+
+Full feature/evaluation rebuilding in this notebook, final figures/writeup and clean Kaggle
+execution remain pending. This notebook is not ready for publication or submission.'''))
     for cell in nb.cells:
         if cell.cell_type=='code':
             cell.outputs = []

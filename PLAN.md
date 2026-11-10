@@ -1,6 +1,6 @@
 # NFL Big Data Bowl 2027 — Submission plan
 
-Updated **2026-11-09** after Studies 1–2 and the repository review. This supersedes the original strategy, preserved in `reports/plan_2026-10-08.md`. Earlier preregistrations and results remain in the research record.
+Updated **2026-11-10** after cohort/cone validation. This supersedes the original strategy, preserved in `reports/plan_2026-10-08.md`. Earlier preregistrations and results remain in the research record.
 
 ## 1. Objective, budget and competition
 Build the strongest defensible University-track entry using our existing data and machine. Aim for a prize through a precise football question, credible validation and excellent communication. A judged competition cannot provide guaranteed income or a reliable payout date. Do not spend money assuming an award will arrive.
@@ -76,6 +76,8 @@ resource ideas remain in [resource_requests.md](reports/resource_requests.md).
 
 ## 2. Existing evidence and limits
 
+**Execution update, November 10:** Studies 1–2 cohort prediction and same-sample cone checks are complete. All 25 frozen comparisons scored; none of the nine primary marginal gain intervals supports improvement, and all original-family simultaneous intervals include zero. Small cone subsets have secondary signals, retained with their selection/uncertainty limits. Evidence-map narrative retained. Current stage is submission production: full raw-input notebook rebuilding/integration, final figures/evidence card and writeup. Interpretation: [validation_findings.md](reports/validation_findings.md). No Study 3 primary fit reopened.
+
 **Execution update, November 9:** local audit/reliability/transfer refits completed. The frozen
 Study 3 measurement screen failed (adjusted contrast SB=0.296 <0.40; 41 diagnostic WRs), so the
 primary route-performance claim stops before fitting TURN or evaluating 2025. Follow the planned
@@ -87,8 +89,7 @@ Current outputs and exact next work: [latest_runs.md](reports/latest_runs.md).
 - Reusable pipeline: signed acceleration → drill-normalised Combine traits → game movement.
 - Reported WR turning transfer r=0.28; DL burst r=0.45, attenuating to 0.21 after weight adjustment in prior notes. These are movement findings, not established performance gains.
 - Six envelope tests and three first-step tests produced no Holm-significant added performance association. The original general-metric and first-step bets have ended.
-- Held-out prediction and same-sample 3-cone checks remain unfinished. Robust binary sensitivity,
-  player-level Study 2 SDs, reliability and adjusted transfer now have saved reproduction code.
+- Cohort prediction, same-sample 3-cone checks, robust binary sensitivity, player-level Study 2 SDs, reliability and adjusted transfer now have saved code. Full public-notebook rebuilding and claim/figure/writeup integration remain unfinished.
 - Only the rookie cohort appears in game tracking. We cannot reconstruct opponent geometry, separation time series or ball-relative outcomes from these frames.
 - Many plays improve performance measurement but do not create more independent athletes.
 
@@ -186,26 +187,17 @@ Bayesian/ML packages do not require a new model suite.
 ## 5. Earn points in all four rubric categories
 
 ### Football — 30%
+Explain the difference between moving well and creating separation against NFL coverage. Ask when tracking justifies additional evaluation beyond the conventional baseline. The scout-facing evidence card has separate measurement, transfer and prediction fields. Reliable movement without added performance evidence does not justify a draft upgrade.
 
-Explain the difference between moving well and creating separation against NFL coverage.
-Ask when tracking justifies additional evaluation beyond the conventional baseline.
-The scout-facing evidence card has separate measurement, transfer and prediction fields.
-Reliable movement without added performance evidence does not justify a draft upgrade.
-
-Show practice monitoring as a proposed use only. Observational associations cannot prove
-that training this metric improves performance. Do not label athletes busts or hidden stars.
-Explain limitations from absent opponents, changing route usage and selection into playing time.
+Show practice monitoring as a proposed use only. Observational associations cannot prove that training this metric improves performance. Do not label athletes busts or hidden stars. Explain limitations from absent opponents, changing route usage and selection into playing time.
 
 ### Data Science — 30%
 
-One predeclared follow-up, corrected uncertainty, unique-player n, reliability, a conventional
-baseline, route/context adjustment, grouped evaluation and explicit prior outcome exposure.
-Show effect sizes in real units. All headline numbers must regenerate from saved code.
+One predeclared follow-up, corrected uncertainty, unique-player n, reliability, a conventional baseline, route/context adjustment, grouped evaluation and explicit prior outcome exposure. Show effect sizes in real units. All headline numbers must regenerate from saved code.
 
 ### Visualisation — 20%
 
-Target **six figures and one table**. Every chart must stand alone at writeup width,
-with colour-blind-safe colours, direct labels, units and sample sizes.
+Target **six figures and one table**. Every chart must stand alone at writeup width, with colour-blind-safe colours, direct labels, units and sample sizes.
 
 | Visual | Purpose |
 |---|---|
@@ -217,23 +209,16 @@ with colour-blind-safe colours, direct labels, units and sample sizes.
 | 6. Scout evidence card | Separate confidence in measurement, transfer and prediction |
 | Table 1. Evaluation | Baseline vs tracking, equal-player error, gain interval and evaluation n |
 
-Never select the hero pair because their NFL outcomes tell the desired story. Animation is
-optional. Build an interactive product only if it improves the judged submission enough
-to justify the time; static figures are sufficient for the current plan.
+Never select the hero pair because their NFL outcomes tell the desired story. Animation is optional. Build an interactive product only if it improves the judged submission enough to justify the time; static figures are sufficient for the current plan.
 
 ### Writeup — 20%
 
-Target **1,850–1,950 words**: question/hook 180; data/measurement 300; validation 300;
-results 500; football use 350; limitations 220. Lead with the actual primary finding.
-Every conclusion should connect to a visual or table.
+Target **1,850–1,950 words**: question/hook 180; data/measurement 300; validation 300; results 500; football use 350; limitations 220. Lead with the actual primary finding. Every conclusion should connect to a visual or table.
 
-Summarise earlier studies in the evidence map and link the complete record from the notebook.
-Do not narrate every abandoned approach in the main writeup.
+Summarise earlier studies in the evidence map and link the complete record from the notebook. Do not narrate every abandoned approach in the main writeup.
 
 ## 6. Reproduction begins during the audit week
-
-Create `notebooks/submission.ipynb` now in the next execution block. Its first working
-version should regenerate at least one verified table and figure from Kaggle input paths.
+Create `notebooks/submission.ipynb` now in the next execution block. Its first working version should regenerate at least one verified table and figure from Kaggle input paths.
 
 - Version project dependencies; avoid paid/network services at runtime.
 - Do not rely on local interim files, secrets or unpublished helper modules.
@@ -241,10 +226,8 @@ version should regenerate at least one verified table and figure from Kaggle inp
   cache, disclose/version it and retain the rebuilding procedure.
 - A small smoke-run is for development only, clearly distinct from submission results.
 - Run the complete notebook in a clean Kaggle session, save outputs and record memory/runtime.
-- Prepare exact notebook metadata and the writeup before requesting any necessary publication
-  authorization. Do not publicly publish/push unless authorization is already provided.
-- Never include token values or raw data in Git; do not push without authorization.
-  Changed terms and final Submit are owner actions.
+- Prepare exact notebook metadata and the writeup before requesting any necessary publication authorization. Do not publicly publish/push unless authorization is already provided.
+- Never include token values or raw data in Git; do not push without authorization. Changed terms and final Submit are owner actions.
 
 ## 7. Schedule from today
 
@@ -261,18 +244,12 @@ version should regenerate at least one verified table and figure from Kaggle inp
 | Dec 22–28 | Owner attaches notebook and submits; save confirmation and artifact versions |
 | Dec 29–Jan 6 | Buffer for genuine fixes/submission issues; no new hypothesis search |
 
-If work slips, remove optional animation and analyses first. Preserve validation, readable
-writeup, public reproduction and the internal submission date.
+If work slips, remove optional animation and analyses first. Preserve validation, readable writeup, public reproduction and the internal submission date.
 
 ## 8. Review and execution discipline
+The assistant reviews from two perspectives: football usefulness and statistical support for each claim, recording assumptions and unresolved issues in `reports/review_notes.md`. The owner reviews execution and presentation. These are internal checks, not independent expert endorsement, and do not require paying reviewers or launching more agents.
 
-The assistant reviews from two perspectives: football usefulness and statistical support for
-each claim, recording assumptions and unresolved issues in `reports/review_notes.md`. The
-owner reviews execution and presentation. These are internal checks, not independent expert
-endorsement, and do not require paying reviewers or launching more agents.
-
-Maintain `reports/submission_checklist.md`. Self-assigned rubric scores diagnose weaknesses;
-they are not prize probabilities. Final checks:
+Maintain `reports/submission_checklist.md`. Self-assigned rubric scores diagnose weaknesses; they are not prize probabilities. Final checks:
 
 - Explicit Combine-tracking→REG performance link and conventional baseline.
 - Every headline number regenerates; intervals, athlete counts and study labels agree.
@@ -281,13 +258,8 @@ they are not prize probabilities. Final checks:
 - ≤2,000 words, fewer than ten figures/tables, public notebook runs and is attached.
 - Eligibility/terms and owner submission complete before the hard deadline.
 
-End each work block with `STATUS.md` and durable `CLAUDE.md` updates. Resume from saved
-artifacts instead of repeating orientation or adding more study families.
+End each work block with `STATUS.md` and durable `CLAUDE.md` updates. Resume from saved artifacts instead of repeating orientation or adding more study families.
 
-**Started November 9:** historical reports preserved; executable audit passes key/count checks
-and records join attrition; starter notebook executes on CSV and Parquet inputs with a sample
-support figure. **Completed later November 9:** join explanations, reliability, model/transfer
-audits and the frozen measurement screen. The screen failed, stopping the primary route claim.
-Notebook reproduces it from CSV and Parquet; three additional draft figures saved. Owner chose
-local execution while remote access is unresolved. **Next:** Studies 1–2 held-out prediction and
-same-sample 3-cone sensitivity, followed by complete notebook/figure/writeup integration.
+**Started November 9:** historical reports preserved; executable audit passes key/count checks and records join attrition; starter notebook executes on CSV and Parquet inputs with a sample support figure. **Completed later November 9:** join explanations, reliability, model/transfer audits and the frozen measurement screen. The screen failed, stopping the primary route claim. Notebook reproduces it from CSV and Parquet; three additional draft figures saved. Owner chose local execution while remote access is unresolved. **Next:** Studies 1–2 held-out prediction and same-sample 3-cone sensitivity, followed by complete notebook/figure/writeup integration.
+
+**Completed November 10:** cohort/cone validation, all original secondary prediction comparisons, evaluation table/figure and interpretation. **Current next work:** complete raw-input public notebook integration, final visual/evidence-card selection and writeup draft. Keep the November 20 claim-review checkpoint; no new hypothesis families or tuning after cohort evaluation.
