@@ -1,0 +1,29 @@
+[
+  {
+    "position": "WR",
+    "counts": {
+      "Combine cohort": 37,
+      "Non-40 movement": 37,
+      "Primary REG outcome": 23,
+      "Sprint + REG outcome": 20
+    }
+  },
+  {
+    "position": "OL",
+    "counts": {
+      "Combine cohort": 38,
+      "Non-40 movement": 38,
+      "Primary REG outcome": 28,
+      "Sprint + REG outcome": 22
+    }
+  },
+  {
+    "position": "DL",
+    "counts": {
+      "Combine cohort": 44,
+      "Non-40 movement": 44,
+      "Primary REG outcome": 37,
+      "Sprint + REG outcome": 23
+    }
+  }
+]

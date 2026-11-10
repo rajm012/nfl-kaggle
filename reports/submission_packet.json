@@ -1,0 +1,23 @@
+{
+  "generated_utc": "2026-11-10T12:19:29.380243+00:00",
+  "word_count_conservative_including_alt_text": 1900,
+  "word_limit": 2000,
+  "figures": 6,
+  "tables": 1,
+  "combined_visuals": 7,
+  "assets": {
+    "writeup/writeup.md": "ca93272549e53d20072733f5282f44859bc9ded939172f68c0198621a9bcb27c",
+    "notebooks/submission.ipynb": "a2c38c0acd79f01e297ae851a5e6553c7091cabcf77016f6836c0fb731f1e771",
+    "notebooks/kernel-metadata.json": "41acbb8b9d4a59b1c99013bd4bc99b1333ea44729deded009099c73a0ed6bc16",
+    "reports/figures/combine_route_trace.png": "0f4da328938859eb712618cb4bf9c0413660c05e83660647fed81b4a03d9b800",
+    "reports/figures/evidence_support.png": "c3328f9b48953131c8f3ba855541e8f321e39336e541ceaf1b6189d3965583f0",
+    "reports/figures/transfer_audited.png": "4dea1eb7b0f718554a174a83af37265f4a78ab4d1f3fd7a4fcc0ab74e03c23a5",
+    "reports/figures/study3_measurement.png": "8af184c5ee47cb4710b2988b062e3ba2e12284b93686e9230c76fcb034e90089",
+    "reports/figures/cohort_prediction.png": "d193a2046156418304d0a240cce583dc6519aebbb15713051d848afe4e859c52",
+    "reports/figures/scout_evidence_card.png": "60e6de4467711610d1bef0c417883ffde1e01cfe785c7080160740accd952588"
+  },
+  "local_preview": "writeup/preview.html",
+  "public_notebook_verified": true,
+  "notebook_url": "https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
+  "final_submission_complete": false
+}

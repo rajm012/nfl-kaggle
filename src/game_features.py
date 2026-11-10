@@ -9,6 +9,8 @@ Window (pre-registered amendment 2026-10-29): kinematics on the full track, then
 import duckdb
 import numpy as np
 import polars as pl
+from pathlib import Path
+import tempfile
 
 from src.kinematics import decompose
 
@@ -17,10 +19,14 @@ WINDOW_S = 3.0
 MIN_FRAMES = 10
 
 
-def season_traits(con: duckdb.DuckDBPyConnection, season: int) -> pl.DataFrame:
+def season_traits(con: duckdb.DuckDBPyConnection, season: int,
+                  game_ids: list[int] | None = None) -> pl.DataFrame:
+    # Batches contain whole games: no player track is split across a boundary.
+    game_filter = '' if game_ids is None else (
+        ' AND game_id IN (' + ','.join(str(int(g)) for g in game_ids) + ')')
     df = con.sql(f"""
         SELECT game_id, play_id, nfl_id, epoch(time) AS t, x, y, event = 'ball_snap' AS is_snap
-        FROM '{INTERIM}/game_tracking.parquet' WHERE season = {season}
+        FROM '{INTERIM}/game_tracking.parquet' WHERE season = {season}{game_filter}
         ORDER BY game_id, play_id, nfl_id, time""").pl()
     key = df.select("game_id", "play_id", "nfl_id").to_numpy()
     t, x, y, snap = (df[c].to_numpy() for c in ("t", "x", "y", "is_snap"))
@@ -44,13 +50,37 @@ def season_traits(con: duckdb.DuckDBPyConnection, season: int) -> pl.DataFrame:
 
 def main() -> None:
     con = duckdb.connect()
-    con.execute("SET memory_limit='4GB'")
-    out = []
-    for season in (2023, 2024, 2025):
-        d = season_traits(con, season).with_columns(season=pl.lit(season))
-        print(season, d.height, "player-plays")
-        out.append(d)
-    pl.concat(out).write_parquet(f"{INTERIM}/game_play_traits.parquet")
+    con.execute("SET memory_limit='256MB'")
+    con.execute('SET threads=2')
+    # ~120k frames per batch instead of materialising a whole season in RAM.
+    with tempfile.TemporaryDirectory(prefix='game_batches_', dir=INTERIM) as temporary:
+        pieces = []
+        for season in (2023, 2024, 2025):
+            games = con.execute(f"SELECT game_id, count(*) FROM '{INTERIM}/game_tracking.parquet' "
+                                f"WHERE season={season} GROUP BY game_id ORDER BY game_id").fetchall()
+            batches, batch, frames = [], [], 0
+            for game, count in games:
+                if batch and frames + count > 120000:
+                    batches.append(batch)
+                    batch, frames = [], 0
+                batch.append(game)
+                frames += count
+            if batch:
+                batches.append(batch)
+            total = 0
+            for index, games_in_batch in enumerate(batches):
+                d = season_traits(con, season, games_in_batch).with_columns(season=pl.lit(season))
+                target = Path(temporary) / f'{season}_{index:04d}.parquet'
+                d.write_parquet(target)
+                pieces.append(str(target).replace("'", "''"))
+                total += d.height
+                if index % 10 == 0:
+                    print(f'{season}: batch {index+1}/{len(batches)}, {total:,} player-plays', flush=True)
+            print(season, total, 'player-plays', flush=True)
+        paths = '[' + ','.join("'" + p + "'" for p in pieces) + ']'
+        con.execute(f"COPY (SELECT * FROM read_parquet({paths}) ORDER BY season,game_id,play_id,nfl_id) "
+                    f"TO '{INTERIM}/game_play_traits.parquet' (FORMAT parquet, COMPRESSION zstd)")
+    con.close()
 
 
 if __name__ == "__main__":

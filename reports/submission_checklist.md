@@ -20,21 +20,22 @@ All unchecked items are pending. This file records evidence of completion, not a
     still depend on completing required Studies 1–2 evaluation/sensitivity work.
   - Nov 10: required cohort/cone work complete; none of nine primary intervals supports a prediction gain. Secondary subset findings retained; keep Nov 20 final-claim review.
 - [x] Create starter notebook and record dependencies; local CSV/Parquet execution verified.
-- [ ] Run full notebook from clean inputs; record duration/memory; reproduce every headline number.
+- [x] Run full notebook from clean inputs; record duration/memory; reproduce every headline number (`full_notebook_execution.json`, `submission_verification.json`; 523.08 s, sampled largest stage RSS 1,183 MiB, 402 checks and 25 scores).
 
 ## Football, figures and writeup
-- [ ] Explicit Combine-tracking→REG performance link with conventional baseline.
-- [ ] Six self-contained figures and one table; unique-player n, units and intervals agree.
-- [ ] Evidence card separates measurement, transfer and incremental prediction confidence.
+- [x] Explicit Combine-tracking→REG performance link with conventional baseline (`writeup/writeup.md`).
+- [x] Six self-contained figures and one table; unique-player n, units and intervals agree (`submission_packet.json`).
+- [x] Evidence card separates measurement, transfer and incremental prediction confidence (`figures/scout_evidence_card.png`).
 - [x] Draft hero examples selected without reference to desired NFL outcomes (`route_trace_selection.json`).
-- [ ] Actual findings and limitations replace provisional titles/claims.
-- [ ] Football and statistical review issues recorded and resolved.
-- [ ] ≤2,000 words and fewer than ten combined figures/tables.
+- [x] Actual findings and limitations replace provisional titles/claims (`writeup/writeup.md`).
+- [x] Football and statistical review issues recorded and resolved (`submission_review.md`, `official_sources.md`; internal review only).
+- [x] ≤2,000 words and fewer than ten combined figures/tables (1,900 conservative words; 6 figures + 1 table).
 
 ## Publication and submission
-- [ ] Official rules, University eligibility, award allocation and citations rechecked.
-- [ ] Any necessary publication authorization obtained for the concrete, tested artifact.
-- [ ] Public notebook access and saved outputs verified by Dec 14.
+- [x] Official rules, University eligibility requirements, award allocation and citations rechecked (`official_sources.md`, `official_tracks.json`; owner personal/track confirmation separate).
+- [x] Publication authorized by request to complete remaining steps; owner confirmed `oppenheimer6th`. Concrete local and Kaggle artifact tested before publication.
+- [x] Notebook published; Kaggle API confirms public status and saved outputs by Dec 14 (`kaggle_execution.json`; public version 3, full execution version 1).
+- [ ] Owner confirms public notebook browser access/rendering (direct anonymous HTTP returned 404 from this workspace despite API public flag).
 - [ ] Writeup embeds render correctly and notebook attachment works.
 - [ ] Owner completes required terms/UI actions and submits by Dec 28.
 - [ ] Submission confirmation and final artifact versions saved.

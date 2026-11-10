@@ -1,0 +1,15 @@
+{
+  "id": "oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
+  "title": "Combine Movement to NFL Decisions: An Evidence Map",
+  "code_file": "submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [
+    "nfl-big-data-bowl-2027"
+  ],
+  "kernel_sources": []
+}

@@ -202,10 +202,10 @@ Target **six figures and one table**. Every chart must stand alone at writeup wi
 | Visual | Purpose |
 |---|---|
 | 1. Hero route trace | Show actual Combine movement and what TURN measures; comparable-stopwatch pair selected by an exposure-only rule |
-| 2. Evidence funnel | Show unique athletes with drills, movement and REG outcomes |
+| 2. Evidence support | Show unique 2025 athletes with movement, primary REG and sprint outcomes |
 | 3. Transfer panel | WR turning and DL burst; raw/size-adjusted estimates and intervals |
-| 4. Performance effect plot | Audited effect sizes with practical-size bands and study labels |
-| 5. Route-context result | The within-player interaction, including honest uncertainty/null display |
+| 4. Route measurement screen | Show raw/adjusted contrast repeatability and the failed frozen gate; no interaction fitted |
+| 5. Cohort prediction | Show all nine primary gains and uncertainty, with study labels |
 | 6. Scout evidence card | Separate confidence in measurement, transfer and prediction |
 | Table 1. Evaluation | Baseline vs tracking, equal-player error, gain interval and evaluation n |
 
@@ -263,3 +263,5 @@ End each work block with `STATUS.md` and durable `CLAUDE.md` updates. Resume fro
 **Started November 9:** historical reports preserved; executable audit passes key/count checks and records join attrition; starter notebook executes on CSV and Parquet inputs with a sample support figure. **Completed later November 9:** join explanations, reliability, model/transfer audits and the frozen measurement screen. The screen failed, stopping the primary route claim. Notebook reproduces it from CSV and Parquet; three additional draft figures saved. Owner chose local execution while remote access is unresolved. **Next:** Studies 1–2 held-out prediction and same-sample 3-cone sensitivity, followed by complete notebook/figure/writeup integration.
 
 **Completed November 10:** cohort/cone validation, all original secondary prediction comparisons, evaluation table/figure and interpretation. **Current next work:** complete raw-input public notebook integration, final visual/evidence-card selection and writeup draft. Keep the November 20 claim-review checkpoint; no new hypothesis families or tuning after cohort evaluation.
+
+**Submission production, later November 10:** standalone nine-CSV notebook executed from clean inputs in 523.08 s (largest sampled stage RSS 1,183 MiB). All 402 numeric comparisons, 25 cohort scores and 12 tests pass. Final visual selection above replaces the unfitted route interaction with its failed measurement screen. Writeup/HTML preview complete: 1,900 conservative words, six figures and one table. Official source/field checks saved. Owner confirmed Kaggle account `oppenheimer6th`. Full Kaggle raw rebuild COMPLETE (1,421.62 s, largest sampled stage RSS 1,021.4 MiB); all checks pass. Public notebook version 3 retains unchanged tested source and saved outputs via QUICK_SAVE after execution version 1. API confirms public status/source/outputs. Owner browser access/rendering, Writeup review/upload, attachment/track confirmation and final submission remain in the checklist.

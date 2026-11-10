@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-11-10T11:17:33.594839+00:00",
+  "replayed": [
+    {
+      "id": "W2",
+      "model": "baseline_cone_tracking",
+      "solver": "Powell",
+      "reason": "Replay recorded historical retry, unchanged model/sample"
+    }
+  ],
+  "cached_coefficients_used": false,
+  "outcome_model_or_sample_changed": false
+}

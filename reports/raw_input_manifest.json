@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-11-10T11:09:15.032005+00:00",
+  "source": "raw CSVs",
+  "counts": {
+    "combine_results": 510,
+    "combine_tracking": 463189,
+    "game_tracking": 22654290,
+    "games": 1002,
+    "player_career_successes": 510,
+    "player_play": 314197,
+    "players": 510
+  },
+  "raw_sha256": {
+    "combine_results.csv": "e4773ef68167d508f3916d446cd411dfd77a87e5765d3babcb986201fb143b86",
+    "combine_tracking.csv": "541c69f6629f5f803b08033c5c386735582120973562134b2c1e7ec6553fb0d3",
+    "game_tracking_2023.csv": "385e620b6b94e8cd91f0d5776395b76b10d52a34401c764c21b4e98ab617855c",
+    "game_tracking_2024.csv": "06b7f34304414306dab53d5cb4c5d28485c5f62376442bcb913f9f01184ece6d",
+    "game_tracking_2025.csv": "419b6bc0388a9210f61911ec2f1351b1e8d56355c0ac8576f24a3bbcd95e54ca",
+    "games.csv": "ca33543f6939af4ee393c568c60920c476ba91ddbfbdce5a06578b9492fa11fd",
+    "player_career_successes.csv": "0d4b8975debda4e2481218f30a16429dad5b806ecdd2fc4367291ac1460ed0a9",
+    "player_play.csv": "68926a268c0a49e58616001fb35ea179018d9cbbce1c5c31e7a4095273c35b2a",
+    "players.csv": "2cd7e0309e7aa40533028dc537c2c877dbedbe0fdb14f337fc18af31a5861c12"
+  }
+}

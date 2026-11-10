@@ -1,0 +1,129 @@
+[
+  {
+    "module": "src.submission_pipeline",
+    "arguments": [
+      "--convert"
+    ],
+    "seconds": 19.78,
+    "sampled_peak_RSS_MiB": 510.8,
+    "exit_code": 0
+  },
+  {
+    "module": "src.combine_features",
+    "arguments": [],
+    "seconds": 18.03,
+    "sampled_peak_RSS_MiB": 616.6,
+    "exit_code": 0
+  },
+  {
+    "module": "src.sprint",
+    "arguments": [],
+    "seconds": 2.5,
+    "sampled_peak_RSS_MiB": 161.6,
+    "exit_code": 0
+  },
+  {
+    "module": "src.game_features",
+    "arguments": [],
+    "seconds": 403.26,
+    "sampled_peak_RSS_MiB": 310.8,
+    "exit_code": 0
+  },
+  {
+    "module": "src.audit_data",
+    "arguments": [],
+    "seconds": 0.75,
+    "sampled_peak_RSS_MiB": 156.7,
+    "exit_code": 0
+  },
+  {
+    "module": "src.join_audit",
+    "arguments": [],
+    "seconds": 1.0,
+    "sampled_peak_RSS_MiB": 120.1,
+    "exit_code": 0
+  },
+  {
+    "module": "src.reliability",
+    "arguments": [],
+    "seconds": 1.25,
+    "sampled_peak_RSS_MiB": 257.2,
+    "exit_code": 0
+  },
+  {
+    "module": "src.route_context",
+    "arguments": [],
+    "seconds": 2.5,
+    "sampled_peak_RSS_MiB": 740.9,
+    "exit_code": 0
+  },
+  {
+    "module": "src.transfer_audit",
+    "arguments": [],
+    "seconds": 25.03,
+    "sampled_peak_RSS_MiB": 406.2,
+    "exit_code": 0
+  },
+  {
+    "module": "src.validation",
+    "arguments": [],
+    "seconds": 10.77,
+    "sampled_peak_RSS_MiB": 1183.0,
+    "exit_code": 0
+  },
+  {
+    "module": "src.evaluate",
+    "arguments": [
+      "--stage",
+      "develop"
+    ],
+    "seconds": 17.52,
+    "sampled_peak_RSS_MiB": 350.6,
+    "exit_code": 0
+  },
+  {
+    "module": "src.evaluate",
+    "arguments": [
+      "--stage",
+      "evaluate"
+    ],
+    "seconds": 3.0,
+    "sampled_peak_RSS_MiB": 329.6,
+    "exit_code": 0
+  },
+  {
+    "module": "src.submission_replay",
+    "arguments": [],
+    "seconds": 9.26,
+    "sampled_peak_RSS_MiB": 1125.2,
+    "exit_code": 0
+  },
+  {
+    "module": "src.submission_verify",
+    "arguments": [],
+    "seconds": 1.5,
+    "sampled_peak_RSS_MiB": 274.3,
+    "exit_code": 0
+  },
+  {
+    "module": "src.audit_figures",
+    "arguments": [],
+    "seconds": 1.5,
+    "sampled_peak_RSS_MiB": 312.8,
+    "exit_code": 0
+  },
+  {
+    "module": "src.evaluation_figures",
+    "arguments": [],
+    "seconds": 2.0,
+    "sampled_peak_RSS_MiB": 289.9,
+    "exit_code": 0
+  },
+  {
+    "module": "src.submission_figures",
+    "arguments": [],
+    "seconds": 1.25,
+    "sampled_peak_RSS_MiB": 200.6,
+    "exit_code": 0
+  }
+]

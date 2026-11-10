@@ -1,0 +1,19 @@
+{
+  "source": "nine raw competition CSVs",
+  "cohort_pipeline_rebuilt_in_notebook": true,
+  "all_headlines_verified": true,
+  "figures": 6,
+  "tables": 1,
+  "elapsed_seconds": 1421.62,
+  "largest_stage_sampled_RSS_MiB": 1021.4,
+  "versions": {
+    "duckdb": "1.5.6",
+    "polars": "2.0.0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2"
+  },
+  "output_root": "/kaggle/working/bdb_raw_rebuild_x1_z4zsw"
+}

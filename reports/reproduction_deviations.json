@@ -1,0 +1,52 @@
+{
+  "deviations_over_1e-8": [
+    [
+      "/cone/W2/baseline_cone_tracking/beta",
+      -0.027722929733692527,
+      -0.027771474032292215,
+      -4.85442985996877e-05
+    ],
+    [
+      "/cone/W2/baseline_cone_tracking/se",
+      0.053904283775212516,
+      0.05227984723295673,
+      -0.0016244365422557888
+    ],
+    [
+      "/cone/W2/baseline_cone_tracking/lo",
+      -0.13337338454553582,
+      -0.1302380917261434,
+      0.0031352928193924268
+    ],
+    [
+      "/cone/W2/baseline_cone_tracking/hi",
+      0.07792752507815078,
+      0.07469514366155897,
+      -0.003232381416591809
+    ]
+  ],
+  "feature_max_absolute_differences": {
+    "combine_attempts": {
+      "joined": 5517,
+      "lat": 0.0,
+      "burst": 0.0
+    },
+    "combine_traits": {
+      "joined": 510,
+      "lat": 4.440892098500626e-16,
+      "burst": 6.661338147750939e-16
+    },
+    "sprint_traits": {
+      "joined": 418,
+      "A0": 0.0
+    },
+    "game_play_traits": {
+      "joined": 314227,
+      "lat": 0.0,
+      "burst": 0.0,
+      "vmax": 0.0
+    }
+  },
+  "interpretation": "Only historical WR BURST+cone LMM uncertainty differs; same keyed feature values, unchanged primary and selected-subset claims.",
+  "resolution": "Replay original recorded historical W2+cone Powell solver; all 402 numeric checks pass at unchanged strict tolerances. No source prediction coefficients/model/sample changed and no cached coefficients used."
+}

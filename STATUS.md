@@ -1,5 +1,33 @@
 # Status log (newest first)
 
+- **2026-11-10 — Kaggle reproduction and notebook publication completed**
+  - Private full Kaggle rebuild COMPLETE: 1,421.62 s, largest sampled stage RSS 1,021.4 MiB; all 402 numeric checks, 25 scores and 12 tests pass. Downloaded execution/verification records saved in `kaggle_*` reports. All 146 output files checked: no raw CSVs or intermediate Parquets redistributed.
+  - Published under owner-confirmed `oppenheimer6th`: code notebook ID 144187820, public version 3. Publication is a QUICK_SAVE of unchanged tested source and saved outputs; full execution was version 1. API retrieval confirms public flag, matching code, 59 output blocks and six figures. Inline previews reduced to 950px/128 colours for Kaggle's 1 MB source limit; full 200dpi assets retained.
+  - Manuscript/standalone HTML/ZIP regenerated with live notebook citation and current asset hashes: 1,900 conservative words, six figures + one table. Final handoff: `reports/submission_handoff.md`; evidence: `kaggle_execution.json`.
+  - Owner Writeup upload/attachment/rendering, track/terms confirmation and Submit remain. Anonymous direct HTTP checks returned 404 from this workspace; API confirms public/source access, while owner browser verification remains pending. No final competition submission, legal acceptance, team change or Git push.
+
+- **2026-11-10 — Local submission production completed; Kaggle run in progress**
+  - Complete standalone notebook rebuilt from all nine raw CSVs in a fresh directory: 523.08 s, largest sampled stage RSS 1,183 MiB. All 402 numeric comparisons, 25 cohort scores and 12 tests pass; saved notebook has 59 outputs and no error cells.
+  - Batched whole-game extraction preserves all 314,227 keyed game-trait values exactly. A historical W2+cone solver-path discrepancy was diagnosed and resolved by replaying its originally recorded Powell retry. No frozen prediction specification/source or sample changed, no cached coefficients, no widened verification tolerance.
+  - Six final figures, nine-row evaluation table, 1,900-word conservative manuscript, offline HTML preview, ZIP and owner handoff prepared. API-retrieved rules, data definitions, deadline, undergraduate track and prize allocation verified.
+  - Private Kaggle version 1 launched. Owner confirmed **oppenheimer6th** (earlier memory
+    said rajm012); canonical metadata corrected. Worker logs show dependencies and raw
+    conversion pass; tracking extraction still running. Publication awaits platform
+    result verification; owner final Writeup attachment/rendering/Submit remain.
+  - No new hypothesis family, route interaction, remote GPU job, Git commit or Git push.
+
+- **2026-11-10 — Repository-position review after validation**
+  - Read current memory/plan, latest results, verification artifacts, submission checklist,
+    notebook sections and pipeline module inventory. No analysis or tests rerun.
+  - Confirmed submission-production stage: cohort/cone validation is complete; notebook
+    execution records explicitly show evaluation rebuilding is still absent. Five draft
+    figure PNGs and the nine-comparison evaluation CSV exist. `writeup/` contains only
+    `.gitkeep`; no writeup draft or Kaggle kernel metadata file exists yet.
+  - Next: complete portable raw-input reproduction, select final figures/evidence card
+    around the measurement/transfer/prediction findings, draft the writeup, and perform
+    owner review plus clean Kaggle execution. Keep Nov 20 claim review, Dec 14 notebook
+    readiness and Dec 28 internal submission. Remote access remains optional/deferred.
+
 - **2026-11-10 — Cohort prediction and 3-cone validation completed locally**
   - Froze implementation details before fitting in `reports/evaluation_protocol.md`, appended
     disclosure to prereg. Rookie-season REG prediction, 2023–24 training and 2025 evaluation;
