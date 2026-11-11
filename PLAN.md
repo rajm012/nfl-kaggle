@@ -73,7 +73,7 @@ analysis reports are historical; they do not reopen completed work.
 
 ### Step 1 — Make receiver turning the central story
 
-**Target: November 12–14. Next task to start.**
+**Target: November 12–14. Completed early November 11; reviewable proposals prepared.**
 
 Review the manuscript and notebook against the receiver question in section 1. Use the
 already selected similar-stopwatch pair: 4.54 versus 4.52 seconds, with contrasting TURN
@@ -89,9 +89,16 @@ wording before replacing the existing submission materials.
 minute of reading; all nine primary results are accounted for; the receiver focus does not
 imply a new selected primary analysis.
 
+**Completion:** [wr_story_review.md](reports/wr_story_review.md) contains the revised outline,
+claim/source map, all-nine ledger, six figure explanations and notebook wording proposals.
+[wr_story_opening_draft.md](writeup/wr_story_opening_draft.md) is the proposed opening;
+[wr_story_evidence.json](reports/wr_story_evidence.json) records source/value checks. Internal
+review is complete; owner feedback can refine the draft. Existing submission materials
+remain the tested versions until integration in Step 5.
+
 ### Step 2 — Explain what the movement difference means
 
-**Target: November 14–16; builds on Step 1.**
+**Target: November 14–16; completed early November 11.**
 
 Inspect existing receiver traces, feature definitions and size/speed-adjusted transfer
 results. Explain how entry speed, path shape and acceleration contribute to the observed
@@ -114,9 +121,19 @@ figure rather than expanding the main visual count.
 addressed, and what remains unresolved. Cohort cross-drill consistency is not presented as
 either example player's individual or single-route repeatability.
 
+**Completion:** [wr_movement_explanation.md](reports/wr_movement_explanation.md) and
+[wr_movement_metrics.json](reports/wr_movement_metrics.json) explain the same selected
+attempts, fixed local windows and all 13 drill contributions. The written
+[measurement protocol](reports/wr_trace_measurement_protocol.md) precedes calculation;
+`src.wr_movement` reproduces the separate review outputs. A
+[candidate Figure 1](reports/figures/combine_route_trace_explained.png) adds speed and
+reference-peak annotations for later integration. Four physical checks and the existing
+12 tests pass. The new module/protocol/checks must be bundled if the candidate is integrated
+in Step 5; the current published figure/notebook/packet remain their tested versions.
+
 ### Step 3 — Explain where the NFL evidence ends
 
-**Target: November 16–18; uses the existing frozen results.**
+**Target: November 16–18; uses the existing frozen results. Next task to start.**
 
 Translate the nine prediction errors and gain intervals into yards, seconds or proportion
 units. Use WR turning as the worked example: baseline separation RMSE 0.23572 yards versus
@@ -184,14 +201,15 @@ fixes and submission issues.
 
 ## 4. Work tracker and responsibility
 
-All five improvement steps are pending; the starting artifacts in section 2 are complete.
-Start Step 1 in the next work block and update this table as outputs are produced.
+Steps 1–2 are complete as internal review/proposal and descriptive explanation. Steps 3–5
+remain pending. The starting artifacts in section 2 are complete. Start Step 3 in the next work block and update this
+table as outputs are produced.
 
 | Step | Dates | Lead | Status |
 |---|---|---|---|
-| 1. Receiver story and claim map | Nov 12–14 | Assistant; owner reviews clarity | Pending — next |
-| 2. Movement explanation | Nov 14–16 | Assistant; owner checks code/figures | Pending |
-| 3. Prediction uncertainty explanation | Nov 16–18 | Assistant; owner reviews plain language | Pending |
+| 1. Receiver story and claim map | Nov 12–14 | Assistant; owner reviews clarity | Complete Nov 11 — proposals ready |
+| 2. Movement explanation | Nov 14–16 | Assistant; owner checks code/figures | Complete Nov 11 — descriptive outputs ready |
+| 3. Prediction uncertainty explanation | Nov 16–18 | Assistant; owner reviews plain language | Pending — next |
 | 4. Scouting workflow and claim lock | Nov 18–20 | Assistant draft; owner design/writeup review | Pending |
 | 5. Final integration and submission | Nov 21–Dec 28 | Assistant prepares/verifies; owner UI/Submit | Pending |
 

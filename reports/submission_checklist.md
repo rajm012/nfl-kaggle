@@ -47,11 +47,12 @@ All unchecked items are pending. This file records evidence of completion, not a
 ## Accepted improvement plan — November 11
 
 The completed checks above refer to the existing November 10 materials. The owner accepted
-the next work in [PLAN.md](../PLAN.md); these improvements have not yet been performed.
+the next work in [PLAN.md](../PLAN.md). Steps 1–2's review/proposals and descriptive
+explanation are complete; Steps 3–5, including submission integration, remain pending.
 
 - [x] Active plan updated with WR focus, five ordered steps, outputs, completion checks and deadlines; prior plan archived (`plan_before_wr_focus_2026-11-11.md`).
-- [ ] Step 1: receiver story/claim map reviewed; all nine results retained (`wr_story_review.md`).
-- [ ] Step 2: movement explanation and trace annotation reviewed; any new descriptive quantities defined and checked before use (`wr_movement_explanation.md`).
+- [x] Step 1: internal receiver story/claim review completed; all nine results accounted for; opening, outline, figure/notebook wording proposals prepared (`wr_story_review.md`, `wr_story_evidence.json`, `../writeup/wr_story_opening_draft.md`; Nov 11). Owner feedback remains useful; submission materials not yet revised.
+- [x] Step 2: written descriptive protocol, movement explanation, fixed-window/13-drill summaries and candidate Figure 1 completed; 4 physics checks plus 12 existing tests pass (`wr_movement_explanation.md`, `wr_trace_measurement_protocol.md`, `wr_movement_metrics.json`, `figures/combine_route_trace_explained.png`; Nov 11). Published assets remain the tested versions pending Step 5 integration.
 - [ ] Step 3: plain-language interpretation of all nine primary prediction comparisons completed (`uncertainty_interpretation.md`).
 - [ ] Step 4: proposed scouting workflow reviewed and final claims locked by Nov 20 (`scouting_workflow_review.md`).
 - [ ] Step 5: revised manuscript, figures, notebook and packet integrated and verified as applicable; actual owner Kaggle UI checks/submission completed.

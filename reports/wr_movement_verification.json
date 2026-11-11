@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-11-11T12:23:38.168030+00:00",
+  "scope": "Step 2 descriptive review; no NFL outcome fitting",
+  "trace_quality_and_windows_pass": true,
+  "cached_kinematics_and_historical_composites_match": true,
+  "all_13_drills_retained": true,
+  "new_physics_checks_passed": 4,
+  "existing_tests_passed": 12,
+  "source_protocol_input_hashes_match": true,
+  "existing_submission_assets_match": true,
+  "frozen_prediction_source_hashes_match": true,
+  "existing_notebook_bundle_integrity_pass": true,
+  "markdown_links_pass": true,
+  "new_outputs_sha256": {
+    "src/wr_movement.py": "74fa946a80adacc06d28ef5de7cd2b536afe27acd78b01b28215e77ce27d272e",
+    "tests/wr_movement_checks.py": "b6231d6d010120e18d34f25dcaaf43d1b8a5eff902cd01a02d4a162acb9f3cb5",
+    "reports/wr_trace_measurement_protocol.md": "c45a2c35caf691c75ede8ea3d1b95f04cb97884e4a7867b4685b6a96093d4ade",
+    "reports/wr_movement_metrics.json": "16927425dfc6004ef7425400b902a1fe9b3d7c7c8f9304bc29f57527fd3c0211",
+    "reports/wr_movement_explanation.md": "8710256751de14fb2a37207ab6149db96ec8d32e41f436ee83a723f95698ed58",
+    "reports/figures/combine_route_trace_explained.png": "55a1c2f4208ce9e7519c3b4200db3de31f10104d3c5b8e7f5b38a8292d08cb53"
+  },
+  "candidate_visually_reviewed": true,
+  "candidate_integrated_into_public_notebook": false
+}
