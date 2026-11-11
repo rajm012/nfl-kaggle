@@ -1,5 +1,16 @@
 # Status log (newest first)
 
+- **2026-11-10 — Judging-focused writeup revised and Kaggle editor package prepared**
+  - Revised introduction and worked receiver example: observed 4.54/4.52-second times, measured TURN profiles, specific drill checks/out-cut film questions, and explicit separation of movement evidence from a performance recommendation. Corrected cohort-to-individual reliability wording and removed implied validation of the scouting aid/equivalence.
+  - Internal rubric/claim review recorded in `writeup_judging_review.md`; optional reviewer brief prepared. All six figures inspected; primary/secondary findings, failed gate and retrospective validation limits preserved. No new models, source/protocol changes or public notebook version changes.
+  - Manuscript 1,926 conservative words, six figures + one generated table. Updated responsive offline preview; prepared `kaggle_upload.zip` with exact editor fields, six numbered PNGs and instructions. Added the previously omitted evaluation CSV to the full packet/asset manifest. Final checks pass: combined editor fields 1,957 words, all quoted source values and nine table rows agree, six embedded PNGs render structurally, upload paths/asset hashes/ZIP integrity valid, no raw data packaged. Proof: `writeup_verification.json`.
+  - Available Kaggle SDK Writeup interfaces are read-only; no browser editor tool exists here. No Kaggle Writeup draft or final submission was created. Owner actual editor upload/attachment/rendering, eligibility/terms and final Submit remain.
+
+- **2026-11-10 — Prize-readiness priorities reviewed after publication**
+  - Notebook execution/publication and the complete manuscript/visual packet are finished. Remaining mandatory items are actual browser rendering, competition Writeup upload/attachment, owner University eligibility/terms and final Submit.
+  - Recommended next work: a judge-focused football/writeup review, with one concrete evidence-card decision example and a clear account of movement transfer versus unsupported primary prediction gain. Improve football explanation, writing and visual comprehension while preserving frozen analyses and uncertainty.
+  - Optional professor/football/design cold reads can challenge clarity and practical usefulness; independent expert reviewers remain unavailable unless the owner arranges them. Keep Nov 20 final-claim review and Dec 28 internal submission. No new outcome models or hypothesis family opened.
+
 - **2026-11-10 — Redesigned notebook verified and republished**
   - Removed the 220,831-character serialized source cell from the reading view. Required source now lives in verified notebook metadata; longest visible code cell is 1,502 characters. Six narrative sections, figure-specific explanations, a formatted table, quiet setup/logging and a collapsible appendix improve the report.
   - Local raw pipeline: 505.28 s, largest sampled stage RSS 1,115 MiB; 402 checks, 25 scores and 12 tests pass. Private clean Kaggle version 3: 979.82 s, peak 1107.0 MiB; all checks pass. W1 historical cone retry-path repair preserves its original BFGS/L-BFGS result with canonical row order; W2 retains Powell. No frozen model/source/protocol/sample or verification tolerance changed.

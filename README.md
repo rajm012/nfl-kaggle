@@ -7,6 +7,7 @@ do not establish a supported prediction gain; secondary cone findings remain sep
 - [Writeup](writeup/writeup.md) and [standalone visual preview](writeup/preview.html)
 - [Self-contained raw-input notebook](notebooks/submission.ipynb)
 - [Notebook reading preview](writeup/notebook_preview.html)
+- [Kaggle Writeup upload package](writeup/kaggle_upload.zip) and [reviewer brief](writeup/reviewer_brief.md)
 - [Current state](STATUS.md), [project memory](CLAUDE.md) and [submission checklist](reports/submission_checklist.md)
 - [Validation interpretation](reports/validation_findings.md) and [production review](reports/submission_review.md)
 

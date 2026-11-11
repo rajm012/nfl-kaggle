@@ -1,0 +1,51 @@
+{
+  "title": "Beyond the Stopwatch: When Should Combine Tracking Change a Scouting Decision?",
+  "description": "Some Combine movement carries into games, while nine primary comparisons leave added performance prediction uncertain. An evidence map shows how tracking can focus scouting questions and where further evidence is needed.",
+  "body_file": "WRITEUP.md",
+  "manuscript_words_including_title": 1926,
+  "editor_title_description_and_body_words": 1957,
+  "suggested_track": {
+    "id": 7289,
+    "name": "University Track",
+    "owner_must_confirm_undergraduate_eligibility": true
+  },
+  "notebook_attachment": {
+    "url": "https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
+    "id": 144208320,
+    "verified_public_version": 4
+  },
+  "image_uploads": [
+    {
+      "order": 1,
+      "file": "figures/01_combine_route_trace.png",
+      "sha256": "0f4da328938859eb712618cb4bf9c0413660c05e83660647fed81b4a03d9b800"
+    },
+    {
+      "order": 2,
+      "file": "figures/02_evidence_support.png",
+      "sha256": "c3328f9b48953131c8f3ba855541e8f321e39336e541ceaf1b6189d3965583f0"
+    },
+    {
+      "order": 3,
+      "file": "figures/03_transfer_audited.png",
+      "sha256": "4dea1eb7b0f718554a174a83af37265f4a78ab4d1f3fd7a4fcc0ab74e03c23a5"
+    },
+    {
+      "order": 4,
+      "file": "figures/04_study3_measurement.png",
+      "sha256": "8af184c5ee47cb4710b2988b062e3ba2e12284b93686e9230c76fcb034e90089"
+    },
+    {
+      "order": 5,
+      "file": "figures/05_cohort_prediction.png",
+      "sha256": "d193a2046156418304d0a240cce583dc6519aebbb15713051d848afe4e859c52"
+    },
+    {
+      "order": 6,
+      "file": "figures/06_scout_evidence_card.png",
+      "sha256": "60e6de4467711610d1bef0c417883ffde1e01cfe785c7080160740accd952588"
+    }
+  ],
+  "draft_saved_to_kaggle": false,
+  "final_submission_complete": false
+}

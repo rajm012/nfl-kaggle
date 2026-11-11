@@ -29,7 +29,11 @@ All unchecked items are pending. This file records evidence of completion, not a
 - [x] Draft hero examples selected without reference to desired NFL outcomes (`route_trace_selection.json`).
 - [x] Actual findings and limitations replace provisional titles/claims (`writeup/writeup.md`).
 - [x] Football and statistical review issues recorded and resolved (`submission_review.md`, `official_sources.md`; internal review only).
-- [x] ≤2,000 words and fewer than ten combined figures/tables (1,900 conservative words; 6 figures + 1 table).
+- [x] ≤2,000 words and fewer than ten combined figures/tables (1,926 conservative manuscript words; title/description/body also checked together; 6 figures + 1 table).
+
+- [x] Judging-focused writeup revision and concrete receiver film-review example (`writeup_judging_review.md`; internal review, no new models).
+- [x] Exact Kaggle editor fields, numbered images and upload guide prepared (`writeup/kaggle_upload.zip`).
+- [x] Optional external cold-read brief prepared (`writeup/reviewer_brief.md`; reviewers not yet arranged).
 
 ## Publication and submission
 - [x] Official rules, University eligibility requirements, award allocation and citations rechecked (`official_sources.md`, `official_tracks.json`; owner personal/track confirmation separate).

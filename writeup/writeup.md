@@ -1,22 +1,22 @@
-# From Combine Movement to NFL Decisions: An Evidence Map
+# Beyond the Stopwatch: When Should Combine Tracking Change a Scouting Decision?
 
-A prospect can post a familiar 40-yard time while moving very differently through a football drill. That makes Combine tracking attractive: it describes how an athlete moves, rather than only when an athlete finishes. But does the additional detail improve an NFL performance decision?
+Receiver A ran an observed 4.54-second 40; Receiver B ran 4.52. Their stopwatch results are close, yet their Combine movement profiles differ. Tracking makes that difference visible. A scouting department must decide what it justifies: a more specific film question, a change in development priorities, or a change on the draft board.
 
-Across nine prescribed comparisons for receivers and offensive and defensive linemen, adding our tracking traits did not produce a cohort prediction gain supported by a primary 95% interval. Some movement transferred from the Combine to games. The distinction matters: movement evidence and performance evidence answer different scouting questions.
+Across nine prescribed receiver and line comparisons, none of the primary 95% intervals supported improved NFL performance prediction from our tracking additions. Some movement carried into games. We therefore propose a practical rule: use movement differences to focus evaluation, and require additional performance evidence before recommending a scouting upgrade.
 
-We build an evidence map that keeps three questions separate: **Can we measure it consistently? Does it carry into games? Does it add performance information beyond conventional measurables?** The result is a calibrated scouting aid, with uncertainty visible at each step.
+Our evidence map asks **Can we measure it consistently? Does it carry into games? Does it improve performance prediction beyond conventional measurables?** Each answer changes the confidence a scout can place in the next step. The map is a proposed review aid; its usefulness in actual scouting decisions has not been tested.
 
 ![Figure 1: Actual Combine speed-out paths and lateral acceleration for two development receivers with similar 40 times.](../reports/figures/combine_route_trace.png)
 
-*Figure 1. The pair was chosen using Combine exposures only: observed 40 times within 0.03 seconds, largest training-reference TURN difference, deterministic ties. Paths are translated to their starts. These examples illustrate measurement; they make no NFL-success comparison.*
+*Figure 1. Two development receivers with similar 40 times and different movement profiles. Selection used Combine exposures only: times within 0.03 seconds, largest training-reference TURN difference, deterministic ties. Paths are translated to their starts. No NFL outcome informed selection.*
 
-## What we measured
+## What tracking adds to the stopwatch
 
 The supplied competition data contain 510 athletes, 22.65 million game-tracking frames and 314,197 player-play records. We connect player IDs across Combine tracking, conventional test results, draft information, game tracking and supplied performance fields. Key, count and join checks are reproducible in the notebook.
 
-Tracking runs at 10 Hz. We smooth positions and derive acceleration along and perpendicular to the direction of travel. This distinguishes speeding up from turning; the supplied total-acceleration magnitude does not distinguish those components. **TURN** is an attempt's 90th percentile of absolute lateral acceleration. **BURST** is peak longitudinal acceleration. We average attempts within athlete and drill, standardise within drill, then average across non-40 drills. This reduces differences caused by athletes completing different drill mixes.
+Tracking runs at 10 Hz. We smooth positions and derive acceleration along and perpendicular to travel, distinguishing speeding up from turning. The supplied total-acceleration magnitude combines those components. **TURN** is an attempt's 90th percentile of absolute lateral acceleration; **BURST** is peak longitudinal acceleration. We average attempts within athlete and drill, standardise within drill, then average across non-40 drills. Standardisation puts different drills on comparable scales.
 
-Our second exposure, **A0**, estimates initial acceleration from a fitted 40-yard speed curve. It represents a separate first-step hypothesis. High lateral acceleration depends on both speed and path shape; none of these measures is automatically an intrinsic, trainable ability score.
+**A0** estimates initial acceleration from a fitted 40-yard speed curve and addresses the separate first-step hypothesis. TURN depends on speed and path shape: a larger value can reflect how a drill was executed. These measurements do not establish intrinsic ability or a causal training effect.
 
 Game movement uses the same decomposition, calculated on complete player tracks before restricting to the first three seconds after the snap. Movement-transfer analyses include preseason and regular season, explicitly excluding postseason. Performance analyses use regular season and exclude nullified plays.
 
@@ -26,23 +26,23 @@ The tracking contains rookie-cohort players rather than a full set of opponents 
 
 *Figure 2. Exposure and outcome availability determine the evaluation sample. Thousands of plays improve an athlete's outcome estimate; they do not create thousands of independent prospects.*
 
-## How we tested added value
+## How we tested NFL relevance
 
 Historical association models examine all available regular-season observations. Conventional controls include draft slot, undrafted status, body size, 40 time, season and football context. Receiver models account for route, coverage, alignment, cushion and motion; line models use the relevant supplied context. Player intercepts account for repeated observations.
 
-We audited the six movement-envelope tests and three first-step tests. Expected directions had been recorded, but a one-sided significance threshold was not explicit. The audit therefore uses conservative two-sided inference and Holm correction within the original six- and three-test families. First-step scaling now uses unique athletes rather than weighting their exposure distributions by play count. Binary historical models also have a separately labelled player-clustered linear-probability sensitivity. Original reports and the correction record remain available.
+The historical audit covers six movement tests and three first-step tests. It uses two-sided inference and Holm correction within those families because the recorded expected directions did not specify a one-sided threshold. First-step scaling uses unique athletes. Binary outcomes also receive a player-clustered linear-probability sensitivity; the original reports and correction record remain available.
 
 Prediction asks a different question. We train on 2023–24 rookie regular seasons and evaluate 2025 rookie regular seasons. Drill references, player medians, scaling and context encoding are learned from training data. Every baseline and tracking-augmented model uses identical rows; the first-step baseline also includes the 10-yard split. All 25 primary, secondary and cone-subset pairs are frozen before scoring.
 
-We predict with fixed model components only: evaluation outcomes cannot supply player intercepts or recalibration. For each athlete, we average the observed outcome and prediction over that athlete's realised NFL contexts. Each athlete contributes equally to root mean squared error (RMSE). Positive baseline-minus-tracking RMSE means improvement. Paired athlete bootstraps give marginal 95% intervals; simultaneous intervals address the original six/three comparison families.
+Predictions use fixed model components, without evaluation-player intercepts or recalibration. We average outcomes and predictions over each athlete's realised NFL contexts and give each athlete equal weight in root mean squared error (RMSE). Gain is baseline minus tracking RMSE; positive means improvement. Paired athlete bootstraps provide 95% intervals, with simultaneous intervals for the original six/three families. Binary prediction uses an unclipped linear-probability model, not a calibrated probability forecast.
 
 These are retrospective, conditional predictions. They do not forecast a prospect's future route tree or playing opportunity. Earlier studies already used 2025 outcomes, so this is **not a pristine untouched holdout**. Bootstrap intervals condition on fitted training models and omit training-fit uncertainty. We also disclose the assumption that the latest trained calendar intercept persists into 2025.
 
-Equal-athlete scoring prevents a high-volume starter from dominating the evaluation, but low exposure still makes some athlete means noisy. The WR TURN sample ranges from two to 401 valid plays per athlete, with a median of 162. We retain the complete primary sample and report the already specified at-least-30-play sensitivity separately; we do not choose the threshold that makes tracking look best. The latter WR sample has 17 athletes and still has an uncertain prediction gain.
+Equal-athlete scoring limits high-volume starters' influence, while low exposure makes some athlete means noisy. WR TURN athletes have two to 401 valid plays, median 162. We retain the complete primary sample. The separately specified at-least-30-play sensitivity has 17 receivers and an uncertain prediction gain; its threshold was not chosen from results.
 
 ## Movement carries over, with limits
 
-For 70 development receivers, training-reference TURN has cross-drill Spearman–Brown consistency of 0.59, with a 95% interval of 0.37–0.74. This describes agreement across different drills, not repeatability of one route-specific talent score. Only three receivers repeated the tracked slant drill, which limits a slant-specific interpretation.
+For 70 development receivers, training-reference TURN has cross-drill Spearman–Brown consistency of 0.593 [0.373, 0.737]. This is cohort-level agreement across drills; it does not establish reliability for a particular player or route-specific talent score. Only three receivers repeated the tracked slant drill, limiting a slant-specific interpretation.
 
 Receiver turning transfers modestly to game movement: correlation 0.279 [0.107, 0.445], 98 athletes. Defensive-line burst transfer is stronger before adjustment: 0.443 [0.289, 0.584], 115 athletes. After controlling for weight, that DL correlation falls to 0.203 [0.044, 0.376]. Body size explains part of the apparent carryover. Adjustment refits within each athlete bootstrap; the figure also shows size-plus-40 adjustment.
 
@@ -56,17 +56,17 @@ The adjusted contrast's Spearman–Brown estimate was 0.296 [−0.257, 0.606], b
 
 ![Figure 4: Raw and adjusted route-family contrast repeatability against the frozen measurement gate.](../reports/figures/study3_measurement.png)
 
-*Figure 4. The gate failed before a TURN interaction was fitted. Separation at a shared pass-forward event should not be interpreted as separation caused specifically by a receiver's break.*
+*Figure 4. BREAK pools SLANT/OUT; panel intervals describe correlations. The gate failed before fitting a TURN interaction. Event-time separation does not measure separation caused specifically by a receiver's break.*
 
 ## Added performance prediction remains uncertain
 
 The audited original association families contain zero Holm-significant results among nine tests. The three player-clustered binary sensitivities also contain none. Cohort prediction is consistent with a cautious conclusion: three primary point gains are positive and six negative, but none has a marginal interval supporting improvement. All original-family simultaneous intervals include zero. Primary evaluation samples contain 20–37 athletes.
 
-For WR TURN, baseline separation RMSE is 0.23572 yards versus 0.23577 with tracking: effectively no point improvement, with a gain interval of [−0.00903, 0.01267] yards across 23 receivers. DL TURN has a small positive pressure-generation point gain, but its interval includes zero. DL BURST worsens get-off prediction nominally; its family-adjusted and at-least-30-play sensitivity intervals remain uncertain. We retain favourable and adverse results together.
+For WR TURN, baseline separation RMSE is 0.23572 yards versus 0.23577 with tracking, with a gain interval of [−0.00903, 0.01267] yards across 23 receivers. DL TURN has a positive point gain for the recorded pressure proxy, with an interval crossing zero. DL BURST worsens get-off prediction nominally; its family-adjusted and at-least-30-play sensitivity intervals remain uncertain. We retain favourable and adverse results together.
 
 ![Figure 5: All nine primary cohort prediction gains and marginal bootstrap intervals.](../reports/figures/cohort_prediction.png)
 
-*Figure 5. Positive is better. Bars show relative reductions in equal-athlete RMSE, conditional on training fits. The table supplies absolute errors and units.*
+*Figure 5. Positive is better. Points and intervals show relative RMSE reductions, conditional on training fits. The table supplies absolute errors and units.*
 
 <!-- EVALUATION_TABLE -->
 
@@ -86,17 +86,23 @@ For WR TURN, baseline separation RMSE is 0.23572 yards versus 0.23577 with track
 
 <!-- END_EVALUATION_TABLE -->
 
-Cone checks retain two interesting exceptions. The historical DL TURN pressure association remains positive after cone adjustment, but its cone-subset cohort prediction is uncertain. DL A0 improves get-off RMSE by 0.00755 seconds [0.00443, 0.01080] in a cone-observed evaluation subset of **nine athletes**. This is one of nine cone sensitivities, in a selected sample, while the broader primary first-step comparison remains uncertain. Other subset findings include adverse prediction results. No cone times are invented, and the notebook reports every comparison.
+Cone checks retain selected secondary findings: the historical DL TURN pressure association is positive after adjustment, with uncertain cone-cohort prediction. DL A0 improves get-off RMSE by 0.00755 seconds [0.00443, 0.01080] in **nine athletes**, one of nine cone sensitivities. The broader primary remains uncertain. The notebook retains adverse findings and every comparison; missing cone times are never invented.
 
 Absence of a supported gain does not establish equivalence, negligible effects or that all tracking features are useless. It limits the claims justified by these particular traits, models and samples.
 
-## What a scout can do with this
+## A concrete scouting conversation
 
-Use the evidence card to distinguish a movement observation from a performance recommendation. A receiver with repeatable TURN warrants a concrete film question: how does the observed movement appear in relevant football situations? A modest transfer correlation adds context. It does not independently justify moving that receiver up a draft board or calling the athlete a hidden star.
+Return to Receivers A and B. Their TURN profiles are −1.78 and +2.53 standard deviations within the development receiver cohort, despite similar 40 times. This pair illustrates what timing alone misses. The values summarise their observed drill profiles; the cross-drill consistency estimate above does not certify either player's individual repeatability.
 
-The three fields also guide future evidence collection. If measurement is weak, obtain comparable repeated drills before interpreting athlete differences. If movement transfers but added performance prediction is uncertain, investigate task and opportunity context rather than promising a ranking improvement. If a selected subset looks favourable, require broader replication before generalising it.
+**Measurement:** inspect the traced attempts and compare repeated, similarly executed drills when available. Ask how entry speed and break shape contribute to the lateral-acceleration difference. This guards against treating drill execution as a universal agility ranking.
 
-For a weekly development meeting, the card offers a proposed sequence: review whether the movement observation repeats, inspect comparable practice or game situations, and discuss whether the available performance evidence changes the recommendation. A coach could track a prospect's movement in a repeated drill, but this study does not validate an individual change threshold or show that increasing TURN creates separation. That distinction keeps an appealing sensor measurement from becoming an unsupported training prescription. The card communicates what further evidence a decision would need.
+**Transfer:** use the observed difference to request targeted film review of comparable out cuts: entry speed, break geometry and reacceleration. Coverage, cushion, motion and throw timing help interpret those situations. Film review is proposed here, not an analysis we performed; player-only coordinates cannot supply the missing opponent geometry.
+
+**Performance:** the receiver prediction comparison does not support an automatic upgrade for the higher-TURN profile. Keep both prospects' movement observations alongside conventional measurables and football evaluation. The specific output of this meeting is a film question and an evidence gap, with draft recommendations requiring further support.
+
+For linemen, the same discipline applies. DL burst transfers into game movement, but its weight-adjusted correlation is smaller and its primary get-off prediction addition lacks a supported gain. Get-off measures crossing the line of scrimmage after the snap, so it combines the initial response and forward movement.
+
+The card can structure a development discussion, but this study establishes neither an individual change threshold nor that increasing TURN creates separation. Repeatable measurements, movement transfer and added performance value remain separate requirements.
 
 ![Figure 6: WR turning evidence card separating measurement, transfer and performance evidence.](../reports/figures/scout_evidence_card.png)
 
