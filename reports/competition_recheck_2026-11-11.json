@@ -1,0 +1,35 @@
+{
+  "retrieved_utc": "2026-11-11T06:25:16.362080+00:00",
+  "mechanism": "Authenticated official Kaggle CompetitionApiService; read only",
+  "competition": "nfl-big-data-bowl-2027",
+  "publication_flags_returned": {
+    "rules": false,
+    "Description": false,
+    "Timeline": false,
+    "Submission Requirements": false,
+    "data-description": false,
+    "abstract": false,
+    "Evaluation": false,
+    "tracks-and-awards": false,
+    "judges": false
+  },
+  "page_content_sha256": {
+    "rules": "e459aa31e580c9463f64b85069b8ce70f38d55f07e884255114e02f120f1abb1",
+    "Description": "780bdafa052c7cbcebf4cde6c8b94961450f6de55c8d362be118e6ddff9d2009",
+    "Timeline": "d58a5d84346f84bde6de87f85608a44fd6ca39598c85af46ff2f98a1766fe8d0",
+    "Submission Requirements": "441856c48c03db56a9f4d4bf86d94808894d410281b9fee79e0f882737248d1e",
+    "data-description": "98c28da52f385342f78ad97eff856f99ec982505a5e691e355dbaa58019e122d",
+    "abstract": "01b60e761d522379c1b79bca32016e9cf1ad510e9e53f677866d907744d1e25b",
+    "Evaluation": "bff96e665bba9caa938120d763d384a8393263cecad962e7e89be99d5826020c",
+    "tracks-and-awards": "e71d75c299f538a0e93c5ed17487e78821577614b367505dab5fa7210f368ac9",
+    "judges": "e71d75c299f538a0e93c5ed17487e78821577614b367505dab5fa7210f368ac9"
+  },
+  "changed_from_2026_11_10": [],
+  "selected_pages": {
+    "abstract": "You are challenged to build an analytical framework that uncovers non-obvious, actionable linkages between 10 Hz Combine sensor tracking data and future regular-season NFL game performance. Your submission should look beyond conventional scouting wisdom and identifying novel signals that help coaches and evaluators identify hidden talent, avoid costly draft busts, and design position-specific player development protocols.",
+    "Description": "## 2027 Theme: Combine to NFL Performance\nEvery spring, college football's top prospects gather in Indianapolis for the NFL Scouting Combine. For decades, player evaluation at the Combine has relied on standardized stopwatch timings and physical testing numbers, such as the 40-yard dash, short shuttle, 3-cone drill, and vertical jump. While these numbers provide a baseline measure of straight-line speed and explosiveness, player tracking sensors worn during workouts now capture the full details of how athletes move throughout each drill.\n\nThe 2027 Big Data Bowl provides player tracking data from the NFL Scouting Combine alongside regular-season NFL game tracking data. The goal of this year's competition is to better understand how player movement during Combine drills translates to performance on the field during the NFL regular season.\n\nIn this competition, participants are tasked with analyzing prospect movement in a way that is actionable and accessible to coaches, scouts, and front offices. This could include creating a new metric or comparing movement traits across position groups. As is often the case in Big Data Bowl analytics competitions, participants are encouraged to focus on one small aspect of movement, a specific position group, or an individual drill, rather than attempting to evaluate every prospect across all drills.\n\n## Examples to consider\nYour challenge is generating actionable, practical, and novel insights from Combine tracking data and exploring how drill performance translates to on-field NFL play. Examples include, but are not limited to:\n- Route running and coverage: Measuring change of direction, deceleration into breaks, and acceleration out of cuts for receivers and defensive backs compared to in-game separation\n- Trench play: Evaluating first-step quickness, lateral agility, and burst for offensive and defensive linemen during agility drills compared to pass-rush or run-blocking performance\n- Drill translation: Comparing sensor-based movement metrics with traditional drill times to identify where tracking data adds context to prospect evaluation\n- Position-specific mechanics: Analyzing body control, acceleration profiles, or pursuit angles during position drills and their relationship to NFL rookie performance\nNote that the above list is not exhaustive, and we encourage participants to be creative with their submissions.",
+    "Evaluation": "| Requirement | Passing Standard | Status |\n| :---- | :---- | :---- |\n| **1\\. Combine-to-NFL Linkage** | Writeup explicitly links Combine sensor tracking data to regular-season NFL game performance. | `[PASS/FAIL]` |\n| **2\\. Writeup Completeness** | Features readable markdown, embedded visuals, and an attached **Public Kaggle Notebook**. | `[PASS/FAIL]` \n\n<br>\n\n> All Writeups are evaluated on the following four components, where 0 is the lowest and 10 is the highest.\n\n| Component | Evaluation Questions |\n| :--- | :--- |\n| **Football Score (30%)** | <ul><li>Would NFL teams (or the league office) be able to use these results on a week-to-week basis?</li><li>Does the analysis account for variables that make football data complex?</li><li>Are the ideas unique?</li></ul> |\n| **Data Science Score (30%)** | <ul><li>Is the work correct?</li><li>Are claims backed up by data?</li><li>Are the statistical models appropriate given the data?</li><li>Are the analytical applications innovative?</li></ul> |\n| **Writeup Score (20%)** | <ul><li>Is the Writeup well-written?</li><li>Is the Writeup easy to follow?</li><li>Is the motivation (metric, player evaluation, etc) clearly defined?</li></ul> |\n| **Data Visualization Score (20%)** | <ul><li>Are the charts and tables provided accessible?</li><li>Are the charts and tables accurate?</li><li>Are the charts and tables innovative?</li></ul> |\n\n<br>\n\n> Participants are encouraged to show statistical code if it helps readers better understand their analyses. However, most code should be hidden in an Appendix. Any Writeup that doesn\u2019t use the player tracking data will not be scored.",
+    "Submission Requirements": "* **Word and figure limits:** Submissions should contain no more than 2,000 words and fewer than 10 tables or figures. Submissions over these limits may be subject to penalty.\n* **Code reproducibility:** Participants are encouraged to show statistical code if it helps readers better understand their analyses, but most code should be placed in an Appendix or linked notebook. Any writeup that does not use the player tracking data will not be scored.\n\n---\n**Judges Panel**\n----\n\nJudges will consist of analytics staffers working for the 32 NFL teams or player tracking vendors that work with NFL teams. Scores will be summarized using a weighted average based on the percentages above.",
+    "Timeline": "* **October 6, 2026** - Start Date. \n* **January 6, 2027** - Final Submission Deadline. \n* **January 7, 2027 - January 25, 2027** - Judging Period*\n* **January 26, 2027** - Anticipated Results Announcement.\n\n*Note - Judging period subject to change based on the number of submissions received\n\nAll deadlines are at 11:59 PM UTC on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.\n"
+  }
+}

@@ -44,4 +44,20 @@ All unchecked items are pending. This file records evidence of completion, not a
 - [ ] Owner completes required terms/UI actions and submits by Dec 28.
 - [ ] Submission confirmation and final artifact versions saved.
 
+## Accepted improvement plan — November 11
+
+The completed checks above refer to the existing November 10 materials. The owner accepted
+the next work in [PLAN.md](../PLAN.md); these improvements have not yet been performed.
+
+- [x] Active plan updated with WR focus, five ordered steps, outputs, completion checks and deadlines; prior plan archived (`plan_before_wr_focus_2026-11-11.md`).
+- [ ] Step 1: receiver story/claim map reviewed; all nine results retained (`wr_story_review.md`).
+- [ ] Step 2: movement explanation and trace annotation reviewed; any new descriptive quantities defined and checked before use (`wr_movement_explanation.md`).
+- [ ] Step 3: plain-language interpretation of all nine primary prediction comparisons completed (`uncertainty_interpretation.md`).
+- [ ] Step 4: proposed scouting workflow reviewed and final claims locked by Nov 20 (`scouting_workflow_review.md`).
+- [ ] Step 5: revised manuscript, figures, notebook and packet integrated and verified as applicable; actual owner Kaggle UI checks/submission completed.
+
+Remote-host verification remains optional under the revised plan; its unchecked historical
+item is not a prerequisite for these steps or submission. New artifact revisions require
+their own relevant checks before earlier completion evidence can be cited for them.
+
 Append dated verification notes and links beneath each item as it is completed.

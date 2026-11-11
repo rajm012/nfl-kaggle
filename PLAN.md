@@ -1,271 +1,230 @@
-# NFL Big Data Bowl 2027 — Submission plan
+# NFL Big Data Bowl 2027 — Plan for the next work
 
-Updated **2026-11-10** after cohort/cone validation. This supersedes the original strategy, preserved in `reports/plan_2026-10-08.md`. Earlier preregistrations and results remain in the research record.
+Updated **2026-11-11**, after the owner accepted the five priorities discussed following
+the official Kaggle brief review. This is the active work plan. The previous plan is
+preserved in [plan_before_wr_focus_2026-11-11.md](reports/plan_before_wr_focus_2026-11-11.md);
+the original strategy remains in [plan_2026-10-08.md](reports/plan_2026-10-08.md).
+Existing preregistrations, fitted models and stopping decisions remain in force.
 
-## 1. Objective, budget and competition
-Build the strongest defensible University-track entry using our existing data and machine. Aim for a prize through a precise football question, credible validation and excellent communication. A judged competition cannot provide guaranteed income or a reliable payout date. Do not spend money assuming an award will arrive.
+## 1. Goal and competition requirements
 
-**Incremental cash budget: $0.** Use the installed environment, existing Parquets, professor-provided remote compute and available free Kaggle notebook resources. On November 9 the owner reported remote access to an **RTX 5080 with 16 GiB GPU memory and a strong CPU**. Connection and host specifications have not yet been verified. No paid datasets, paid cloud compute, new subscriptions or large model search. Cache movement calculations and work in resumable blocks.
+Make the entry easier to understand and more useful to a football evaluator by centering
+one concrete receiver question:
 
-| Constraint | Working requirement |
+**Two receivers have similar sprint times but move differently. What does their turning
+profile reveal, and what evidence would justify using that difference in scouting?**
+
+Receiver turning is the central worked example. All nine primary comparisons remain
+reported, with line findings providing supporting context. Narrative focus does not select
+a new primary hypothesis from observed results.
+
+The submission remains a **scouting evidence map**: can we measure the movement consistently,
+does it carry into games, and does it improve regular-season performance prediction?
+Current manuscript title: **“Beyond the Stopwatch: When Should Combine Tracking Change a
+Scouting Decision?”** Refine wording only if it better describes the supported findings.
+
+| Requirement | Current target |
 |---|---|
-| Competition | https://www.kaggle.com/competitions/nfl-big-data-bowl-2027 |
-| Track | University; undergraduate status recorded in project memory |
-| Hard deadline | **2027-01-06 23:59 UTC**, reconfirmed via Kaggle CLI on November 9 |
-| Internal submission | **December 28**; public notebook ready by December 14 |
-| Deliverable | Writeup ≤2,000 words, fewer than 10 combined figures/tables, attached public notebook |
-| Rubric from original rules notes | Football 30%, Data Science 30%, Writeup 20%, Visualisation 20% |
-| Prize information | API lists a **$100,000 total pool**, not an individual award. Earlier rules notes list $5k/$10k track awards; recheck allocation and eligibility before publication. |
-| Required link | Combine **tracking** to regular-season **performance**, including a well-supported negative finding if warranted |
+| Competition | [NFL Big Data Bowl 2027](https://www.kaggle.com/competitions/nfl-big-data-bowl-2027) |
+| Track | University, ID 7289; every member must be an undergraduate; owner confirms eligibility |
+| Judging | Football 30%, data science 30%, writeup 20%, visualization 20% |
+| Required connection | Explicit Combine sensor-tracking link to regular-season NFL performance |
+| Submission | At most 2,000 words, fewer than ten combined figures/tables, attached public Kaggle notebook |
+| Visual target | Six figures and one table; improve existing assets before adding more |
+| Claim lock | **November 20, 2026** |
+| Internal submission | **December 28, 2026** |
+| Hard deadline | **January 6, 2027, 23:59 UTC** |
+| Incremental cash budget | **$0** |
 
-CLI confirms `userHasEntered=True`. Direct overview/rules HTTP requests returned 404 on November 9 although the listing worked; the rules have not been newly reverified. Check the official UI before publication. Changed legal terms and final Writeup submission remain owner actions.
+The official description encourages a narrow movement aspect, position group or drill.
+It emphasizes practical, novel insight; positive prediction improvement is not stated as
+a requirement. All nine official page content hashes were unchanged in the November 11
+recheck. Sources: [official_sources.md](reports/official_sources.md) and
+[competition_recheck_2026-11-11.json](reports/competition_recheck_2026-11-11.json).
+The $100,000 total pool includes a $45,000 University pool with three $10,000 finalists
+and three $5,000 runners-up. Judging scores are not award probabilities.
 
-### Compute allocation and remote setup — added November 9
+## 2. Starting point: completed work and remaining gap
 
-| Resource | Intended use |
+| Area | Verified starting state |
 |---|---|
-| Local machine: 16 GB RAM, RTX 4050 6 GB | Editing, small audits, figures, cached-table checks and a portable development environment |
-| Professor's remote CPU | Repeated feature extraction when needed, audited model refits, player bootstrap/refit sensitivity and clean reproduction runs |
-| Remote RTX 5080, reported 16 GiB VRAM | Optional acceleration of an already justified workload after a small compatibility/correctness benchmark |
-| Kaggle runtime | Final public notebook execution and verification that the submission runs without professor-only hardware |
+| Data and audits | Nine CSVs; 510 athletes, 22,654,290 game frames, 314,197 player-play rows; key/join/model audits complete |
+| Historical associations | 0/9 two-sided Holm-significant primary associations; 0/3 player-clustered binary sensitivities |
+| Cohort prediction | All 25 frozen pairs scored; none of nine primary marginal intervals supports improvement; all original-family simultaneous intervals include zero |
+| WR movement | Development cross-drill TURN consistency 0.593 [0.373, 0.737], 70 WRs; descriptive game-movement transfer r=0.279 [0.107, 0.445], 98 WRs |
+| DL movement | Burst transfer r=0.443, falling to 0.203 after weight adjustment; movement transfer is separate from added performance prediction |
+| Study 3 | Adjusted route-family consistency 0.296 below frozen 0.40 gate; primary TURN interaction stopped without fitting or Study 3 evaluation |
+| Reproduction | Clean raw-input local and Kaggle runs completed; 402 numeric checks, all 25 scores and 12 invariant tests pass |
+| Notebook | Public version 4, ID 144208320; clean Kaggle execution version 3; API source/output verification complete |
+| Materials | 1,926-word manuscript, six figures, one table, standalone previews and upload ZIP prepared |
+| Submission | Owner browser rendering, Writeup upload/attachment, eligibility/terms, Submit and confirmation remain |
 
-**GPU memory is not host RAM.** Record system RAM, CPU model/available cores, SSD space, OS,
-GPU driver, access method, permitted job duration and access end date before sizing remote jobs.
-Prefer reliable access through December 28; checkpoint outputs in case access ends earlier.
+The strongest existing contribution is careful separation of movement information from
+performance claims. The main gap is practical usefulness: the film-review aid is proposed
+and has not been evaluated in actual scouting decisions. The tasks below improve that
+contribution without claiming to have discovered a proven scouting advantage.
 
-The current DuckDB/Polars/SciPy/statsmodels work is mainly CPU/RAM-bound, and statsmodels does
-not automatically use the GPU. First use the stronger CPU for the **already planned** reliability,
-cluster bootstrap, model audit and 200 training-bootstrap refits. Do not increase hypothesis
-count or replace the small-player study with a deep network because a GPU is available.
+Current evidence: [submission_checklist.md](reports/submission_checklist.md),
+[submission_handoff.md](reports/submission_handoff.md) and
+[kaggle_execution.json](reports/kaggle_execution.json). Older next-stage paragraphs in
+analysis reports are historical; they do not reopen completed work.
 
-Remote onboarding, once connection details are available:
+## 3. Work in order
 
-1. Record available resources and create an isolated environment from versioned dependencies.
-   Use a dedicated working directory and bounded CPU/thread counts on the shared machine.
-2. Stage code and only the permitted inputs needed by each job; retain existing data-licence
-   and raw-data handling conventions. Do not share Kaggle credentials with other users.
-3. Benchmark one representative CPU job against local cached output; compare results and
-   measure peak memory/runtime. Split bootstrap/refit jobs by saved seed with checkpoints.
-4. Test a GPU backend only if the workload supports it and estimated time savings exceed setup
-   effort. Check the actual driver/framework support; no CUDA/backend combination is assumed.
-5. Return versioned tables, logs and figures to the project. Preserve a CPU/Kaggle rebuilding
-   route so the final public notebook is reproducible without the RTX 5080.
+### Step 1 — Make receiver turning the central story
 
-Additional compute buys more thorough validation and faster iteration. It does not increase
-the independent athlete sample or remove the limitations of prior 2025 outcome exposure.
+**Target: November 12–14. Next task to start.**
 
-### Work allocation — confirmed November 9
+Review the manuscript and notebook against the receiver question in section 1. Use the
+already selected similar-stopwatch pair: 4.54 versus 4.52 seconds, with contrasting TURN
+profiles. Selection remains based on Combine exposures, independent of NFL outcomes.
+Map each proposed claim to its source and limitation. Keep the full nine-comparison table
+and failed route gate visible; explain line results as supporting context.
 
-The owner will handle Python/notebook checks and design/writeup review and confirms full remote
-machine access through SSH. External football/statistical researchers are unavailable; work
-does not depend on arranging them. Current handoff: [START_HERE.md](START_HERE.md).
+**Output:** `reports/wr_story_review.md`, containing a revised outline, claim/source map,
+and proposed changes to the opening, figure explanations and notebook. Prepare reviewable
+wording before replacing the existing submission materials.
 
-| Work | Responsible | Concrete contribution |
-|---|---|---|
-| Football interpretation and research | Assistant | Check route semantics against available definitions/traces, distinguish movement from performance and keep a sourced assumptions/review log |
-| Statistical design, audit and analysis | Assistant | Reproducible inference, player-aware validation, measurement checks, uncertainty and sensitivity review |
-| Remote account/access | Owner, with assistant setup guidance | Configure access and report machine/job limits; assistant runs jobs when authentication is available |
-| Python/notebook checks | Owner | Run cells from a fresh kernel, inspect tables/errors and help test the executable pipeline |
-| Design and writeup | Owner, with assistant drafts/figures | Revise readability, visual choices and football explanation against actual evidence |
-| Final legal/eligibility/submission actions | Owner | Complete required Kaggle UI steps and Submit |
+**Done when:** the question, actual result and proposed football use are clear in the first
+minute of reading; all nine primary results are accounted for; the receiver focus does not
+imply a new selected primary analysis.
 
-Assistant-led football/statistical critique is an internal review, not independent expert
-validation. Owner reruns provide a fresh execution check; they are not blinded peer review.
-External feedback remains optional if availability changes. Details and historical optional
-resource ideas remain in [resource_requests.md](reports/resource_requests.md).
+### Step 2 — Explain what the movement difference means
 
-## 2. Existing evidence and limits
+**Target: November 14–16; builds on Step 1.**
 
-**Execution update, November 10:** Studies 1–2 cohort prediction and same-sample cone checks are complete. All 25 frozen comparisons scored; none of the nine primary marginal gain intervals supports improvement, and all original-family simultaneous intervals include zero. Small cone subsets have secondary signals, retained with their selection/uncertainty limits. Evidence-map narrative retained. Current stage is submission production: full raw-input notebook rebuilding/integration, final figures/evidence card and writeup. Interpretation: [validation_findings.md](reports/validation_findings.md). No Study 3 primary fit reopened.
+Inspect existing receiver traces, feature definitions and size/speed-adjusted transfer
+results. Explain how entry speed, path shape and acceleration contribute to the observed
+TURN difference. High lateral acceleration must not automatically be described as efficient
+cutting or intrinsic agility. One illustrated attempt does not by itself explain a profile
+aggregated across drills.
 
-**Execution update, November 9:** local audit/reliability/transfer refits completed. The frozen
-Study 3 measurement screen failed (adjusted contrast SB=0.296 <0.40; 41 diagnostic WRs), so the
-primary route-performance claim stops before fitting TURN or evaluating 2025. Follow the planned
-evidence-map path. Two-sided audited Studies 1–2 remain 0/9 Holm-significant; separate robust
-binary sensitivities remain 0/3. Held-out prediction and same-sample 3-cone checks remain pending.
-Current outputs and exact next work: [latest_runs.md](reports/latest_runs.md).
+Start with existing quantities and reusable kinematics. If extra descriptive trace
+quantities are necessary, write their definition, segment rule, units, smoothing and quality
+checks in `reports/wr_trace_measurement_protocol.md` before computing them. Apply the same
+rule to the existing pair. They remain descriptive illustrations, with no new trait–outcome
+tests, prospect rankings or outcome-based example selection. If a quantity cannot be measured
+reliably, explain the limitation rather than inventing precision.
 
-- All nine CSVs downloaded: 510 athletes, **22,654,290 game frames**, 314,197 player-play rows.
-- Reusable pipeline: signed acceleration → drill-normalised Combine traits → game movement.
-- Reported WR turning transfer r=0.28; DL burst r=0.45, attenuating to 0.21 after weight adjustment in prior notes. These are movement findings, not established performance gains.
-- Six envelope tests and three first-step tests produced no Holm-significant added performance association. The original general-metric and first-step bets have ended.
-- Cohort prediction, same-sample 3-cone checks, robust binary sensitivity, player-level Study 2 SDs, reliability and adjusted transfer now have saved code. Full public-notebook rebuilding and claim/figure/writeup integration remain unfinished.
-- Only the rookie cohort appears in game tracking. We cannot reconstruct opponent geometry, separation time series or ball-relative outcomes from these frames.
-- Many plays improve performance measurement but do not create more independent athletes.
+**Output:** `reports/wr_movement_explanation.md`, reproducible annotations for the existing
+route-trace figure, and the descriptive measurement protocol if needed. Improve the existing
+figure rather than expanding the main visual count.
 
-The final product will be a **scouting evidence map** separating measurement reliability, game transfer and incremental performance value. A stronger signal headline is conditional on validation; a complete submission will exist even if the next experiment fails.
+**Done when:** readers understand what TURN captures, which speed/body-size effects are
+addressed, and what remains unresolved. Cohort cross-drill consistency is not presented as
+either example player's individual or single-route repeatability.
 
-## 3. One final bounded research question
-**Working title: “Turning into Separation? What Combine Movement Can Tell a Scout.”**
-**Does a receiver's Combine turning trait relate to better separation on slant/out routes relative to go routes, after accounting for context and conventional measurables?**
+### Step 3 — Explain where the NFL evidence ends
 
-This tests whether the earlier all-route null concealed a route-context relationship. Use the existing TURN trait rather than inventing a score and searching for an outcome.
+**Target: November 16–18; uses the existing frozen results.**
 
-### Feasibility checked November 9
+Translate the nine prediction errors and gain intervals into yards, seconds or proportion
+units. Use WR turning as the worked example: baseline separation RMSE 0.23572 yards versus
+0.23577 with tracking, gain interval [−0.00903, 0.01267], 23 evaluation receivers. Distinguish
+the point result, the reported interval and the limitations of that interval.
 
-Counts below used eligibility/missingness only, with no new trait–outcome association:
-| Draft class | ≥10 recorded plays on both SLANT and OUT, all available seasons | ≥10 on each of pooled SLANT/OUT and GO, rookie season only |
-|---|---:|---:|
-| 2023 | 23 | 25 |
-| 2024 | 17 | 17 |
-| 2025 | 7 | 16 |
+Explain athlete support, exposure noise, prior 2025 outcome exposure and uncertainty
+conditional on training. Use already specified sample/season/cone sensitivities and
+size/speed-adjusted transfer results; retain favourable and adverse findings. Do not diagnose
+inadequate power solely from nonsignificance or introduce a post-results threshold to claim
+equivalence or practical usefulness.
 
-All 107 WRs ran tracked slant and canonicalised speed-out drills. Only **3** repeated slant and **17** repeated speed-out. A drill-specific route-talent score lacks convincing test–retest evidence. The primary study uses the existing all-drill turning measurement.
+**Output:** `reports/uncertainty_interpretation.md`, covering all nine primary comparisons,
+source references and candidate plain-language writeup/figure wording.
 
-### Fixed design
+**Done when:** every performance claim traces to existing results; readers distinguish
+movement transfer from added prediction and lack of supported improvement from proof of no
+useful effect. Selected cone findings remain secondary.
 
-- Primary routes: **SLANT, OUT, GO**. Pool SLANT/OUT as the turning-route family for the interaction; retain separate route intercepts. These are distinct routes.
-- Rookie-season REG, non-nullified plays with recorded separation; require ≥10 such plays in each family per athlete.
-- One primary coefficient: **TURN × turning-route family**. Expected positive; two-sided test and 95% interval. This estimates a difference between route-family associations.
-- Within-player comparison, context controls, and conventional-measurable family interactions. Player effects remove athlete-level intercept differences; they do not eliminate all context/selection confounding.
-- Separate route slopes and coverage interactions are exploratory, not additional chances to declare a confirmatory success.
-- Full protocol: `reports/study3_protocol.md`, appended to the preregistration record.
+### Step 4 — Make the proposed scouting action concrete
 
-### Required validation
+**Target: November 18–20; incorporates Steps 1–3.**
 
-1. Reproduce TURN reliability; inspect actual movement traces. Cross-drill reliability is
-   not proof of reliability for a single-route score.
-2. Measure repeatability of the adjusted route-family separation contrast across games,
-   using outcomes alone. Report uncertainty and who is missing.
-3. Develop on **2023–24 rookie seasons** with training-only preprocessing.
-4. Evaluate on **2025 athletes**, comparing baseline versus TURN-augmented prediction of
-   each athlete's route-family separation contrast. Give every athlete equal evaluation weight.
-5. Use player-aware uncertainty and game clustering; check influential athletes, route weights,
-   missingness and the small 3-cone-observed subset without redefining the primary test.
+Build one receiver-evaluation conversation with a movement observation, a specific film
+question, current NFL evidence and the evidence gap before a recommendation could change.
+For example, review entry speed, break shape and reacceleration on comparable out routes,
+interpreting coverage, cushion, motion and throw timing. This is a proposed workflow: no
+film assessment or scouting intervention has been performed.
 
-**History matters:** 2025 outcomes already appeared in Studies 1–2. Reserve them from
-further Study 3 development, but do not call this a pristine untouched holdout. Disclose
-prior outcome exposure, frozen choices and the limits of a 16-athlete evaluation sample.
+Revise the evidence card and worked example to identify the proposed action clearly.
+Retain separate measurement, transfer and performance fields. Do not claim an automatic
+draft upgrade, individual change threshold or benefit from training TURN.
 
-Prediction using realised NFL context is retrospective conditional validation. It does not
-directly establish a pre-draft forecast of a prospect's future route tree.
+**Output:** `reports/scouting_workflow_review.md`, revised example/card text and owner
+readability feedback. External football/statistical feedback is optional if available.
 
-### Research limits and narrative decision
+**Done when:** readers can say what to inspect next and what evidence is missing before
+acting on the draft board. Record final claims and sources by **November 20**; no new
+hypothesis families afterward.
 
-- **November 12:** audit and frozen protocol in place before associations.
-- **November 16:** measurement/support checks and development fits complete.
-- **November 20:** cohort evaluation complete and final story selected. No new hypothesis
-  families after this date; later work corrects errors or supplies prespecified sensitivities.
-- Do not lower eligibility thresholds after viewing an effect or change route groups until
-  significance appears. Do not revive unreliable braking features.
-- Stop the performance-signal claim if measurement, support or replication fails.
+### Step 5 — Integrate, verify and submit
 
-| Evidence by November 20 | Story and permitted football use |
-|---|---|
-| Positive development interval excludes zero; stable direction; improved cohort prediction with uncertainty supporting improvement | Limited route-context signal; propose targeted film/practice evaluation with prospect uncertainty |
-| Development association but uncertain/worse cohort prediction | Exploratory association; no validated ranking claim |
-| Reliable movement transfer but absent/uncertain added performance gain | Evidence map showing where Combine movement carries over and where scouting claims lack support |
-| Audit materially changes prior results | Correct reports transparently; reassess against the same evidence requirements |
+**Target: November 21–December 28, with the existing January buffer.**
 
-Use **0.10 yard per SD** as a predeclared planning band for the route interaction, with
-0.05/0.20-yard sensitivity bands. This is not an established NFL utility threshold.
-Absence of significance does not establish negligible effect. Use equivalence wording only
-with an appropriate interval/test against a predeclared band. No universal “tracking is useless” claim.
+Integrate the reviewed explanation into the manuscript, figures and notebook. Preserve
+all primary, secondary and adverse results in the reproducible record. Keep six main figures
+and one table; count intended editor fields conservatively and remain under the limits.
 
-## 4. Repair the evidence before polishing it
+Regenerate affected artifacts and check source/asset hashes, numeric claims, captions,
+sample counts, previews and ZIP contents. If notebook source or its embedded bundle changes,
+rebuild with `src.build_submission_notebook`, complete a clean raw-input execution and verify
+the corresponding Kaggle version before updating publication evidence. A saved execution
+record proves its tested version; it does not certify later changed code. For manuscript-only
+changes, regenerate/check the affected packet and previews without repeating unchanged fits.
 
-Preserve numerical reports as dated historical outputs. Save corrected reruns separately;
-explain amendments and discrepancies rather than overwriting unfavourable results.
+Owner checks public browser access and actual Kaggle Writeup rendering, uploads images and
+the manuscript/table, attaches the exact notebook, confirms University eligibility and
+presented terms, and performs Submit. Save the Writeup URL, confirmation and final artifact/
+notebook versions. Update [submission_handoff.md](reports/submission_handoff.md) as materials
+change and follow its UI instructions.
 
-| Work | Concrete output | Acceptance condition |
-|---|---|---|
-| Data/key audit | `src/audit_data.py`, `reports/audit.md` | Unique joins, counts, REG/PRE/POST treatment, retained/dropped players, missingness |
-| Model audit | `src/validation.py`, corrected Study 1/2 reports | Actual fitted n; robust player-clustered binary LPM sensitivity; player-table Study 2 SDs; directional-test deviation; convergence |
-| Supporting findings | `reports/reliability.md`, adjusted-transfer and positive-control tables | Saved code regenerates all selected numbers, intervals and adjustment definitions |
-| Transfer specification | Player-season and pooled traits; season-type sensitivity | Explicit POST exclusion for REG/PRE measurement; code/report alignment; no evaluation leakage |
-| Incremental validity | `src/evaluate.py`, `reports/validation.md` | Baseline vs tracking; train-only imputation/scaling; no held-out player effects fitted from evaluation outcomes |
-| 3-cone sensitivity | Same-sample nested comparison table | Show small sample/opt-outs; do not fabricate cone times |
+**Done when:** final materials agree and render on Kaggle, the attachment works, and owner
+submission confirmation is saved by **December 28**. Keep December 29–January 6 for genuine
+fixes and submission issues.
 
-A separate player-clustered linear-probability model is a documented sensitivity analysis,
-not silently described as the original mixed model. Show changes in coefficients and
-intervals. Study 3 remains continuous.
+## 4. Work tracker and responsibility
 
-Prioritise checks used in the submission. Use small meaningful tests for keys, season
-filters, player-level scaling and evaluation leakage. Reuse cached tracking; installed
-Bayesian/ML packages do not require a new model suite.
+All five improvement steps are pending; the starting artifacts in section 2 are complete.
+Start Step 1 in the next work block and update this table as outputs are produced.
 
-## 5. Earn points in all four rubric categories
+| Step | Dates | Lead | Status |
+|---|---|---|---|
+| 1. Receiver story and claim map | Nov 12–14 | Assistant; owner reviews clarity | Pending — next |
+| 2. Movement explanation | Nov 14–16 | Assistant; owner checks code/figures | Pending |
+| 3. Prediction uncertainty explanation | Nov 16–18 | Assistant; owner reviews plain language | Pending |
+| 4. Scouting workflow and claim lock | Nov 18–20 | Assistant draft; owner design/writeup review | Pending |
+| 5. Final integration and submission | Nov 21–Dec 28 | Assistant prepares/verifies; owner UI/Submit | Pending |
 
-### Football — 30%
-Explain the difference between moving well and creating separation against NFL coverage. Ask when tracking justifies additional evaluation beyond the conventional baseline. The scout-facing evidence card has separate measurement, transfer and prediction fields. Reliable movement without added performance evidence does not justify a draft upgrade.
+Owner handles Python/notebook checks and design/writeup review; assistant leads football
+interpretation and statistical explanation. These are internal reviews, not independent
+expert validation. External reviewers are unavailable unless the owner arranges them.
 
-Show practice monitoring as a proposed use only. Observational associations cannot prove that training this metric improves performance. Do not label athletes busts or hidden stars. Explain limitations from absent opponents, changing route usage and selection into playing time.
+## 5. Scientific and execution boundaries
 
-### Data Science — 30%
+- Preserve frozen sources/protocols and prediction samples. Do not tune models after
+  evaluation, fit the stopped Study 3 primary interaction, weaken its gate, or select
+  favourable subsets for a headline. Genuine error corrections must be documented separately.
+- Keep [prereg.md](reports/prereg.md), [study3_protocol.md](reports/study3_protocol.md) and
+  [evaluation_protocol.md](reports/evaluation_protocol.md) as the scientific record. This plan
+  covers explanation and bounded descriptive measurement, not a new outcome study.
+- Preserve 2023–24 training-only processing and disclosed prior 2025 exposure. No pristine
+  holdout, causal-training, universal-ranking or unsupported equivalence claims.
+- Game tracking contains only rookie-cohort players. Opponent/ball geometry and independent
+  defender-distance validation are unavailable. Event-time separation is not separation
+  caused specifically by the break; get-off is LOS-crossing time.
+- Use `.venv/bin/python`, existing Parquets and bounded local threads. Never load all game
+  tracking into pandas. No extra hardware or paid services are needed for these priorities.
+- Owner chose local execution after remote SSH trouble. Professor-provided RTX 5080 access
+  remains optional and unverified; it is not a required milestone. Additional compute does
+  not increase independent-player support.
+- Raw data stay unedited in `data/raw/`, excluded from Git and non-Kaggle redistribution.
+  Data are CC BY-NC 4.0; code is MIT. Never expose credentials or push Git without authorization.
+- Check changed numerical/kinematic behavior with meaningful invariants; reuse the existing
+  12 tests as appropriate. Documentation-only blocks need consistency/link/diff checks, not
+  model runs. Update [submission_checklist.md](reports/submission_checklist.md) as evidence is
+  produced; do not mark planned work complete prematurely.
+- End each block with a dated `STATUS.md` entry and durable `CLAUDE.md` updates. Resume from
+  completed artifacts and the next pending step.
 
-One predeclared follow-up, corrected uncertainty, unique-player n, reliability, a conventional baseline, route/context adjustment, grouped evaluation and explicit prior outcome exposure. Show effect sizes in real units. All headline numbers must regenerate from saved code.
-
-### Visualisation — 20%
-
-Target **six figures and one table**. Every chart must stand alone at writeup width, with colour-blind-safe colours, direct labels, units and sample sizes.
-
-| Visual | Purpose |
-|---|---|
-| 1. Hero route trace | Show actual Combine movement and what TURN measures; comparable-stopwatch pair selected by an exposure-only rule |
-| 2. Evidence support | Show unique 2025 athletes with movement, primary REG and sprint outcomes |
-| 3. Transfer panel | WR turning and DL burst; raw/size-adjusted estimates and intervals |
-| 4. Route measurement screen | Show raw/adjusted contrast repeatability and the failed frozen gate; no interaction fitted |
-| 5. Cohort prediction | Show all nine primary gains and uncertainty, with study labels |
-| 6. Scout evidence card | Separate confidence in measurement, transfer and prediction |
-| Table 1. Evaluation | Baseline vs tracking, equal-player error, gain interval and evaluation n |
-
-Never select the hero pair because their NFL outcomes tell the desired story. Animation is optional. Build an interactive product only if it improves the judged submission enough to justify the time; static figures are sufficient for the current plan.
-
-### Writeup — 20%
-
-Target **1,850–1,950 words**: question/hook 180; data/measurement 300; validation 300; results 500; football use 350; limitations 220. Lead with the actual primary finding. Every conclusion should connect to a visual or table.
-
-Summarise earlier studies in the evidence map and link the complete record from the notebook. Do not narrate every abandoned approach in the main writeup.
-
-## 6. Reproduction begins during the audit week
-Create `notebooks/submission.ipynb` now in the next execution block. Its first working version should regenerate at least one verified table and figure from Kaggle input paths.
-
-- Version project dependencies; avoid paid/network services at runtime.
-- Do not rely on local interim files, secrets or unpublished helper modules.
-- Rebuild required features from competition inputs. If using a permitted Kaggle output
-  cache, disclose/version it and retain the rebuilding procedure.
-- A small smoke-run is for development only, clearly distinct from submission results.
-- Run the complete notebook in a clean Kaggle session, save outputs and record memory/runtime.
-- Prepare exact notebook metadata and the writeup before requesting any necessary publication authorization. Do not publicly publish/push unless authorization is already provided.
-- Never include token values or raw data in Git; do not push without authorization. Changed terms and final Submit are owner actions.
-
-## 7. Schedule from today
-
-| Dates | Required output |
-|---|---|
-| Nov 9 | Revised strategy and bounded protocol; feasibility recorded |
-| Nov 10–12 | Data/model audit; reliability reproduction; notebook skeleton and first table/figure; remote resource inventory/CPU benchmark if access details are available |
-| Nov 13–16 | Corrected models; Study 3 measurement/development; two prototype figures |
-| Nov 17–20 | Frozen cohort evaluation, sensitivities, **final story decision** |
-| Nov 21–30 | Complete seven visuals/table, notebook v1 and draft v1 |
-| Dec 1–7 | Football/statistical cold reads; clean-input rerun; revise explanations and figures |
-| Dec 8–14 | Full Kaggle execution; public notebook ready with authorization; writeup v2 |
-| Dec 15–21 | Official rules/track verification; access, citations, rendering and count checks; packet ready |
-| Dec 22–28 | Owner attaches notebook and submits; save confirmation and artifact versions |
-| Dec 29–Jan 6 | Buffer for genuine fixes/submission issues; no new hypothesis search |
-
-If work slips, remove optional animation and analyses first. Preserve validation, readable writeup, public reproduction and the internal submission date.
-
-## 8. Review and execution discipline
-The assistant reviews from two perspectives: football usefulness and statistical support for each claim, recording assumptions and unresolved issues in `reports/review_notes.md`. The owner reviews execution and presentation. These are internal checks, not independent expert endorsement, and do not require paying reviewers or launching more agents.
-
-Maintain `reports/submission_checklist.md`. Self-assigned rubric scores diagnose weaknesses; they are not prize probabilities. Final checks:
-
-- Explicit Combine-tracking→REG performance link and conventional baseline.
-- Every headline number regenerates; intervals, athlete counts and study labels agree.
-- Prior 2025 exposure and current evaluation boundaries disclosed.
-- No unsupported causal training effects, universal rankings or claims that p>0.05 proves zero.
-- ≤2,000 words, fewer than ten figures/tables, public notebook runs and is attached.
-- Eligibility/terms and owner submission complete before the hard deadline.
-
-End each work block with `STATUS.md` and durable `CLAUDE.md` updates. Resume from saved artifacts instead of repeating orientation or adding more study families.
-
-**Started November 9:** historical reports preserved; executable audit passes key/count checks and records join attrition; starter notebook executes on CSV and Parquet inputs with a sample support figure. **Completed later November 9:** join explanations, reliability, model/transfer audits and the frozen measurement screen. The screen failed, stopping the primary route claim. Notebook reproduces it from CSV and Parquet; three additional draft figures saved. Owner chose local execution while remote access is unresolved. **Next:** Studies 1–2 held-out prediction and same-sample 3-cone sensitivity, followed by complete notebook/figure/writeup integration.
-
-**Completed November 10:** cohort/cone validation, all original secondary prediction comparisons, evaluation table/figure and interpretation. **Current next work:** complete raw-input public notebook integration, final visual/evidence-card selection and writeup draft. Keep the November 20 claim-review checkpoint; no new hypothesis families or tuning after cohort evaluation.
-
-**Submission production, later November 10:** standalone nine-CSV notebook executed from clean inputs in 523.08 s (largest sampled stage RSS 1,183 MiB). All 402 numeric comparisons, 25 cohort scores and 12 tests pass. Final visual selection above replaces the unfitted route interaction with its failed measurement screen. Writeup/HTML preview complete: 1,900 conservative words, six figures and one table. Official source/field checks saved. Owner confirmed Kaggle account `oppenheimer6th`. Full Kaggle raw rebuild COMPLETE (1,421.62 s, largest sampled stage RSS 1,021.4 MiB); all checks pass. Public notebook version 3 retains unchanged tested source and saved outputs via QUICK_SAVE after execution version 1. API confirms public status/source/outputs. Owner browser access/rendering, Writeup review/upload, attachment/track confirmation and final submission remain in the checklist.
-
-**Notebook presentation revision, November 10:** owner deleted the first publication because its serialized source cell overwhelmed the reading view. Recreated the same notebook URL with source in verified metadata, six narrative figure sections, a readable table and collapsible reports. Clean Kaggle raw version 3 passes all checks; redesigned public version 4 verified through API. New reading preview: `writeup/notebook_preview.html`. Owner final Writeup attachment/rendering/terms/Submit remains.
-
-**Writeup review completed, November 10:** concrete receiver example and film-review questions replace general scouting advice; cohort-level reliability and unvalidated decision usefulness are explicit. Manuscript 1,926 conservative words; six figures plus one table. Exact editor fields/ordered image upload package and optional review brief prepared. Existing public notebook and frozen results preserved. Kaggle Writeup creation/upload remains in the owner UI because available APIs are read-only.
+If time tightens, drop optional new descriptive quantities, animation and outside reviews
+first. Preserve honest claims, readable football explanation, reproduction and submission.
