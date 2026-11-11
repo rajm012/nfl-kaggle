@@ -1,4 +1,10 @@
-# Final owner handoff — 2026-11-10
+# Owner handoff — updated 2026-11-12
+
+Steps 1–4 are integrated, and the final notebook source passes clean local and private
+Kaggle rebuilds. The public notebook is version 5; the matching full execution is private
+verification notebook ID 144414064/version 6. Final packet assets and source checks are in
+`step5_integration_verification.json`. No competition Writeup draft or final submission has
+been saved; the owner UI steps below remain.
 
 ## Reviewable packet
 
@@ -7,14 +13,29 @@
 - `writeup/kaggle_upload.zip`: exact editor title/description/body, six ordered PNGs and upload guide.
 - `writeup/reviewer_brief.md`: questions ready for an optional outside cold read.
 - `reports/writeup_judging_review.md`: internal rubric review, resolved wording issues and claim sources.
-- `writeup/writeup.md`: complete manuscript and nine-row table; 1,926 conservative words.
+- `writeup/writeup.md`: integrated manuscript and nine-row table; 1,687 conservative words;
+  title/description/body together are 1,720. Figures 1/6 explain speed/path differences
+  and the specific next film question with its missing evidence.
 - `writeup/submission_packet.zip`: manuscript, preview, notebook/metadata, six PNGs,
   evaluation CSV and verification/source notes. No raw or intermediate data.
-- `notebooks/submission.ipynb`: standalone nine-CSV rebuild, with saved report outputs from verified cloud results.
+- `notebooks/submission.ipynb`: standalone nine-CSV rebuild; current saved outputs come
+  from the verified revised cloud reports, rendered with the unchanged display source. The source bundle has 36 files, including the
+  descriptive protocol/module, fixed trace assertion references and explicit physics checks.
 - Notebook target: https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map .
-  Redesigned public version 4 (notebook ID 144208320) is verified by API with ten clean report outputs and six figures. Full clean Kaggle execution was version 3 (979.82 s; sampled peak 1107.0 MiB). Exact proof: `kaggle_execution.json`. Check actual browser access/rendering.
+  Public version 5 (notebook ID 144208320) is verified by API with ten clean report outputs
+  and six figures. The matching clean Kaggle execution is a separate private notebook,
+  ID 144414064/version 6 (969.30 s; sampled peak 1132.4 MiB). Exact proof:
+  `kaggle_execution.json`. Check actual browser access/rendering.
 
-Full clean local run: 523.08 seconds; largest sampled stage RSS 1,183 MiB. All 402 numeric comparisons, 25 cohort scores and 12 tests pass. No frozen prediction source/model/sample changed. Reported results and figure captions retain uncertainty, prior 2025 exposure and selected-subset limitations. Official field/track/rules checks: `official_sources.md`.
+Full clean revised local run: 397.52 seconds; largest sampled stage RSS 1211.3 MiB.
+Both environments pass 402 original numeric comparisons, 25 cohort scores, 241 descriptive
+checks and 12 pipeline + 4 physics tests. Frozen scientific sources/results remain unchanged.
+The historical W1 replay uses fixed C then F memory layouts only after strict numerical
+failure; values, reference formulas/athletes, solver chain and acceptance checks remain
+unchanged. Evidence: `step5_reproduction_findings.json`. The private numerical diagnostic
+contains input data and is excluded from the public notebook and all submission packages. Current
+uncertainty, prior 2025 exposure and selected-subset limits remain visible. Official
+field/track/rules checks: `official_sources.md`.
 
 ## Owner UI steps
 
@@ -40,7 +61,7 @@ No further hypothesis search, route-gate weakening or post-evaluation tuning is 
 Keep November 20 as the final claim review checkpoint; later changes address presentation,
 documented errors or already specified checks.
 
-## Writeup revision — November 10
+## Writeup revision — November 11
 
 The revised introduction and worked receiver conversation explain concrete drill/film questions.
 Cohort consistency does not certify an individual player, and the map is a proposed aid with

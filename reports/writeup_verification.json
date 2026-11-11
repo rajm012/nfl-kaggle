@@ -1,35 +1,35 @@
 {
-  "date": "2026-11-10",
-  "scope": "Revised manuscript claim/asset checks; no model refitting",
-  "manuscript_sha256": "f62f882c3a1dc480ebac800c58907a2053a9642976d7ff690dd04631a3129745",
-  "manuscript_conservative_words": 1926,
+  "date": "2026-11-12",
+  "scope": "Integrated Steps 1\u20134 manuscript and upload package",
+  "manuscript_sha256": "b2881d64f7c3f9ac5a50f76e94d1367980d7fbc2689c4ed605baa4f82d09b245",
+  "manuscript_conservative_words": 1687,
+  "combined_editor_words": 1720,
   "primary_improvement_supported": 0,
   "primary_comparisons": 9,
-  "primary_evaluation_athletes_range": [
-    20,
-    37
-  ],
   "headline_values_checked_against_reports": true,
-  "exposure_only_example_verified": true,
   "individual_repeatability_claim_removed": true,
   "scouting_decision_use_explicitly_unvalidated": true,
+  "all_nine_csv_rows_match_reported_precision": true,
+  "source_asset_and_preview_checks_passed": true,
+  "corresponding_public_notebook_verified": true,
   "frozen_source_hashes": {
     "src/evaluate.py": "e79257914cff252c7dfff0330d52ebae11d82c9cf0526d2dc3df14e9cba820fe",
     "src/route_context.py": "218ffb0c3dd0ffc3ab48f951f027ad80500dd84d6d6a26b1d315455e3445bc99",
-    "requirements.txt": "874fcf8eea57713dbae5db6dbd9b3ac2e10e7e4f85dedc1fa91eafaf2cd28b55",
-    "reports/evaluation_protocol.md": "bc298468e77b233762776ed6318ab88b2e5a3ff6af38e25e26e4a40b7b28fce2"
+    "src/kinematics.py": "2d1c078da74b74394ae0215b89fc1d6463ed6e1e6046e1fc7d1abb6f9dffed2b",
+    "src/cone_sensitivity.py": "fd5080ee5317a3212f7d00cb7ea2905d23823402932fbdda08ab48640da3f1cf",
+    "src/outcomes.py": "658e7baab3e06c3dc70077d923ec9df7bb3bbbc91c52b52d4fe0bb4c8893c0eb",
+    "src/combine_features.py": "763dae09be38974e125a208fe0c5172a2301373e00f7dc12775e7a2ac51d082e",
+    "src/submission_verify.py": "2ef38e0a8b43ef611df74c62de546abdfb1a2d781d350308abd79d311dd86f8e",
+    "reports/evaluation_protocol.md": "bc298468e77b233762776ed6318ab88b2e5a3ff6af38e25e26e4a40b7b28fce2",
+    "reports/study3_protocol.md": "822ae3938b1a558cedf8f6fbd3f1892da4a51a2de7e821ce174dac800f5a8462",
+    "reports/wr_trace_measurement_protocol.md": "c45a2c35caf691c75ede8ea3d1b95f04cb97884e4a7867b4685b6a96093d4ade",
+    "reports/prereg.md": "4765ecfd12b2d4531e172770e9afbc697fbf126c58602cbb0e55aa1579554c87",
+    "reports/validation.json": "9053c495b86795d842aded834895bad0f96a47b24f24945a17c1d07816cde6a1",
+    "reports/model_audit.json": "e8311197bc5a2bfe37ae8fc3600715166968340e5655591761fe54692877861c",
+    "reports/transfer_audit.json": "bde5b6ba15c7575adb4f36d1901ca66fffc26e42d1294554c866d71445473a26",
+    "reports/reliability.json": "bae95e98f26f000a2e3bafa810d0e5547efc093657e6660828e0128adc88c1c6",
+    "reports/cone_sensitivity.json": "fe5088c1c0150d8da001a15ffcca9c723fc4b2881d1956adcdc0f3a2b7664b9f",
+    "reports/study3_measurement.json": "f145ac9caf1984419afb2b1650ad9eaecac1ebf6a3788f599e698bbb7d422070"
   },
-  "unchanged_public_notebook_and_figures": {
-    "notebooks/submission.ipynb": "7df6ac3d55032cb94b8580a7d1820edbb80c1ce67fd6ccb9756e8f472625711a",
-    "reports/figures/combine_route_trace.png": "0f4da328938859eb712618cb4bf9c0413660c05e83660647fed81b4a03d9b800",
-    "reports/figures/evidence_support.png": "c3328f9b48953131c8f3ba855541e8f321e39336e541ceaf1b6189d3965583f0",
-    "reports/figures/transfer_audited.png": "4dea1eb7b0f718554a174a83af37265f4a78ab4d1f3fd7a4fcc0ab74e03c23a5",
-    "reports/figures/study3_measurement.png": "8af184c5ee47cb4710b2988b062e3ba2e12284b93686e9230c76fcb034e90089",
-    "reports/figures/cohort_prediction.png": "d193a2046156418304d0a240cce583dc6519aebbb15713051d848afe4e859c52",
-    "reports/figures/scout_evidence_card.png": "60e6de4467711610d1bef0c417883ffde1e01cfe785c7080160740accd952588"
-  },
-  "all_checks_passed": true,
-  "transfer_intervals_and_samples_checked": true,
-  "historical_audit_significance_counts_checked": true,
-  "all_nine_csv_rows_match_reported_precision": true
+  "all_checks_passed": true
 }

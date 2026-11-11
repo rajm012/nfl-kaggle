@@ -1,0 +1,241 @@
+{
+  "scope": "Documented numerical reproduction correction, not model selection",
+  "failed_local_run": "/tmp/bdb_raw_rebuild_m2doz7rk",
+  "failure": "Recorded W1 historical cone BFGS/L-BFGS fit reported nonconvergence",
+  "matrix_input_max_difference_observed": 7.771561172376096e-16,
+  "diagnostic_before": [
+    {
+      "converged": false,
+      "positive_finite_fixed_bse": true,
+      "lat_beta": 0.011392906959004426,
+      "lat_se": 0.0644356326049057,
+      "random_variance": 0.017547601898600874,
+      "x_C": false,
+      "x_F": true,
+      "x_dtype": "float64",
+      "y_dtype": "float64",
+      "groups_dtype": "int64",
+      "x_sha256": "eecbbd6d81fff34de16e439d45a56acbb9d141c8b9874e451271e3c830015b0b",
+      "y_sha256": "fcdaec93ee17314c5ded633f06069931261c505da8297f0be1b4eb7e3e75a484",
+      "groups_sha256": "1a978feb6b8375b81a088e85f236139cca40085afc512670ffa063fdee26a60c"
+    }
+  ],
+  "matrix_layout_diagnostic": [
+    {
+      "layout": "pandas",
+      "converged": false,
+      "fixed_bse_finite_positive": true,
+      "lat_beta": 0.011392906959004426,
+      "lat_se": 0.0644356326049057,
+      "random_variance": 0.017547601898600874,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "MixedLM optimization failed, trying a different optimizer may help.",
+        "Gradient optimization failed, |grad| = 13.492967"
+      ]
+    },
+    {
+      "layout": "C",
+      "converged": true,
+      "fixed_bse_finite_positive": true,
+      "lat_beta": 0.011392906958988362,
+      "lat_se": 0.06443563260483626,
+      "random_variance": 0.017547601898534194,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs"
+      ]
+    },
+    {
+      "layout": "F",
+      "converged": false,
+      "fixed_bse_finite_positive": true,
+      "lat_beta": 0.011392906959004426,
+      "lat_se": 0.0644356326049057,
+      "random_variance": 0.017547601898600874,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "MixedLM optimization failed, trying a different optimizer may help.",
+        "Gradient optimization failed, |grad| = 13.492967"
+      ]
+    }
+  ],
+  "fix": "Sorted identical unique-athlete references, canonical W1 rows, and fixed C then F memory-layout retry only after strict numerical failure; unchanged matrix values, recorded BFGS/L-BFGS chain and acceptance checks",
+  "exact_matrix_values_preserved": true,
+  "strict_convergence_and_covariance_checks_pass": true,
+  "recorded_lat": {
+    "beta": 0.011392906958938957,
+    "se": 0.06443563260475277,
+    "lo": -0.11489861226743128,
+    "hi": 0.1376844261853092
+  },
+  "canonical_C_lat": {
+    "beta": 0.011392906958988362,
+    "se": 0.06443563260483626
+  },
+  "model_formula_sample_scaling_or_optimizer_changed": false,
+  "frozen_prediction_sources_or_protocols_changed": false,
+  "verification_tolerance_changed": false,
+  "cached_coefficients_used": false,
+  "source_sha256": "595cc95cfb080ab82773904ace0e242330a15a2a6e08fef6fc1fb70df34c9d00",
+  "final_full_local_and_kaggle_proof": "See step5_integration_verification.json and kaggle_execution.json after their final verification",
+  "canonical_reference_case_all_402_headline_checks_pass": true,
+  "canonical_reference_same_unscaled_rows_and_values": true,
+  "canonical_reference_formula_and_athletes_unchanged": true,
+  "C_only_private_cloud_version_4_failed": true,
+  "fixed_matrix_Kaggle_diagnostic": "reports/kaggle_step5_numeric_diagnostic.json",
+  "diagnostic_result": "Recorded, 1000-iteration and larger-line-search cases produce identical valid estimates; no optimizer options changed in the final source",
+  "dependency_reload_repair": "Movement verification uses a fresh subprocess and table display uses the standard CSV reader, avoiding stale NumPy after installation",
+  "updated_utc": "2026-11-11T18:28:17.280990+00:00",
+  "latest_failed_local_run": "/tmp/bdb_raw_rebuild_xztxviqq",
+  "layout_retry_selection": "First fit passing convergence and finite positive fixed-effect standard errors; no coefficient direction, outcome significance or reference result is consulted",
+  "latest_failed_case_replay": {
+    "generated_utc": "2026-11-11T18:26:14.647675+00:00",
+    "replayed": [
+      {
+        "id": "W1",
+        "model": "baseline_cone_tracking",
+        "solver": "BFGS/L-BFGS",
+        "canonical_row_order": true,
+        "canonical_C_matrix_layout": true,
+        "accepted_matrix_layout": "F",
+        "numerical_attempts": [
+          {
+            "matrix_layout": "C",
+            "converged": false,
+            "strict_numerical_checks_pass": false,
+            "warnings": [
+              "Gradient optimization failed, |grad| = 13.492967",
+              "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+              "MixedLM optimization failed, trying a different optimizer may help.",
+              "Retrying MixedLM optimization with lbfgs"
+            ]
+          },
+          {
+            "matrix_layout": "F",
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": [
+              "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+              "Retrying MixedLM optimization with lbfgs"
+            ]
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      },
+      {
+        "id": "W2",
+        "model": "baseline_cone_tracking",
+        "solver": "Powell",
+        "canonical_row_order": false,
+        "canonical_C_matrix_layout": false,
+        "accepted_matrix_layout": null,
+        "numerical_attempts": [
+          {
+            "matrix_layout": null,
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": []
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      }
+    ],
+    "cached_coefficients_used": false,
+    "outcome_model_or_sample_changed": false
+  },
+  "latest_failed_case_all_402_headline_checks_pass": true,
+  "current_full_local_and_corresponding_private_cloud_verification": "Both pass final source: local /tmp/bdb_raw_rebuild_t4d5dxg2 and private Kaggle ID 144414064/version 6",
+  "final_local_replay": {
+    "generated_utc": "2026-11-11T18:33:27.394475+00:00",
+    "replayed": [
+      {
+        "id": "W1",
+        "model": "baseline_cone_tracking",
+        "solver": "BFGS/L-BFGS",
+        "canonical_row_order": true,
+        "canonical_C_matrix_layout": true,
+        "accepted_matrix_layout": "C",
+        "numerical_attempts": [
+          {
+            "matrix_layout": "C",
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": [
+              "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+              "Retrying MixedLM optimization with lbfgs"
+            ]
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      },
+      {
+        "id": "W2",
+        "model": "baseline_cone_tracking",
+        "solver": "Powell",
+        "canonical_row_order": false,
+        "canonical_C_matrix_layout": false,
+        "accepted_matrix_layout": null,
+        "numerical_attempts": [
+          {
+            "matrix_layout": null,
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": []
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      }
+    ],
+    "cached_coefficients_used": false,
+    "outcome_model_or_sample_changed": false
+  },
+  "final_cloud_replay": {
+    "generated_utc": "2026-11-11T18:43:49.597164+00:00",
+    "replayed": [
+      {
+        "id": "W1",
+        "model": "baseline_cone_tracking",
+        "solver": "BFGS/L-BFGS",
+        "canonical_row_order": true,
+        "canonical_C_matrix_layout": true,
+        "accepted_matrix_layout": "C",
+        "numerical_attempts": [
+          {
+            "matrix_layout": "C",
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": [
+              "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+              "Retrying MixedLM optimization with lbfgs"
+            ]
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      },
+      {
+        "id": "W2",
+        "model": "baseline_cone_tracking",
+        "solver": "Powell",
+        "canonical_row_order": false,
+        "canonical_C_matrix_layout": false,
+        "accepted_matrix_layout": null,
+        "numerical_attempts": [
+          {
+            "matrix_layout": null,
+            "converged": true,
+            "strict_numerical_checks_pass": true,
+            "warnings": []
+          }
+        ],
+        "reason": "Replay recorded historical retry, unchanged model/sample"
+      }
+    ],
+    "cached_coefficients_used": false,
+    "outcome_model_or_sample_changed": false
+  }
+}

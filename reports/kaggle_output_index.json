@@ -1,153 +1,496 @@
-[
-  "bdb_raw_rebuild_89ovjwxf/LICENSE",
-  "bdb_raw_rebuild_89ovjwxf/reports/audit.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/audit.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/cone_sensitivity.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/cone_sensitivity.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/environment_setup.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_development.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D1.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D1_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D1_joint.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D2.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D2_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/D2_joint.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F1.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F1_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F1_no10.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F2.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F2_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F2_no10.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F3.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F3_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/F3_no10.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/O1.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/O1_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/O1_joint.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/O2.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/O2_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/W1.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/W1_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/W1_joint.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/W2.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_models/W2_cone.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_protocol.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/evaluation_table.csv",
-  "bdb_raw_rebuild_89ovjwxf/reports/evidence_support.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/cohort_prediction.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/combine_route_trace.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/evidence_support.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/scout_evidence_card.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/study3_measurement.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/figures/transfer_audited.png",
-  "bdb_raw_rebuild_89ovjwxf/reports/full_notebook_execution.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/historical_solver_plan.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/historical_solver_replay.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/join_attrition.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/join_attrition.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/D1_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/D2_primary_cluster.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/D2_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F1_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F1_secondary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F2_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F2_secondary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F3_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/F3_secondary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/O1_primary_cluster.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/O1_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/O2_primary_cluster.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/O2_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/W1_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/model_audit_checkpoints/W2_primary_lmm.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/prereg.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/raw_input_manifest.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_audit_data.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_audit_figures.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_combine_features.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_evaluate_stage_develop.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_evaluate_stage_evaluate.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_evaluation_figures.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_game_features.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_join_audit.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_reliability.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_route_context.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_sprint.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_stages.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_submission_figures.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_submission_pipeline_convert.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_submission_replay.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_submission_verify.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_summary.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_transfer_audit.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/rebuild_validation.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/reference_headlines.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/reliability.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/reliability.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/route_trace_selection.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_baseline.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_measurement.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_measurement.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_preprocessing.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_protocol.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/study3_turn_reference.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/submission_verification.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/tests.log",
-  "bdb_raw_rebuild_89ovjwxf/reports/transfer_audit.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/transfer_audit.md",
-  "bdb_raw_rebuild_89ovjwxf/reports/validation.json",
-  "bdb_raw_rebuild_89ovjwxf/reports/validation.md",
-  "bdb_raw_rebuild_89ovjwxf/requirements.txt",
-  "bdb_raw_rebuild_89ovjwxf/src/__init__.py",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/__init__.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/audit_data.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/audit_figures.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/combine_features.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/cone_sensitivity.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/evaluate.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/evaluation_figures.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/game_features.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/join_audit.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/kinematics.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/notebook_runtime.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/outcomes.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/reliability.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/route_context.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/sprint.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/study2.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/submission_figures.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/submission_pipeline.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/submission_replay.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/submission_verify.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/transfer_audit.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/__pycache__/validation.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/src/audit_data.py",
-  "bdb_raw_rebuild_89ovjwxf/src/audit_figures.py",
-  "bdb_raw_rebuild_89ovjwxf/src/combine_features.py",
-  "bdb_raw_rebuild_89ovjwxf/src/cone_sensitivity.py",
-  "bdb_raw_rebuild_89ovjwxf/src/evaluate.py",
-  "bdb_raw_rebuild_89ovjwxf/src/evaluation_figures.py",
-  "bdb_raw_rebuild_89ovjwxf/src/game_features.py",
-  "bdb_raw_rebuild_89ovjwxf/src/join_audit.py",
-  "bdb_raw_rebuild_89ovjwxf/src/kinematics.py",
-  "bdb_raw_rebuild_89ovjwxf/src/notebook_runtime.py",
-  "bdb_raw_rebuild_89ovjwxf/src/outcomes.py",
-  "bdb_raw_rebuild_89ovjwxf/src/reliability.py",
-  "bdb_raw_rebuild_89ovjwxf/src/route_context.py",
-  "bdb_raw_rebuild_89ovjwxf/src/sprint.py",
-  "bdb_raw_rebuild_89ovjwxf/src/study2.py",
-  "bdb_raw_rebuild_89ovjwxf/src/submission_figures.py",
-  "bdb_raw_rebuild_89ovjwxf/src/submission_pipeline.py",
-  "bdb_raw_rebuild_89ovjwxf/src/submission_replay.py",
-  "bdb_raw_rebuild_89ovjwxf/src/submission_verify.py",
-  "bdb_raw_rebuild_89ovjwxf/src/transfer_audit.py",
-  "bdb_raw_rebuild_89ovjwxf/src/validation.py",
-  "bdb_raw_rebuild_89ovjwxf/tests/__pycache__/test_audit.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/tests/__pycache__/test_evaluate.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/tests/__pycache__/test_game_batches.cpython-313.pyc",
-  "bdb_raw_rebuild_89ovjwxf/tests/test_audit.py",
-  "bdb_raw_rebuild_89ovjwxf/tests/test_evaluate.py",
-  "bdb_raw_rebuild_89ovjwxf/tests/test_game_batches.py"
-]
+{
+  "verified_utc": "2026-11-11T18:47:59.442957+00:00",
+  "kernel_id": 144414064,
+  "version": 6,
+  "files": [
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/LICENSE"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/audit.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/audit.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/cone_sensitivity.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/cone_sensitivity.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/environment_setup.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_development.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D1.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D1_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D1_joint.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D2.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D2_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/D2_joint.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F1.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F1_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F1_no10.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F2.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F2_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F2_no10.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F3.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F3_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/F3_no10.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/O1.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/O1_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/O1_joint.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/O2.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/O2_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/W1.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/W1_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/W1_joint.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/W2.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_models/W2_cone.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_protocol.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evaluation_table.csv"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/evidence_support.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/cohort_prediction.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/combine_route_trace.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/combine_route_trace_explained.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/evidence_support.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/scout_evidence_card.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/study3_measurement.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/figures/transfer_audited.png"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/full_notebook_execution.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/historical_solver_plan.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/historical_solver_replay.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/join_attrition.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/join_attrition.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/D1_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/D2_primary_cluster.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/D2_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F1_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F1_secondary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F2_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F2_secondary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F3_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/F3_secondary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/O1_primary_cluster.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/O1_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/O2_primary_cluster.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/O2_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/W1_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/model_audit_checkpoints/W2_primary_lmm.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/movement_physics_checks.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/prereg.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/raw_input_manifest.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_audit_data.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_audit_figures.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_combine_features.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_evaluate_stage_develop.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_evaluate_stage_evaluate.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_evaluation_figures.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_game_features.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_join_audit.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_reliability.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_route_context.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_sprint.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_stages.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_submission_figures.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_submission_pipeline_convert.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_submission_replay.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_submission_verify.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_summary.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_transfer_audit.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_validation.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/rebuild_wr_movement.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/reference_headlines.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/reference_wr_movement.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/reliability.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/reliability.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/route_trace_selection.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_baseline.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_measurement.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_measurement.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_preprocessing.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_protocol.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/study3_turn_reference.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/submission_verification.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/tests.log"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/transfer_audit.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/transfer_audit.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/validation.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/validation.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/wr_movement_explanation.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/wr_movement_metrics.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/wr_movement_submission_verification.json"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/reports/wr_trace_measurement_protocol.md"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/requirements.txt"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__init__.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/__init__.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/audit_data.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/audit_figures.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/combine_features.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/cone_sensitivity.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/evaluate.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/evaluation_figures.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/game_features.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/join_audit.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/kinematics.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/notebook_runtime.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/outcomes.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/reliability.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/route_context.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/sprint.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/study2.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/submission_figures.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/submission_pipeline.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/submission_replay.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/submission_verify.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/transfer_audit.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/validation.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/__pycache__/wr_movement.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/audit_data.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/audit_figures.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/combine_features.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/cone_sensitivity.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/evaluate.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/evaluation_figures.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/game_features.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/join_audit.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/kinematics.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/notebook_runtime.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/outcomes.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/reliability.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/route_context.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/sprint.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/study2.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/submission_figures.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/submission_pipeline.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/submission_replay.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/submission_verify.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/transfer_audit.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/validation.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/src/wr_movement.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/__pycache__/test_audit.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/__pycache__/test_evaluate.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/__pycache__/test_game_batches.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/__pycache__/wr_movement_checks.cpython-313.pyc"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/test_audit.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/test_evaluate.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/test_game_batches.py"
+    },
+    {
+      "file_name": "bdb_raw_rebuild_eqmj5sua/tests/wr_movement_checks.py"
+    }
+  ]
+}

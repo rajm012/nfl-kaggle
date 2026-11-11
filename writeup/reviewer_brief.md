@@ -1,4 +1,4 @@
-# Cold-read brief — 2026-11-10
+# Cold-read brief — 2026-11-11
 
 Read [the manuscript preview](preview.html), especially Figure 1 and the final scouting
 conversation. The analysis and hypotheses are frozen; feedback should identify unclear or
@@ -8,6 +8,10 @@ The main result: some Combine movement carries into games, while none of nine pr
 comparisons establishes improved performance prediction. A predeclared route-performance
 measurement gate failed, so that primary interaction was stopped. The evidence card is a
 proposed evaluation aid; its decision usefulness has not been tested.
+
+Figure 1 now separates path shape, speed and lateral acceleration for the same extreme
+receiver example. The profiles average 13 drills; the single speed-out does not explain
+the whole difference. Figure 6 names the next review question and missing evidence.
 
 ## Football reader
 

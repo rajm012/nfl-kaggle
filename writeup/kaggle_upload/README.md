@@ -1,4 +1,4 @@
-# Kaggle Writeup upload — prepared 2026-11-10
+# Kaggle Writeup upload — prepared 2026-11-11
 
 This folder is ready for the competition editor. No Writeup draft or final submission has been saved on Kaggle.
 
@@ -6,14 +6,14 @@ This folder is ready for the competition editor. No Writeup draft or final submi
 
 **Title:** Beyond the Stopwatch: When Should Combine Tracking Change a Scouting Decision?
 
-**Description:** Some Combine movement carries into games, while nine primary comparisons leave added performance prediction uncertain. An evidence map shows how tracking can focus scouting questions and where further evidence is needed.
+**Description:** Similar 40 times can hide different receiver movement. Nine primary comparisons do not establish better NFL prediction; an evidence map sets a specific film question and the evidence needed before a recommendation changes.
 
 **Body:** paste `WRITEUP.md`; its title is already supplied separately above.
 
 **Notebook to attach:** https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map
 
-Manuscript including title: 1926 conservative words. Title + description + body:
-1957 words. Six figures and one table.
+Manuscript including title: 1687 conservative words. Title + description + body:
+1720 words. Six figures and one table.
 
 ## Upload sequence
 

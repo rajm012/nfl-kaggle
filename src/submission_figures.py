@@ -65,32 +65,37 @@ def evidence_card():
     score = next(r for r in validation['results'] if r['id']=='W1')['metrics']
     measurement = json.loads((ROOT/'reports/study3_measurement.json').read_text())
     adjusted = next(r for r in measurement['diagnostic'] if r['contrast']=='adjusted')
-    fig,ax = plt.subplots(figsize=(10.8,6.8))
+    fig,ax = plt.subplots(figsize=(10.8,8.0))
     fig.subplots_adjust(left=.025,right=.975,top=.96,bottom=.03)
     ax.set(xlim=(0,1),ylim=(0,1)); ax.axis('off')
-    ax.text(.02,.96,'WR turning: a scout’s evidence card',fontsize=21,fontweight='bold',color=INK)
+    ax.text(.02,.96,'WR turning: evidence and the next scouting question',fontsize=20,fontweight='bold',color=INK)
     rows = [
-        ('MEASUREMENT','Cross-drill consistency',
+        ('MEASUREMENT','Agreement across drills in the cohort',
          f"SB {turn['SB']:.2f} [{turn['SB_lo']:.2f}, {turn['SB_hi']:.2f}] · {turn['n']} development WRs",
-         'Observe repeatable movement; this is not single-route test–retest.',BLUE),
+         'Does not establish either receiver’s individual repeatability.',BLUE),
         ('TRANSFER','Modest movement carryover',
          f"r {move['r']:.2f} [{move['lo']:.2f}, {move['hi']:.2f}] · {move['n']} WRs · PRE + REG",
-         'Use as movement context alongside film; size/speed adjustment is shown separately.',GREEN),
+         'Game-movement association; does not establish a separation advantage.',GREEN),
         ('PERFORMANCE','Added prediction remains uncertain',
          f"RMSE gain {score['improvement']:+.5f} yd [{score['improvement_lo']:.5f}, {score['improvement_hi']:.5f}] · {score['players']} WRs",
-         'No automatic draft upgrade or validated separation ranking.',ORANGE),
+         'No supported gain; individual scouting value remains unvalidated.',ORANGE),
     ]
-    for y,(label,title,stat,use,color) in zip([.72,.49,.26],rows):
-        ax.add_patch(FancyBboxPatch((.015,y-.055),.97,.20,boxstyle='round,pad=.008',
+    for y,(label,title,stat,use,color) in zip([.755,.535,.315],rows):
+        ax.add_patch(FancyBboxPatch((.015,y-.065),.97,.185,boxstyle='round,pad=.008',
                                     facecolor='#F3F6F8',edgecolor='#DDE4E9'))
-        ax.text(.035,y+.102,label,fontsize=9,fontweight='bold',color=color)
-        ax.text(.035,y+.058,title,fontsize=15,fontweight='bold',color=INK)
-        ax.text(.035,y+.015,stat,fontsize=11,color=INK)
-        ax.text(.035,y-.023,use,fontsize=10,color=INK)
-    ax.text(.025,.11,f"Route-family screen: adjusted SB {adjusted['SB']:.2f} < frozen 0.40 gate; primary interaction not fitted.",
+        ax.text(.035,y+.08,label,fontsize=9,fontweight='bold',color=color)
+        ax.text(.035,y+.045,title,fontsize=15,fontweight='bold',color=INK)
+        ax.text(.035,y+.005,stat,fontsize=11,color=INK)
+        ax.text(.035,y-.035,use,fontsize=10,color=INK)
+    ax.text(.025,.205,'NEXT REVIEW',fontsize=9,fontweight='bold',color=BLUE)
+    ax.text(.025,.135,'Review approach, turn and acceleration afterward on comparable out routes.\n'
+            'Record coverage/throw timing; grade changes need repeatability and independent performance evidence.',
+            fontsize=10,color=INK,linespacing=1.5)
+    ax.text(.025,.085,f"Route-family screen: adjusted SB {adjusted['SB']:.2f} < frozen 0.40 gate; primary interaction not fitted.",
             fontsize=10,color=INK)
-    ax.text(.025,.065,'Intervals: 95% athlete bootstrap. Prediction is conditional on trained models and realised NFL contexts.\n'
-            'Prior 2025 exposure disclosed. Observational evidence does not establish a causal training benefit.',fontsize=9,color=INK)
+    ax.text(.025,.035,'95% athlete-bootstrap intervals; prediction holds training models fixed and uses realised NFL context.\n'
+            'Training-fit uncertainty omitted; prior 2025 exposure disclosed. Film review/scouting usefulness untested.',
+            fontsize=9,color=INK)
     fig.savefig(ROOT/'reports/figures/scout_evidence_card.png',dpi=200)
     plt.close(fig)
 

@@ -1,8 +1,11 @@
-# Writeup judging review — 2026-11-10
+# Writeup judging review — 2026-11-11
 
 Internal editorial, football and statistical review. This is not independent expert feedback
-or a prediction of the competition result. Models, samples, frozen specifications and notebook
-version 4 remain unchanged. The revision uses existing verified results only.
+or a prediction of the competition result. Steps 1–4 are integrated into the manuscript,
+Figures 1/6 and notebook. Models, samples, frozen prediction specifications and measurement
+definitions remain unchanged. A documented historical-solver memory-layout reproduction
+fix preserves matrix values and the original acceptance checks; see
+[step5_reproduction_findings.json](step5_reproduction_findings.json).
 
 ## Rubric review
 
@@ -11,7 +14,7 @@ version 4 remain unchanged. The revision uses existing verified results only.
 | Football relevance | 30% | Opens with the observed 4.54/4.52-second WR pair. The scout conversation specifies drill checks, out-cut film questions and the performance evidence needed for a recommendation. Explains that get-off is LOS-crossing time. | Film review and decision usefulness are proposed; no film assessment or scouting intervention was performed. |
 | Data science | 30% | Retains the failed measurement gate, all nine primary comparisons, conservative historical inference, equal-athlete scoring, training-only processing and conditional evaluation limits. | Small samples, earlier 2025 exposure, selection and omitted training-fit uncertainty remain. |
 | Writing | 20% | Replaces a generic introduction and repeated abstract advice with a specific football question and a three-part worked conversation. Reduces audit detail while preserving necessary corrections. | External cold-read feedback remains unavailable until arranged. |
-| Visualization | 20% | Preserves six verified figures and one generated table; explains the illustrated receiver pair and distinguishes relative plot gains from absolute table errors. Improves preview spacing and mobile table scrolling. | Actual Kaggle Writeup image upload and editor rendering are unverified. |
+| Visualization | 20% | Keeps six figures and one generated table; Figure 1 adds speed/reference-window explanations, while Figure 6 specifies the next film question and missing evidence. Relative plot gains remain distinct from absolute table errors. | Actual Kaggle Writeup image upload and editor rendering remain owner checks. |
 
 ## Issues found and resolved
 
@@ -36,6 +39,19 @@ version 4 remain unchanged. The revision uses existing verified results only.
    need replacing with editor-generated links. The package checks the combined editor-field word count.
 8. **Packet omission.** Added the actual nine-row evaluation CSV to the ZIP and asset manifest;
    the earlier packet description promised it but the generator omitted it.
+9. **Single-attempt/profile confusion.** Both profiles average the same 13 drills; the
+   illustrated speed-out contributes 5.9% arithmetically to their gap. Separate reference
+   peaks show B faster along a wider local curve. Higher TURN is not cutting efficiency.
+10. **Repeatability on the card.** Replaced “Observe repeatable movement” with cohort
+    agreement and explicit absence of individual repeatability validation. The uncertain
+    n=17 speed-out repeat result is retained in the manuscript and notebook.
+11. **Prediction endpoint and deployment.** W1 scores athlete means over realised NFL
+    contexts, rather than route-level errors or a draft-time role forecast. Throw-time
+    separation and the pooled-route W1 test do not answer the proposed out-cut film question.
+12. **Workflow specificity.** The revised example records comparable routes, coverage,
+    timing, contradictory clips and missing context. It identifies repeatable individual
+    measurements and independent performance information as evidence needed before a grade
+    change. No film assessment or decision-utility test is represented as completed.
 
 ## Claim and source checks
 
@@ -49,13 +65,18 @@ version 4 remain unchanged. The revision uses existing verified results only.
 | Primary added prediction | `validation.json` and `evaluation_table.csv`: zero of nine marginal intervals supports improvement; all original-family simultaneous intervals include zero. DL BURST has nominal deterioration, not a supported improvement. |
 | WR TURN prediction | Baseline 0.23572 yd, tracking 0.23577 yd; gain interval [−0.00903, 0.01267], n=23. The full nine-row table is generated rather than manually maintained. |
 | Selected cone finding | `validation.json`: DL A0 cone gain 0.00755 s [0.00443, 0.01080], nine evaluation athletes. Secondary, selected sample; broader primary uncertain. |
-| Reproduction | `kaggle_execution.json`: public notebook 144208320/version 4; clean raw execution version 3; 402 checks, 25 scores, 12 tests pass. |
+| Trace explanation | `wr_movement_metrics.json` and the written trace protocol: speed 5.433/5.879 yd/s, curvature 0.249/0.233 1/yd; fixed interior peaks/windows, no efficiency claim. |
+| Repeat and adjusted transfer | `reliability.json`: speed-out r=0.012 [−0.442, 0.492], n=17. `transfer_audit.json`: size/40-adjusted WR r=0.278 [0.092, 0.450], n=98. |
+| Adverse/secondary findings | `validation.json`: D1 nominal deterioration, F2 adverse ≥30-play nominal result, selected F1_cone positive n=9 and W2_cone adverse n=7. All 16 secondaries retained. |
+| Reproduction | `step5_integration_verification.json` and `kaggle_execution.json` hold current version-specific proof: 402 original checks, 25 scores, 241 descriptive numeric checks, 12 pipeline tests and 4 physics checks. The public notebook ID remains 144208320. |
 
 ## Actual open work
 
-Numerical/asset checks are recorded in `writeup_verification.json`. The six full-resolution
-figures and the published notebook match their preceding verified hashes; frozen prediction
-source/protocol hashes remain unchanged. Counts and headline values were checked against the reports.
+Numerical/asset checks are recorded in `writeup_verification.json` and
+`step5_integration_verification.json`. The manuscript is 1,687 conservative words; title,
+description and body total 1,720, with six figures and one table. Frozen scientific
+sources and reports are preserved. Publication is verified against the corresponding
+source bundle and execution record, rather than relying on the preceding version's hashes.
 
 - Owner review of the revised preview, followed by any corrections it identifies.
 - Optional external football/statistical cold reads; a brief is prepared in `writeup/reviewer_brief.md`.

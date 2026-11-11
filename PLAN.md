@@ -54,9 +54,9 @@ and three $5,000 runners-up. Judging scores are not award probabilities.
 | WR movement | Development cross-drill TURN consistency 0.593 [0.373, 0.737], 70 WRs; descriptive game-movement transfer r=0.279 [0.107, 0.445], 98 WRs |
 | DL movement | Burst transfer r=0.443, falling to 0.203 after weight adjustment; movement transfer is separate from added performance prediction |
 | Study 3 | Adjusted route-family consistency 0.296 below frozen 0.40 gate; primary TURN interaction stopped without fitting or Study 3 evaluation |
-| Reproduction | Clean raw-input local and Kaggle runs completed; 402 numeric checks, all 25 scores and 12 invariant tests pass |
-| Notebook | Public version 4, ID 144208320; clean Kaggle execution version 3; API source/output verification complete |
-| Materials | 1,926-word manuscript, six figures, one table, standalone previews and upload ZIP prepared |
+| Reproduction | Final clean local/Kaggle source passes 402 numeric checks, all 25 scores, 241 descriptive checks and 12 pipeline + 4 physics tests |
+| Notebook | Public version 5, ID 144208320; matching private raw execution ID 144414064/version 6; API source/output verification complete |
+| Materials | 1,687-word manuscript, 1,720 combined editor words, six figures, one table, final standalone previews and upload ZIP |
 | Submission | Owner browser rendering, Writeup upload/attachment, eligibility/terms, Submit and confirmation remain |
 
 The strongest existing contribution is careful separation of movement information from
@@ -133,7 +133,7 @@ in Step 5; the current published figure/notebook/packet remain their tested vers
 
 ### Step 3 — Explain where the NFL evidence ends
 
-**Target: November 16–18; uses the existing frozen results. Next task to start.**
+**Target: November 16–18; completed early November 11 using the existing frozen results.**
 
 Translate the nine prediction errors and gain intervals into yards, seconds or proportion
 units. Use WR turning as the worked example: baseline separation RMSE 0.23572 yards versus
@@ -153,9 +153,18 @@ source references and candidate plain-language writeup/figure wording.
 movement transfer from added prediction and lack of supported improvement from proof of no
 useful effect. Selected cone findings remain secondary.
 
+**Completion:** [uncertainty_interpretation.md](reports/uncertainty_interpretation.md)
+contains all nine original/converted-unit comparisons, exposure/≥30-play checks, all 16
+secondaries, inference limits and figure/notebook wording. Saved-error checks for all 25
+RMSE/MAE comparisons and source hashes are in
+[uncertainty_evidence.json](reports/uncertainty_evidence.json). The
+[results draft](writeup/uncertainty_results_draft.md) is proposed replacement copy for later
+integration. No model refits, new intervals, thresholds or submission-asset changes.
+
 ### Step 4 — Make the proposed scouting action concrete
 
-**Target: November 18–20; incorporates Steps 1–3.**
+**Target: November 18–20; internal draft/review completed early November 11. Owner
+readability feedback and November 20 final-claim checkpoint remain pending.**
 
 Build one receiver-evaluation conversation with a movement observation, a specific film
 question, current NFL evidence and the evidence gap before a recommendation could change.
@@ -173,6 +182,18 @@ readability feedback. External football/statistical feedback is optional if avai
 **Done when:** readers can say what to inspect next and what evidence is missing before
 acting on the draft board. Record final claims and sources by **November 20**; no new
 hypothesis families afterward.
+
+**Completion:** [scouting_workflow_review.md](reports/scouting_workflow_review.md) records
+the proposed receiver-evaluation conversation, comparable-route/context review fields,
+blank film-note structure, evidence needed before a recommendation and twelve proposed
+final claims with sources. [scouting_workflow_draft.md](writeup/scouting_workflow_draft.md)
+provides revised worked-example, Figure 6 card/caption and notebook copy;
+[scouting_workflow_evidence.json](reports/scouting_workflow_evidence.json) records value,
+source, link and unchanged-artifact checks. Cohort agreement replaces the card's overstrong
+repeatability wording in the candidate copy. No film assessment, scouting intervention or
+new analysis performed. The claim set is recorded for the November 20 owner checkpoint,
+not represented as owner-approved. A concise clarity question was sent; feedback remains
+pending. Candidate copy was integrated and verified in Step 5; owner review remains pending.
 
 ### Step 5 — Integrate, verify and submit
 
@@ -199,19 +220,29 @@ change and follow its UI instructions.
 submission confirmation is saved by **December 28**. Keep December 29–January 6 for genuine
 fixes and submission issues.
 
+**Preparation completed November 12:** final source passes clean local and private Kaggle
+rebuilds (402 original checks, 25 scores, 241 descriptive checks, 12 pipeline + 4 physics
+tests). Public notebook version 5 is a verified QUICK_SAVE of the same tested source with
+cloud-generated displays. Both previews, upload ZIP and full packet are refreshed; the
+owner UI steps and saved final submission confirmation remain pending. Evidence:
+[step5_integration_verification.json](reports/step5_integration_verification.json),
+[kaggle_execution.json](reports/kaggle_execution.json).
+
 ## 4. Work tracker and responsibility
 
-Steps 1–2 are complete as internal review/proposal and descriptive explanation. Steps 3–5
-remain pending. The starting artifacts in section 2 are complete. Start Step 3 in the next work block and update this
-table as outputs are produced.
+Steps 1–4's internal review/proposals, descriptive explanation, uncertainty interpretation
+and scouting workflow are complete. Owner feedback and the November 20 claim checkpoint
+remain pending. Step 5 preparation, local/cloud verification, publication and packet work
+are complete; owner browser/editor/eligibility/terms/Submit actions remain. Next work block:
+owner readability and actual Kaggle rendering review; retain the November 20 claim checkpoint.
 
 | Step | Dates | Lead | Status |
 |---|---|---|---|
 | 1. Receiver story and claim map | Nov 12–14 | Assistant; owner reviews clarity | Complete Nov 11 — proposals ready |
 | 2. Movement explanation | Nov 14–16 | Assistant; owner checks code/figures | Complete Nov 11 — descriptive outputs ready |
-| 3. Prediction uncertainty explanation | Nov 16–18 | Assistant; owner reviews plain language | Pending — next |
-| 4. Scouting workflow and claim lock | Nov 18–20 | Assistant draft; owner design/writeup review | Pending |
-| 5. Final integration and submission | Nov 21–Dec 28 | Assistant prepares/verifies; owner UI/Submit | Pending |
+| 3. Prediction uncertainty explanation | Nov 16–18 | Assistant; owner reviews plain language | Complete Nov 11 — interpretation/copy ready |
+| 4. Scouting workflow and claim lock | Nov 18–20 | Assistant draft; owner design/writeup review | Internal draft/review complete Nov 11 — feedback and Nov 20 owner checkpoint pending |
+| 5. Final integration and submission | Nov 21–Dec 28 | Assistant prepares/verifies; owner UI/Submit | Preparation complete Nov 12 — local/cloud verified, published, packet ready; owner review/UI/Submit pending |
 
 Owner handles Python/notebook checks and design/writeup review; assistant leads football
 interpretation and statistical explanation. These are internal reviews, not independent

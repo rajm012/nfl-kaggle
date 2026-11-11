@@ -53,9 +53,9 @@ def kaggle_upload(text, images, platform):
     (folder/'figures').mkdir(parents=True, exist_ok=True)
     title, body = text.split('\n', 1)
     title, body = title.removeprefix('# ').strip(), body.lstrip()
-    description = ('Some Combine movement carries into games, while nine primary comparisons leave added '
-                   'performance prediction uncertain. An evidence map shows how tracking can focus '
-                   'scouting questions and where further evidence is needed.')
+    description = ('Similar 40 times can hide different receiver movement. Nine primary comparisons do not '
+                   'establish better NFL prediction; an evidence map sets a specific film question and '
+                   'the evidence needed before a recommendation changes.')
     combined_words = word_count(title)+word_count(description)+word_count(body)
     if combined_words > 2000:
         raise AssertionError(f'Editor title, description and body exceed limit: {combined_words}')
@@ -81,7 +81,7 @@ def kaggle_upload(text, images, platform):
               'image_uploads': uploads, 'draft_saved_to_kaggle': False,
               'final_submission_complete': False}
     (folder/'editor_fields.json').write_text(json.dumps(fields, indent=2)+'\n')
-    guide = f'''# Kaggle Writeup upload — prepared 2026-11-10
+    guide = f'''# Kaggle Writeup upload — prepared {datetime.now(timezone.utc).date()}
 
 This folder is ready for the competition editor. No Writeup draft or final submission has been saved on Kaggle.
 
@@ -189,6 +189,9 @@ def main():
               'editor_title_description_and_body_words':editor['editor_title_description_and_body_words'],
               'kaggle_writeup_draft_saved':False,
               'public_notebook_verified':platform.get('public_access_verified',False),
+              'public_notebook_version':platform.get('publication_version'),
+              'verified_execution_kernel_id':platform.get('verified_full_execution_kernel_id'),
+              'verified_execution_version':platform.get('verified_full_execution_version'),
               'notebook_url':platform.get('notebook_url'),
               'final_submission_complete':False}
     (ROOT/'reports/submission_packet.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -197,7 +200,13 @@ def main():
              ROOT/'reports/full_notebook_execution.json',ROOT/'reports/official_sources.md',
              ROOT/'reports/submission_handoff.md',ROOT/'reports/kaggle_execution.json',
              ROOT/'reports/kaggle_publication.json',ROOT/'reports/kaggle_full_notebook_execution.json',
-             ROOT/'reports/kaggle_submission_verification.json']
+             ROOT/'reports/kaggle_submission_verification.json',ROOT/'reports/submission_source_manifest.json',
+             ROOT/'reports/kaggle_wr_movement_submission_verification.json',
+             ROOT/'reports/kaggle_step5_execution_verification.json',
+             ROOT/'reports/kaggle_historical_solver_replay.json',
+             ROOT/'reports/step5_reproduction_findings.json',
+             ROOT/'reports/wr_movement_submission_verification.json',
+             ROOT/'reports/step5_integration_verification.json']
     with zipfile.ZipFile(target.parent/'submission_packet.zip','w',zipfile.ZIP_DEFLATED) as archive:
         for path in paths + extra:
             if path.exists():

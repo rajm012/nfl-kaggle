@@ -1,7 +1,7 @@
 """Exposure-only explanation of the frozen WR hero pair; see the descriptive protocol.
 
 Run: .venv/bin/python -m src.wr_movement
-Writes separate review artifacts; does not change historical/submission outputs.
+Writes descriptive artifacts and an explained trace; the notebook runtime uses it as Figure 1.
 """
 from datetime import datetime, timezone
 import hashlib
@@ -248,11 +248,11 @@ def report(record):
         lines.append(f"\nExisting PRE+REG WR movement transfer, {r['adjustment']}: r={r['r']:.3f} "
                      f"[{r['lo']:.3f}, {r['hi']:.3f}], n={r['n']}. This is population-level descriptive transfer, "
                      'not an adjustment for the entry speed of these two attempts or improved separation prediction.')
-    lines += ['', '## Candidate Figure 1 and writeup wording', '',
-              'The [candidate replacement figure](figures/combine_route_trace_explained.png) adds the speed curve, reference '
+    lines += ['', '## Explained Figure 1 and writeup wording', '',
+              'The [explained route figure](figures/combine_route_trace_explained.png) adds the speed curve, reference '
               'peak and fixed local windows to the original path/acceleration view. It keeps the original pair, common '
-              'axes and separately labelled across-drill profile. The existing published Figure 1 remains intact for '
-              'Step 5 integration; this candidate would replace it, not add a seventh main figure.', '',
+              'axes and separately labelled across-drill profile. The standalone notebook rebuild uses it to replace '
+              'Figure 1, keeping six main figures.', '',
               '**Proposed methods wording:** “TURN summarizes the upper range of lateral acceleration across non-40 drills. '
               'Lateral acceleration increases with both speed and path curvature, so a higher profile can reflect drill '
               'execution as well as movement ability. The illustrated speed-out attempts show path, speed and acceleration; '
@@ -268,12 +268,11 @@ def report(record):
               '0.6 seconds between endpoints and can blur brief movements; estimates are not direct measurements of forces.', '',
               'The four physics checks run with `.venv/bin/python -m unittest discover -s tests -p wr_movement_checks.py -v`. '
               'They cover straight motion, circular motion at a known radius, quadratic speed dependence, rigid-coordinate '
-              'invariance and rejection of irregular cadence. This sidecar check file stays outside the current notebook '
-              'test bundle. Step 5 must include the new module, descriptive protocol and relevant checks if this figure '
-              'is integrated into the standalone notebook.', '',
+              'invariance and rejection of irregular cadence. The standalone notebook includes this module, written '
+              'protocol and explicit check file, and runs all four checks alongside the twelve pipeline tests.', '',
               'No NFL outcomes enter these new summaries. No new outcome models, efficiency rankings, causal attribution, '
               'individual repeatability claims, route-gate changes or fitted-reference changes were made. '
-              'The next step is the explanation of existing performance uncertainty.']
+              'Performance uncertainty is assessed separately in the nine prescribed comparisons.']
     return '\n'.join(lines)+'\n'
 
 

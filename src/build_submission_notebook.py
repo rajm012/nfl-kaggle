@@ -11,18 +11,23 @@ ROOT = Path(__file__).resolve().parents[1]
 MODULES = ['__init__','kinematics','combine_features','game_features','sprint','audit_data',
            'join_audit','reliability','route_context','outcomes','study2','validation','evaluate',
            'cone_sensitivity','transfer_audit','audit_figures','evaluation_figures',
-           'submission_pipeline','notebook_runtime','submission_figures','submission_verify','submission_replay']
+           'submission_pipeline','notebook_runtime','submission_figures','submission_verify','submission_replay',
+           'wr_movement']
 
 
 def main():
     files = {'src/'+name+'.py':(ROOT/'src'/(name+'.py')).read_text() for name in MODULES}
     for name in ['requirements.txt','LICENSE','reports/evaluation_protocol.md','reports/study3_protocol.md',
-                 'reports/prereg.md']:
+                 'reports/prereg.md','reports/wr_trace_measurement_protocol.md',
+                 'tests/wr_movement_checks.py']:
         files[name] = (ROOT/name).read_text()
     for p in sorted((ROOT/'tests').glob('test_*.py')):
         files['tests/'+p.name] = p.read_text()
     reference = selected_values(ROOT)
     files['reports/reference_headlines.json'] = json.dumps(reference,indent=2)+'\n'
+    movement = json.loads((ROOT/'reports/wr_movement_metrics.json').read_text())
+    files['reports/reference_wr_movement.json'] = json.dumps(
+        {key:movement[key] for key in ['selection','traces','profiles']},indent=2)+'\n'
     cone = json.loads((ROOT/'reports/cone_sensitivity.json').read_text())
     solver_plan = [{'id':r['id'],'model':name,'columns':list(model['coefficients']),
                     'recorded_optimizer':model['optimizer'],
@@ -56,12 +61,13 @@ def main():
 
 **NFL Big Data Bowl 2027 · University Track**
 
-Two prospects can post nearly identical 40-yard times and move differently through a route.
-Does that difference carry into NFL games—and does it improve performance prediction?
+Receiver A ran **4.54 seconds** and B **4.52**, yet their Combine turning profiles differ.
+Does that extra movement information justify a different scouting evaluation?
 
 We follow the evidence through three questions: **can we measure it, does it transfer,
-and does it add predictive value?** The answer supports a scouting conversation, with clear limits
-on what tracking can justify.'''),
+and does it add predictive value?** None of nine primary prediction intervals supports an
+improvement. We propose using movement differences to focus film questions, with further
+evidence needed before changing a recommendation. This use has not been tested in scouting.'''),
         code('''# Load the source stored with this notebook, then prepare a fresh run.
 import hashlib, json, os, sys, tempfile
 from pathlib import Path
@@ -96,19 +102,28 @@ rebuild()''', quiet=True),
         md('''## 01 · What the stopwatch misses
 
 The 40-yard dash captures straight-line speed. Route tracking adds the shape of movement:
-how a player turns, accelerates and builds speed. Here, two development receivers have observed
-40 times within **0.03 seconds**, but different turning profiles.'''),
+how a player turns, accelerates and builds speed. The selected receivers have close 40 times,
+but their across-drill TURN profiles are **−1.78** and **+2.53** development-WR SD.
+Both profiles use the same **13 drills**; the displayed speed-out is one recorded attempt.'''),
         code("figure('combine_route_trace')"),
-        md('''*Figure 1. Actual Combine route traces. The pair was chosen using Combine exposure only:
-largest training-reference TURN difference among development WRs with comparable observed 40 times,
-with deterministic athlete-ID ties. NFL outcomes played no part in selection.*
+        md('''*Figure 1. One speed-out attempt per receiver; headings describe across-drill profiles.
+The pair maximizes TURN contrast among 2023–24 WRs with observed 40 times within 0.03 seconds;
+deterministic ties and first recorded attempts. No NFL outcomes selected this extreme example.
+Dotted lines/crosses mark separately selected interior acceleration peaks, rather than verified
+cut onset; fixed speed windows are descriptive and gray shading marks derivative edges.*
 
 **TURN** summarises lateral acceleration through a drill. **BURST** summarises peak forward
 acceleration. **A0** describes the early acceleration of the fitted 40-yard speed curve.
 Positions are smoothed at 10 Hz; acceleration is decomposed into signed longitudinal and lateral
-components. Standardisation for prediction uses 2023–24 athletes only.
+components. Attempts are averaged within drill, standardized within drill and averaged across
+available non-40 drills. Standardisation for prediction uses 2023–24 athletes only.
 
-These are descriptions of movement. A more distinctive trace alone does not establish a better player.'''),
+**Lateral acceleration = speed² × curvature.** At the reference peaks, B is faster
+(5.879 versus 5.433 yd/s) along a slightly wider local curve (curvature 0.233 versus 0.249 1/yd).
+A higher TURN value therefore does not establish a tighter or more efficient cut. The speed-out
+contributes 5.9% arithmetically to the profile gap; one attempt does not explain the composite.
+These quantities use the written descriptive protocol and unchanged kinematics. They do not
+establish individual talent, repeatability or a causal effect.'''),
         md('''## 02 · The sample behind the claim
 
 The supplied tracking covers **510 rookie-cohort players**. Availability narrows as we require
@@ -126,14 +141,17 @@ Movement transfer uses PRE + REG and excludes POST; performance prediction uses 
 Some Combine movement differences reappear in NFL tracking. Receiver TURN correlates with game
 turning at **0.279 [0.107, 0.445]** across 98 athletes. Defensive-line BURST correlates with
 game burst at **0.443 [0.289, 0.584]** across 115 athletes; after weight adjustment, the estimate
-is **0.203 [0.044, 0.376]**.'''),
+is **0.203 [0.044, 0.376]**. WR transfer after measured size/40 adjustment is
+**0.278 [0.092, 0.450]**; this does not hold the illustrated drill speeds constant.'''),
         code("figure('transfer_audited')"),
         md('''*Figure 3. Descriptive movement transfer, with athlete-bootstrap intervals and refitted
-adjustment. These pooled PRE + REG estimates are separate from held-out performance prediction.*
+adjustment. These pooled PRE + REG estimates are separate from regular-season performance prediction.
+Historical full-cohort normalization differs from development reliability and training-only prediction.*
 
 Development WR cross-drill TURN consistency is **0.593 [0.373, 0.737]**, based on 70 receivers.
-Cross-drill consistency supports measuring a trait, but does not by itself establish repeatability
-of a particular route-performance outcome.'''),
+Cohort cross-drill agreement does not establish either receiver's individual repeatability.
+The separate same-speed-out repeat estimate is **r=0.012 [−0.442, 0.492]**, only **17 pairs**,
+and remains highly uncertain.'''),
         md('''## 04 · A measurement gate worth respecting
 
 Before testing whether TURN predicts a route-specific performance advantage, we required a
@@ -161,9 +179,17 @@ Positive RMSE gain means better prediction. Intervals condition on the training 
 tracking RMSE; the 95% intervals omit training-fit uncertainty.*
 
 For WR TURN, the baseline RMSE is **0.23572 yd** and tracking RMSE is **0.23577 yd**
-on 23 evaluation athletes. A secondary DL A0 comparison with observed cone times improves by
+on 23 evaluation athletes, with a gain interval **[−0.00903, +0.01267] yd**. Both errors
+round to 0.24 yd, but that is not an equivalence test. These are athlete-mean prediction errors,
+not route-level errors or changes in actual separation. There are 3,701 plays, two to 401 per
+receiver; the prespecified ≥30-play check retains 17 WRs and remains uncertain.
+
+Three primary point gains are positive and six negative. DL BURST worsens get-off prediction
+nominally; its family and ≥30-play intervals include zero. F2's ≥30-play nominal result is
+also adverse, with a family interval including zero. A secondary DL A0 comparison with observed cone times improves by
 **0.00755 s [0.00443, 0.01080]**, but includes only **nine athletes**. The full appendix retains
-this result, the positive historical DL TURN/pressure association, and uncertain/adverse subset findings.
+this result, the positive historical DL TURN/pressure association, and all uncertain/adverse
+subset findings, including W2_cone deterioration on seven receivers.
 Missing cone times are never imputed.
 
 **Validation context:** earlier studies already used 2025 outcomes. This is a retrospective cohort
@@ -172,20 +198,31 @@ before evaluation scoring, using training-only preprocessing. Binary outcomes us
 player-clustered linear-probability fallback without clipping.'''),
         md('''## 06 · A scout’s evidence card
 
-Use tracking to make a specific film question: where does a player turn efficiently, build speed,
-or lose momentum? Carry that question into game review. The evidence is stronger for describing
-movement than for assigning an automatic draft upgrade.'''),
+The proposed request: **on comparable out routes, how does each receiver approach the break,
+change direction and build speed afterward?** Record route depth, alignment, motion, coverage,
+cushion and throw timing. Define the eligible clip set before reviewing its results; retain
+contradictory clips and missing context. No film assessment has been performed here.
+
+The meeting produces a film question and an evidence gap. A TURN-based grade change needs
+repeatable individual measurements and independently supported relevant NFL performance
+information beyond conventional evaluation. The current results do not supply those requirements.'''),
         code("figure('scout_evidence_card')"),
-        md('''*Figure 6. A practical evidence map separating measurement, movement transfer and added
-performance prediction. Film/practice review is a proposed use, not a validated intervention.*
+        md('''*Figure 6. A proposed receiver-review workflow: observe movement, ask a specific film
+question and record the evidence needed before changing a recommendation. Cohort agreement,
+movement transfer and added performance prediction remain separate.*
 
 The limits matter: small evaluation samples, prior 2025 exposure, omitted training uncertainty,
 selection into NFL playing time and cone testing, observational context, and incomplete opponent
-tracking. Supplied separation is measured at the pass-forward event, not a break-specific causal effect.'''),
+tracking. Supplied separation is distance to the nearest defender at throw; W1 pools routes
+and does not measure separation caused by an out cut. Get-off is snap-to-LOS-crossing time,
+rather than movement-onset latency. No individual change threshold or benefit from training
+TURN is established, and the workflow's decision usefulness remains untested.'''),
         md('''---
 ## Reproduction and complete record
 
-**Run All** rebuilds the six figures and table from all nine competition CSVs in a fresh directory.
+**Run All** rebuilds the six figures and table from all nine competition CSVs in a fresh directory,
+including the explained trace under its written descriptive protocol. It runs the twelve
+pipeline checks and four movement-physics checks.
 On Kaggle, attach the competition data and enable Internet for the recorded dependencies.
 Locally, set `BDB_INPUT_ROOT` to the raw CSV folder and `BDB_NOTEBOOK_PATH` to this notebook.
 No private repository or fitted-coefficient cache is required.
@@ -193,8 +230,10 @@ No private repository or fitted-coefficient cache is required.
 The ordinary source files and their SHA-256 manifest are stored in notebook metadata, keeping
 the setup cell readable. Detailed logs, fit warnings, sample attrition and full reports are saved
 under the run’s `reports/` directory. The assertion references are checked only after refitting.
-Recorded historical W1/W2 + cone retries are reproduced; W1 uses a stable row order to keep
-numerical joins from changing its recorded BFGS → L-BFGS path.'''),
+Recorded historical W1/W2 + cone retries are reproduced. Historical athlete references are
+sorted before the same standardization; W1 also uses canonical rows and matrix buffers.
+This removes numerical ordering effects without changing inputs, formulas or acceptance checks.
+Verification uses fresh subprocesses after dependency installation.'''),
         code('evidence_notes()'),
         code('appendix()'),
         md('''**Attribution:** NFL / NFL Big Data Bowl 2027, competition data under CC BY-NC 4.0.

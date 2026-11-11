@@ -1,0 +1,9 @@
+{
+  "numeric_checks": 241,
+  "same_saved_pair_and_descriptive_values": true,
+  "quality_and_fixed_windows_pass": true,
+  "physics_checks_passed": 4,
+  "pipeline_tests_passed": 12,
+  "integrated_as_figure": 1,
+  "generated_utc": "2026-11-11T18:33:36.932607+00:00"
+}

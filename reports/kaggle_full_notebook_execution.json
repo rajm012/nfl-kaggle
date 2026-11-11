@@ -4,8 +4,8 @@
   "all_headlines_verified": true,
   "figures": 6,
   "tables": 1,
-  "elapsed_seconds": 979.82,
-  "largest_stage_sampled_RSS_MiB": 1107.0,
+  "elapsed_seconds": 969.3,
+  "largest_stage_sampled_RSS_MiB": 1132.4,
   "versions": {
     "duckdb": "1.5.6",
     "polars": "2.0.0",
@@ -15,7 +15,10 @@
     "statsmodels": "0.15.0",
     "matplotlib": "3.11.2"
   },
-  "output_root": "/kaggle/working/bdb_raw_rebuild_89ovjwxf",
+  "output_root": "/kaggle/working/bdb_raw_rebuild_eqmj5sua",
   "presentation_format": 2,
-  "generated_utc": "2026-11-10T15:21:19.556895+00:00"
+  "pipeline_tests_passed": 12,
+  "movement_physics_checks_passed": 4,
+  "movement_numeric_checks": 241,
+  "generated_utc": "2026-11-11T18:44:08.075014+00:00"
 }

@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-10",
+  "scope": "Revised manuscript claim/asset checks; no model refitting",
+  "manuscript_sha256": "f62f882c3a1dc480ebac800c58907a2053a9642976d7ff690dd04631a3129745",
+  "manuscript_conservative_words": 1926,
+  "primary_improvement_supported": 0,
+  "primary_comparisons": 9,
+  "primary_evaluation_athletes_range": [
+    20,
+    37
+  ],
+  "headline_values_checked_against_reports": true,
+  "exposure_only_example_verified": true,
+  "individual_repeatability_claim_removed": true,
+  "scouting_decision_use_explicitly_unvalidated": true,
+  "frozen_source_hashes": {
+    "src/evaluate.py": "e79257914cff252c7dfff0330d52ebae11d82c9cf0526d2dc3df14e9cba820fe",
+    "src/route_context.py": "218ffb0c3dd0ffc3ab48f951f027ad80500dd84d6d6a26b1d315455e3445bc99",
+    "requirements.txt": "874fcf8eea57713dbae5db6dbd9b3ac2e10e7e4f85dedc1fa91eafaf2cd28b55",
+    "reports/evaluation_protocol.md": "bc298468e77b233762776ed6318ab88b2e5a3ff6af38e25e26e4a40b7b28fce2"
+  },
+  "unchanged_public_notebook_and_figures": {
+    "notebooks/submission.ipynb": "7df6ac3d55032cb94b8580a7d1820edbb80c1ce67fd6ccb9756e8f472625711a",
+    "reports/figures/combine_route_trace.png": "0f4da328938859eb712618cb4bf9c0413660c05e83660647fed81b4a03d9b800",
+    "reports/figures/evidence_support.png": "c3328f9b48953131c8f3ba855541e8f321e39336e541ceaf1b6189d3965583f0",
+    "reports/figures/transfer_audited.png": "4dea1eb7b0f718554a174a83af37265f4a78ab4d1f3fd7a4fcc0ab74e03c23a5",
+    "reports/figures/study3_measurement.png": "8af184c5ee47cb4710b2988b062e3ba2e12284b93686e9230c76fcb034e90089",
+    "reports/figures/cohort_prediction.png": "d193a2046156418304d0a240cce583dc6519aebbb15713051d848afe4e859c52",
+    "reports/figures/scout_evidence_card.png": "60e6de4467711610d1bef0c417883ffde1e01cfe785c7080160740accd952588"
+  },
+  "all_checks_passed": true,
+  "transfer_intervals_and_samples_checked": true,
+  "historical_audit_significance_counts_checked": true,
+  "all_nine_csv_rows_match_reported_precision": true
+}

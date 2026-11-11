@@ -1,7 +1,7 @@
-"""Physics checks for the separate Step 2 review module.
+"""Physics checks for the explained receiver trace, included in the standalone notebook.
 
 Run explicitly: python -m unittest discover -s tests -p wr_movement_checks.py -v
-Kept outside the submission builder's test_*.py bundle until Step 5 integration.
+The runtime runs these four checks explicitly alongside the twelve pipeline tests.
 """
 import unittest
 

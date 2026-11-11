@@ -1,0 +1,46 @@
+{
+  "kernel_id": 144447170,
+  "version": 2,
+  "status": "COMPLETE",
+  "scope": "Numerical diagnostic of the same historical W1 fit on Kaggle; input-bearing private notebook is not a submission artifact",
+  "cases": [
+    {
+      "case": "recorded_chain",
+      "converged": true,
+      "finite_positive_covariance": true,
+      "beta": 0.011392906958988362,
+      "se": 0.06443563260483626,
+      "random_variance": 0.017547601898534194,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs"
+      ]
+    },
+    {
+      "case": "larger_iteration_budget",
+      "converged": true,
+      "finite_positive_covariance": true,
+      "beta": 0.011392906958988362,
+      "se": 0.06443563260483626,
+      "random_variance": 0.017547601898534194,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs"
+      ]
+    },
+    {
+      "case": "larger_line_search_budget",
+      "converged": true,
+      "finite_positive_covariance": true,
+      "beta": 0.011392906958988362,
+      "se": 0.06443563260483626,
+      "random_variance": 0.017547601898534194,
+      "warnings": [
+        "Keyword arguments have been passed to the optimizer that have no effect. The list of allowed keyword arguments for method bfgs is: gtol, norm, epsilon. The list of unsupported keyword arguments passed include: maxls. After release 0.14, this will raise.",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Retrying MixedLM optimization with lbfgs",
+        "Keyword arguments have been passed to the optimizer that have no effect. The list of allowed keyword arguments for method lbfgs is: m, pgtol, factr, maxfun, epsilon, approx_grad, bounds, loglike_and_score. The list of unsupported keyword arguments passed include: maxls. After release 0.14, this will raise."
+      ]
+    }
+  ]
+}

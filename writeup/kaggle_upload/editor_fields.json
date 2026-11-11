@@ -1,9 +1,9 @@
 {
   "title": "Beyond the Stopwatch: When Should Combine Tracking Change a Scouting Decision?",
-  "description": "Some Combine movement carries into games, while nine primary comparisons leave added performance prediction uncertain. An evidence map shows how tracking can focus scouting questions and where further evidence is needed.",
+  "description": "Similar 40 times can hide different receiver movement. Nine primary comparisons do not establish better NFL prediction; an evidence map sets a specific film question and the evidence needed before a recommendation changes.",
   "body_file": "WRITEUP.md",
-  "manuscript_words_including_title": 1926,
-  "editor_title_description_and_body_words": 1957,
+  "manuscript_words_including_title": 1687,
+  "editor_title_description_and_body_words": 1720,
   "suggested_track": {
     "id": 7289,
     "name": "University Track",
@@ -12,13 +12,13 @@
   "notebook_attachment": {
     "url": "https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
     "id": 144208320,
-    "verified_public_version": 4
+    "verified_public_version": 5
   },
   "image_uploads": [
     {
       "order": 1,
       "file": "figures/01_combine_route_trace.png",
-      "sha256": "0f4da328938859eb712618cb4bf9c0413660c05e83660647fed81b4a03d9b800"
+      "sha256": "55a1c2f4208ce9e7519c3b4200db3de31f10104d3c5b8e7f5b38a8292d08cb53"
     },
     {
       "order": 2,
@@ -43,7 +43,7 @@
     {
       "order": 6,
       "file": "figures/06_scout_evidence_card.png",
-      "sha256": "60e6de4467711610d1bef0c417883ffde1e01cfe785c7080160740accd952588"
+      "sha256": "e60305ab1384f97b12ca56177cdb40869b8e6101a4ec9563a7085b8eb0c8539e"
     }
   ],
   "draft_saved_to_kaggle": false,
