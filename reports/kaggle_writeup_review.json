@@ -1,0 +1,103 @@
+{
+  "reviewed_utc": "2026-11-14T12:29:50.627792+00:00",
+  "scope": "Read-only review of saved Kaggle Writeup content and accessible assets; separate local administrative cleanup.",
+  "writeup_url": "https://www.kaggle.com/competitions/nfl-big-data-bowl-2027/writeups/new-writeup-1794329536012",
+  "writeup_id": 125273,
+  "hackathon_writeup_id": 92919,
+  "reported_content_state": "PUBLISHED",
+  "reported_publish_time": "2026-11-14T12:17:21.553Z",
+  "state_observation": "Draft listing initially reported DRAFT; subsequent detail reports PUBLISHED with a newer timestamp.",
+  "title_characters": 78,
+  "subtitle_characters": 137,
+  "body_words": 1676,
+  "combined_editor_words": 1707,
+  "body_matches_prepared_manuscript_excluding_uploaded_image_urls": true,
+  "figures": 6,
+  "tables": 1,
+  "combined_analytical_visuals": 7,
+  "figure_downloads": [
+    {
+      "figure": 1,
+      "http_status": 200,
+      "matches_local_sha256": true
+    },
+    {
+      "figure": 2,
+      "http_status": 200,
+      "matches_local_sha256": true
+    },
+    {
+      "figure": 3,
+      "http_status": 200,
+      "matches_local_sha256": true
+    },
+    {
+      "figure": 4,
+      "http_status": 200,
+      "matches_local_sha256": true
+    },
+    {
+      "figure": 5,
+      "http_status": 200,
+      "matches_local_sha256": true
+    },
+    {
+      "figure": 6,
+      "http_status": 200,
+      "matches_local_sha256": true
+    }
+  ],
+  "notebook_attachment": {
+    "id": 210708,
+    "title": "Combine Movement to NFL Decisions: An Evidence Map",
+    "sortKey": 1,
+    "location": "ADDITIONAL_LINKS",
+    "url": "https://kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
+    "kernelId": 144208320,
+    "description": "",
+    "resource": {
+      "date": "2026-11-10T13:42:41.657Z",
+      "upvoteCount": 0,
+      "ownerUser": {
+        "displayName": "Oppenheimer-6th",
+        "thumbnailUrl": "https://storage.googleapis.com/kaggle-avatars/thumbnails/33012938-kg.jpg?t=2026-11-10-12-49-25",
+        "url": "/oppenheimer6th",
+        "userName": "oppenheimer6th",
+        "tier": "CONTRIBUTOR",
+        "id": 33012938,
+        "profileUrl": "/oppenheimer6th",
+        "performanceTier": "CONTRIBUTOR",
+        "userId": 33012938,
+        "progressionOptOut": false
+      },
+      "usabilityRating": 0,
+      "isPrivate": false,
+      "isPhoneVerified": true
+    },
+    "entityType": "KAGGLE_RESOURCE_TYPE_KERNELS"
+  },
+  "selected_track_ids": [
+    7289
+  ],
+  "github_url_http_status": 200,
+  "uploaded_supplementary_zip": {
+    "http_status": 200,
+    "bytes": 5027196,
+    "integrity_passed": true,
+    "contains_old_administrative_handoff": true
+  },
+  "local_cleaned_zip": "writeup/submission_packet.zip",
+  "unverified": [
+    "Actual five-item editor checklist",
+    "Browser rendering and thumbnail crop",
+    "Final competition submission confirmation distinct from API publication state"
+  ],
+  "writeup_modified_by_agent": false,
+  "final_submit_clicked_by_agent": false,
+  "cleanup_checks": {
+    "administrative_files_removed": 13,
+    "embedded_notebook_files_preserved": 36,
+    "submission_asset_hashes_verified": 28,
+    "both_zip_integrity_checks_passed": true
+  }
+}

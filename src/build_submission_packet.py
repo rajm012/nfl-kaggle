@@ -198,7 +198,7 @@ def main():
     extra = [ROOT/'LICENSE',ROOT/'README.md',
              ROOT/'reports/submission_packet.json',ROOT/'reports/submission_verification.json',
              ROOT/'reports/full_notebook_execution.json',ROOT/'reports/official_sources.md',
-             ROOT/'reports/submission_handoff.md',ROOT/'reports/kaggle_execution.json',
+             ROOT/'reports/kaggle_execution.json',
              ROOT/'reports/kaggle_publication.json',ROOT/'reports/kaggle_full_notebook_execution.json',
              ROOT/'reports/kaggle_submission_verification.json',ROOT/'reports/submission_source_manifest.json',
              ROOT/'reports/kaggle_wr_movement_submission_verification.json',

@@ -1,6 +1,6 @@
 # Step 4 — A concrete receiver scouting conversation
 
-Prepared **2026-11-11** under [PLAN.md](../PLAN.md), using Steps 1–3. Revised worked-example,
+Prepared **2026-11-11** using the receiver story, movement explanation and uncertainty review. Revised worked-example,
 Figure 6 card and notebook text: [scouting_workflow_draft.md](../writeup/scouting_workflow_draft.md).
 Source values, hashes and checks: [scouting_workflow_evidence.json](scouting_workflow_evidence.json).
 This is an internal proposal. No film assessment or scouting intervention has been performed.

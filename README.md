@@ -7,9 +7,15 @@ do not establish a supported prediction gain; secondary cone findings remain sep
 - [Writeup](writeup/writeup.md) and [standalone visual preview](writeup/preview.html)
 - [Self-contained raw-input notebook](notebooks/submission.ipynb)
 - [Notebook reading preview](writeup/notebook_preview.html)
-- [Kaggle Writeup upload package](writeup/kaggle_upload.zip) and [reviewer brief](writeup/reviewer_brief.md)
-- [Current state](STATUS.md), [project memory](CLAUDE.md) and [submission checklist](reports/submission_checklist.md)
+- [Kaggle Writeup upload package](writeup/kaggle_upload.zip), [editor field guide](writeup/EDITOR_GUIDE.md) and [thumbnail](writeup/assets/thumbnail.png)
+- [Public Kaggle notebook](https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map)
 - [Validation interpretation](reports/validation_findings.md) and [production review](reports/submission_review.md)
+
+The repository keeps the research and submission work: `src/` contains analysis and
+artifact builders, `tests/` contains pipeline and movement checks, `notebooks/` contains
+the reproducible analysis, `reports/` contains results, experiment logs, scientific
+protocols and verification evidence, and `writeup/` contains the manuscript and assets.
+Local competition data and derived tables remain in `data/` and are excluded from Git.
 
 ## Run locally
 
@@ -37,4 +43,5 @@ the NFL through [NFL Big Data Bowl 2027](https://www.kaggle.com/competitions/nfl
 under CC BY-NC 4.0 and remain subject to the competition's access rules. The code license
 does not relicense data. Raw files, derived data and credentials are excluded from Git.
 
-Publication and the final owner submission are tracked separately from local verification.
+Scientific protocols and preregistrations remain with the experiments so an independent
+reviewer can reproduce the analyses and distinguish planned tests from exploratory work.

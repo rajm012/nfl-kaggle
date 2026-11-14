@@ -1,6 +1,6 @@
 # Step 1 — Receiver story and claim review
 
-Completed **2026-11-11** under [PLAN.md](../PLAN.md), Step 1. Internal narrative/source
+Completed **2026-11-11**. Internal narrative/source
 review, not independent football validation. This report and the
 [opening draft](../writeup/wr_story_opening_draft.md) are reviewable proposals for later
 integration. Existing manuscript, notebook, figures and upload packet remain the tested

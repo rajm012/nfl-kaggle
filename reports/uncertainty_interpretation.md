@@ -1,6 +1,6 @@
 # Step 3 — What the performance results allow us to conclude
 
-Completed **2026-11-11** under [PLAN.md](../PLAN.md). Interpretation of existing frozen
+Completed **2026-11-11**. Interpretation of existing frozen
 results, not a new analysis specification. Evidence, unit conversions and checks are in
 [uncertainty_evidence.json](uncertainty_evidence.json). Proposed results wording is in
 [uncertainty_results_draft.md](../writeup/uncertainty_results_draft.md).

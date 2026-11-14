@@ -30,7 +30,10 @@
     "writeup/kaggle_upload.zip": "f1c634d5c77e51db18e369022f028d0897563075386370b0aa941f0e3967f956",
     "reports/writeup_judging_review.md": "702792c629f056b5f4fc9bd1a47df040b5cd26056ee6bdb24d4671094c5beea4",
     "reports/writeup_verification.json": "b056a508d14928182be4b10e6da539bdd26e43ca0ca00253a0c9958fae93b130",
-    "writeup/reviewer_brief.md": "7cb68c345c54b5007b24328198503d7b5ec6334922241ac96fa5c587f0e38de5"
+    "writeup/reviewer_brief.md": "7cb68c345c54b5007b24328198503d7b5ec6334922241ac96fa5c587f0e38de5",
+    "README.md": "f3c0a53e9e0cd8117d727b89627396ad27e563058c62f26f97dd8284d756e8d3",
+    "writeup/EDITOR_GUIDE.md": "1eef9b26823f8b14f12a0d6ed8b8786e230b6a7a4d427595e7c88f5594d622fb",
+    "writeup/assets/thumbnail.png": "5204b735be7c7650368b998378be18a33d57f8f443a68785aeece48b5da9df45"
   },
   "local_preview": "writeup/preview.html",
   "notebook_reading_preview": "writeup/notebook_preview.html",
@@ -42,5 +45,7 @@
   "verified_execution_kernel_id": 144414064,
   "verified_execution_version": 6,
   "notebook_url": "https://www.kaggle.com/code/oppenheimer6th/combine-movement-to-nfl-decisions-an-evidence-map",
-  "final_submission_complete": false
+  "final_submission_complete": false,
+  "packaging_updated_utc": "2026-11-14T12:13:56.208927+00:00",
+  "packaging_scope": "Administrative handoff removed; current README, editor guide and thumbnail included. Analytical assets and notebook unchanged."
 }
