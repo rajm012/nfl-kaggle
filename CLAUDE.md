@@ -10,6 +10,8 @@ This file is the shared memory for any agent working in this folder. Keep it cur
 - **Hard deadline 2027-01-06 23:59 UTC. Internal deadline 2026-12-28.**
 
 ## Where things are
+**Current editor guide (Nov 14):** `writeup/EDITOR_GUIDE.md` maps the exact owner-supplied fields. Use its 137-character subtitle instead of the older 222-character upload-package description; title is 78 characters, revised combined editor count 1,707 words. `writeup/assets/thumbnail.png` is a 560×280 card rendered from the existing selected speed-out tracks by `src/build_submission_thumbnail.py`. Existing tested manuscript/notebook/ZIPs are unchanged; the new card/guide are separate. Previous conversation read through the app confirms public version 5/preparation complete and owner UI pending. No live Writeup/checklist access or draft save verified Nov 14.
+
 | Path | What |
 |---|---|
 | `PLAN.md` | Strategy, thesis, stats design, figure plan, timeline. Source of truth for *what* we do. |
